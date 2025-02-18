@@ -37,21 +37,21 @@ export default function AboutPage() {
             {[
               {
                 image:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135812-CRkui4YZPxjGhfmT9fjjaQFDOfnJC0.png",
+                  "/images/8deb2f7f40c999bf95e59c8d627037d7.png",
                 title: "Basketball Techniques",
                 description:
                   "Learn advanced basketball dribbling techniques with our expert coaches",
               },
               {
                 image:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135812-CRkui4YZPxjGhfmT9fjjaQFDOfnJC0.png",
+                  "/images/d2338b5fe7ec6b767a6f106bbcee1227.png",
                 title: "Yoga & Stretching",
                 description:
                   "Explore the benefits of yoga with our guided sessions for all levels",
               },
               {
                 image:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135812-CRkui4YZPxjGhfmT9fjjaQFDOfnJC0.png",
+                  "/images/e353b2fb29a64134a25fec74dc42d9ea.png",
                 title: "Weightlifting Mastery",
                 description:
                   "Master weightlifting techniques with our step-by-step tutorials",
@@ -92,7 +92,7 @@ export default function AboutPage() {
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="relative h-48 mb-4">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135812-CRkui4YZPxjGhfmT9fjjaQFDOfnJC0.png"
+                  src="/images/7f81588e93aba3fd3d23776442e41776.png"
                   alt="Sports Psychology Session"
                   fill
                   className="object-cover rounded-lg"
@@ -113,7 +113,7 @@ export default function AboutPage() {
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="relative h-48 mb-4">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135812-CRkui4YZPxjGhfmT9fjjaQFDOfnJC0.png"
+                  src="/images/2c007fc3bca4b03ab8ef4cda5c0afe43.png"
                   alt="Nutrition Consultation"
                   fill
                   className="object-cover rounded-lg"
@@ -139,7 +139,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-8">Live Events and Coverage</h2>
           <div className="relative h-[400px] rounded-lg overflow-hidden">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135830-96zjpNIg7p8XSP08udxjKPcuUFMiGV.png"
+              src="/images/03054f09bd5ab9ccfc33ab5051292b4a.png"
               alt="Live sports event"
               fill
               className="object-cover"
@@ -170,7 +170,7 @@ export default function AboutPage() {
             <div className="bg-gray-700 text-white rounded-lg overflow-hidden">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135830-96zjpNIg7p8XSP08udxjKPcuUFMiGV.png"
+                  src="/images/cc18f816d084b229fcdaba137ffc133d.png"
                   alt="Outdoor fitness"
                   fill
                   className="object-cover"
@@ -190,7 +190,7 @@ export default function AboutPage() {
             <div className="bg-gray-700 text-white rounded-lg overflow-hidden">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135830-96zjpNIg7p8XSP08udxjKPcuUFMiGV.png"
+                  src="/images/9d57ec65f82d82559b352a3f1444c250.png"
                   alt="Group fitness"
                   fill
                   className="object-cover"
