@@ -8,13 +8,13 @@ export default function Header() {
         <nav className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
-              {/* <Image
-                src="images"
-                alt="Global Sports Foundation Logo"
+              <Image
+                src="/images/logo_bsf.png"
+                alt="Bharat Sports Foundation Logo"
                 width={80}
                 height={80}
                 className="h-16 w-16"
-              /> */}
+              />
             </Link>
           </div>
 
