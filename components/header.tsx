@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 w-full shadow-sm z-50">
+    <header className="fixed top-0 left-0 right-0 w-full shadow-sm z-50 bg-white">
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-20">
           <div className="flex items-center">
@@ -18,30 +18,40 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-4">
-            {" "}
-            {/* Added space-x-4 for spacing */}
+          <div className="hidden md:flex items-center space-x-6">
             <Link
               href="/"
               className="px-4 py-2 bg-[#B7E4A7] text-black font-medium rounded"
             >
               Home
             </Link>
-            <Link href="/what-we-do" className="text-black hover:text-gray-600">
+            <Link
+              href="/what-we-do"
+              className="text-black font-medium hover:text-gray-600"
+            >
               What We Do
             </Link>
-            <Link href="/blog" className="text-black hover:text-gray-600">
+            <Link
+              href="/blog"
+              className="text-black font-medium hover:text-gray-600"
+            >
               Our Blog
             </Link>
-            <Link href="/resources" className="text-black hover:text-gray-600">
+            <Link
+              href="/resources"
+              className="text-black font-medium hover:text-gray-600"
+            >
               Resources
             </Link>
-            <Link href="/contact" className="text-black hover:text-gray-600">
+            <Link
+              href="/contact"
+              className="text-black font-medium hover:text-gray-600"
+            >
               Contact Us
             </Link>
             <Link
               href="/donate"
-              className="px-6 py-2 bg-[#B7E4A7] text-black font-bold rounded hover:bg-[#a5d695] transition-colors"
+              className="px-6 py-2 bg-[#B7E4A7] text-black font-bold rounded hover:bg-[#a5d695] transition-colors border border-[#B7E4A7]"
             >
               DONATE HERE
             </Link>
