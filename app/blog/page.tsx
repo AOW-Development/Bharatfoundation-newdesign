@@ -45,7 +45,7 @@ export default function BlogPage() {
                   <div className="bg-[#B7E4A7] rounded-lg overflow-hidden">
                     <div className="relative h-48">
                       <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135616-dXEdplH2XJH3b94cBekRbJTown6ylc.png"
+                        src="/images/89e47092ce57d95022164c316fa26775.png"
                         alt="Runner in red"
                         fill
                         className="object-cover"
@@ -69,7 +69,7 @@ export default function BlogPage() {
                   <div className="bg-[#B7E4A7] rounded-lg overflow-hidden">
                     <div className="relative h-48">
                       <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135616-dXEdplH2XJH3b94cBekRbJTown6ylc.png"
+                        src="/images/f755171b33bdb21fcec9db159e0aa353.png"
                         alt="Children playing soccer"
                         fill
                         className="object-cover"
@@ -101,21 +101,21 @@ export default function BlogPage() {
                       description:
                         "Catch up on the thrilling moments from this year's championship games.",
                       image:
-                        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135616-dXEdplH2XJH3b94cBekRbJTown6ylc.png",
+                        "/images/210876708e0f735a8d9a625bf7cd372d.png",
                     },
                     {
                       title: "Coaching Tips for Young Athletes",
                       description:
                         "Learn essential coaching strategies to nurture young talents.",
                       image:
-                        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135616-dXEdplH2XJH3b94cBekRbJTown6ylc.png",
+                        "/images/ee82f3120d79366a4c871191b1b791a5.png",
                     },
                     {
                       title: "Marathon: A Test of Endurance",
                       description:
                         "Experience the excitement and challenges of marathon running.",
                       image:
-                        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135616-dXEdplH2XJH3b94cBekRbJTown6ylc.png",
+                        "/images/fc80c050e7a77a19c613163fdc10e533.png",
                     },
                   ].map((post, index) => (
                     <div key={index} className="flex gap-6 items-start">
