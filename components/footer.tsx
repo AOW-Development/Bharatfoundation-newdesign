@@ -27,22 +27,28 @@ export default function Footer() {
             </h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/impact" className="hover:text-gray-300">
+                <Link href="/our-work#impact" className="hover:text-gray-300">
                   Impact
                 </Link>
               </li>
               <li>
-                <Link href="/womens-report" className="hover:text-gray-300">
+                <Link
+                  href="/our-work#womens-report"
+                  className="hover:text-gray-300"
+                >
                   Women's Report
                 </Link>
               </li>
               <li>
-                <Link href="/grant" className="hover:text-gray-300">
+                <Link href="/our-work#grants" className="hover:text-gray-300">
                   Grant
                 </Link>
               </li>
               <li>
-                <Link href="/initiatives" className="hover:text-gray-300">
+                <Link
+                  href="/our-work#initiatives"
+                  className="hover:text-gray-300"
+                >
                   Simply Periods, Roots, Smiles
                 </Link>
               </li>
@@ -56,22 +62,34 @@ export default function Footer() {
             </h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/volunteer" className="hover:text-gray-300">
+                <Link
+                  href="/get-involved#volunteer"
+                  className="hover:text-gray-300"
+                >
                   Volunteer
                 </Link>
               </li>
               <li>
-                <Link href="/donate" className="hover:text-gray-300">
+                <Link
+                  href="/get-involved#donate"
+                  className="hover:text-gray-300"
+                >
                   Donate
                 </Link>
               </li>
               <li>
-                <Link href="/partner" className="hover:text-gray-300">
+                <Link
+                  href="/get-involved#partner"
+                  className="hover:text-gray-300"
+                >
                   Partner with us
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="hover:text-gray-300">
+                <Link
+                  href="/get-involved#careers"
+                  className="hover:text-gray-300"
+                >
                   Careers
                 </Link>
               </li>
@@ -85,22 +103,22 @@ export default function Footer() {
             </h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/tutorials" className="hover:text-gray-300">
+                <Link href="/about#tutorials" className="hover:text-gray-300">
                   In-Depth Tutorials
                 </Link>
               </li>
               <li>
-                <Link href="/insights" className="hover:text-gray-300">
+                <Link href="/about#insights" className="hover:text-gray-300">
                   Expert Insights
                 </Link>
               </li>
               <li>
-                <Link href="/events" className="hover:text-gray-300">
+                <Link href="/about#events" className="hover:text-gray-300">
                   Live Events and Coverage
                 </Link>
               </li>
               <li>
-                <Link href="/fitness" className="hover:text-gray-300">
+                <Link href="/about#fitness" className="hover:text-gray-300">
                   Fitness and Wellness
                 </Link>
               </li>
