@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden">
+    <section className="relative pt-20 min-h-[calc(100vh-80px)] w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
