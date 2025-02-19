@@ -16,13 +16,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-700 px-12 text-white">
+    <footer className="bg-gray-700 px-28 text-sm text-white">
       <div className="container mx-auto px-4 pt-12 pb-6">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Our Work Section */}
           <div>
-            <h2 className="text-xl font-bold mb-4 border-b border-gray-500 pb-2">
+            <h2 className="text-lg font-bold mb-4 border-b border-gray-500 pb-2">
               OUR WORK
             </h2>
             <ul className="space-y-2">
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Get Involved Section */}
           <div>
-            <h2 className="text-xl font-bold mb-4 border-b border-gray-500 pb-2">
+            <h2 className="text-lg font-bold mb-4 border-b border-gray-500 pb-2">
               GET INVOLVED
             </h2>
             <ul className="space-y-2">
@@ -98,7 +98,7 @@ export default function Footer() {
 
           {/* About Us Section */}
           <div>
-            <h2 className="text-xl font-bold mb-4 border-b border-gray-500 pb-2">
+            <h2 className="text-lg font-bold mb-4 border-b border-gray-500 pb-2">
               ABOUT US
             </h2>
             <ul className="space-y-2">
@@ -127,7 +127,7 @@ export default function Footer() {
 
           {/* Main Office Section */}
           <div>
-            <h2 className="text-xl font-bold mb-4 border-b border-gray-500 pb-2">
+            <h2 className="text-lg font-bold mb-4 border-b border-gray-500 pb-2">
               MAIN OFFICE
             </h2>
             <address className="not-italic">
