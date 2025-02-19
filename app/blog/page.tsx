@@ -34,12 +34,11 @@ export default function BlogPage() {
       </section> */}
 
       <Banner
-        imageUrl="/images/home_banner.png"
-        heading=" Welcome to Bharat Sports Foundation"
-        paragraph=" Your ultimate destination for everything related to physical
-                    education and sports"
-        buttonText="Donate Here"
-        buttonLink="/donate"
+        imageUrl="/images/blogbanner.jpg"
+        heading=""
+        paragraph=""
+        // buttonText="Donate Here"
+        // buttonLink="/donate"
       />
       <div className="flex-grow bg-gray-50 py-12">
         <div className="container mx-auto px-4">

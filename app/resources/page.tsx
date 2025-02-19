@@ -36,12 +36,11 @@ export default function ResourcesPage() {
       </section> */}
 
       <Banner
-        imageUrl="/images/home_banner.png"
-        heading=" Welcome to Bharat Sports Foundation"
-        paragraph=" Your ultimate destination for everything related to physical
-                            education and sports"
-        buttonText="Donate Here"
-        buttonLink="/donate"
+        imageUrl="/images/resourcesbanner.webp"
+        heading=""
+        paragraph=""
+        // buttonText="Donate Here"
+        // buttonLink="/donate"
       />
 
       {/* Main Content */}

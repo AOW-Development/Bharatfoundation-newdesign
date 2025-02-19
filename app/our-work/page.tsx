@@ -33,7 +33,7 @@ export default function OurWorkPage() {
       </section> */}
 
       <Banner
-        imageUrl="/images/home_banner.png"
+        imageUrl="/images/ourworkbanner.jpg"
         heading=" Welcome to Bharat Sports Foundation"
         paragraph=" Your ultimate destination for everything related to physical
                             education and sports"

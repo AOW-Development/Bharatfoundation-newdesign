@@ -41,12 +41,11 @@ export default function WhatWeDoPage() {
       </section> */}
 
       <Banner
-        imageUrl="/images/home_banner.png"
-        heading=" Welcome to Bharat Sports Foundation"
-        paragraph=" Your ultimate destination for everything related to physical
-                    education and sports"
-        buttonText="Donate Here"
-        buttonLink="/donate"
+        imageUrl="/images/whatwedobanner.jpg"
+        heading=""
+        paragraph=""
+        // buttonText="Donate Here"
+        // buttonLink="/donate"
       />
 
       {/* Mission & Vision Section */}

@@ -131,12 +131,10 @@ export default function MonthlyDonation() {
           </div>
         </div>
       </section> */}
-
       <Banner
-        imageUrl="/images/home_banner.png"
-        heading=" Welcome to Bharat Sports Foundation"
-        paragraph=" Your ultimate destination for everything related to physical
-                    education and sports"
+        imageUrl="/images/donationbanner.png"
+        heading="Want to be a Volunteer ? Select Your Donation Choice& Amount"
+        paragraph="Feel free to go ahead and join us in celebrating the achievement of success all-together forming a dynamic team"
         buttonText="Donate Here"
         buttonLink="/donate"
       />

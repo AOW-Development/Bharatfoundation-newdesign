@@ -9,11 +9,14 @@ import {
   ArrowUp,
   HelpCircle,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const router = useRouter();
 
   return (
     <footer className="bg-gray-700 px-28 text-sm text-white">
@@ -178,7 +181,10 @@ export default function Footer() {
 
         {/* Help and Scroll to Top Buttons */}
         <div className="fixed bottom-8 right-8 flex flex gap-4">
-          <button className="bg-white text-green-500 px-6 py-2 rounded-md font-semibold flex items-center gap-2">
+          <button
+            onClick={() => router.push("/contact")}
+            className="bg-white text-green-500 px-6 py-2 rounded-md font-semibold flex items-center gap-2"
+          >
             <HelpCircle className="h-5 w-5" />
             Help?
           </button>

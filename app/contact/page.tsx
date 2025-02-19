@@ -46,15 +46,14 @@ export default function ContactPage() {
         </div>
       </section> */}
       <Banner
-        imageUrl="/images/home_banner.png"
-        heading=" Welcome to Bharat Sports Foundation"
-        paragraph=" Your ultimate destination for everything related to physical
-                    education and sports"
-        buttonText="Donate Here"
-        buttonLink="/donate"
+        imageUrl="/images/contactusbanner.jpg"
+        heading=""
+        paragraph=""
+        // buttonText="Donate Here"
+        // buttonLink="/donate"
       />
       {/* Contact Section */}
-      <section className="py-16">
+      <section className="p-32">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Information */}

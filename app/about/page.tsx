@@ -31,7 +31,7 @@ export default function AboutPage() {
       </section> */}
 
       <Banner
-        imageUrl="/images/home_banner.png"
+        imageUrl="/images/aboutusbanner.jpg"
         heading=" Welcome to Bharat Sports Foundation"
         paragraph=" Your ultimate destination for everything related to physical
                     education and sports"
