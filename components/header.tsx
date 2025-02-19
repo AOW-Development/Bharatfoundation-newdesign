@@ -16,14 +16,17 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full shadow-sm z-50">
-      <div className="container mx-auto px-4">
-        <nav className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 shadow-sm">
+      <div className="container mx-auto px-12">
+        <nav className="flex items-center justify-between h-20 relative">
+          {/* Background strip */}
+          <div className="absolute inset-0 bg-gray-100 h-8 top-1/2 mx-6 -translate-y-1/2" />
+
+          <div className="flex-shrink-0 z-10">
+            <Link href="/">
               <Image
                 src="/images/logo_bsf.png"
-                alt="Global Sports Foundation Logo"
+                alt="Bharat Sports Foundation Logo"
                 width={80}
                 height={80}
                 className="h-16 w-16"
@@ -31,30 +34,33 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center w-full bg-white justify-between">
+          <div className="hidden md:flex items-center justify-center absolute left-0 right-0 mx-16 h-8 z-0">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`px-4 py-2 ${
+                className={`mx-12 py-1 px-4 text-sm mx-2 font-bold ${
                   pathname === item.href
-                    ? "bg-[#B7E4A7] text-black font-medium rounded"
+                    ? "bg-[#B7E4A7] text-black"
                     : "text-black hover:text-gray-600"
                 }`}
               >
                 {item.label}
               </Link>
             ))}
+          </div>
+
+          <div className="hidden md:block z-10">
             <Link
               href="/donate"
-              className="px-6 py-2 bg-[#B7E4A7] text-black font-bold rounded hover:bg-[#a5d695] transition-colors"
+              className="px-6 py-3 bg-[#B7E4A7] text-black font-bold text-sm hover:bg-[#a5d695] transition-colors"
             >
-              DONATE HERE
+              DONATE NOW
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden p-2">
+          <button className="md:hidden p-2 z-10">
             <svg
               className="h-6 w-6"
               fill="none"

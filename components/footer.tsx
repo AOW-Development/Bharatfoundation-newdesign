@@ -16,7 +16,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-700 text-white">
+    <footer className="bg-gray-700 px-12 text-white">
       <div className="container mx-auto px-4 pt-12 pb-6">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -177,7 +177,7 @@ export default function Footer() {
         </div>
 
         {/* Help and Scroll to Top Buttons */}
-        <div className="fixed bottom-8 right-8 flex flex-col gap-4">
+        <div className="fixed bottom-8 right-8 flex flex gap-4">
           <button className="bg-white text-green-500 px-6 py-2 rounded-md font-semibold flex items-center gap-2">
             <HelpCircle className="h-5 w-5" />
             Help?
