@@ -107,7 +107,10 @@ export default function WhatWeDo() {
                 galley of type and scrambled it to make a type specimen book.
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry&apos;s standard
-                dummy
+                dummy.when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. Lorem Ipsum is simply
+                dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the industry&apos;s standard dummy
               </p>
               <button className="flex items-center gap-2 font-medium text-sm">
                 Read More
