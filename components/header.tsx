@@ -16,20 +16,20 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-50 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 shadow-sm  pt-8">
       <div className="container mx-auto px-12">
         <nav className="flex items-center justify-between h-20 relative">
           {/* Background strip */}
-          <div className="absolute inset-0 bg-gray-100 h-8 top-1/2 mx-6 -translate-y-1/2" />
+          <div className="absolute inset-0 bg-gray-100 h-12 top-1/2 mx-6 -translate-y-1/2" />
 
           <div className="flex-shrink-0 z-10">
             <Link href="/">
               <Image
                 src="/images/revisedlogo_bsf.svg"
                 alt="Bharat Sports Foundation Logo"
-                width={80}
-                height={80}
-                className="h-16 w-16"
+                width={150}
+                height={150}
+                className="h-28 w-28"
               />
             </Link>
           </div>
@@ -53,7 +53,7 @@ export default function Header() {
           <div className="hidden md:block z-10">
             <Link
               href="/donate"
-              className="px-6 py-3 bg-[#B7E4A7] text-black font-bold text-sm hover:bg-[#a5d695] transition-colors"
+              className="px-6 py-6 bg-[#B7E4A7] text-black font-bold text-sm hover:bg-[#a5d695] transition-colors"
             >
               DONATE NOW
             </Link>

@@ -42,7 +42,7 @@ export default function WhatWeDo() {
           <div className="space-y-8">
             <div className="rounded-lg overflow-hidden">
               <Image
-                src="/images/whatwedo.jpg"
+                src="/images/whatwedo-1.png"
                 alt="playing sports"
                 width={400}
                 height={300}
