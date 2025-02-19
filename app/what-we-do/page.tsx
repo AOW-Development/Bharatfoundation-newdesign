@@ -167,7 +167,7 @@ export default function WhatWeDoPage() {
             </div>
             <div className="relative h-64 md:h-full">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135700-5rddfhSA4B0CDSEQo6Djc8JFPQqbd7.png"
+                src="/images/36f02fee745bdf45fe3a56e6ad0882e9.png"
                 alt="Sports collage"
                 fill
                 className="object-cover rounded-lg"

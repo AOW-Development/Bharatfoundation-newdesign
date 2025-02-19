@@ -78,7 +78,7 @@ export default function ResourcesPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48">
                     <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20140023-pGMNSi2ahvaUAVplpOoSPrxxfdzk4f.png"
+                      src="/images/4243ea019ae45c91edd4fc7bc74bae3c.png"
                       alt="Runner at sunset"
                       fill
                       className="object-cover"
@@ -102,7 +102,7 @@ export default function ResourcesPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48">
                     <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20140023-pGMNSi2ahvaUAVplpOoSPrxxfdzk4f.png"
+                      src="/images/46f59acc05e30e01d3b90c82d79adcf1.png"
                       alt="Gym equipment"
                       fill
                       className="object-cover"
@@ -126,7 +126,7 @@ export default function ResourcesPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48">
                     <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20140023-pGMNSi2ahvaUAVplpOoSPrxxfdzk4f.png"
+                      src="/images/9dc6bed21dc874070eea4c2bf77c3f01.png"
                       alt="Nutritionist consultation"
                       fill
                       className="object-cover"
@@ -150,7 +150,7 @@ export default function ResourcesPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48">
                     <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20140023-pGMNSi2ahvaUAVplpOoSPrxxfdzk4f.png"
+                      src="/images/c0df94c2b54808754c37c83123efb985.png"
                       alt="Group of diverse people with certificates"
                       fill
                       className="object-cover"
