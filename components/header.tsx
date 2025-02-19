@@ -25,7 +25,7 @@ export default function Header() {
           <div className="flex-shrink-0 z-10">
             <Link href="/">
               <Image
-                src="/images/logo_bsf.png"
+                src="/images/revisedlogo_bsf.svg"
                 alt="Bharat Sports Foundation Logo"
                 width={80}
                 height={80}
