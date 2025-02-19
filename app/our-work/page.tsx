@@ -60,7 +60,7 @@ export default function OurWorkPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135902-wqDEDwrsN4TJ7gBvX7pwZ85gXVAQyU.png"
+                  src="/images/a352d9d50f6ec0297ab6b9ff466f1ae7.png"
                   alt="Girls in classroom learning about menstrual health"
                   fill
                   className="object-cover"
@@ -77,7 +77,7 @@ export default function OurWorkPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135902-wqDEDwrsN4TJ7gBvX7pwZ85gXVAQyU.png"
+                  src="/images/881fd11f4e32051541024d1f749b9348.png"
                   alt="People planting trees"
                   fill
                   className="object-cover"
@@ -95,7 +95,7 @@ export default function OurWorkPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135902-wqDEDwrsN4TJ7gBvX7pwZ85gXVAQyU.png"
+                  src="/images/c04c63db05ff0b2d71821c65cbb33397.png"
                   alt="Happy children participating in sports"
                   fill
                   className="object-cover"
@@ -121,7 +121,7 @@ export default function OurWorkPage() {
             <Card>
               <div className="relative h-48">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135849-qLW8Bklb1KaTpWj409xGyzLrbj8u8C.png"
+                  src="/images/5344c1f894031da92a2f60f9086a33601.png"
                   alt="Athletes running"
                   fill
                   className="object-cover"
@@ -138,7 +138,7 @@ export default function OurWorkPage() {
             <Card>
               <div className="relative h-48">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135849-qLW8Bklb1KaTpWj409xGyzLrbj8u8C.png"
+                  src="/images/ddceedefb3e6d9cf35fee9a3e57db879.png"
                   alt="Youth sports program"
                   fill
                   className="object-cover"
@@ -155,7 +155,7 @@ export default function OurWorkPage() {
             <Card>
               <div className="relative h-48">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20135849-qLW8Bklb1KaTpWj409xGyzLrbj8u8C.png"
+                  src="/images/b03b7c43e5128f277e02711417f55502.png"
                   alt="Women athletes training"
                   fill
                   className="object-cover"
