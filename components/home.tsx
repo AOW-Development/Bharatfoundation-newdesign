@@ -18,9 +18,9 @@ export default function Home() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid md:grid-cols-2 gap-8 p-12 mt-12 items-center">
           <div className="text-white space-y-6">
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-3xl font-bold">
               Welcome to
               <span className="block mt-2">Bharat Sports Foundation</span>
             </h1>

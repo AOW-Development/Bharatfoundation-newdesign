@@ -26,7 +26,7 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className="py-16 px-4">
+    <section className="py-16 px-16 mx-12">
       <div className="container mx-auto">
         {/* What We Do Section */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">

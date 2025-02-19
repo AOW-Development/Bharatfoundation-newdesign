@@ -4,12 +4,20 @@ import WhatWeDo from "@/components/what-we-do";
 import OurProgram from "@/components/our-program";
 import VolunteerStats from "@/components/volunteer-stats";
 import Footer from "@/components/footer";
+import Banner from "@/components/banner";
 
 export default function Page() {
   return (
     <main>
       <Header />
-      <HomePage />
+      <Banner
+        imageUrl="/images/home_banner.png"
+        heading=" Welcome to Bharat Sports Foundation"
+        paragraph=" Your ultimate destination for everything related to physical
+              education and sports"
+        buttonText="Donate Here"
+        buttonLink="/donate"
+      />{" "}
       <WhatWeDo />
       <OurProgram />
       <VolunteerStats />
