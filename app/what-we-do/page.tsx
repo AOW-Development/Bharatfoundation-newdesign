@@ -11,6 +11,7 @@ import {
   Briefcase,
   Building2,
 } from "lucide-react";
+import Banner from "@/components/banner";
 
 export default function WhatWeDoPage() {
   return (
@@ -18,7 +19,7 @@ export default function WhatWeDoPage() {
       <Header />
 
       {/* Banner Section */}
-      <section className="relative pt-20 h-[40vh] w-full">
+      {/* <section className="relative pt-20 h-[40vh] w-full">
         <div className="absolute inset-0 z-0">
           <Image
             src="/what-we-do-banner.jpg"
@@ -37,7 +38,16 @@ export default function WhatWeDoPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <Banner
+        imageUrl="/images/home_banner.png"
+        heading=" Welcome to Bharat Sports Foundation"
+        paragraph=" Your ultimate destination for everything related to physical
+                    education and sports"
+        buttonText="Donate Here"
+        buttonLink="/donate"
+      />
 
       {/* Mission & Vision Section */}
       <section className="py-16 bg-gray-50">

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ScrollText, Waves, Award, Settings, ChevronRight } from "lucide-react";
+import Banner from "@/components/banner";
 
 export default function ResourcesPage() {
   return (
@@ -13,7 +14,7 @@ export default function ResourcesPage() {
       <Header />
 
       {/* Banner Section */}
-      <section className="relative pt-20 h-[40vh] w-full">
+      {/* <section className="relative pt-20 h-[40vh] w-full">
         <div className="absolute inset-0 z-0">
           <Image
             src="/resources-banner.jpg"
@@ -32,7 +33,16 @@ export default function ResourcesPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <Banner
+        imageUrl="/images/home_banner.png"
+        heading=" Welcome to Bharat Sports Foundation"
+        paragraph=" Your ultimate destination for everything related to physical
+                            education and sports"
+        buttonText="Donate Here"
+        buttonLink="/donate"
+      />
 
       {/* Main Content */}
       <section className="py-16">

@@ -13,6 +13,7 @@ import {
   Home,
   ArrowRight,
 } from "lucide-react";
+import Banner from "@/components/banner";
 
 export default function GetInvolvedPage() {
   return (
@@ -20,7 +21,7 @@ export default function GetInvolvedPage() {
       <Header />
 
       {/* Banner Section */}
-      <section className="relative pt-20 h-[40vh] w-full">
+      {/* <section className="relative pt-20 h-[40vh] w-full">
         <div className="absolute inset-0 z-0">
           <Image
             src="/get-involved-banner.jpg"
@@ -39,8 +40,16 @@ export default function GetInvolvedPage() {
             <p className="text-xl opacity-90">Join us in making a difference</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
+      <Banner
+        imageUrl="/images/home_banner.png"
+        heading=" Welcome to Bharat Sports Foundation"
+        paragraph=" Your ultimate destination for everything related to physical
+                    education and sports"
+        buttonText="Donate Here"
+        buttonLink="/donate"
+      />
       {/* Volunteer Section */}
       <section id="volunteer" className="py-16 bg-[#B7E4A7] scroll-mt-20">
         <div className="container mx-auto px-4">

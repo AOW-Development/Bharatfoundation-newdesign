@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Image from "next/image";
+import Banner from "@/components/banner";
 
 export default function AboutPage() {
   return (
@@ -8,7 +9,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Banner Section */}
-      <section className="relative pt-20 h-[40vh] w-full">
+      {/* <section className="relative pt-20 h-[40vh] w-full">
         <div className="absolute inset-0 z-0">
           <Image
             src="/about-banner.jpg"
@@ -27,8 +28,16 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
+      <Banner
+        imageUrl="/images/home_banner.png"
+        heading=" Welcome to Bharat Sports Foundation"
+        paragraph=" Your ultimate destination for everything related to physical
+                    education and sports"
+        buttonText="Donate Here"
+        buttonLink="/donate"
+      />
       {/* In-Depth Tutorials Section */}
       <section id="tutorials" className="py-16">
         <div className="container mx-auto px-4">
@@ -36,22 +45,19 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                image:
-                  "/images/8deb2f7f40c999bf95e59c8d627037d7.png",
+                image: "/images/8deb2f7f40c999bf95e59c8d627037d7.png",
                 title: "Basketball Techniques",
                 description:
                   "Learn advanced basketball dribbling techniques with our expert coaches",
               },
               {
-                image:
-                  "/images/d2338b5fe7ec6b767a6f106bbcee1227.png",
+                image: "/images/d2338b5fe7ec6b767a6f106bbcee1227.png",
                 title: "Yoga & Stretching",
                 description:
                   "Explore the benefits of yoga with our guided sessions for all levels",
               },
               {
-                image:
-                  "/images/e353b2fb29a64134a25fec74dc42d9ea.png",
+                image: "/images/e353b2fb29a64134a25fec74dc42d9ea.png",
                 title: "Weightlifting Mastery",
                 description:
                   "Master weightlifting techniques with our step-by-step tutorials",

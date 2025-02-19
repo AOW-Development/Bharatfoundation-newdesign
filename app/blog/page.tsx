@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import Banner from "@/components/banner";
 
 export default function BlogPage() {
   return (
@@ -10,7 +11,7 @@ export default function BlogPage() {
       <Header />
 
       {/* Banner Section */}
-      <section className="relative pt-20 h-[40vh] w-full">
+      {/* <section className="relative pt-20 h-[40vh] w-full">
         <div className="absolute inset-0 z-0">
           <Image
             src="/blog-banner.jpg"
@@ -30,8 +31,16 @@ export default function BlogPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
+      <Banner
+        imageUrl="/images/home_banner.png"
+        heading=" Welcome to Bharat Sports Foundation"
+        paragraph=" Your ultimate destination for everything related to physical
+                    education and sports"
+        buttonText="Donate Here"
+        buttonLink="/donate"
+      />
       <div className="flex-grow bg-gray-50 py-12">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-8">
@@ -100,22 +109,19 @@ export default function BlogPage() {
                       title: "Basketball Championship Highlights",
                       description:
                         "Catch up on the thrilling moments from this year's championship games.",
-                      image:
-                        "/images/210876708e0f735a8d9a625bf7cd372d.png",
+                      image: "/images/210876708e0f735a8d9a625bf7cd372d.png",
                     },
                     {
                       title: "Coaching Tips for Young Athletes",
                       description:
                         "Learn essential coaching strategies to nurture young talents.",
-                      image:
-                        "/images/ee82f3120d79366a4c871191b1b791a5.png",
+                      image: "/images/ee82f3120d79366a4c871191b1b791a5.png",
                     },
                     {
                       title: "Marathon: A Test of Endurance",
                       description:
                         "Experience the excitement and challenges of marathon running.",
-                      image:
-                        "/images/fc80c050e7a77a19c613163fdc10e533.png",
+                      image: "/images/fc80c050e7a77a19c613163fdc10e533.png",
                     },
                   ].map((post, index) => (
                     <div key={index} className="flex gap-6 items-start">

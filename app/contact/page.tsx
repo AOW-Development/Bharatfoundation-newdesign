@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Share2, Instagram, Twitter } from "lucide-react";
 import { useState } from "react";
+import Banner from "@/components/banner";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -26,7 +27,7 @@ export default function ContactPage() {
       <Header />
 
       {/* Banner Section */}
-      <section className="relative pt-20 h-[40vh] w-full">
+      {/* <section className="relative pt-20 h-[40vh] w-full">
         <div className="absolute inset-0 z-0">
           <Image
             src="/contact-banner.jpg"
@@ -43,8 +44,15 @@ export default function ContactPage() {
             <p className="text-xl opacity-90">Get in touch with our team</p>
           </div>
         </div>
-      </section>
-
+      </section> */}
+      <Banner
+        imageUrl="/images/home_banner.png"
+        heading=" Welcome to Bharat Sports Foundation"
+        paragraph=" Your ultimate destination for everything related to physical
+                    education and sports"
+        buttonText="Donate Here"
+        buttonLink="/donate"
+      />
       {/* Contact Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">

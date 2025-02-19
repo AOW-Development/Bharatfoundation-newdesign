@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import { CreditCard, MapPin, Mail, Phone, DollarSign } from "lucide-react";
 import { useState } from "react";
+import Banner from "@/components/banner";
 
 export default function OneTimeDonation() {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
@@ -19,7 +20,7 @@ export default function OneTimeDonation() {
       <Header />
 
       {/* Banner Section */}
-      <section className="relative pt-20 h-[40vh] w-full">
+      {/* <section className="relative pt-20 h-[40vh] w-full">
         <div className="absolute inset-0 z-0">
           <Image
             src="/donate-banner.jpg"
@@ -40,7 +41,16 @@ export default function OneTimeDonation() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <Banner
+        imageUrl="/images/home_banner.png"
+        heading=" Welcome to Bharat Sports Foundation"
+        paragraph=" Your ultimate destination for everything related to physical
+                            education and sports"
+        buttonText="Donate Here"
+        buttonLink="/donate"
+      />
 
       {/* Donation Form Section */}
       <section className="flex-grow bg-gray-50 py-12">
