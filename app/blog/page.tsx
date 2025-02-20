@@ -34,7 +34,7 @@ export default function BlogPage() {
       </section> */}
 
       <Banner
-        imageUrl="/images/blogbanner.jpg"
+        mediaUrl="/images/ourblog-vid.mp4"
         heading=""
         paragraph=""
         // buttonText="Donate Here"

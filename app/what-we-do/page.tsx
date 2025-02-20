@@ -41,7 +41,7 @@ export default function WhatWeDoPage() {
       </section> */}
 
       <Banner
-        imageUrl="/images/whatwedobanner.jpg"
+        mediaUrl="/images/whatwedo.mp4"
         heading=""
         paragraph=""
         // buttonText="Donate Here"

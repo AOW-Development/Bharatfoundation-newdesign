@@ -46,7 +46,7 @@ export default function ContactPage() {
         </div>
       </section> */}
       <Banner
-        imageUrl="/images/contactusbanner.jpg"
+        mediaUrl="/images/contactusbanner.jpg"
         heading=""
         paragraph=""
         // buttonText="Donate Here"

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const programs = [
   {
-    image: "/images/ourprogram-4.jpg",
+    image: "/images/ourprogram-6.jpg",
     title: "Lorem Ipsum is simply dummy",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",

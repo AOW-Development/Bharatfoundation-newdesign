@@ -36,7 +36,7 @@ export default function ResourcesPage() {
       </section> */}
 
       <Banner
-        imageUrl="/images/resourcesbanner.webp"
+        mediaUrl="/images/resourcesbanner.webp"
         heading=""
         paragraph=""
         // buttonText="Donate Here"

@@ -43,7 +43,7 @@ export default function GetInvolvedPage() {
       </section> */}
 
       <Banner
-        imageUrl="/images/getinvolvedBanner.jpg"
+        mediaUrl="/images/getinvolvedBanner.jpg"
         heading="Welcome to Bharat Sports Foundation"
         paragraph=" Your ultimate destination for everything related to physical
                     education and sports"

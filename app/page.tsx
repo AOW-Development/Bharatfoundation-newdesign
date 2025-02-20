@@ -11,7 +11,7 @@ export default function Page() {
     <main>
       <Header />
       <Banner
-        imageUrl="/images/home_banner.png"
+        mediaUrl="/images/home_banner.png"
         heading=" Welcome to Bharat Sports Foundation"
         paragraph=" Your ultimate destination for everything related to physical
               education and sports"
