@@ -21,7 +21,7 @@ export default function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white sm:bg-transparent shadow-sm pt-4 md:pt-8">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white sm:bg-transparent shadow-sm md:pt-4 py-4 md:pt-8">
       <div className="container mx-auto px-4 md:px-12">
         <nav className="flex items-center justify-between h-16 md:h-20 relative">
           {/* Background strip (visible only on desktop) */}
@@ -43,7 +43,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Heading */}
-          <h1 className="text-lg font-bold text-center absolute left-1/2 transform -translate-x-1/2 md:hidden">
+          <h1 className="text-lg font-bold md:text-black text-center absolute left-1/2 transform -translate-x-1/2 md:hidden">
             Bharat Sports Foundation
           </h1>
 
