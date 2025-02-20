@@ -12,7 +12,6 @@ export default function ResourcesPage() {
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
-
       <Banner
         imageUrl="/images/resourcesbanner.webp"
         videoUrl="/images/resources-banner.mp4"
@@ -21,7 +20,7 @@ export default function ResourcesPage() {
       />
 
       {/* Main Content */}
-      <section className="py-16 px-16">
+      <section className="py-16 md:px-16 px-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-8">
             {/* Sidebar */}
@@ -158,10 +157,10 @@ export default function ResourcesPage() {
               </div>
 
               {/* Reading Section */}
-              <div className="flex">
-                <div className="mt-12">
+              <div className="flex flex-col md:flex-row">
+                <div className="md:mt-12">
                   <h2 className="text-2xl font-bold mb-6">Reading</h2>
-                  <div className="flex gap-6">
+                  <div className="flex md:gap-6">
                     {[
                       { icon: ScrollText, label: "Lorem ipsum" },
                       { icon: Waves, label: "Listening to" },

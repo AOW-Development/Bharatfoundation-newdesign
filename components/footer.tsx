@@ -19,7 +19,7 @@ export default function Footer() {
   const router = useRouter();
 
   return (
-    <footer className="bg-gray-700 px-28 text-sm text-white">
+    <footer className="bg-gray-700 px-6 md:px-28 text-sm text-white">
       <div className="container mx-auto px-4 pt-12 pb-6">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">

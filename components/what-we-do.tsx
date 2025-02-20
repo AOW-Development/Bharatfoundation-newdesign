@@ -35,7 +35,7 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className="pt-16 px-24 md:px-12 lg:px-20">
+    <section className="pt-16 px-6 md:px-12 lg:px-20">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Image and Mission */}

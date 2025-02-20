@@ -26,7 +26,7 @@ export default function VolunteerStats() {
         />
         <div className="absolute inset-0 flex items-center w-full">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl space-y-4 bg-white/80 p-12 mx-auto">
+            <div className="max-w-6xl space-y-4 bg-white/80 md:p-12 p-6 mx-auto">
               <h2 className="text-2xl font-bold text-black">
                 Want to be a Volunteer?
               </h2>
