@@ -21,13 +21,13 @@ export default function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white sm:bg-transparent shadow-sm  pt-4 md:pt-8">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white sm:bg-transparent shadow-sm pt-4 md:pt-8">
       <div className="container mx-auto px-4 md:px-12">
         <nav className="flex items-center justify-between h-16 md:h-20 relative">
           {/* Background strip (visible only on desktop) */}
           <div className="absolute inset-0 bg-gray-100 h-12 top-1/2 mx-6 -translate-y-1/2 hidden md:block" />
 
-          <div className="flex-shrink-0 z-10">
+          <div className="flex items-center z-10">
             <Link href="/">
               <Image
                 src="/images/revisedlogo_bsf.svg"
@@ -37,6 +37,9 @@ export default function Header() {
                 className="h-16 w-16 md:h-28 md:w-28"
               />
             </Link>
+            {/* <h1 className="text-lg font-bold ml-4 hidden md:block bg-[#ADE78A] text-[#aec8fa]">
+              Bharat Sports Foundation
+            </h1> */}
           </div>
 
           {/* Mobile Heading */}
@@ -50,7 +53,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`mx-12 py-1 px-4 text-sm mx-2 font-bold ${
+                className={`mx-12 py-1 px-6 text-sm mx-2 font-bold ${
                   pathname === item.href
                     ? "bg-[#B7E4A7] text-black"
                     : "text-black hover:text-gray-600"

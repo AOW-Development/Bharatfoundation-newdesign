@@ -13,35 +13,11 @@ export default function ResourcesPage() {
     <main className="min-h-screen flex flex-col">
       <Header />
 
-      {/* Banner Section */}
-      {/* <section className="relative pt-20 h-[40vh] w-full">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/resources-banner.jpg"
-            alt="Resources Banner"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
-        </div>
-        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
-          <div className="text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Resources</h1>
-            <p className="text-xl opacity-90">
-              Everything you need to succeed in sports
-            </p>
-          </div>
-        </div>
-      </section> */}
-
       <Banner
         imageUrl="/images/resourcesbanner.webp"
         videoUrl="/images/resources-banner.mp4"
         heading=""
         paragraph=""
-        // buttonText="Donate Here"
-        // buttonLink="/donate"
       />
 
       {/* Main Content */}
@@ -220,7 +196,7 @@ export default function ResourcesPage() {
                         className="relative w-24 h-24 rounded-lg overflow-hidden"
                       >
                         <Image
-                          src={src}
+                          src={src || "/placeholder.svg"}
                           alt={`Training ${index + 1}`}
                           fill
                           className="object-cover"

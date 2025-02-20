@@ -12,12 +12,11 @@ export default function Page() {
       <Header />
       <Banner
         imageUrl="/images/home_banner.png"
-        videoUrl="/images/home-banner.mp4"
+        videoUrl="/images/homebanner-vid.mp4"
         heading=" Welcome to Bharat Sports Foundation"
         paragraph=" Your ultimate destination for everything related to physical
               education and sports"
-        buttonText="Donate Here"
-        buttonLink="/donate"
+        buttons={[{ text: "Donate Here", link: "/donate" }]}
       />{" "}
       <WhatWeDo />
       <OurProgram />

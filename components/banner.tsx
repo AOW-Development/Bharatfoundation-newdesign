@@ -4,14 +4,18 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+interface ButtonProps {
+  text: string;
+  link: string;
+}
+
 interface BannerProps {
   mediaUrl?: string;
   imageUrl?: string;
   videoUrl?: string;
   heading?: string;
   paragraph?: string;
-  buttonText?: string;
-  buttonLink?: string;
+  buttons?: ButtonProps[];
 }
 
 export default function Banner({
@@ -20,8 +24,7 @@ export default function Banner({
   videoUrl,
   heading,
   paragraph,
-  buttonText,
-  buttonLink,
+  buttons,
 }: BannerProps) {
   const [isVideo, setIsVideo] = useState(false);
 
@@ -84,13 +87,18 @@ export default function Banner({
             ))}
           </h1>
           <p className="text-xl opacity-90">{paragraph}</p>
-          {buttonText && buttonLink && (
-            <Link
-              href={buttonLink}
-              className="inline-block px-8 py-3 bg-[#B7E4A7] text-black font-bold rounded-md hover:bg-[#a5d695] transition-colors"
-            >
-              {buttonText}
-            </Link>
+          {buttons && buttons.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-4">
+              {buttons.map((button, index) => (
+                <Link
+                  key={index}
+                  href={button.link}
+                  className="inline-block px-8 py-3 bg-[#B7E4A7] text-black font-bold rounded-md hover:bg-[#a5d695] transition-colors"
+                >
+                  {button.text}
+                </Link>
+              ))}
+            </div>
           )}
         </div>
       </div>

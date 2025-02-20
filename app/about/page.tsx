@@ -35,8 +35,10 @@ export default function AboutPage() {
         heading=" Welcome to Bharat Sports Foundation"
         paragraph=" Your ultimate destination for everything related to physical
                     education and sports"
-        buttonText="Donate Here"
-        buttonLink="/donate"
+        buttons={[
+          { text: "Monthly Donation", link: "/monthly-donation" },
+          { text: "Onetime Donation", link: "/one-time-donation" },
+        ]}
       />
       {/* In-Depth Tutorials Section */}
       <section id="tutorials" className="py-16">

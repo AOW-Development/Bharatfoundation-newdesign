@@ -37,8 +37,13 @@ export default function OurWorkPage() {
         heading=" Welcome to Bharat Sports Foundation"
         paragraph=" Your ultimate destination for everything related to physical
                             education and sports"
-        buttonText="Donate Here"
-        buttonLink="/donate"
+        // buttonText="Donate Here"
+        // buttonLink="/donate"
+        // buttons={[
+        //   { text: "Learn More", link: "/about" },
+        //   { text: "Get Started", link: "/signup" },
+        //   { text: "Contact Us", link: "/contact" }
+        // ]}
       />
 
       {/* Grants Section */}

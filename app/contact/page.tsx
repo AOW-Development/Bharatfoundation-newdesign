@@ -57,7 +57,7 @@ export default function ContactPage() {
         videoUrl="/images/contactus-banner.mp4"
       />
       {/* Contact Section */}
-      <section className="p-32">
+      <section className="px-64 py-32">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Information */}

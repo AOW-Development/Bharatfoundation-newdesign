@@ -47,8 +47,10 @@ export default function OneTimeDonation() {
         mediaUrl="/images/donationbanner.png"
         heading="Want to be a Volunteer ? Select Your Donation Choice& Amount"
         paragraph="Feel free to go ahead and join us in celebrating the achievement of success all-together forming a dynamic team"
-        buttonText="Donate Here"
-        buttonLink="/donate"
+        buttons={[
+          { text: "Monthly Donation", link: "/monthly-donation" },
+          { text: "Onetime Donation", link: "/one-time-donation" },
+        ]}
       />
 
       {/* Donation Form Section */}
