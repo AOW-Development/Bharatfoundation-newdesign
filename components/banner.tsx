@@ -6,6 +6,8 @@ import Link from "next/link";
 
 interface BannerProps {
   mediaUrl?: string;
+  imageUrl?: string;
+  videoUrl?: string;
   heading?: string;
   paragraph?: string;
   buttonText?: string;
@@ -14,6 +16,8 @@ interface BannerProps {
 
 export default function Banner({
   mediaUrl,
+  imageUrl,
+  videoUrl,
   heading,
   paragraph,
   buttonText,
@@ -30,45 +34,47 @@ export default function Banner({
     }
   }, [mediaUrl]);
 
-  const defaultMedia = "/placeholder.svg";
+  const renderVideo = (src: string) => (
+    <video
+      src={src}
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+  );
+
+  const renderImage = (src: string) => (
+    <Image
+      src={src || "/placeholder.svg"}
+      alt="Banner background"
+      fill
+      className="object-cover"
+      priority
+    />
+  );
 
   return (
     <section className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden flex items-center justify-center">
       {/* Background Media */}
       <div className="absolute inset-0 z-0">
-        {mediaUrl ? (
-          isVideo ? (
-            <video
-              src={mediaUrl}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="object-cover w-full h-full"
-            />
-          ) : (
-            <Image
-              src={mediaUrl || "/placeholder.svg"}
-              alt="Banner background"
-              fill
-              className="object-cover"
-              priority
-            />
-          )
-        ) : (
-          <Image
-            src={defaultMedia || "/placeholder.svg"}
-            alt="Default banner background"
-            fill
-            className="object-cover"
-            priority
-          />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+        {/* Video Layer */}
+        {(videoUrl || (mediaUrl && isVideo)) &&
+          renderVideo(videoUrl || mediaUrl || "")}
+
+        {/* Image Overlay */}
+        <div className="absolute inset-0 z-10 opacity-70">
+          {(imageUrl || (mediaUrl && !isVideo)) &&
+            renderImage(imageUrl || mediaUrl || "")}
+        </div>
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/50 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container flex flex-col items-center justify-center text-center px-4 py-24 min-h-screen">
+      <div className="relative z-30 container flex flex-col items-center justify-center text-center px-4 py-24 min-h-screen">
         <div className="text-white space-y-6">
           <h1 className="text-3xl font-bold">
             {(heading || "").split("\n").map((line, index) => (

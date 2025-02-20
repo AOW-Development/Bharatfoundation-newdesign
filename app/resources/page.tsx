@@ -36,7 +36,8 @@ export default function ResourcesPage() {
       </section> */}
 
       <Banner
-        mediaUrl="/images/resourcesbanner.webp"
+        imageUrl="/images/resourcesbanner.webp"
+        videoUrl="/images/resources-banner.mp4"
         heading=""
         paragraph=""
         // buttonText="Donate Here"
@@ -44,7 +45,7 @@ export default function ResourcesPage() {
       />
 
       {/* Main Content */}
-      <section className="py-16">
+      <section className="py-16 px-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-8">
             {/* Sidebar */}
@@ -181,43 +182,52 @@ export default function ResourcesPage() {
               </div>
 
               {/* Reading Section */}
-              <div className="mt-12">
-                <h2 className="text-2xl font-bold mb-8">Reading</h2>
-                <div className="grid grid-cols-4 gap-4">
-                  {[
-                    { icon: ScrollText, label: "Lorem ipsum" },
-                    { icon: Waves, label: "Listening to" },
-                    { icon: Award, label: "Sports" },
-                    { icon: Settings, label: "Skill" },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col items-center justify-center bg-[#B7E4A7] rounded-full aspect-square p-4"
-                    >
-                      <item.icon className="h-8 w-8 mb-2" />
-                      <span className="text-sm text-center">{item.label}</span>
-                    </div>
-                  ))}
+              <div className="flex">
+                <div className="mt-12">
+                  <h2 className="text-2xl font-bold mb-6">Reading</h2>
+                  <div className="flex gap-6">
+                    {[
+                      { icon: ScrollText, label: "Lorem ipsum" },
+                      { icon: Waves, label: "Listening to" },
+                      { icon: Award, label: "Sports" },
+                      { icon: Settings, label: "Skill" },
+                    ].map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col items-center justify-center bg-[#B7E4A7] rounded-full w-24 h-24 p-4"
+                      >
+                        <item.icon className="h-8 w-8 mb-2" />
+                        <span className="text-sm text-center">
+                          {item.label}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Training Programs */}
-              <div className="mt-12">
-                <h2 className="text-2xl font-bold mb-8">Training Programs</h2>
-                <div className="grid grid-cols-4 gap-4">
-                  {Array.from({ length: 4 }).map((_, index) => (
-                    <div
-                      key={index}
-                      className="relative aspect-square rounded-lg overflow-hidden"
-                    >
-                      <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-18%20140023-pGMNSi2ahvaUAVplpOoSPrxxfdzk4f.png"
-                        alt={`Training program ${index + 1}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
+                {/* Training Programs Section */}
+                <div className="mt-12 md:ml-12">
+                  <h2 className="text-2xl font-bold mb-6">Training Programs</h2>
+                  <div className="flex gap-4">
+                    {[
+                      "/images/training-1.png",
+                      "/images/training-2.png",
+                      "/images/training-3.png",
+                      "/images/training-4.png",
+                    ].map((src, index) => (
+                      <div
+                        key={index}
+                        className="relative w-24 h-24 rounded-lg overflow-hidden"
+                      >
+                        <Image
+                          src={src}
+                          alt={`Training ${index + 1}`}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

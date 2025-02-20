@@ -45,12 +45,16 @@ export default function ContactPage() {
           </div>
         </div>
       </section> */}
-      <Banner
+      {/* <Banner
         mediaUrl="/images/contactusbanner.jpg"
         heading=""
         paragraph=""
         // buttonText="Donate Here"
         // buttonLink="/donate"
+      /> */}
+      <Banner
+        imageUrl="/images/contactusbanner.jpg"
+        videoUrl="/images/contactus-banner.mp4"
       />
       {/* Contact Section */}
       <section className="p-32">

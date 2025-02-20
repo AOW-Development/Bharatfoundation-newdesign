@@ -40,7 +40,7 @@ export default function BlogPage() {
         // buttonText="Donate Here"
         // buttonLink="/donate"
       />
-      <div className="flex-grow bg-gray-50 py-12">
+      <div className="flex-grow bg-gray-50 py-12 px-12">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Main Content Area */}

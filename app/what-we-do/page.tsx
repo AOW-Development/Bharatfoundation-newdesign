@@ -49,9 +49,9 @@ export default function WhatWeDoPage() {
       />
 
       {/* Mission & Vision Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 px-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto mb-12">
+          <div className=" mb-12">
             <h2 className="text-3xl font-bold mb-6">Our Mission & Vision</h2>
             <p className="text-gray-600">
               Our mission is to promote physical education and sports at all
@@ -167,7 +167,7 @@ export default function WhatWeDoPage() {
       </section>
 
       {/* Featured Program Section */}
-      <section className="py-16">
+      <section className="py-16 px-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div>
