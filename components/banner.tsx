@@ -44,7 +44,7 @@ export default function Banner({
       loop
       muted
       playsInline
-      className="absolute inset-0 w-full h-full object-cover"
+      className="w-full h-full object-cover"
     />
   );
 
@@ -59,41 +59,42 @@ export default function Banner({
   );
 
   return (
-    <section className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden flex items-center justify-center">
+    <section className="relative w-full overflow-hidden">
       {/* Background Media */}
-      <div className="absolute inset-0 z-0">
+      <div className="relative w-full h-[40vh] md:h-[calc(100vh-80px)]">
         {/* Video Layer */}
         {(videoUrl || (mediaUrl && isVideo)) &&
           renderVideo(videoUrl || mediaUrl || "")}
 
-        {/* Image Overlay */}
-        <div className="absolute inset-0 z-10 opacity-70">
-          {(imageUrl || (mediaUrl && !isVideo)) &&
-            renderImage(imageUrl || mediaUrl || "")}
-        </div>
+        {/* Image Layer */}
+        {(imageUrl || (mediaUrl && !isVideo)) && (
+          <div className="absolute inset-0">
+            {renderImage(imageUrl || mediaUrl || "")}
+          </div>
+        )}
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-30 container flex flex-col items-center justify-center text-center px-4 py-24 min-h-screen">
-        <div className="text-white space-y-6">
-          <h1 className="text-3xl font-bold">
+      <div className="relative z-10 container mx-auto px-4 py-8 md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-center">
+        <div className="text-center md:text-white space-y-6">
+          <h1 className="text-2xl md:text-3xl font-bold">
             {(heading || "").split("\n").map((line, index) => (
               <span key={index} className={index > 0 ? "block mt-2" : ""}>
                 {line}
               </span>
             ))}
           </h1>
-          <p className="text-xl opacity-90">{paragraph}</p>
+          <p className="text-lg md:text-xl opacity-90">{paragraph}</p>
           {buttons && buttons.length > 0 && (
             <div className="flex flex-wrap justify-center gap-4">
               {buttons.map((button, index) => (
                 <Link
                   key={index}
                   href={button.link}
-                  className="inline-block px-8 py-3 bg-[#B7E4A7] text-black font-bold rounded-md hover:bg-[#a5d695] transition-colors"
+                  className="inline-block px-6 py-2 md:px-8 md:py-3 bg-[#B7E4A7] text-black font-bold rounded-md hover:bg-[#a5d695] transition-colors"
                 >
                   {button.text}
                 </Link>

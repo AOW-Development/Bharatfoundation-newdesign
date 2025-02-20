@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -9,6 +9,21 @@ import { Menu, X } from "lucide-react";
 export default function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Check if dark mode is enabled
+    const darkModeMediaQuery = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+    setIsDarkMode(darkModeMediaQuery.matches);
+
+    // Listen for changes in color scheme
+    const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
+    darkModeMediaQuery.addEventListener("change", handleChange);
+
+    return () => darkModeMediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -21,11 +36,15 @@ export default function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white sm:bg-transparent shadow-sm md:pt-4 py-4 md:pt-8">
+    <header
+      className={`fixed top-0 left-0 right-0 w-full z-50 dark:bg-gray-900 shadow-sm md:pt-4 py-4 md:pt-8 ${
+        isDarkMode ? "dark" : ""
+      }`}
+    >
       <div className="container mx-auto px-4 md:px-12">
         <nav className="flex items-center justify-between h-16 md:h-20 relative">
           {/* Background strip (visible only on desktop) */}
-          <div className="absolute inset-0 bg-gray-100 h-12 top-1/2 mx-6 -translate-y-1/2 hidden md:block" />
+          <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 h-12 top-1/2 mx-6 -translate-y-1/2 hidden md:block" />
 
           <div className="flex items-center z-10">
             <Link href="/">
@@ -37,13 +56,10 @@ export default function Header() {
                 className="h-16 w-16 md:h-28 md:w-28"
               />
             </Link>
-            {/* <h1 className="text-lg font-bold ml-4 hidden md:block bg-[#ADE78A] text-[#aec8fa]">
-              Bharat Sports Foundation
-            </h1> */}
           </div>
 
           {/* Mobile Heading */}
-          <h1 className="text-lg font-bold md:text-black text-center absolute left-1/2 transform -translate-x-1/2 md:hidden">
+          <h1 className="text-lg font-bold text-[#a5d695] dark:text-[#a5d695] text-center absolute left-1/2 transform -translate-x-1/2 md:hidden">
             Bharat Sports Foundation
           </h1>
 
@@ -55,8 +71,8 @@ export default function Header() {
                 href={item.href}
                 className={`mx-12 py-1 px-6 text-sm mx-2 font-bold ${
                   pathname === item.href
-                    ? "bg-[#B7E4A7] text-black"
-                    : "text-black hover:text-gray-600"
+                    ? "bg-[#B7E4A7] text-black dark:text-white"
+                    : "text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300"
                 }`}
               >
                 {item.label}
@@ -67,7 +83,7 @@ export default function Header() {
           <div className="hidden md:block z-10">
             <Link
               href="/donate"
-              className="px-6 py-6 bg-[#B7E4A7] text-black font-bold text-sm hover:bg-[#a5d695] transition-colors"
+              className="px-6 py-6 bg-[#B7E4A7] text-black dark:text-white font-bold text-sm hover:bg-[#a5d695] transition-colors"
             >
               DONATE NOW
             </Link>
@@ -75,7 +91,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#B7E4A7] z-10"
+            className="md:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#B7E4A7] z-10"
             onClick={toggleMenu}
           >
             <span className="sr-only">Open main menu</span>
@@ -89,7 +105,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute left-0 right-0 bg-white z-50">
+          <div className="md:hidden absolute left-0 right-0 bg-white dark:bg-gray-900 z-50">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navItems.map((item) => (
                 <Link
@@ -97,8 +113,8 @@ export default function Header() {
                   href={item.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium ${
                     pathname === item.href
-                      ? "bg-[#B7E4A7] text-black"
-                      : "text-gray-700 hover:bg-gray-100 hover:text-black"
+                      ? "bg-[#B7E4A7] text-black dark:text-white"
+                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white"
                   }`}
                   onClick={toggleMenu}
                 >
@@ -107,7 +123,7 @@ export default function Header() {
               ))}
               <Link
                 href="/donate"
-                className="block px-3 py-2 rounded-md text-base font-medium bg-[#B7E4A7] text-black hover:bg-[#a5d695]"
+                className="block px-3 py-2 rounded-md text-base font-medium bg-[#B7E4A7] text-black dark:text-white hover:bg-[#a5d695]"
                 onClick={toggleMenu}
               >
                 DONATE NOW
