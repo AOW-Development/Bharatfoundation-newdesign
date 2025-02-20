@@ -93,7 +93,7 @@ export default function OneTimeDonation() {
                     <h3 className="font-bold mb-4">Payment Information</h3>
                     <div className="space-y-4">
                       <div className="grid grid-cols-4 gap-2">
-                        <Image
+                        {/* <Image
                           src="/visa.png"
                           alt="Visa"
                           width={60}
@@ -120,7 +120,7 @@ export default function OneTimeDonation() {
                           width={60}
                           height={40}
                           className="border p-2 rounded"
-                        />
+                        /> */}
                       </div>
                       <div className="flex gap-4">
                         <button className="flex-1 border rounded py-2 hover:bg-gray-50">

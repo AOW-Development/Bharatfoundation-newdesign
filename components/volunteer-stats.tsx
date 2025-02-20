@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Heart, Gift, Trophy } from "lucide-react";
-import { useInView } from "react-intersection-observer"; // Import hook for visibility detection
+import { useInView } from "react-intersection-observer";
 
 const stats = [
   { number: 552, label: "Volunteers", icon: Heart },
   { number: 552, label: "Activities", icon: Trophy },
-  { number: 552, label: "Raised & Donated", icon: Gift },
+  { number: 552, label: "Donated", icon: Gift },
 ];
 
 export default function VolunteerStats() {
@@ -50,9 +50,9 @@ export default function VolunteerStats() {
       </div>
 
       {/* Stats Section */}
-      <div className="bg-gray-50 py-16 mb-16">
+      <div className="bg-gray-50 py-8 md:py-16 mb-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-16">
+          <div className="flex justify-between md:grid md:grid-cols-3 gap-2 md:gap-16">
             {stats.map((stat, index) => (
               <StatCard
                 key={index}
@@ -79,14 +79,14 @@ function StatCard({
   label: string;
 }) {
   const [count, setCount] = useState(0);
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 }); // Detects when 50% of the component is in view
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
 
   useEffect(() => {
-    if (!inView) return; // Only start counting when the section is in view
+    if (!inView) return;
 
     let start = 0;
-    const duration = 2000; // Animation duration in ms
-    const intervalTime = 20; // Update interval
+    const duration = 2000;
+    const intervalTime = 20;
     const increment = finalNumber / (duration / intervalTime);
 
     const counter = setInterval(() => {
@@ -103,13 +103,17 @@ function StatCard({
   }, [inView, finalNumber]);
 
   return (
-    <div ref={ref} className="flex flex-col items-center">
-      <div className="mb-4">
-        <Icon className="w-12 h-12 text-black" />
+    <div ref={ref} className="flex flex-col items-center w-full">
+      <div className="mb-2 md:mb-4">
+        <Icon className="w-6 h-6 md:w-12 md:h-12 text-black dark:text-white" />
       </div>
-      <div className="bg-[#B7E4A7] rounded-full px-12 py-4 w-64 flex flex-col items-center shadow-sm border-[#B3D9FF] border-2">
-        <div className="text-2xl font-bold text-black">{count}+</div>
-        <div className="text-lg text-black">{label}</div>
+      <div className="bg-[#B7E4A7] dark:bg-[#98c889] rounded-full px-2 py-2 md:px-12 md:py-4 w-full md:w-64 flex flex-col items-center shadow-sm border-[#B3D9FF] border-2">
+        <div className="text-lg md:text-2xl font-bold text-black dark:text-gray-800">
+          {count}+
+        </div>
+        <div className="text-xs md:text-lg text-black dark:text-gray-800">
+          {label}
+        </div>
       </div>
     </div>
   );
