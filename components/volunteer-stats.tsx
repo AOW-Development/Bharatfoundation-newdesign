@@ -34,9 +34,11 @@ export default function VolunteerStats() {
                 Become a Proud Volunteer
               </h3>
               <p className="text-base text-gray-800">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Perferendis totam, laudantium officia praesentium expedita omnis
-                unde tempora beatae, modi, sequi quis.
+                Make a long-lasting impact on children’s lives by volunteering
+                with the Bharath Sports Foundation. Whether you coach young
+                athletes, organize sports events, or support our community. Your
+                time and efforts matter much for a real change. Join hands so
+                that we can transform lives through the power of sports.
               </p>
               <Link
                 href="/volunteer"

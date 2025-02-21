@@ -4,36 +4,36 @@ import Link from "next/link";
 
 const programs = [
   {
-    image: "/images/ourprogram-6.jpg",
-    title: "Lorem Ipsum is simply dummy",
+    image: "/images/ourprogram-cricket.jpeg",
+    title: "CRICKET DREAM",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
+      "Prakash is from a low-income family group. It was hard to meet daily needs for him. With our support, he received training, equipment, and mentorship. As of today, he is a state level player, and he alone inspires many athletes.",
     shortDesc:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry .",
+      "Prakash now dreams of representing his country, a beacon of hope for others in his community.",
   },
   {
     image: "/images/ourprogram-5.jpg",
-    title: "Lorem Ipsum is simply dummy",
+    title: "ATHLETICS BREAKTHROUGH",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
+      "Meena, a committed sprinter from an agrarian background, lacked coaching. Through our grassroot foundation training program,",
     shortDesc:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry .",
+      "she won multiple national-level championships and even secured a scholarship for her higher education.",
   },
   {
-    image: "/images/our-program-3.png",
-    title: "Lorem Ipsum is simply dummy",
+    image: "/images/ourprogram-football.jpeg",
+    title: "JOURNEY OF FOOTBALL ",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
+      "Our sports education initiatives provided the required essentials to balance his studies as well as football, and for now he represents his school for national level tournaments.",
     shortDesc:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry .",
+      "Arjun dropped out of school due to his financial conditions, but he was very good at sporting activities.",
   },
   {
-    image: "/images/our-program-4.png",
-    title: "Lorem Ipsum is simply dummy",
+    image: "/images/ourprogram-badminton.jpeg",
+    title: "SUCCESS AT BADMINTON",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
+      "Pooja was fond of badminton for a long time, despite pursuing herself in the same way. Their community members weren’t allowed to move forward. With our motivation and training under a team of our expertise coaches,",
     shortDesc:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry .",
+      " she is now a district-level competitor, breaking down the barriers and inspiring many young girls.",
   },
 ];
 

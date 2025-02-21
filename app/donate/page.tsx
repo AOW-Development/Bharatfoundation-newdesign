@@ -5,6 +5,7 @@ import Banner from "@/components/banner";
 import { useState } from "react";
 import Header from "@/components/header";
 import GooglePay from "@/components/googlepay";
+import Footer from "@/components/footer";
 
 export default function DonatePage() {
   const [paymentMethod, setPaymentMethod] = useState<"credit" | "checking">(
@@ -305,7 +306,7 @@ export default function DonatePage() {
           </div>
         </div>
       </section>
-
+      <Footer />
       {/* We've removed the Footer component */}
     </main>
   );

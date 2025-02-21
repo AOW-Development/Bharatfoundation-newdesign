@@ -3,21 +3,21 @@ export default function ActionCards() {
     {
       title: "BECOME A VOLUNTEER",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "We welcome you onboard to contribute your time and skills in many ways.",
       buttonText: "Join us Now",
       buttonLink: "/volunteer",
     },
     {
       title: "ADOPT A CHILD",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        " Your integrity speaks to the aspiring youths who make loud noises with their success.",
       buttonText: "Contact us",
       buttonLink: "/adopt",
     },
     {
       title: "GET INVOLVED",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Partnering with Bharath Sports Foundation allows you to refine many lives. ",
       buttonText: "Donate Now",
       buttonLink: "/donate",
     },

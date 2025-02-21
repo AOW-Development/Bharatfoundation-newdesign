@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Target, Eye } from "lucide-react";
 import ActionCards from "./actionCards";
+import Link from "next/link";
 
 export default function WhatWeDo() {
   const events = [
@@ -9,28 +10,27 @@ export default function WhatWeDo() {
       time: "5.00 pm- 7.30 pm",
       location: "24 Bangalore City",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Education is the basic essential to everyone in this technological era.",
     },
     {
       title: "Sponsor a child today",
       time: "5.00 pm- 7.30 pm",
       location: "24 Bangalore City",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Your small action towards kindness might rejuvenate the life of a child for their essential resources, education, and many more",
     },
     {
       title: "Shelter for Poor",
       time: "5.00 pm- 7.30 pm",
       location: "24 Bangalore City",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      description: "A basic requirement is a home for anyone. ",
     },
     {
       title: "Education for Children",
       time: "5.00 pm- 7.30 pm",
       location: "24 Bangalore City",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Education is the basic essential to everyone in this technological era.",
     },
   ];
 
@@ -57,18 +57,20 @@ export default function WhatWeDo() {
                 <h3 className="text-xl font-bold">Mission</h3>
               </div>
               <p className="text-gray-600 text-sm">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry&apos;s standard
-                dummy text ever since the 1500s, when an unknown printer took a
-                galley of type and scrambled it to make a type specimen book.
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry&apos;s standard
-                dummy
+                We at Bharath Sports Foundation inspire and enrich athletes as
+                well as provide them with required essentials, resources,
+                mentorship, and growth opportunities. As we value sporting
+                activities, we support the individuals despite their backgrounds
+                and make sure the talent is utilized for the betterment of their
+                lives. With our steps to progress, we build a strong, healthy,
+                and competitive sporting community in India.
               </p>
-              <button className="flex items-center gap-2 text-sm">
-                Read More
-                <span className="text-xl">→</span>
-              </button>
+              <Link href="/what-we-do" className="inline-block mt-4">
+                <button className="flex items-center gap-2 text-sm">
+                  Read More
+                  <span className="text-xl">→</span>
+                </button>
+              </Link>
             </div>
 
             {/* Vision Section (visible on mobile, hidden on desktop) */}
@@ -78,18 +80,18 @@ export default function WhatWeDo() {
                 <h3 className="text-xl font-bold">Vision</h3>
               </div>
               <p className="text-gray-600 text-sm">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry&apos;s standard
-                dummy text ever since the 1500s, when an unknown printer took a
-                galley of type and scrambled it to make a type specimen book.
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry&apos;s standard
-                dummy
+                The Bharath Sports Foundation seeks to develop vibrant talent,
+                give athletes access to resources, and offer them ample
+                possibilities to succeed in their intended disciplines. We work
+                to ensure all individuals gets to engage in sports and to
+                construct a solid basis for Indian athletics in the future.
               </p>
-              <button className="flex items-center gap-2 font-medium text-sm">
-                Read More
-                <span className="text-xl">→</span>
-              </button>
+              <Link href="/what-we-do" className="inline-block mt-4">
+                <button className="flex items-center gap-2 font-medium text-sm">
+                  Read More
+                  <span className="text-xl">→</span>
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -101,21 +103,21 @@ export default function WhatWeDo() {
                 Motivating Greatness Through Sports
               </h3>
               <p className="text-gray-600">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry&apos;s standard
-                dummy text ever since the 1500s, when an unknown printer took a
-                galley of type and scrambled it to make a type specimen book.
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry&apos;s standard
-                dummy.when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. Lorem Ipsum is simply
-                dummy text of the printing and typesetting industry. Lorem Ipsum
-                has been the industry&apos;s standard dummy
+                At Bharath Sports Foundation, we are dedicated to a culture of
+                accessing sports to everyone despite their backgrounds.
+                Primarily our initiatives are focused on identifying talent,
+                skill-development, and to provide training programs for young
+                athletes. Our coaching is structured with various disciplines,
+                to ensure the aspiring sporting individuals receive the right
+                guidance and support. We offer sponsorships and scholarships to
+                the underprivileged.
               </p>
-              <button className="flex items-center gap-2 font-medium text-sm">
-                Read More
-                <span className="text-xl">→</span>
-              </button>
+              <Link href="/what-we-do" className="inline-block mt-4">
+                <button className="flex items-center gap-2 font-medium text-sm">
+                  Read More
+                  <span className="text-xl">→</span>
+                </button>
+              </Link>
             </div>
 
             {/* Vision Section (visible only on desktop) */}
@@ -125,18 +127,18 @@ export default function WhatWeDo() {
                 <h3 className="text-xl font-bold">Vision</h3>
               </div>
               <p className="text-gray-600 text-sm">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry&apos;s standard
-                dummy text ever since the 1500s, when an unknown printer took a
-                galley of type and scrambled it to make a type specimen book.
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry&apos;s standard
-                dummy
+                The Bharath Sports Foundation seeks to develop vibrant talent,
+                give athletes access to resources, and offer them ample
+                possibilities to succeed in their intended disciplines. We work
+                to ensure all individuals gets to engage in sports and to
+                construct a solid basis for Indian athletics in the future.
               </p>
-              <button className="flex items-center gap-2 font-medium text-sm">
-                Read More
-                <span className="text-xl">→</span>
-              </button>
+              <Link href="/what-we-do" className="inline-block mt-4">
+                <button className="flex items-center gap-2 font-medium text-sm">
+                  Read More
+                  <span className="text-xl">→</span>
+                </button>
+              </Link>
             </div>
           </div>
 
