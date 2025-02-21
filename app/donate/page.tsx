@@ -68,13 +68,13 @@ export default function DonatePage() {
                     <div>
                       <h3 className="font-bold mb-4">Payment Options</h3>
                       <div className="flex gap-4 mb-4">
-                        <div className="flex items-center gap-2 border p-2 rounded">
-                          <Image
+                        <div className="flex items-center gap-2 rounded">
+                          {/* <Image
                             src="/images/phonepe-1.svg"
                             alt="PhonePe"
                             width={40}
                             height={40}
-                          />
+                          /> */}
                           {/* <span>PhonePe</span> */}
                         </div>
                         <div className="flex items-center gap-2">
