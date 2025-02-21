@@ -2,7 +2,7 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Image from "next/image";
-import { CreditCard, MapPin, Mail, Phone, DollarSign } from "lucide-react";
+import { CreditCard, MapPin, Mail, Phone, IndianRupee } from "lucide-react";
 import { useState } from "react";
 import Banner from "@/components/banner";
 
@@ -76,7 +76,7 @@ export default function OneTimeDonation() {
                       }`}
                     >
                       <div className="flex items-center justify-center mb-2">
-                        <DollarSign className="h-6 w-6" />
+                        <IndianRupee className="h-6 w-6" />
                         <span className="text-xl font-bold">2000/-</span>
                       </div>
                       <p className="text-xs text-center">
