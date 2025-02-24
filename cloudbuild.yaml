@@ -1,3 +1,6 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 steps:
   # Step 1: Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
@@ -26,8 +29,10 @@ steps:
       - '--platform'
       - 'managed'
       - '--allow-unauthenticated'
- options:
-  logging: CLOUD_LOGGING_ONLY
+      # Optional: Add environment variables if needed
+      - '--set-env-vars'
+      - 'PHONEPE_MERCHANT_ID=$PHONEPE_MERCHANT_ID,PHONEPE_SALT_KEY=$PHONEPE_SALT_KEY,PHONEPE_SALT_INDEX=$PHONEPE_SALT_INDEX,NEXT_PUBLIC_BASE_URL=https://your-service-abc123-uc.a.run.app'
+
 # Define the images to be pushed
 images:
   - 'gcr.io/$PROJECT_ID/nextjs-app:$COMMIT_SHA'
