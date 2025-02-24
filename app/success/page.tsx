@@ -1,7 +1,9 @@
+// app/success/page.tsx
 import Header from "@/components/header";
 import Banner from "@/components/banner";
 import Footer from "@/components/footer";
 import SuccessContent from "@/components/successcontent";
+import { Suspense } from "react"; // Import Suspense
 
 export default function SuccessPage() {
   return (
@@ -12,7 +14,9 @@ export default function SuccessPage() {
         heading="Thank You for Your Donation!"
         paragraph="Your generosity makes a real difference in the lives of those we serve."
       />
-      <SuccessContent />
+      <Suspense fallback={<div>Loading success details...</div>}>
+        <SuccessContent />
+      </Suspense>
       <Footer />
     </main>
   );

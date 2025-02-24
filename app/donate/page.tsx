@@ -2,13 +2,14 @@
 import type React from "react";
 import { MapPin, Mail, Phone } from "lucide-react";
 import Banner from "@/components/banner";
-import { useState, useEffect } from "react";
+import { useState, Suspense } from "react"; // Add Suspense import
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { validateEmail, validatePhone, validatePAN } from "@/lib/validation";
-import RightColumn from "@/components/rightColumn";
-import { useSearchParams, usePathname } from "next/navigation";
+import RightColumn from "../../components/rightColumn";
+import { useSearchParams } from "next/navigation";
 
+// Define interfaces
 interface FormData {
   firstName: string;
   lastName: string;
@@ -32,9 +33,9 @@ interface FormErrors {
   panCard?: string;
 }
 
-export default function DonatePage() {
+// Component to handle useSearchParams
+function DonationForm() {
   const searchParams = useSearchParams();
-  const pathname = usePathname();
   const initialAmount = Number(searchParams.get("amount")) || 2000;
   const [donationAmount, setDonationAmount] = useState<number>(initialAmount);
   const [formErrors, setFormErrors] = useState<FormErrors>({});
@@ -49,19 +50,6 @@ export default function DonatePage() {
     panCard: "",
   });
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [activeButton, setActiveButton] = useState<string | undefined>(
-    undefined
-  );
-
-  useEffect(() => {
-    if (pathname === "/one-time-donation") {
-      setActiveButton("Onetime Donation");
-    } else if (pathname === "/monthly-donation") {
-      setActiveButton("Monthly Donation");
-    } else {
-      setActiveButton(undefined);
-    }
-  }, [pathname]);
 
   const validateForm = (): boolean => {
     const errors: FormErrors = {};
@@ -107,7 +95,7 @@ export default function DonatePage() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.details || "Payment failed");
 
-      window.location.href = data.redirectUrl; // PhonePe redirects to /success with query params
+      window.location.href = data.redirectUrl;
     } catch (error) {
       console.error("Payment error:", error);
       alert("Failed to initiate payment: " + (error as Error).message);
@@ -122,6 +110,233 @@ export default function DonatePage() {
   };
 
   return (
+    <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-sm">
+      <form onSubmit={handleSubmit}>
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-2">
+            Quick Pay: Cheque/ Demand Draft/ NEFT/ RTGS Transfer Details/ UPI
+            Details
+          </h2>
+          <div className="space-y-2 text-sm">
+            <p>Bank Name: Name Of The Bank</p>
+            <p>Account Number: 200000001001 IFSC: OPP10004</p>
+            <p>970030368# Namethebank</p>
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="font-bold mb-4">
+            Enter Your Own Donation Amount To Help As Much As Possible.
+          </h3>
+          <div className="flex gap-2">
+            <input
+              type="number"
+              placeholder="Enter Your Donation Amount To Help"
+              className="flex-1 px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              value={donationAmount}
+              onChange={(e) => setDonationAmount(Number(e.target.value))}
+            />
+            <button
+              type="button"
+              className="bg-[#B7E4A7] px-6 py-2 rounded-r-lg text-black font-semibold"
+            >
+              Enter
+            </button>
+          </div>
+          {formErrors.donationAmount && (
+            <p className="text-red-500 text-xs mt-1">
+              {formErrors.donationAmount}
+            </p>
+          )}
+        </div>
+
+        <div className="mb-8">
+          <h3 className="font-bold mb-4">Payment Information</h3>
+          <div className="space-y-4">
+            <h3 className="font-bold mb-4">Payment Options</h3>
+            <div className="flex gap-4">
+              <div className="flex-1">
+                <span className="block text-center border rounded py-2 bg-[#B7E4A7] cursor-default">
+                  PhonePe
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="font-bold mb-4">Your Information</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <input
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                    className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                      formErrors.firstName ? "border-red-500" : ""
+                    }`}
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                  />
+                  {formErrors.firstName && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {formErrors.firstName}
+                    </p>
+                  )}
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Last Name"
+                    className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                      formErrors.lastName ? "border-red-500" : ""
+                    }`}
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                  />
+                  {formErrors.lastName && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {formErrors.lastName}
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="Address Street"
+                  className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                    formErrors.address ? "border-red-500" : ""
+                  }`}
+                  value={formData.address}
+                  onChange={handleInputChange}
+                />
+                <MapPin
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  size={20}
+                />
+                {formErrors.address && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {formErrors.address}
+                  </p>
+                )}
+              </div>
+              <input
+                type="text"
+                name="city"
+                placeholder="City"
+                className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                  formErrors.city ? "border-red-500" : ""
+                }`}
+                value={formData.city}
+                onChange={handleInputChange}
+              />
+              {formErrors.city && (
+                <p className="text-red-500 text-xs mt-1">{formErrors.city}</p>
+              )}
+            </div>
+            <div className="space-y-4">
+              <input
+                type="text"
+                name="stateProvinceZip"
+                placeholder="State/Province/Zip"
+                className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                  formErrors.stateProvinceZip ? "border-red-500" : ""
+                }`}
+                value={formData.stateProvinceZip}
+                onChange={handleInputChange}
+              />
+              {formErrors.stateProvinceZip && (
+                <p className="text-red-500 text-xs mt-1">
+                  {formErrors.stateProvinceZip}
+                </p>
+              )}
+              <div className="relative">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                    formErrors.email ? "border-red-500" : ""
+                  }`}
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
+                <Mail
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  size={20}
+                />
+                {formErrors.email && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {formErrors.email}
+                  </p>
+                )}
+              </div>
+              <div className="relative">
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone/Mobile No"
+                  className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                    formErrors.phone ? "border-red-500" : ""
+                  }`}
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                />
+                <Phone
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  size={20}
+                />
+                {formErrors.phone && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {formErrors.phone}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-4 mt-4 items-center">
+            <div className="flex-1 space-y-4">
+              <input
+                type="text"
+                name="panCard"
+                placeholder="PAN Card No (Optional)"
+                className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                  formErrors.panCard ? "border-red-500" : ""
+                }`}
+                value={formData.panCard}
+                onChange={handleInputChange}
+              />
+              {formErrors.panCard && (
+                <p className="text-red-500 text-xs mt-1">
+                  {formErrors.panCard}
+                </p>
+              )}
+            </div>
+            <button
+              type="submit"
+              className="w-full md:w-auto bg-[#B7E4A7] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors disabled:bg-gray-400"
+              disabled={isLoading}
+            >
+              {isLoading
+                ? "Processing..."
+                : `DONATE ₹${donationAmount}/- via PhonePe`}
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  );
+}
+
+// Main page component
+export default function DonatePage() {
+  return (
     <main className="min-h-screen flex flex-col">
       <Header />
       <Banner
@@ -132,225 +347,14 @@ export default function DonatePage() {
           { text: "Monthly Donation", link: "/monthly-donation" },
           { text: "Onetime Donation", link: "/one-time-donation" },
         ]}
-        activeButton={activeButton}
       />
-
       <section className="flex-grow bg-gray-50 py-12">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-sm">
-              <form onSubmit={handleSubmit}>
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-2">
-                    Quick Pay: Cheque/ Demand Draft/ NEFT/ RTGS Transfer
-                    Details/ UPI Details
-                  </h2>
-                  <div className="space-y-2 text-sm">
-                    <p>Bank Name: Name Of The Bank</p>
-                    <p>Account Number: 200000001001 IFSC: OPP10004</p>
-                    <p>970030368# Namethebank</p>
-                  </div>
-                </div>
-
-                <div className="mb-8">
-                  <h3 className="font-bold mb-4">
-                    Enter Your Own Donation Amount To Help As Much As Possible.
-                  </h3>
-                  <div className="flex gap-2">
-                    <input
-                      type="number"
-                      placeholder="Enter Your Donation Amount To Help"
-                      className="flex-1 px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                      value={donationAmount}
-                      onChange={(e) =>
-                        setDonationAmount(Number(e.target.value))
-                      }
-                    />
-                    <button
-                      type="button"
-                      className="bg-[#B7E4A7] px-6 py-2 rounded-r-lg text-black font-semibold"
-                    >
-                      Enter
-                    </button>
-                  </div>
-                  {formErrors.donationAmount && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {formErrors.donationAmount}
-                    </p>
-                  )}
-                </div>
-
-                <div className="mb-8">
-                  <h3 className="font-bold mb-4">Your Information</h3>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-4">
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <input
-                            type="text"
-                            name="firstName"
-                            placeholder="First Name"
-                            className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                              formErrors.firstName ? "border-red-500" : ""
-                            }`}
-                            value={formData.firstName}
-                            onChange={handleInputChange}
-                          />
-                          {formErrors.firstName && (
-                            <p className="text-red-500 text-xs mt-1">
-                              {formErrors.firstName}
-                            </p>
-                          )}
-                        </div>
-                        <div>
-                          <input
-                            type="text"
-                            name="lastName"
-                            placeholder="Last Name"
-                            className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                              formErrors.lastName ? "border-red-500" : ""
-                            }`}
-                            value={formData.lastName}
-                            onChange={handleInputChange}
-                          />
-                          {formErrors.lastName && (
-                            <p className="text-red-500 text-xs mt-1">
-                              {formErrors.lastName}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                      <div className="relative">
-                        <input
-                          type="text"
-                          name="address"
-                          placeholder="Address Street"
-                          className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                            formErrors.address ? "border-red-500" : ""
-                          }`}
-                          value={formData.address}
-                          onChange={handleInputChange}
-                        />
-                        <MapPin
-                          className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
-                          size={20}
-                        />
-                        {formErrors.address && (
-                          <p className="text-red-500 text-xs mt-1">
-                            {formErrors.address}
-                          </p>
-                        )}
-                      </div>
-                      <input
-                        type="text"
-                        name="city"
-                        placeholder="City"
-                        className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                          formErrors.city ? "border-red-500" : ""
-                        }`}
-                        value={formData.city}
-                        onChange={handleInputChange}
-                      />
-                      {formErrors.city && (
-                        <p className="text-red-500 text-xs mt-1">
-                          {formErrors.city}
-                        </p>
-                      )}
-                    </div>
-                    <div className="space-y-4">
-                      <input
-                        type="text"
-                        name="stateProvinceZip"
-                        placeholder="State/Province/Zip"
-                        className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                          formErrors.stateProvinceZip ? "border-red-500" : ""
-                        }`}
-                        value={formData.stateProvinceZip}
-                        onChange={handleInputChange}
-                      />
-                      {formErrors.stateProvinceZip && (
-                        <p className="text-red-500 text-xs mt-1">
-                          {formErrors.stateProvinceZip}
-                        </p>
-                      )}
-                      <div className="relative">
-                        <input
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                          className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                            formErrors.email ? "border-red-500" : ""
-                          }`}
-                          value={formData.email}
-                          onChange={handleInputChange}
-                        />
-                        <Mail
-                          className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
-                          size={20}
-                        />
-                        {formErrors.email && (
-                          <p className="text-red-500 text-xs mt-1">
-                            {formErrors.email}
-                          </p>
-                        )}
-                      </div>
-                      <div className="relative">
-                        <input
-                          type="tel"
-                          name="phone"
-                          placeholder="Phone/Mobile No"
-                          className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                            formErrors.phone ? "border-red-500" : ""
-                          }`}
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                        />
-                        <Phone
-                          className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
-                          size={20}
-                        />
-                        {formErrors.phone && (
-                          <p className="text-red-500 text-xs mt-1">
-                            {formErrors.phone}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col md:flex-row gap-4 mt-4 items-center">
-                    <div className="flex-1 space-y-4">
-                      <input
-                        type="text"
-                        name="panCard"
-                        placeholder="PAN Card No (Optional)"
-                        className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                          formErrors.panCard ? "border-red-500" : ""
-                        }`}
-                        value={formData.panCard}
-                        onChange={handleInputChange}
-                      />
-                      {formErrors.panCard && (
-                        <p className="text-red-500 text-xs mt-1">
-                          {formErrors.panCard}
-                        </p>
-                      )}
-                    </div>
-                    <button
-                      type="submit"
-                      className="w-full md:w-auto bg-[#B7E4A7] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors disabled:bg-gray-400"
-                      disabled={isLoading}
-                    >
-                      {isLoading
-                        ? "Processing..."
-                        : `DONATE ₹${donationAmount}/- via PhonePe`}
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-
-            <div className="lg:col-span-1 w-full bg-white p-6 rounded-lg shadow-sm">
+            <Suspense fallback={<div>Loading donation form...</div>}>
+              <DonationForm />
+            </Suspense>
+            <div className="lg:col-span-1 w-full lg:w-1/2 bg-white p-6 rounded-lg shadow-sm">
               <RightColumn />
             </div>
           </div>

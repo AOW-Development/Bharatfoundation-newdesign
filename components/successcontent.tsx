@@ -1,3 +1,4 @@
+// app/components/successcontent.tsx
 "use client";
 
 import { useSearchParams } from "next/navigation";
@@ -37,7 +38,6 @@ export default function SuccessContent() {
         console.error("Error sharing:", error);
       }
     } else {
-      // Fallback for WhatsApp
       const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(
         shareText + " " + shareUrl
       )}`;
