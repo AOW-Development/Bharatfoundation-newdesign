@@ -64,7 +64,7 @@ export default function OurProgram() {
               <p className="text-gray-600 mb-3">{program.description}</p>
               <p className="text-gray-600 mb-4">{program.shortDesc}</p>
               <Link
-                href="/program-details"
+                href="/blog"
                 className="inline-flex items-center text-primary hover:underline mt-auto"
               >
                 Read More <ArrowRight className="ml-2 h-4 w-4" />

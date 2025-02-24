@@ -16,6 +16,7 @@ interface BannerProps {
   heading?: string;
   paragraph?: string;
   buttons?: ButtonProps[];
+  activeButton?: string; // New prop for the active button
 }
 
 export default function Banner({
@@ -25,6 +26,7 @@ export default function Banner({
   heading,
   paragraph,
   buttons,
+  activeButton,
 }: BannerProps) {
   const [isVideo, setIsVideo] = useState(false);
 
@@ -94,7 +96,11 @@ export default function Banner({
                 <Link
                   key={index}
                   href={button.link}
-                  className="inline-block px-6 py-2 md:px-8 md:py-3 bg-[#B7E4A7] text-black font-bold rounded-md hover:bg-[#a5d695] transition-colors"
+                  className={`inline-block px-6 py-2 md:px-8 md:py-3 font-bold rounded-md transition-colors ${
+                    activeButton === button.text
+                      ? "bg-[#a5d695] text-black"
+                      : "bg-[#B7E4A7] text-black hover:bg-[#a5d695]"
+                  }`}
                 >
                   {button.text}
                 </Link>

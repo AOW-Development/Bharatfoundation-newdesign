@@ -2,47 +2,122 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Image from "next/image";
-import { CreditCard, MapPin, Mail, Phone, IndianRupee } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 import { useState } from "react";
 import Banner from "@/components/banner";
+import { useRouter } from "next/navigation"; // Import useRouter for navigation
 
-export default function OneTimeDonation() {
-  const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
+export default function MonthlyDonation() {
+  const [units, setUnits] = useState<{ [key: string]: number }>({});
+  const router = useRouter(); // Initialize router
 
-  const donationOptions = Array(8).fill({
-    amount: 2000,
-    description:
-      "Helps Provide 10 Person Already Followers 5002 The Donation Your Are Welcome",
-  });
+  const donationCategories = [
+    {
+      title: "Equipment& Gear Sponsorship",
+      description:
+        "Donations for purchasing sports kits, shoes, balls, and other essentials",
+      image: "/images/md-10.jpg",
+      cost: 5000,
+      id: "equipment",
+    },
+    {
+      title: "Coaching& Training Programs",
+      description: "Fund coaching fees and skill development programs",
+      image: "/images/md-9.jpg",
+      cost: 8000,
+      id: "coaching",
+    },
+    {
+      title: "Facility Development",
+      description:
+        "Contribution to build or improve sports fields, courts, and training centers",
+      image: "/images/md-8.jpg",
+      cost: 15000,
+      id: "facility",
+    },
+    {
+      title: "Event Sponsorship",
+      description:
+        "Support for organizing tournaments, leagues, and sports events",
+      image: "/images/md-7.jpg",
+      cost: 10000,
+      id: "event",
+    },
+    {
+      title: "Scholarship& Athlete Support",
+      description:
+        "Funding for young and talented athletes in need of financial assistance",
+      image: "/images/md-6.jpg",
+      cost: 10000,
+      id: "scholarship",
+    },
+    {
+      title: "Travel& Accommodation",
+      description:
+        "Assistance to help athletes participate in competitions outside their locality",
+      image: "/images/md-5.jpg",
+      cost: 12000,
+      id: "travel",
+    },
+    {
+      title: "Health& Nutrition Support",
+      description:
+        "Funds for medical checkups, nutrition programs, and sports psychology",
+      image: "/images/md-4.jpg",
+      cost: 7500,
+      id: "health",
+    },
+    {
+      title: "Women in Sports Fund",
+      description:
+        "Specific contributions to promote female participation in sports",
+      image: "/images/md-3.jpg",
+      cost: 8000,
+      id: "women",
+    },
+    {
+      title: "Special Needs Sports Programs",
+      description:
+        "Support for inclusive athletics and adaptive sports initiatives",
+      image: "/images/md-2.jpg",
+      cost: 6000,
+      id: "special",
+    },
+    {
+      title: "Corporate Sponsorship& CSR Contributions",
+      description:
+        "Encouraging businesses to contribute to large-scale sports programs",
+      image: "/images/md-1.jpg",
+      cost: 10000,
+      id: "corporate",
+    },
+  ];
+
+  const handleUnitChange = (id: string, change: number) => {
+    setUnits((prev) => ({
+      ...prev,
+      [id]: Math.max(0, (prev[id] || 0) + change),
+    }));
+  };
+
+  const calculateTotal = () => {
+    return donationCategories.reduce((total, category) => {
+      return total + category.cost * (units[category.id] || 0);
+    }, 0);
+  };
+
+  const handleProceedToDonate = () => {
+    const total = calculateTotal();
+    if (total > 0) {
+      router.push(`/donate?amount=${total}`);
+    } else {
+      alert("Please select at least one donation category to proceed.");
+    }
+  };
 
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
-
-      {/* Banner Section */}
-      {/* <section className="relative pt-20 h-[40vh] w-full">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/donate-banner.jpg"
-            alt="One Time Donation Banner"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
-        </div>
-        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
-          <div className="text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              One Time Donation
-            </h1>
-            <p className="text-xl opacity-90">
-              Make a difference with your contribution
-            </p>
-          </div>
-        </div>
-      </section> */}
-
       <Banner
         mediaUrl="/images/donationbanner.png"
         heading="Want to be a Volunteer ? Select Your Donation Choice& Amount"
@@ -53,188 +128,83 @@ export default function OneTimeDonation() {
         ]}
       />
 
-      {/* Donation Form Section */}
       <section className="flex-grow bg-gray-50 py-12">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8">
-            {/* Left Column - Donation Form */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold mb-4">Monthly Donation</h2>
-                <h3 className="text-lg font-semibold mb-4">
-                  Select Your Donation Amount
-                </h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {donationOptions.map((option, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSelectedAmount(option.amount)}
-                      className={`p-4 rounded-lg border transition-colors ${
-                        selectedAmount === option.amount
-                          ? "bg-[#B7E4A7] border-[#98c889]"
-                          : "bg-white hover:bg-gray-50"
-                      }`}
-                    >
-                      <div className="flex items-center justify-center mb-2">
-                        <IndianRupee className="h-6 w-6" />
-                        <span className="text-xl font-bold">2000/-</span>
-                      </div>
-                      <p className="text-xs text-center">
-                        {option.description}
-                      </p>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="font-bold mb-4">Payment Information</h3>
-                    <div className="space-y-4">
-                      <div className="grid grid-cols-4 gap-2">
-                        {/* <Image
-                          src="/visa.png"
-                          alt="Visa"
-                          width={60}
-                          height={40}
-                          className="border p-2 rounded"
-                        />
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold mb-6">Donation Categories</h2>
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                {donationCategories.map((category) => (
+                  <div
+                    key={category.id}
+                    className="border-b last:border-b-0 p-4"
+                  >
+                    <div className="flex gap-4">
+                      <div className="relative w-20 h-20 flex-shrink-0">
                         <Image
-                          src="/mastercard.png"
-                          alt="Mastercard"
-                          width={60}
-                          height={40}
-                          className="border p-2 rounded"
-                        />
-                        <Image
-                          src="/gpay.png"
-                          alt="Google Pay"
-                          width={60}
-                          height={40}
-                          className="border p-2 rounded"
-                        />
-                        <Image
-                          src="/paypal.png"
-                          alt="PayPal"
-                          width={60}
-                          height={40}
-                          className="border p-2 rounded"
-                        /> */}
-                      </div>
-                      <div className="flex gap-4">
-                        <button className="flex-1 border rounded py-2 hover:bg-gray-50">
-                          Credit Card
-                        </button>
-                        <button className="flex-1 border rounded py-2 hover:bg-gray-50">
-                          Checking Account
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="font-bold mb-4">Your Information</h3>
-                    <div className="space-y-4">
-                      <div className="grid grid-cols-2 gap-4">
-                        <input
-                          type="text"
-                          placeholder="Enter Your First Name"
-                          className="px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-                        />
-                        <input
-                          type="text"
-                          placeholder="Enter Your Last Name"
-                          className="px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                          src={category.image || "/placeholder.svg"}
+                          alt={category.title}
+                          fill
+                          className="object-cover rounded"
                         />
                       </div>
-                      <div className="relative">
-                        <input
-                          type="text"
-                          placeholder="Enter Your Address Street"
-                          className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-                        />
-                        <MapPin
-                          className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
-                          size={20}
-                        />
+                      <div className="flex-grow">
+                        <h3 className="font-bold">{category.title}</h3>
+                        <p className="text-sm text-gray-600">
+                          {category.description}
+                        </p>
+                        <div className="flex items-center justify-between mt-2">
+                          <div className="text-sm">
+                            Cost: ₹{category.cost.toLocaleString()}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <button
+                              onClick={() => handleUnitChange(category.id, -1)}
+                              className="p-1 rounded border hover:bg-gray-50"
+                            >
+                              <Minus className="h-4 w-4" />
+                            </button>
+                            <input
+                              type="number"
+                              value={units[category.id] || 0}
+                              onChange={(e) => {
+                                const value =
+                                  Number.parseInt(e.target.value) || 0;
+                                setUnits((prev) => ({
+                                  ...prev,
+                                  [category.id]: Math.max(0, value),
+                                }));
+                              }}
+                              className="w-12 text-center border rounded p-1"
+                              min="0"
+                            />
+                            <button
+                              onClick={() => handleUnitChange(category.id, 1)}
+                              className="p-1 rounded border hover:bg-gray-50"
+                            >
+                              <Plus className="h-4 w-4" />
+                            </button>
+                          </div>
+                          <div className="text-sm font-semibold">
+                            Amount: ₹
+                            {(
+                              (units[category.id] || 0) * category.cost
+                            ).toLocaleString()}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
+                ))}
+                <div className="p-4 bg-gray-50 flex justify-between items-center">
+                  <span className="font-bold">Total Amount</span>
+                  <span className="font-bold">
+                    ₹{calculateTotal().toLocaleString()}
+                  </span>
                 </div>
-
-                <div className="grid md:grid-cols-2 gap-4 mt-4">
-                  <div className="space-y-4">
-                    <div className="relative">
-                      <input
-                        type="text"
-                        placeholder="Enter Your Credit Card Number"
-                        className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-                      />
-                      <CreditCard
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
-                        size={20}
-                      />
-                    </div>
-                    <input
-                      type="text"
-                      placeholder="Enter Your Credit Card Date"
-                      className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Enter Your Credit Card CVV Code"
-                      className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Enter Your PAN Card No"
-                      className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-                    />
-                  </div>
-                  <div className="space-y-4">
-                    <input
-                      type="text"
-                      placeholder="Enter Your City"
-                      className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Enter Your State/Province/Zip code"
-                      className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-                    />
-                    <div className="relative">
-                      <input
-                        type="email"
-                        placeholder="Enter Your Email"
-                        className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-                      />
-                      <Mail
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
-                        size={20}
-                      />
-                    </div>
-                    <div className="relative">
-                      <input
-                        type="tel"
-                        placeholder="Enter Your Phone/Mobile No"
-                        className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-                      />
-                      <Phone
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
-                        size={20}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <button className="w-full bg-[#B7E4A7] text-black font-bold py-3 rounded-lg mt-6 hover:bg-[#a5d695] transition-colors">
-                  DONATION RS 2000/-
-                </button>
               </div>
             </div>
 
-            {/* Right Column - Support Categories */}
             <div className="space-y-6">
               <h2 className="text-xl font-bold">You May Support to</h2>
               {[
@@ -295,6 +265,16 @@ export default function OneTimeDonation() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Proceed to Donate Button */}
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={handleProceedToDonate}
+              className="bg-[#B7E4A7] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors"
+            >
+              Proceed to Donate
+            </button>
           </div>
         </div>
       </section>
