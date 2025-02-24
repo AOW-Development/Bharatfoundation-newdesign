@@ -354,7 +354,7 @@ export default function DonatePage() {
             <Suspense fallback={<div>Loading donation form...</div>}>
               <DonationForm />
             </Suspense>
-            <div className="lg:col-span-1 w-full lg:w-1/2 bg-white p-6 rounded-lg shadow-sm">
+            <div className="lg:col-span-1 w-full bg-white p-6 rounded-lg shadow-sm">
               <RightColumn />
             </div>
           </div>
