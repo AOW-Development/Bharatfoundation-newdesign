@@ -29,10 +29,13 @@ steps:
       - '--platform'
       - 'managed'
       - '--allow-unauthenticated'
-      # Optional: Add environment variables if needed
       - '--set-env-vars'
-      - 'PHONEPE_MERCHANT_ID=$PHONEPE_MERCHANT_ID,PHONEPE_SALT_KEY=$PHONEPE_SALT_KEY,PHONEPE_SALT_INDEX=$PHONEPE_SALT_INDEX,NEXT_PUBLIC_BASE_URL=https://your-service-abc123-uc.a.run.app'
+      - 'PHONEPE_MERCHANT_ID=$_PHONEPE_MERCHANT_ID,PHONEPE_SALT_KEY=$_PHONEPE_SALT_KEY,PHONEPE_SALT_INDEX=$_PHONEPE_SALT_INDEX,NEXT_PUBLIC_BASE_URL=https://your-service-abc123-uc.a.run.app'
 
-# Define the images to be pushed
 images:
   - 'gcr.io/$PROJECT_ID/nextjs-app:$COMMIT_SHA'
+
+substitutions:
+  _PHONEPE_MERCHANT_ID: 'PGTESTPAYUAT86'  # Replace with your actual value
+  _PHONEPE_SALT_KEY: '96434309-7796-489d-8924-ab56988a6076'  # Replace with your actual value
+  _PHONEPE_SALT_INDEX: '1'
