@@ -151,20 +151,6 @@ function DonationForm() {
         </div>
 
         <div className="mb-8">
-          <h3 className="font-bold mb-4">Payment Information</h3>
-          <div className="space-y-4">
-            <h3 className="font-bold mb-4">Payment Options</h3>
-            <div className="flex gap-4">
-              <div className="flex-1">
-                <span className="block text-center border rounded py-2 bg-[#B7E4A7] cursor-default">
-                  PhonePe
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mb-8">
           <h3 className="font-bold mb-4">Your Information</h3>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-4">
