@@ -1,5 +1,6 @@
 service_account: "487191762139@cloudbuild.gserviceaccount.com"
-logsBucket: "gs://bsfbucket"
+options:
+  logging: CLOUD_LOGGING_ONLY
 
 steps:
   # Step 1: Build the Docker image
