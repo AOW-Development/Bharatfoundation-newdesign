@@ -1,6 +1,6 @@
 # Top-level build configuration
 service_account: "487191762139-compute@developer.gserviceaccount.com"
-logsBucket: "gs://my-logs-bucket"
+logsBucket: "bsfbucket"
 
 # Build steps
 steps:
