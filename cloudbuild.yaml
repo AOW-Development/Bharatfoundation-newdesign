@@ -29,8 +29,10 @@ steps:
       - '--platform'
       - 'managed'
       - '--allow-unauthenticated'
+      - '--port'
+      - '8080'
       - '--set-env-vars'
-      - 'PHONEPE_MERCHANT_ID=$_PHONEPE_MERCHANT_ID,PHONEPE_SALT_KEY=$_PHONEPE_SALT_KEY,PHONEPE_SALT_INDEX=$_PHONEPE_SALT_INDEX,NEXT_PUBLIC_BASE_URL=https://your-service-abc123-uc.a.run.app'
+      - 'PHONEPE_MERCHANT_ID=$_PHONEPE_MERCHANT_ID,PHONEPE_SALT_KEY=$_PHONEPE_SALT_KEY,PHONEPE_SALT_INDEX=$_PHONEPE_SALT_INDEX,NEXT_PUBLIC_BASE_URL=https://nextjs-app-abc123-uc.a.run.app'
 
 images:
   - 'gcr.io/$PROJECT_ID/nextjs-app:$COMMIT_SHA'

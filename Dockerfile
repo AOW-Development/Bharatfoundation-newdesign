@@ -1,24 +1,21 @@
-# Stage 1: Install dependencies
-FROM node:18-alpine AS deps
-WORKDIR /app
-COPY package.json yarn.lock* package-lock.json* ./
-RUN npm ci --production
+# Use official Node.js runtime as the base image
+FROM node:18-alpine
 
-# Stage 2: Build the app
-FROM node:18-alpine AS builder
+# Set working directory
 WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
-RUN npm run build
 
-# Stage 3: Production image
-FROM node:18-alpine AS runner
-WORKDIR /app
-ENV NODE_ENV production
-COPY --from=builder /app/next.config.js ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-EXPOSE 3000
+# Copy package.json and install dependencies
+COPY package*.json ./
+RUN npm install --production
+
+# Copy the Next.js build output
+COPY .next ./.next
+COPY public ./public
+COPY next.config.js ./
+
+# Expose the port (Cloud Run expects 8080 by default)
+ENV PORT=8080
+EXPOSE 8080
+
+# Start the Next.js app
 CMD ["npm", "start"]
