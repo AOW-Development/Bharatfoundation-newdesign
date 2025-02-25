@@ -1,5 +1,5 @@
 options:
-  logging: NONE
+  logging: REGIONAL_USER_OWNED_BUCKET
 
 steps:
   # Step 1: Build the Docker image
