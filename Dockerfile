@@ -11,7 +11,7 @@ RUN npm install --production
 # Copy the Next.js build output
 COPY .next ./.next
 COPY public ./public
-COPY next.config.js ./
+COPY next.config.ts ./
 
 # Expose the port (Cloud Run expects 8080 by default)
 ENV PORT=8080
