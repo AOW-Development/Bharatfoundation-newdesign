@@ -1,6 +1,8 @@
-build:
-  service_account: "487191762139@cloudbuild.gserviceaccount.com"
-  logs_bucket: "gs://my-logs-bucket"
+# Top-level build configuration
+service_account: "487191762139@cloudbuild.gserviceaccount.com"
+logsBucket: "gs://my-logs-bucket"
+
+# Build steps
 steps:
   # Step 1: Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
@@ -32,10 +34,12 @@ steps:
       - '--set-env-vars'
       - 'PHONEPE_MERCHANT_ID=$_PHONEPE_MERCHANT_ID,PHONEPE_SALT_KEY=$_PHONEPE_SALT_KEY,PHONEPE_SALT_INDEX=$_PHONEPE_SALT_INDEX,NEXT_PUBLIC_BASE_URL=https://your-service-abc123-uc.a.run.app'
 
+# Images to be built and pushed
 images:
   - 'gcr.io/$PROJECT_ID/nextjs-app:$COMMIT_SHA'
 
+# Substitution variables
 substitutions:
-  _PHONEPE_MERCHANT_ID: 'PGTESTPAYUAT86'  # Replace with your actual value
-  _PHONEPE_SALT_KEY: '96434309-7796-489d-8924-ab56988a6076'  # Replace with your actual value
+  _PHONEPE_MERCHANT_ID: 'PGTESTPAYUAT86'
+  _PHONEPE_SALT_KEY: '96434309-7796-489d-8924-ab56988a6076'
   _PHONEPE_SALT_INDEX: '1'
