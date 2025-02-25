@@ -1,5 +1,7 @@
 options:
-  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
+  logging: CLOUD_LOGGING_ONLY
+  loggingOptions:
+    logsBucket: "gs://$PROJECT_ID-cloudbuild-logs"
 
 steps:
   # Step 1: Build the Docker image
