@@ -37,7 +37,7 @@ export default function WhatWeDoPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-[#B7E4A7] dark:bg-[#98c889] p-6 rounded-lg">
+            <div className="bg-[#16A34A] dark:bg-[#98c889] p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4 dark:text-gray-800">
                 Key Areas of Impact
               </h3>
@@ -48,7 +48,7 @@ export default function WhatWeDoPage() {
                 <li>Education & Training</li>
               </ul>
             </div>
-            <div className="bg-[#98c889] dark:bg-[#B7E4A7] p-6 rounded-lg">
+            <div className="bg-[#98c889] dark:bg-[#16A34A] p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4 dark:text-gray-800">
                 Success Stories & Testimonials
               </h3>
@@ -64,13 +64,13 @@ export default function WhatWeDoPage() {
               <div className="text-3xl font-bold mb-2">500+</div>
               <div>Athletes Supported</div>
             </div>
-            <div className="bg-[#98c889] dark:bg-[#B7E4A7] p-6 rounded-lg">
+            <div className="bg-[#98c889] dark:bg-[#16A34A] p-6 rounded-lg">
               <div className="text-3xl font-bold mb-2 dark:text-gray-800">
                 120+
               </div>
               <div className="dark:text-gray-800">Community Programs</div>
             </div>
-            <div className="bg-[#B7E4A7] dark:bg-[#98c889] p-6 rounded-lg">
+            <div className="bg-[#16A34A] dark:bg-[#98c889] p-6 rounded-lg">
               <div className="text-3xl font-bold mb-2 dark:text-gray-800">
                 200K+
               </div>
@@ -135,7 +135,7 @@ export default function WhatWeDoPage() {
                 key={index}
                 className="flex flex-col items-center text-center"
               >
-                <div className="bg-[#B7E4A7] dark:bg-[#98c889] p-4 rounded-lg mb-4">
+                <div className="bg-[#16A34A] dark:bg-[#98c889] p-4 rounded-lg mb-4">
                   <item.icon className="h-8 w-8 dark:text-gray-800" />
                 </div>
                 <h3 className="font-semibold dark:text-white">{item.title}</h3>
@@ -145,7 +145,7 @@ export default function WhatWeDoPage() {
 
           <div className="bg-gray-700 text-white text-center py-16 rounded-lg">
             <h3 className="text-3xl font-bold mb-6">Get involved</h3>
-            <button className="bg-[#B7E4A7] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#98c889] transition-colors">
+            <button className="bg-[#16A34A] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#98c889] transition-colors">
               Join Now
             </button>
           </div>
@@ -172,7 +172,7 @@ export default function WhatWeDoPage() {
             </div>
           </div>
 
-          <div className="bg-[#B7E4A7] dark:bg-[#98c889] p-8 rounded-lg">
+          <div className="bg-[#16A34A] dark:bg-[#98c889] p-8 rounded-lg">
             <h3 className="text-2xl font-bold text-center mb-6 dark:text-gray-800">
               Program Overview
             </h3>
@@ -182,7 +182,7 @@ export default function WhatWeDoPage() {
               generation of athletes.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8 bg-[#98c889]/50 dark:bg-[#B7E4A7]/50 p-6 rounded-lg">
+            <div className="grid md:grid-cols-2 gap-8 bg-[#98c889]/50 dark:bg-[#16A34A]/50 p-6 rounded-lg">
               <div>
                 <h4 className="font-bold mb-4 dark:text-gray-800">
                   Activities:

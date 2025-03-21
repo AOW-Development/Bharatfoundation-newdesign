@@ -148,7 +148,7 @@ export default function WhatWeDo() {
             <div className="space-y-6">
               {events.map((event, index) => (
                 <div key={index} className="flex gap-4">
-                  <div className="bg-[#B7E4A7] p-3 h-min text-center">
+                  <div className="bg-[#16A34A] p-3 h-min text-center">
                     <div className="text-2xl font-bold">24</div>
                     <hr className="border-2 my-2 border-black" />
                     <div className="font-bold">JAN</div>

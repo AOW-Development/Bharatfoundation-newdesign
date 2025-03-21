@@ -25,7 +25,7 @@ export default function ResourcesPage() {
           <div className="flex flex-col md:flex-row gap-8">
             {/* Sidebar */}
             <div className="w-full md:w-64 flex-shrink-0">
-              <div className="bg-[#B7E4A7] p-6 rounded-lg">
+              <div className="bg-[#16A34A] p-6 rounded-lg">
                 <h2 className="font-bold text-lg mb-4">Categories</h2>
                 <ul className="space-y-2">
                   {[
@@ -169,7 +169,7 @@ export default function ResourcesPage() {
                     ].map((item, index) => (
                       <div
                         key={index}
-                        className="flex flex-col items-center justify-center bg-[#B7E4A7] rounded-full w-24 h-24 p-4"
+                        className="flex flex-col items-center justify-center bg-[#16A34A] rounded-full w-24 h-24 p-4"
                       >
                         <item.icon className="h-8 w-8 mb-2" />
                         <span className="text-sm text-center">

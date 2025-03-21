@@ -1,17 +1,4 @@
 {
-  "/api/phonepe-payment/route": "app/api/phonepe-payment/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/about/page": "app/about/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/donate/page": "app/donate/page.js",
-  "/monthly-donation/page": "app/monthly-donation/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/get-involved/page": "app/get-involved/page.js",
-  "/our-work/page": "app/our-work/page.js",
-  "/one-time-donation/page": "app/one-time-donation/page.js",
   "/page": "app/page.js",
-  "/success/page": "app/success/page.js",
-  "/resources/page": "app/resources/page.js",
-  "/what-we-do/page": "app/what-we-do/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

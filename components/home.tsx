@@ -30,7 +30,7 @@ export default function Home() {
             </p>
             <Link
               href="/donate"
-              className="inline-block px-8 py-3 bg-[#B7E4A7] text-black font-bold rounded-md hover:bg-[#a5d695] transition-colors"
+              className="inline-block px-8 py-3 bg-[#16A34A] text-black font-bold rounded-md hover:bg-[#a5d695] transition-colors"
             >
               DONATE HERE
             </Link>

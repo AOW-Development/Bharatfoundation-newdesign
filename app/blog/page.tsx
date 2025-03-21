@@ -50,7 +50,7 @@ export default function BlogPage() {
                 <h2 className="text-2xl font-bold mb-6">Featured Articles</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   {/* Featured Article 1 */}
-                  <div className="bg-[#B7E4A7] rounded-lg overflow-hidden">
+                  <div className="bg-[#16A34A] rounded-lg overflow-hidden">
                     <div className="relative h-48">
                       <Image
                         src="/images/89e47092ce57d95022164c316fa26775.png"
@@ -74,7 +74,7 @@ export default function BlogPage() {
                   </div>
 
                   {/* Featured Article 2 */}
-                  <div className="bg-[#B7E4A7] rounded-lg overflow-hidden">
+                  <div className="bg-[#16A34A] rounded-lg overflow-hidden">
                     <div className="relative h-48">
                       <Image
                         src="/images/f755171b33bdb21fcec9db159e0aa353.png"
@@ -202,7 +202,7 @@ export default function BlogPage() {
                   />
                   <button
                     type="submit"
-                    className="w-full bg-[#B7E4A7] text-black font-bold py-2 rounded hover:bg-[#a5d695] transition-colors"
+                    className="w-full bg-[#16A34A] text-black font-bold py-2 rounded hover:bg-[#a5d695] transition-colors"
                   >
                     Subscribe
                   </button>

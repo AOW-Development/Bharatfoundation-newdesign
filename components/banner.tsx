@@ -99,7 +99,7 @@ export default function Banner({
                   className={`inline-block px-6 py-2 md:px-8 md:py-3 font-bold rounded-md transition-colors ${
                     activeButton === button.text
                       ? "bg-[#a5d695] text-black"
-                      : "bg-[#B7E4A7] text-black hover:bg-[#a5d695]"
+                      : "bg-[#16A34A] text-black hover:bg-[#a5d695]"
                   }`}
                 >
                   {button.text}

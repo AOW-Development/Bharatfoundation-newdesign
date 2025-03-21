@@ -49,7 +49,7 @@ export default function GetInvolvedPage() {
                     education and sports"
       />
       {/* Volunteer Section */}
-      <section id="volunteer" className="py-16 bg-[#B7E4A7] scroll-mt-20">
+      <section id="volunteer" className="py-16 bg-[#16A34A] scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Volunteer</h2>
@@ -77,7 +77,7 @@ export default function GetInvolvedPage() {
               Your contributions help us fund programs and support athletes.
               Every donation, big or small, makes a significant impact.
             </p>
-            <Button className="bg-[#B7E4A7] text-black hover:bg-[#98c889]">
+            <Button className="bg-[#16A34A] text-black hover:bg-[#98c889]">
               Donate Now
             </Button>
           </div>
@@ -94,7 +94,7 @@ export default function GetInvolvedPage() {
               Partner with us to create more opportunities for youth and
               community development.
             </p>
-            <Button className="bg-[#B7E4A7] text-black hover:bg-[#98c889]">
+            <Button className="bg-[#16A34A] text-black hover:bg-[#98c889]">
               Become a Partner
             </Button>
           </div>
@@ -132,7 +132,7 @@ export default function GetInvolvedPage() {
                     key={index}
                     className="flex flex-col items-center text-center"
                   >
-                    <div className="bg-[#B7E4A7] p-4 rounded-lg mb-3">
+                    <div className="bg-[#16A34A] p-4 rounded-lg mb-3">
                       <benefit.icon className="h-6 w-6" />
                     </div>
                     <p className="text-sm font-medium">{benefit.title}</p>

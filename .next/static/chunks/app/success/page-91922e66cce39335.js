@@ -1,1 +1,157 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[582],{92577:(e,t,n)=>{Promise.resolve().then(n.bind(n,83746)),Promise.resolve().then(n.bind(n,52845)),Promise.resolve().then(n.bind(n,14223)),Promise.resolve().then(n.bind(n,92864))},92864:(e,t,n)=>{"use strict";n.d(t,{default:()=>x});var s=n(95155),o=n(76046),a=n(13261),r=n(10319),c=n(69553),l=n(48173),i=n.n(l),d=n(10142);function x(){let e=(0,o.useSearchParams)(),t=e.get("amount")||"0",n=e.get("transactionId")||"Unknown",l=async()=>{let e="I just donated ₹".concat(t," to support a great cause! Transaction ID: ").concat(n,". Join me in making a difference!"),s=window.location.origin;if(navigator.share)try{await navigator.share({title:"Donation Success",text:e,url:s})}catch(e){console.error("Error sharing:",e)}else{let t="https://wa.me/?text=".concat(encodeURIComponent(e+" "+s));window.open(t,"_blank")}};return(0,s.jsx)("section",{className:"flex-grow bg-gray-50 py-12",children:(0,s.jsx)("div",{className:"container mx-auto px-4",children:(0,s.jsxs)("div",{className:"max-w-2xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden",children:[(0,s.jsxs)("div",{className:"p-8 text-center",children:[(0,s.jsx)(a.A,{className:"w-16 h-16 text-green-500 mx-auto mb-6"}),(0,s.jsx)("h2",{className:"text-3xl font-bold text-gray-800 mb-4",children:"Donation Successful!"}),(0,s.jsxs)("p",{className:"text-xl text-gray-600 mb-8",children:["Thank you for your generous donation of ₹",t,". Your support means the world to us!"]}),(0,s.jsx)("div",{className:"bg-gray-100 rounded-lg p-4 mb-8",children:(0,s.jsxs)("p",{className:"text-sm text-gray-600",children:["Transaction ID: ",n]})}),(0,s.jsxs)("div",{className:"flex flex-col sm:flex-row justify-center gap-4",children:[(0,s.jsxs)("button",{onClick:()=>{let e=new d.uE;e.setFontSize(20),e.text("Donation Receipt",20,20),e.setFontSize(12),e.text("Amount: ₹".concat(t),20,40),e.text("Transaction ID: ".concat(n),20,50),e.text("Date: ".concat(new Date().toLocaleDateString()),20,60),e.text("Thank you for your generous donation!",20,80),e.save("receipt_".concat(n,".pdf"))},className:"flex items-center justify-center gap-2 bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-colors",children:[(0,s.jsx)(r.A,{className:"w-5 h-5"}),"Download Receipt"]}),(0,s.jsxs)("button",{onClick:l,className:"flex items-center justify-center gap-2 bg-blue-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors",children:[(0,s.jsx)(c.A,{className:"w-5 h-5"}),"Share"]})]})]}),(0,s.jsxs)("div",{className:"bg-gray-100 p-8 text-center",children:[(0,s.jsx)("h3",{className:"text-xl font-semibold text-gray-800 mb-4",children:"What's Next?"}),(0,s.jsx)("p",{className:"text-gray-600 mb-6",children:"Your donation will be put to work immediately. Check out our latest projects and see the impact you're making!"}),(0,s.jsx)(i(),{href:"/resources",className:"inline-block bg-[#B7E4A7] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors",children:"View Our Resources"})]})]})})})}}},e=>{var t=t=>e(e.s=t);e.O(0,[930,111,137,88,441,517,358],()=>t(92577)),_N_E=e.O()}]);
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+  [582],
+  {
+    92577: (e, t, n) => {
+      Promise.resolve().then(n.bind(n, 83746)),
+        Promise.resolve().then(n.bind(n, 52845)),
+        Promise.resolve().then(n.bind(n, 14223)),
+        Promise.resolve().then(n.bind(n, 92864));
+    },
+    92864: (e, t, n) => {
+      "use strict";
+      n.d(t, { default: () => x });
+      var s = n(95155),
+        o = n(76046),
+        a = n(13261),
+        r = n(10319),
+        c = n(69553),
+        l = n(48173),
+        i = n.n(l),
+        d = n(10142);
+      function x() {
+        let e = (0, o.useSearchParams)(),
+          t = e.get("amount") || "0",
+          n = e.get("transactionId") || "Unknown",
+          l = async () => {
+            let e = "I just donated ₹"
+                .concat(t, " to support a great cause! Transaction ID: ")
+                .concat(n, ". Join me in making a difference!"),
+              s = window.location.origin;
+            if (navigator.share)
+              try {
+                await navigator.share({
+                  title: "Donation Success",
+                  text: e,
+                  url: s,
+                });
+              } catch (e) {
+                console.error("Error sharing:", e);
+              }
+            else {
+              let t = "https://wa.me/?text=".concat(
+                encodeURIComponent(e + " " + s)
+              );
+              window.open(t, "_blank");
+            }
+          };
+        return (0, s.jsx)("section", {
+          className: "flex-grow bg-gray-50 py-12",
+          children: (0, s.jsx)("div", {
+            className: "container mx-auto px-4",
+            children: (0, s.jsxs)("div", {
+              className:
+                "max-w-2xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden",
+              children: [
+                (0, s.jsxs)("div", {
+                  className: "p-8 text-center",
+                  children: [
+                    (0, s.jsx)(a.A, {
+                      className: "w-16 h-16 text-green-500 mx-auto mb-6",
+                    }),
+                    (0, s.jsx)("h2", {
+                      className: "text-3xl font-bold text-gray-800 mb-4",
+                      children: "Donation Successful!",
+                    }),
+                    (0, s.jsxs)("p", {
+                      className: "text-xl text-gray-600 mb-8",
+                      children: [
+                        "Thank you for your generous donation of ₹",
+                        t,
+                        ". Your support means the world to us!",
+                      ],
+                    }),
+                    (0, s.jsx)("div", {
+                      className: "bg-gray-100 rounded-lg p-4 mb-8",
+                      children: (0, s.jsxs)("p", {
+                        className: "text-sm text-gray-600",
+                        children: ["Transaction ID: ", n],
+                      }),
+                    }),
+                    (0, s.jsxs)("div", {
+                      className:
+                        "flex flex-col sm:flex-row justify-center gap-4",
+                      children: [
+                        (0, s.jsxs)("button", {
+                          onClick: () => {
+                            let e = new d.uE();
+                            e.setFontSize(20),
+                              e.text("Donation Receipt", 20, 20),
+                              e.setFontSize(12),
+                              e.text("Amount: ₹".concat(t), 20, 40),
+                              e.text("Transaction ID: ".concat(n), 20, 50),
+                              e.text(
+                                "Date: ".concat(
+                                  new Date().toLocaleDateString()
+                                ),
+                                20,
+                                60
+                              ),
+                              e.text(
+                                "Thank you for your generous donation!",
+                                20,
+                                80
+                              ),
+                              e.save("receipt_".concat(n, ".pdf"));
+                          },
+                          className:
+                            "flex items-center justify-center gap-2 bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-colors",
+                          children: [
+                            (0, s.jsx)(r.A, { className: "w-5 h-5" }),
+                            "Download Receipt",
+                          ],
+                        }),
+                        (0, s.jsxs)("button", {
+                          onClick: l,
+                          className:
+                            "flex items-center justify-center gap-2 bg-blue-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors",
+                          children: [
+                            (0, s.jsx)(c.A, { className: "w-5 h-5" }),
+                            "Share",
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  className: "bg-gray-100 p-8 text-center",
+                  children: [
+                    (0, s.jsx)("h3", {
+                      className: "text-xl font-semibold text-gray-800 mb-4",
+                      children: "What's Next?",
+                    }),
+                    (0, s.jsx)("p", {
+                      className: "text-gray-600 mb-6",
+                      children:
+                        "Your donation will be put to work immediately. Check out our latest projects and see the impact you're making!",
+                    }),
+                    (0, s.jsx)(i(), {
+                      href: "/resources",
+                      className:
+                        "inline-block bg-[#16A34A] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors",
+                      children: "View Our Resources",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          }),
+        });
+      }
+    },
+  },
+  (e) => {
+    var t = (t) => e((e.s = t));
+    e.O(0, [930, 111, 137, 88, 441, 517, 358], () => t(92577)), (_N_E = e.O());
+  },
+]);

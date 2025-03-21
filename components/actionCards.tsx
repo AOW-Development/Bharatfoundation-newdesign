@@ -30,7 +30,7 @@ export default function ActionCards() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="bg-[#B7E4A7] h-[220px] p-8 flex flex-col justify-between border-[#B3D9FF] border-2"
+              className="bg-[#16A34A] h-[220px] p-8 flex flex-col justify-between border-[#B3D9FF] border-2"
             >
               <div>
                 <h3 className="text-xl font-bold mb-3">{card.title}</h3>

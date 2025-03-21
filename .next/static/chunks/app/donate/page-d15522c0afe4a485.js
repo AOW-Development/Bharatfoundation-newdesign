@@ -1,1 +1,549 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[272],{29456:(e,t,a)=>{Promise.resolve().then(a.bind(a,26370))},26370:(e,t,a)=>{"use strict";a.r(t),a.d(t,{default:()=>f});var s=a(95155),n=a(54333),r=a(25548),i=a(29329),o=a(83746),l=a(12115),d=a(14223),c=a(52845);let p=e=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e),m=e=>/^\d{10}$/.test(e),u=e=>/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(e);var h=a(54680),x=a(76046);function g(){let e=Number((0,x.useSearchParams)().get("amount"))||2e3,[t,a]=(0,l.useState)(e),[o,d]=(0,l.useState)({}),[c,h]=(0,l.useState)({firstName:"",lastName:"",address:"",city:"",stateProvinceZip:"",email:"",phone:"",panCard:""}),[g,f]=(0,l.useState)(!1),N=()=>{let e={};return t<=0&&(e.donationAmount="Please enter a valid donation amount"),c.firstName||(e.firstName="First name is required"),c.lastName||(e.lastName="Last name is required"),c.address||(e.address="Address is required"),c.city||(e.city="City is required"),c.stateProvinceZip||(e.stateProvinceZip="State/Province/Zip is required"),c.email&&p(c.email)||(e.email="Please enter a valid email address"),c.phone&&m(c.phone)||(e.phone="Please enter a valid 10-digit phone number"),c.panCard&&!u(c.panCard)&&(e.panCard="Please enter a valid PAN card number"),d(e),0===Object.keys(e).length},y=async e=>{if(e.preventDefault(),!N()){console.log("Form has errors");return}f(!0);try{let e="TXN"+Date.now(),a=await fetch("/api/phonepe-payment",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({amount:t,transactionId:e,userId:"".concat(c.firstName,"_").concat(c.lastName)})}),s=await a.json();if(!a.ok)throw Error(s.details||"Payment failed");window.location.href=s.redirectUrl}catch(e){console.error("Payment error:",e),alert("Failed to initiate payment: "+e.message)}finally{f(!1)}},b=e=>{let{name:t,value:a}=e.target;h(e=>({...e,[t]:a}))};return(0,s.jsx)("div",{className:"lg:col-span-2 bg-white p-6 rounded-lg shadow-sm",children:(0,s.jsxs)("form",{onSubmit:y,children:[(0,s.jsxs)("div",{className:"mb-8",children:[(0,s.jsx)("h2",{className:"text-xl font-bold mb-2",children:"Quick Pay: Cheque/ Demand Draft/ NEFT/ RTGS Transfer Details/ UPI Details"}),(0,s.jsxs)("div",{className:"space-y-2 text-sm",children:[(0,s.jsx)("p",{children:"Bank Name: Name Of The Bank"}),(0,s.jsx)("p",{children:"Account Number: 200000001001 IFSC: OPP10004"}),(0,s.jsx)("p",{children:"970030368# Namethebank"})]})]}),(0,s.jsxs)("div",{className:"mb-8",children:[(0,s.jsx)("h3",{className:"font-bold mb-4",children:"Enter Your Own Donation Amount To Help As Much As Possible."}),(0,s.jsxs)("div",{className:"flex gap-2",children:[(0,s.jsx)("input",{type:"number",placeholder:"Enter Your Donation Amount To Help",className:"flex-1 px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500",value:t,onChange:e=>a(Number(e.target.value))}),(0,s.jsx)("button",{type:"button",className:"bg-[#B7E4A7] px-6 py-2 rounded-r-lg text-black font-semibold",children:"Enter"})]}),o.donationAmount&&(0,s.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.donationAmount})]}),(0,s.jsxs)("div",{className:"mb-8",children:[(0,s.jsx)("h3",{className:"font-bold mb-4",children:"Your Information"}),(0,s.jsxs)("div",{className:"grid md:grid-cols-2 gap-4",children:[(0,s.jsxs)("div",{className:"space-y-4",children:[(0,s.jsxs)("div",{className:"grid grid-cols-2 gap-4",children:[(0,s.jsxs)("div",{children:[(0,s.jsx)("input",{type:"text",name:"firstName",placeholder:"First Name",className:"w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(o.firstName?"border-red-500":""),value:c.firstName,onChange:b}),o.firstName&&(0,s.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.firstName})]}),(0,s.jsxs)("div",{children:[(0,s.jsx)("input",{type:"text",name:"lastName",placeholder:"Last Name",className:"w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(o.lastName?"border-red-500":""),value:c.lastName,onChange:b}),o.lastName&&(0,s.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.lastName})]})]}),(0,s.jsxs)("div",{className:"relative",children:[(0,s.jsx)("input",{type:"text",name:"address",placeholder:"Address Street",className:"w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(o.address?"border-red-500":""),value:c.address,onChange:b}),(0,s.jsx)(n.A,{className:"absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",size:20}),o.address&&(0,s.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.address})]}),(0,s.jsx)("input",{type:"text",name:"city",placeholder:"City",className:"w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(o.city?"border-red-500":""),value:c.city,onChange:b}),o.city&&(0,s.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.city})]}),(0,s.jsxs)("div",{className:"space-y-4",children:[(0,s.jsx)("input",{type:"text",name:"stateProvinceZip",placeholder:"State/Province/Zip",className:"w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(o.stateProvinceZip?"border-red-500":""),value:c.stateProvinceZip,onChange:b}),o.stateProvinceZip&&(0,s.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.stateProvinceZip}),(0,s.jsxs)("div",{className:"relative",children:[(0,s.jsx)("input",{type:"email",name:"email",placeholder:"Email",className:"w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(o.email?"border-red-500":""),value:c.email,onChange:b}),(0,s.jsx)(r.A,{className:"absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",size:20}),o.email&&(0,s.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.email})]}),(0,s.jsxs)("div",{className:"relative",children:[(0,s.jsx)("input",{type:"tel",name:"phone",placeholder:"Phone/Mobile No",className:"w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(o.phone?"border-red-500":""),value:c.phone,onChange:b}),(0,s.jsx)(i.A,{className:"absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",size:20}),o.phone&&(0,s.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.phone})]})]})]}),(0,s.jsxs)("div",{className:"flex flex-col md:flex-row gap-4 mt-4 items-center",children:[(0,s.jsxs)("div",{className:"flex-1 space-y-4",children:[(0,s.jsx)("input",{type:"text",name:"panCard",placeholder:"PAN Card No (Optional)",className:"w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(o.panCard?"border-red-500":""),value:c.panCard,onChange:b}),o.panCard&&(0,s.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.panCard})]}),(0,s.jsx)("button",{type:"submit",className:"w-full md:w-auto bg-[#B7E4A7] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors disabled:bg-gray-400",disabled:g,children:g?"Processing...":"DONATE ₹".concat(t,"/- via PhonePe")})]})]})]})})}function f(){return(0,s.jsxs)("main",{className:"min-h-screen flex flex-col",children:[(0,s.jsx)(d.default,{}),(0,s.jsx)(o.default,{mediaUrl:"/images/donationbanner.png",heading:"Want to be a Volunteer? Select Your Donation Choice & Amount",paragraph:"Feel free to go ahead and join us in celebrating the achievement of success all-together forming a dynamic team",buttons:[{text:"Monthly Donation",link:"/monthly-donation"},{text:"Onetime Donation",link:"/one-time-donation"}]}),(0,s.jsx)("section",{className:"flex-grow bg-gray-50 py-12",children:(0,s.jsx)("div",{className:"container mx-auto px-4",children:(0,s.jsxs)("div",{className:"grid lg:grid-cols-3 gap-8",children:[(0,s.jsx)(l.Suspense,{fallback:(0,s.jsx)("div",{children:"Loading donation form..."}),children:(0,s.jsx)(g,{})}),(0,s.jsx)("div",{className:"lg:col-span-1 w-full bg-white p-6 rounded-lg shadow-sm",children:(0,s.jsx)(h.A,{})})]})})}),(0,s.jsx)(c.default,{})]})}},54680:(e,t,a)=>{"use strict";a.d(t,{A:()=>n});var s=a(95155);a(12115);let n=()=>(0,s.jsxs)("div",{className:"space-y-6",children:[(0,s.jsx)("h2",{className:"text-xl font-bold",children:"You May Support to"}),(0,s.jsx)("div",{className:"space-y-4",children:[{title:"Youth Sports Development",description:"Organize training camps, coaching programs, and competitions for underprivileged children."},{title:"School Sports Integration",description:"Provide sports equipment and coaching to schools that lack resources."},{title:"Sports for Women Empowerment",description:"Promote female participation in sports through mentorship, training, and tournaments."},{title:"Paralympic& Adaptive Sports",description:"Support athletes with disabilities by offering specialized training and facilities."},{title:"Community Sports Centres",description:"Build or refurbish local playgrounds, fields, and courts to encourage sports participation."},{title:"Health& Fitness through Sports",description:"Conduct awareness campaigns on physical fitness and mental health benefits of sports."},{title:"Anti- Drug& Rehabilitation through Sports",description:"Use sports as a tool for rehabilitation and preventing substance abuse."},{title:"Scholarship Programs",description:"Provide scholarships to talented young athletes who lack financial support."},{title:"Sports for Social Inclusion",description:"Promote sports programs for marginalized communities, including refugees and orphans."},{title:"Senior Citizen Wellness Sports Programs",description:"Organize light sports activities for elderly individuals to promote healthy aging."}].map((e,t)=>(0,s.jsxs)("div",{className:"bg-white p-4 rounded-lg shadow-sm",children:[(0,s.jsx)("h3",{className:"font-bold mb-2",children:e.title}),(0,s.jsx)("p",{className:"text-gray-600 text-sm",children:e.description})]},t))})]})},25548:(e,t,a)=>{"use strict";a.d(t,{A:()=>s});let s=(0,a(14057).A)("Mail",[["rect",{width:"20",height:"16",x:"2",y:"4",rx:"2",key:"18n3k1"}],["path",{d:"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7",key:"1ocrg3"}]])},54333:(e,t,a)=>{"use strict";a.d(t,{A:()=>s});let s=(0,a(14057).A)("MapPin",[["path",{d:"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",key:"1r0f0z"}],["circle",{cx:"12",cy:"10",r:"3",key:"ilqhr7"}]])},29329:(e,t,a)=>{"use strict";a.d(t,{A:()=>s});let s=(0,a(14057).A)("Phone",[["path",{d:"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z",key:"foiqr5"}]])}},e=>{var t=t=>e(e.s=t);e.O(0,[111,88,441,517,358],()=>t(29456)),_N_E=e.O()}]);
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+  [272],
+  {
+    29456: (e, t, a) => {
+      Promise.resolve().then(a.bind(a, 26370));
+    },
+    26370: (e, t, a) => {
+      "use strict";
+      a.r(t), a.d(t, { default: () => f });
+      var s = a(95155),
+        n = a(54333),
+        r = a(25548),
+        i = a(29329),
+        o = a(83746),
+        l = a(12115),
+        d = a(14223),
+        c = a(52845);
+      let p = (e) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e),
+        m = (e) => /^\d{10}$/.test(e),
+        u = (e) => /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(e);
+      var h = a(54680),
+        x = a(76046);
+      function g() {
+        let e = Number((0, x.useSearchParams)().get("amount")) || 2e3,
+          [t, a] = (0, l.useState)(e),
+          [o, d] = (0, l.useState)({}),
+          [c, h] = (0, l.useState)({
+            firstName: "",
+            lastName: "",
+            address: "",
+            city: "",
+            stateProvinceZip: "",
+            email: "",
+            phone: "",
+            panCard: "",
+          }),
+          [g, f] = (0, l.useState)(!1),
+          N = () => {
+            let e = {};
+            return (
+              t <= 0 &&
+                (e.donationAmount = "Please enter a valid donation amount"),
+              c.firstName || (e.firstName = "First name is required"),
+              c.lastName || (e.lastName = "Last name is required"),
+              c.address || (e.address = "Address is required"),
+              c.city || (e.city = "City is required"),
+              c.stateProvinceZip ||
+                (e.stateProvinceZip = "State/Province/Zip is required"),
+              (c.email && p(c.email)) ||
+                (e.email = "Please enter a valid email address"),
+              (c.phone && m(c.phone)) ||
+                (e.phone = "Please enter a valid 10-digit phone number"),
+              c.panCard &&
+                !u(c.panCard) &&
+                (e.panCard = "Please enter a valid PAN card number"),
+              d(e),
+              0 === Object.keys(e).length
+            );
+          },
+          y = async (e) => {
+            if ((e.preventDefault(), !N())) {
+              console.log("Form has errors");
+              return;
+            }
+            f(!0);
+            try {
+              let e = "TXN" + Date.now(),
+                a = await fetch("/api/phonepe-payment", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({
+                    amount: t,
+                    transactionId: e,
+                    userId: "".concat(c.firstName, "_").concat(c.lastName),
+                  }),
+                }),
+                s = await a.json();
+              if (!a.ok) throw Error(s.details || "Payment failed");
+              window.location.href = s.redirectUrl;
+            } catch (e) {
+              console.error("Payment error:", e),
+                alert("Failed to initiate payment: " + e.message);
+            } finally {
+              f(!1);
+            }
+          },
+          b = (e) => {
+            let { name: t, value: a } = e.target;
+            h((e) => ({ ...e, [t]: a }));
+          };
+        return (0, s.jsx)("div", {
+          className: "lg:col-span-2 bg-white p-6 rounded-lg shadow-sm",
+          children: (0, s.jsxs)("form", {
+            onSubmit: y,
+            children: [
+              (0, s.jsxs)("div", {
+                className: "mb-8",
+                children: [
+                  (0, s.jsx)("h2", {
+                    className: "text-xl font-bold mb-2",
+                    children:
+                      "Quick Pay: Cheque/ Demand Draft/ NEFT/ RTGS Transfer Details/ UPI Details",
+                  }),
+                  (0, s.jsxs)("div", {
+                    className: "space-y-2 text-sm",
+                    children: [
+                      (0, s.jsx)("p", {
+                        children: "Bank Name: Name Of The Bank",
+                      }),
+                      (0, s.jsx)("p", {
+                        children: "Account Number: 200000001001 IFSC: OPP10004",
+                      }),
+                      (0, s.jsx)("p", { children: "970030368# Namethebank" }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, s.jsxs)("div", {
+                className: "mb-8",
+                children: [
+                  (0, s.jsx)("h3", {
+                    className: "font-bold mb-4",
+                    children:
+                      "Enter Your Own Donation Amount To Help As Much As Possible.",
+                  }),
+                  (0, s.jsxs)("div", {
+                    className: "flex gap-2",
+                    children: [
+                      (0, s.jsx)("input", {
+                        type: "number",
+                        placeholder: "Enter Your Donation Amount To Help",
+                        className:
+                          "flex-1 px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500",
+                        value: t,
+                        onChange: (e) => a(Number(e.target.value)),
+                      }),
+                      (0, s.jsx)("button", {
+                        type: "button",
+                        className:
+                          "bg-[#16A34A] px-6 py-2 rounded-r-lg text-black font-semibold",
+                        children: "Enter",
+                      }),
+                    ],
+                  }),
+                  o.donationAmount &&
+                    (0, s.jsx)("p", {
+                      className: "text-red-500 text-xs mt-1",
+                      children: o.donationAmount,
+                    }),
+                ],
+              }),
+              (0, s.jsxs)("div", {
+                className: "mb-8",
+                children: [
+                  (0, s.jsx)("h3", {
+                    className: "font-bold mb-4",
+                    children: "Your Information",
+                  }),
+                  (0, s.jsxs)("div", {
+                    className: "grid md:grid-cols-2 gap-4",
+                    children: [
+                      (0, s.jsxs)("div", {
+                        className: "space-y-4",
+                        children: [
+                          (0, s.jsxs)("div", {
+                            className: "grid grid-cols-2 gap-4",
+                            children: [
+                              (0, s.jsxs)("div", {
+                                children: [
+                                  (0, s.jsx)("input", {
+                                    type: "text",
+                                    name: "firstName",
+                                    placeholder: "First Name",
+                                    className:
+                                      "w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(
+                                        o.firstName ? "border-red-500" : ""
+                                      ),
+                                    value: c.firstName,
+                                    onChange: b,
+                                  }),
+                                  o.firstName &&
+                                    (0, s.jsx)("p", {
+                                      className: "text-red-500 text-xs mt-1",
+                                      children: o.firstName,
+                                    }),
+                                ],
+                              }),
+                              (0, s.jsxs)("div", {
+                                children: [
+                                  (0, s.jsx)("input", {
+                                    type: "text",
+                                    name: "lastName",
+                                    placeholder: "Last Name",
+                                    className:
+                                      "w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(
+                                        o.lastName ? "border-red-500" : ""
+                                      ),
+                                    value: c.lastName,
+                                    onChange: b,
+                                  }),
+                                  o.lastName &&
+                                    (0, s.jsx)("p", {
+                                      className: "text-red-500 text-xs mt-1",
+                                      children: o.lastName,
+                                    }),
+                                ],
+                              }),
+                            ],
+                          }),
+                          (0, s.jsxs)("div", {
+                            className: "relative",
+                            children: [
+                              (0, s.jsx)("input", {
+                                type: "text",
+                                name: "address",
+                                placeholder: "Address Street",
+                                className:
+                                  "w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(
+                                    o.address ? "border-red-500" : ""
+                                  ),
+                                value: c.address,
+                                onChange: b,
+                              }),
+                              (0, s.jsx)(n.A, {
+                                className:
+                                  "absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",
+                                size: 20,
+                              }),
+                              o.address &&
+                                (0, s.jsx)("p", {
+                                  className: "text-red-500 text-xs mt-1",
+                                  children: o.address,
+                                }),
+                            ],
+                          }),
+                          (0, s.jsx)("input", {
+                            type: "text",
+                            name: "city",
+                            placeholder: "City",
+                            className:
+                              "w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(
+                                o.city ? "border-red-500" : ""
+                              ),
+                            value: c.city,
+                            onChange: b,
+                          }),
+                          o.city &&
+                            (0, s.jsx)("p", {
+                              className: "text-red-500 text-xs mt-1",
+                              children: o.city,
+                            }),
+                        ],
+                      }),
+                      (0, s.jsxs)("div", {
+                        className: "space-y-4",
+                        children: [
+                          (0, s.jsx)("input", {
+                            type: "text",
+                            name: "stateProvinceZip",
+                            placeholder: "State/Province/Zip",
+                            className:
+                              "w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(
+                                o.stateProvinceZip ? "border-red-500" : ""
+                              ),
+                            value: c.stateProvinceZip,
+                            onChange: b,
+                          }),
+                          o.stateProvinceZip &&
+                            (0, s.jsx)("p", {
+                              className: "text-red-500 text-xs mt-1",
+                              children: o.stateProvinceZip,
+                            }),
+                          (0, s.jsxs)("div", {
+                            className: "relative",
+                            children: [
+                              (0, s.jsx)("input", {
+                                type: "email",
+                                name: "email",
+                                placeholder: "Email",
+                                className:
+                                  "w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(
+                                    o.email ? "border-red-500" : ""
+                                  ),
+                                value: c.email,
+                                onChange: b,
+                              }),
+                              (0, s.jsx)(r.A, {
+                                className:
+                                  "absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",
+                                size: 20,
+                              }),
+                              o.email &&
+                                (0, s.jsx)("p", {
+                                  className: "text-red-500 text-xs mt-1",
+                                  children: o.email,
+                                }),
+                            ],
+                          }),
+                          (0, s.jsxs)("div", {
+                            className: "relative",
+                            children: [
+                              (0, s.jsx)("input", {
+                                type: "tel",
+                                name: "phone",
+                                placeholder: "Phone/Mobile No",
+                                className:
+                                  "w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(
+                                    o.phone ? "border-red-500" : ""
+                                  ),
+                                value: c.phone,
+                                onChange: b,
+                              }),
+                              (0, s.jsx)(i.A, {
+                                className:
+                                  "absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",
+                                size: 20,
+                              }),
+                              o.phone &&
+                                (0, s.jsx)("p", {
+                                  className: "text-red-500 text-xs mt-1",
+                                  children: o.phone,
+                                }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, s.jsxs)("div", {
+                    className:
+                      "flex flex-col md:flex-row gap-4 mt-4 items-center",
+                    children: [
+                      (0, s.jsxs)("div", {
+                        className: "flex-1 space-y-4",
+                        children: [
+                          (0, s.jsx)("input", {
+                            type: "text",
+                            name: "panCard",
+                            placeholder: "PAN Card No (Optional)",
+                            className:
+                              "w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ".concat(
+                                o.panCard ? "border-red-500" : ""
+                              ),
+                            value: c.panCard,
+                            onChange: b,
+                          }),
+                          o.panCard &&
+                            (0, s.jsx)("p", {
+                              className: "text-red-500 text-xs mt-1",
+                              children: o.panCard,
+                            }),
+                        ],
+                      }),
+                      (0, s.jsx)("button", {
+                        type: "submit",
+                        className:
+                          "w-full md:w-auto bg-[#16A34A] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors disabled:bg-gray-400",
+                        disabled: g,
+                        children: g
+                          ? "Processing..."
+                          : "DONATE ₹".concat(t, "/- via PhonePe"),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
+      }
+      function f() {
+        return (0, s.jsxs)("main", {
+          className: "min-h-screen flex flex-col",
+          children: [
+            (0, s.jsx)(d.default, {}),
+            (0, s.jsx)(o.default, {
+              mediaUrl: "/images/donationbanner.png",
+              heading:
+                "Want to be a Volunteer? Select Your Donation Choice & Amount",
+              paragraph:
+                "Feel free to go ahead and join us in celebrating the achievement of success all-together forming a dynamic team",
+              buttons: [
+                { text: "Monthly Donation", link: "/monthly-donation" },
+                { text: "Onetime Donation", link: "/one-time-donation" },
+              ],
+            }),
+            (0, s.jsx)("section", {
+              className: "flex-grow bg-gray-50 py-12",
+              children: (0, s.jsx)("div", {
+                className: "container mx-auto px-4",
+                children: (0, s.jsxs)("div", {
+                  className: "grid lg:grid-cols-3 gap-8",
+                  children: [
+                    (0, s.jsx)(l.Suspense, {
+                      fallback: (0, s.jsx)("div", {
+                        children: "Loading donation form...",
+                      }),
+                      children: (0, s.jsx)(g, {}),
+                    }),
+                    (0, s.jsx)("div", {
+                      className:
+                        "lg:col-span-1 w-full bg-white p-6 rounded-lg shadow-sm",
+                      children: (0, s.jsx)(h.A, {}),
+                    }),
+                  ],
+                }),
+              }),
+            }),
+            (0, s.jsx)(c.default, {}),
+          ],
+        });
+      }
+    },
+    54680: (e, t, a) => {
+      "use strict";
+      a.d(t, { A: () => n });
+      var s = a(95155);
+      a(12115);
+      let n = () =>
+        (0, s.jsxs)("div", {
+          className: "space-y-6",
+          children: [
+            (0, s.jsx)("h2", {
+              className: "text-xl font-bold",
+              children: "You May Support to",
+            }),
+            (0, s.jsx)("div", {
+              className: "space-y-4",
+              children: [
+                {
+                  title: "Youth Sports Development",
+                  description:
+                    "Organize training camps, coaching programs, and competitions for underprivileged children.",
+                },
+                {
+                  title: "School Sports Integration",
+                  description:
+                    "Provide sports equipment and coaching to schools that lack resources.",
+                },
+                {
+                  title: "Sports for Women Empowerment",
+                  description:
+                    "Promote female participation in sports through mentorship, training, and tournaments.",
+                },
+                {
+                  title: "Paralympic& Adaptive Sports",
+                  description:
+                    "Support athletes with disabilities by offering specialized training and facilities.",
+                },
+                {
+                  title: "Community Sports Centres",
+                  description:
+                    "Build or refurbish local playgrounds, fields, and courts to encourage sports participation.",
+                },
+                {
+                  title: "Health& Fitness through Sports",
+                  description:
+                    "Conduct awareness campaigns on physical fitness and mental health benefits of sports.",
+                },
+                {
+                  title: "Anti- Drug& Rehabilitation through Sports",
+                  description:
+                    "Use sports as a tool for rehabilitation and preventing substance abuse.",
+                },
+                {
+                  title: "Scholarship Programs",
+                  description:
+                    "Provide scholarships to talented young athletes who lack financial support.",
+                },
+                {
+                  title: "Sports for Social Inclusion",
+                  description:
+                    "Promote sports programs for marginalized communities, including refugees and orphans.",
+                },
+                {
+                  title: "Senior Citizen Wellness Sports Programs",
+                  description:
+                    "Organize light sports activities for elderly individuals to promote healthy aging.",
+                },
+              ].map((e, t) =>
+                (0, s.jsxs)(
+                  "div",
+                  {
+                    className: "bg-white p-4 rounded-lg shadow-sm",
+                    children: [
+                      (0, s.jsx)("h3", {
+                        className: "font-bold mb-2",
+                        children: e.title,
+                      }),
+                      (0, s.jsx)("p", {
+                        className: "text-gray-600 text-sm",
+                        children: e.description,
+                      }),
+                    ],
+                  },
+                  t
+                )
+              ),
+            }),
+          ],
+        });
+    },
+    25548: (e, t, a) => {
+      "use strict";
+      a.d(t, { A: () => s });
+      let s = (0, a(14057).A)("Mail", [
+        [
+          "rect",
+          { width: "20", height: "16", x: "2", y: "4", rx: "2", key: "18n3k1" },
+        ],
+        [
+          "path",
+          { d: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7", key: "1ocrg3" },
+        ],
+      ]);
+    },
+    54333: (e, t, a) => {
+      "use strict";
+      a.d(t, { A: () => s });
+      let s = (0, a(14057).A)("MapPin", [
+        [
+          "path",
+          {
+            d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+            key: "1r0f0z",
+          },
+        ],
+        ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }],
+      ]);
+    },
+    29329: (e, t, a) => {
+      "use strict";
+      a.d(t, { A: () => s });
+      let s = (0, a(14057).A)("Phone", [
+        [
+          "path",
+          {
+            d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z",
+            key: "foiqr5",
+          },
+        ],
+      ]);
+    },
+  },
+  (e) => {
+    var t = (t) => e((e.s = t));
+    e.O(0, [111, 88, 441, 517, 358], () => t(29456)), (_N_E = e.O());
+  },
+]);

@@ -1,1 +1,699 @@
-(()=>{var e={};e.id=272,e.ids=[272],e.modules={10846:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/app-page.runtime.prod.js")},19121:e=>{"use strict";e.exports=require("next/dist/server/app-render/action-async-storage.external.js")},3295:e=>{"use strict";e.exports=require("next/dist/server/app-render/after-task-async-storage.external.js")},29294:e=>{"use strict";e.exports=require("next/dist/server/app-render/work-async-storage.external.js")},63033:e=>{"use strict";e.exports=require("next/dist/server/app-render/work-unit-async-storage.external.js")},33873:e=>{"use strict";e.exports=require("path")},79551:e=>{"use strict";e.exports=require("url")},82814:(e,t,s)=>{"use strict";s.r(t),s.d(t,{GlobalError:()=>i.a,__next_app__:()=>p,pages:()=>c,routeModule:()=>u,tree:()=>d});var r=s(70260),a=s(28203),n=s(25155),i=s.n(n),o=s(67292),l={};for(let e in o)0>["default","tree","pages","GlobalError","__next_app__","routeModule"].indexOf(e)&&(l[e]=()=>o[e]);s.d(t,l);let d=["",{children:["donate",{children:["__PAGE__",{},{page:[()=>Promise.resolve().then(s.bind(s,54696)),"D:\\Development\\bsf-sureshdesign\\app\\donate\\page.tsx"]}]},{metadata:{icon:[async e=>(await Promise.resolve().then(s.bind(s,46055))).default(e)],apple:[],openGraph:[],twitter:[],manifest:void 0}}]},{layout:[()=>Promise.resolve().then(s.bind(s,19611)),"D:\\Development\\bsf-sureshdesign\\app\\layout.tsx"],"not-found":[()=>Promise.resolve().then(s.t.bind(s,19937,23)),"next/dist/client/components/not-found-error"],forbidden:[()=>Promise.resolve().then(s.t.bind(s,69116,23)),"next/dist/client/components/forbidden-error"],unauthorized:[()=>Promise.resolve().then(s.t.bind(s,41485,23)),"next/dist/client/components/unauthorized-error"],metadata:{icon:[async e=>(await Promise.resolve().then(s.bind(s,46055))).default(e)],apple:[],openGraph:[],twitter:[],manifest:void 0}}],c=["D:\\Development\\bsf-sureshdesign\\app\\donate\\page.tsx"],p={require:s,loadChunk:()=>Promise.resolve()},u=new r.AppPageRouteModule({definition:{kind:a.RouteKind.APP_PAGE,page:"/donate/page",pathname:"/donate",bundlePath:"",filename:"",appPaths:[]},userland:{loaderTree:d}})},99400:(e,t,s)=>{Promise.resolve().then(s.bind(s,54696))},86248:(e,t,s)=>{Promise.resolve().then(s.bind(s,59174))},59174:(e,t,s)=>{"use strict";s.r(t),s.d(t,{default:()=>f});var r=s(45512),a=s(25391),n=s(9472),i=s(89995),o=s(23320),l=s(58009),d=s(39701),c=s(26283);let p=e=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e),u=e=>/^\d{10}$/.test(e),m=e=>/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(e);var h=s(6224),x=s(79334);function g(){let e=Number((0,x.useSearchParams)().get("amount"))||2e3,[t,s]=(0,l.useState)(e),[o,d]=(0,l.useState)({}),[c,h]=(0,l.useState)({firstName:"",lastName:"",address:"",city:"",stateProvinceZip:"",email:"",phone:"",panCard:""}),[g,f]=(0,l.useState)(!1),b=()=>{let e={};return t<=0&&(e.donationAmount="Please enter a valid donation amount"),c.firstName||(e.firstName="First name is required"),c.lastName||(e.lastName="Last name is required"),c.address||(e.address="Address is required"),c.city||(e.city="City is required"),c.stateProvinceZip||(e.stateProvinceZip="State/Province/Zip is required"),c.email&&p(c.email)||(e.email="Please enter a valid email address"),c.phone&&u(c.phone)||(e.phone="Please enter a valid 10-digit phone number"),c.panCard&&!m(c.panCard)&&(e.panCard="Please enter a valid PAN card number"),d(e),0===Object.keys(e).length},v=async e=>{if(e.preventDefault(),!b()){console.log("Form has errors");return}f(!0);try{let e="TXN"+Date.now(),s=await fetch("/api/phonepe-payment",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({amount:t,transactionId:e,userId:`${c.firstName}_${c.lastName}`})}),r=await s.json();if(!s.ok)throw Error(r.details||"Payment failed");window.location.href=r.redirectUrl}catch(e){console.error("Payment error:",e),alert("Failed to initiate payment: "+e.message)}finally{f(!1)}},y=e=>{let{name:t,value:s}=e.target;h(e=>({...e,[t]:s}))};return(0,r.jsx)("div",{className:"lg:col-span-2 bg-white p-6 rounded-lg shadow-sm",children:(0,r.jsxs)("form",{onSubmit:v,children:[(0,r.jsxs)("div",{className:"mb-8",children:[(0,r.jsx)("h2",{className:"text-xl font-bold mb-2",children:"Quick Pay: Cheque/ Demand Draft/ NEFT/ RTGS Transfer Details/ UPI Details"}),(0,r.jsxs)("div",{className:"space-y-2 text-sm",children:[(0,r.jsx)("p",{children:"Bank Name: Name Of The Bank"}),(0,r.jsx)("p",{children:"Account Number: 200000001001 IFSC: OPP10004"}),(0,r.jsx)("p",{children:"970030368# Namethebank"})]})]}),(0,r.jsxs)("div",{className:"mb-8",children:[(0,r.jsx)("h3",{className:"font-bold mb-4",children:"Enter Your Own Donation Amount To Help As Much As Possible."}),(0,r.jsxs)("div",{className:"flex gap-2",children:[(0,r.jsx)("input",{type:"number",placeholder:"Enter Your Donation Amount To Help",className:"flex-1 px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500",value:t,onChange:e=>s(Number(e.target.value))}),(0,r.jsx)("button",{type:"button",className:"bg-[#B7E4A7] px-6 py-2 rounded-r-lg text-black font-semibold",children:"Enter"})]}),o.donationAmount&&(0,r.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.donationAmount})]}),(0,r.jsxs)("div",{className:"mb-8",children:[(0,r.jsx)("h3",{className:"font-bold mb-4",children:"Your Information"}),(0,r.jsxs)("div",{className:"grid md:grid-cols-2 gap-4",children:[(0,r.jsxs)("div",{className:"space-y-4",children:[(0,r.jsxs)("div",{className:"grid grid-cols-2 gap-4",children:[(0,r.jsxs)("div",{children:[(0,r.jsx)("input",{type:"text",name:"firstName",placeholder:"First Name",className:`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${o.firstName?"border-red-500":""}`,value:c.firstName,onChange:y}),o.firstName&&(0,r.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.firstName})]}),(0,r.jsxs)("div",{children:[(0,r.jsx)("input",{type:"text",name:"lastName",placeholder:"Last Name",className:`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${o.lastName?"border-red-500":""}`,value:c.lastName,onChange:y}),o.lastName&&(0,r.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.lastName})]})]}),(0,r.jsxs)("div",{className:"relative",children:[(0,r.jsx)("input",{type:"text",name:"address",placeholder:"Address Street",className:`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${o.address?"border-red-500":""}`,value:c.address,onChange:y}),(0,r.jsx)(a.A,{className:"absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",size:20}),o.address&&(0,r.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.address})]}),(0,r.jsx)("input",{type:"text",name:"city",placeholder:"City",className:`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${o.city?"border-red-500":""}`,value:c.city,onChange:y}),o.city&&(0,r.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.city})]}),(0,r.jsxs)("div",{className:"space-y-4",children:[(0,r.jsx)("input",{type:"text",name:"stateProvinceZip",placeholder:"State/Province/Zip",className:`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${o.stateProvinceZip?"border-red-500":""}`,value:c.stateProvinceZip,onChange:y}),o.stateProvinceZip&&(0,r.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.stateProvinceZip}),(0,r.jsxs)("div",{className:"relative",children:[(0,r.jsx)("input",{type:"email",name:"email",placeholder:"Email",className:`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${o.email?"border-red-500":""}`,value:c.email,onChange:y}),(0,r.jsx)(n.A,{className:"absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",size:20}),o.email&&(0,r.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.email})]}),(0,r.jsxs)("div",{className:"relative",children:[(0,r.jsx)("input",{type:"tel",name:"phone",placeholder:"Phone/Mobile No",className:`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${o.phone?"border-red-500":""}`,value:c.phone,onChange:y}),(0,r.jsx)(i.A,{className:"absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",size:20}),o.phone&&(0,r.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.phone})]})]})]}),(0,r.jsxs)("div",{className:"flex flex-col md:flex-row gap-4 mt-4 items-center",children:[(0,r.jsxs)("div",{className:"flex-1 space-y-4",children:[(0,r.jsx)("input",{type:"text",name:"panCard",placeholder:"PAN Card No (Optional)",className:`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${o.panCard?"border-red-500":""}`,value:c.panCard,onChange:y}),o.panCard&&(0,r.jsx)("p",{className:"text-red-500 text-xs mt-1",children:o.panCard})]}),(0,r.jsx)("button",{type:"submit",className:"w-full md:w-auto bg-[#B7E4A7] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors disabled:bg-gray-400",disabled:g,children:g?"Processing...":`DONATE ₹${t}/- via PhonePe`})]})]})]})})}function f(){return(0,r.jsxs)("main",{className:"min-h-screen flex flex-col",children:[(0,r.jsx)(d.default,{}),(0,r.jsx)(o.default,{mediaUrl:"/images/donationbanner.png",heading:"Want to be a Volunteer? Select Your Donation Choice & Amount",paragraph:"Feel free to go ahead and join us in celebrating the achievement of success all-together forming a dynamic team",buttons:[{text:"Monthly Donation",link:"/monthly-donation"},{text:"Onetime Donation",link:"/one-time-donation"}]}),(0,r.jsx)("section",{className:"flex-grow bg-gray-50 py-12",children:(0,r.jsx)("div",{className:"container mx-auto px-4",children:(0,r.jsxs)("div",{className:"grid lg:grid-cols-3 gap-8",children:[(0,r.jsx)(l.Suspense,{fallback:(0,r.jsx)("div",{children:"Loading donation form..."}),children:(0,r.jsx)(g,{})}),(0,r.jsx)("div",{className:"lg:col-span-1 w-full bg-white p-6 rounded-lg shadow-sm",children:(0,r.jsx)(h.A,{})})]})})}),(0,r.jsx)(c.default,{})]})}},6224:(e,t,s)=>{"use strict";s.d(t,{A:()=>a});var r=s(45512);s(58009);let a=()=>(0,r.jsxs)("div",{className:"space-y-6",children:[(0,r.jsx)("h2",{className:"text-xl font-bold",children:"You May Support to"}),(0,r.jsx)("div",{className:"space-y-4",children:[{title:"Youth Sports Development",description:"Organize training camps, coaching programs, and competitions for underprivileged children."},{title:"School Sports Integration",description:"Provide sports equipment and coaching to schools that lack resources."},{title:"Sports for Women Empowerment",description:"Promote female participation in sports through mentorship, training, and tournaments."},{title:"Paralympic& Adaptive Sports",description:"Support athletes with disabilities by offering specialized training and facilities."},{title:"Community Sports Centres",description:"Build or refurbish local playgrounds, fields, and courts to encourage sports participation."},{title:"Health& Fitness through Sports",description:"Conduct awareness campaigns on physical fitness and mental health benefits of sports."},{title:"Anti- Drug& Rehabilitation through Sports",description:"Use sports as a tool for rehabilitation and preventing substance abuse."},{title:"Scholarship Programs",description:"Provide scholarships to talented young athletes who lack financial support."},{title:"Sports for Social Inclusion",description:"Promote sports programs for marginalized communities, including refugees and orphans."},{title:"Senior Citizen Wellness Sports Programs",description:"Organize light sports activities for elderly individuals to promote healthy aging."}].map((e,t)=>(0,r.jsxs)("div",{className:"bg-white p-4 rounded-lg shadow-sm",children:[(0,r.jsx)("h3",{className:"font-bold mb-2",children:e.title}),(0,r.jsx)("p",{className:"text-gray-600 text-sm",children:e.description})]},t))})]})},54696:(e,t,s)=>{"use strict";s.r(t),s.d(t,{default:()=>r});let r=(0,s(46760).registerClientReference)(function(){throw Error("Attempted to call the default export of \"D:\\\\Development\\\\bsf-sureshdesign\\\\app\\\\donate\\\\page.tsx\" from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"D:\\Development\\bsf-sureshdesign\\app\\donate\\page.tsx","default")},9472:(e,t,s)=>{"use strict";s.d(t,{A:()=>r});let r=(0,s(94825).A)("Mail",[["rect",{width:"20",height:"16",x:"2",y:"4",rx:"2",key:"18n3k1"}],["path",{d:"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7",key:"1ocrg3"}]])},25391:(e,t,s)=>{"use strict";s.d(t,{A:()=>r});let r=(0,s(94825).A)("MapPin",[["path",{d:"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",key:"1r0f0z"}],["circle",{cx:"12",cy:"10",r:"3",key:"ilqhr7"}]])},89995:(e,t,s)=>{"use strict";s.d(t,{A:()=>r});let r=(0,s(94825).A)("Phone",[["path",{d:"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z",key:"foiqr5"}]])}};var t=require("../../webpack-runtime.js");t.C(e);var s=e=>t(t.s=e),r=t.X(0,[638,776,392,746],()=>s(82814));module.exports=r})();
+(() => {
+  var e = {};
+  (e.id = 272),
+    (e.ids = [272]),
+    (e.modules = {
+      10846: (e) => {
+        "use strict";
+        e.exports = require("next/dist/compiled/next-server/app-page.runtime.prod.js");
+      },
+      19121: (e) => {
+        "use strict";
+        e.exports = require("next/dist/server/app-render/action-async-storage.external.js");
+      },
+      3295: (e) => {
+        "use strict";
+        e.exports = require("next/dist/server/app-render/after-task-async-storage.external.js");
+      },
+      29294: (e) => {
+        "use strict";
+        e.exports = require("next/dist/server/app-render/work-async-storage.external.js");
+      },
+      63033: (e) => {
+        "use strict";
+        e.exports = require("next/dist/server/app-render/work-unit-async-storage.external.js");
+      },
+      33873: (e) => {
+        "use strict";
+        e.exports = require("path");
+      },
+      79551: (e) => {
+        "use strict";
+        e.exports = require("url");
+      },
+      82814: (e, t, s) => {
+        "use strict";
+        s.r(t),
+          s.d(t, {
+            GlobalError: () => i.a,
+            __next_app__: () => p,
+            pages: () => c,
+            routeModule: () => u,
+            tree: () => d,
+          });
+        var r = s(70260),
+          a = s(28203),
+          n = s(25155),
+          i = s.n(n),
+          o = s(67292),
+          l = {};
+        for (let e in o)
+          0 >
+            [
+              "default",
+              "tree",
+              "pages",
+              "GlobalError",
+              "__next_app__",
+              "routeModule",
+            ].indexOf(e) && (l[e] = () => o[e]);
+        s.d(t, l);
+        let d = [
+            "",
+            {
+              children: [
+                "donate",
+                {
+                  children: [
+                    "__PAGE__",
+                    {},
+                    {
+                      page: [
+                        () => Promise.resolve().then(s.bind(s, 54696)),
+                        "D:\\Development\\bsf-sureshdesign\\app\\donate\\page.tsx",
+                      ],
+                    },
+                  ],
+                },
+                {
+                  metadata: {
+                    icon: [
+                      async (e) =>
+                        (
+                          await Promise.resolve().then(s.bind(s, 46055))
+                        ).default(e),
+                    ],
+                    apple: [],
+                    openGraph: [],
+                    twitter: [],
+                    manifest: void 0,
+                  },
+                },
+              ],
+            },
+            {
+              layout: [
+                () => Promise.resolve().then(s.bind(s, 19611)),
+                "D:\\Development\\bsf-sureshdesign\\app\\layout.tsx",
+              ],
+              "not-found": [
+                () => Promise.resolve().then(s.t.bind(s, 19937, 23)),
+                "next/dist/client/components/not-found-error",
+              ],
+              forbidden: [
+                () => Promise.resolve().then(s.t.bind(s, 69116, 23)),
+                "next/dist/client/components/forbidden-error",
+              ],
+              unauthorized: [
+                () => Promise.resolve().then(s.t.bind(s, 41485, 23)),
+                "next/dist/client/components/unauthorized-error",
+              ],
+              metadata: {
+                icon: [
+                  async (e) =>
+                    (await Promise.resolve().then(s.bind(s, 46055))).default(e),
+                ],
+                apple: [],
+                openGraph: [],
+                twitter: [],
+                manifest: void 0,
+              },
+            },
+          ],
+          c = ["D:\\Development\\bsf-sureshdesign\\app\\donate\\page.tsx"],
+          p = { require: s, loadChunk: () => Promise.resolve() },
+          u = new r.AppPageRouteModule({
+            definition: {
+              kind: a.RouteKind.APP_PAGE,
+              page: "/donate/page",
+              pathname: "/donate",
+              bundlePath: "",
+              filename: "",
+              appPaths: [],
+            },
+            userland: { loaderTree: d },
+          });
+      },
+      99400: (e, t, s) => {
+        Promise.resolve().then(s.bind(s, 54696));
+      },
+      86248: (e, t, s) => {
+        Promise.resolve().then(s.bind(s, 59174));
+      },
+      59174: (e, t, s) => {
+        "use strict";
+        s.r(t), s.d(t, { default: () => f });
+        var r = s(45512),
+          a = s(25391),
+          n = s(9472),
+          i = s(89995),
+          o = s(23320),
+          l = s(58009),
+          d = s(39701),
+          c = s(26283);
+        let p = (e) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e),
+          u = (e) => /^\d{10}$/.test(e),
+          m = (e) => /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(e);
+        var h = s(6224),
+          x = s(79334);
+        function g() {
+          let e = Number((0, x.useSearchParams)().get("amount")) || 2e3,
+            [t, s] = (0, l.useState)(e),
+            [o, d] = (0, l.useState)({}),
+            [c, h] = (0, l.useState)({
+              firstName: "",
+              lastName: "",
+              address: "",
+              city: "",
+              stateProvinceZip: "",
+              email: "",
+              phone: "",
+              panCard: "",
+            }),
+            [g, f] = (0, l.useState)(!1),
+            b = () => {
+              let e = {};
+              return (
+                t <= 0 &&
+                  (e.donationAmount = "Please enter a valid donation amount"),
+                c.firstName || (e.firstName = "First name is required"),
+                c.lastName || (e.lastName = "Last name is required"),
+                c.address || (e.address = "Address is required"),
+                c.city || (e.city = "City is required"),
+                c.stateProvinceZip ||
+                  (e.stateProvinceZip = "State/Province/Zip is required"),
+                (c.email && p(c.email)) ||
+                  (e.email = "Please enter a valid email address"),
+                (c.phone && u(c.phone)) ||
+                  (e.phone = "Please enter a valid 10-digit phone number"),
+                c.panCard &&
+                  !m(c.panCard) &&
+                  (e.panCard = "Please enter a valid PAN card number"),
+                d(e),
+                0 === Object.keys(e).length
+              );
+            },
+            v = async (e) => {
+              if ((e.preventDefault(), !b())) {
+                console.log("Form has errors");
+                return;
+              }
+              f(!0);
+              try {
+                let e = "TXN" + Date.now(),
+                  s = await fetch("/api/phonepe-payment", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      amount: t,
+                      transactionId: e,
+                      userId: `${c.firstName}_${c.lastName}`,
+                    }),
+                  }),
+                  r = await s.json();
+                if (!s.ok) throw Error(r.details || "Payment failed");
+                window.location.href = r.redirectUrl;
+              } catch (e) {
+                console.error("Payment error:", e),
+                  alert("Failed to initiate payment: " + e.message);
+              } finally {
+                f(!1);
+              }
+            },
+            y = (e) => {
+              let { name: t, value: s } = e.target;
+              h((e) => ({ ...e, [t]: s }));
+            };
+          return (0, r.jsx)("div", {
+            className: "lg:col-span-2 bg-white p-6 rounded-lg shadow-sm",
+            children: (0, r.jsxs)("form", {
+              onSubmit: v,
+              children: [
+                (0, r.jsxs)("div", {
+                  className: "mb-8",
+                  children: [
+                    (0, r.jsx)("h2", {
+                      className: "text-xl font-bold mb-2",
+                      children:
+                        "Quick Pay: Cheque/ Demand Draft/ NEFT/ RTGS Transfer Details/ UPI Details",
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: "space-y-2 text-sm",
+                      children: [
+                        (0, r.jsx)("p", {
+                          children: "Bank Name: Name Of The Bank",
+                        }),
+                        (0, r.jsx)("p", {
+                          children:
+                            "Account Number: 200000001001 IFSC: OPP10004",
+                        }),
+                        (0, r.jsx)("p", { children: "970030368# Namethebank" }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: "mb-8",
+                  children: [
+                    (0, r.jsx)("h3", {
+                      className: "font-bold mb-4",
+                      children:
+                        "Enter Your Own Donation Amount To Help As Much As Possible.",
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: "flex gap-2",
+                      children: [
+                        (0, r.jsx)("input", {
+                          type: "number",
+                          placeholder: "Enter Your Donation Amount To Help",
+                          className:
+                            "flex-1 px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500",
+                          value: t,
+                          onChange: (e) => s(Number(e.target.value)),
+                        }),
+                        (0, r.jsx)("button", {
+                          type: "button",
+                          className:
+                            "bg-[#16A34A] px-6 py-2 rounded-r-lg text-black font-semibold",
+                          children: "Enter",
+                        }),
+                      ],
+                    }),
+                    o.donationAmount &&
+                      (0, r.jsx)("p", {
+                        className: "text-red-500 text-xs mt-1",
+                        children: o.donationAmount,
+                      }),
+                  ],
+                }),
+                (0, r.jsxs)("div", {
+                  className: "mb-8",
+                  children: [
+                    (0, r.jsx)("h3", {
+                      className: "font-bold mb-4",
+                      children: "Your Information",
+                    }),
+                    (0, r.jsxs)("div", {
+                      className: "grid md:grid-cols-2 gap-4",
+                      children: [
+                        (0, r.jsxs)("div", {
+                          className: "space-y-4",
+                          children: [
+                            (0, r.jsxs)("div", {
+                              className: "grid grid-cols-2 gap-4",
+                              children: [
+                                (0, r.jsxs)("div", {
+                                  children: [
+                                    (0, r.jsx)("input", {
+                                      type: "text",
+                                      name: "firstName",
+                                      placeholder: "First Name",
+                                      className: `w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                                        o.firstName ? "border-red-500" : ""
+                                      }`,
+                                      value: c.firstName,
+                                      onChange: y,
+                                    }),
+                                    o.firstName &&
+                                      (0, r.jsx)("p", {
+                                        className: "text-red-500 text-xs mt-1",
+                                        children: o.firstName,
+                                      }),
+                                  ],
+                                }),
+                                (0, r.jsxs)("div", {
+                                  children: [
+                                    (0, r.jsx)("input", {
+                                      type: "text",
+                                      name: "lastName",
+                                      placeholder: "Last Name",
+                                      className: `w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                                        o.lastName ? "border-red-500" : ""
+                                      }`,
+                                      value: c.lastName,
+                                      onChange: y,
+                                    }),
+                                    o.lastName &&
+                                      (0, r.jsx)("p", {
+                                        className: "text-red-500 text-xs mt-1",
+                                        children: o.lastName,
+                                      }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            (0, r.jsxs)("div", {
+                              className: "relative",
+                              children: [
+                                (0, r.jsx)("input", {
+                                  type: "text",
+                                  name: "address",
+                                  placeholder: "Address Street",
+                                  className: `w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                                    o.address ? "border-red-500" : ""
+                                  }`,
+                                  value: c.address,
+                                  onChange: y,
+                                }),
+                                (0, r.jsx)(a.A, {
+                                  className:
+                                    "absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",
+                                  size: 20,
+                                }),
+                                o.address &&
+                                  (0, r.jsx)("p", {
+                                    className: "text-red-500 text-xs mt-1",
+                                    children: o.address,
+                                  }),
+                              ],
+                            }),
+                            (0, r.jsx)("input", {
+                              type: "text",
+                              name: "city",
+                              placeholder: "City",
+                              className: `w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                                o.city ? "border-red-500" : ""
+                              }`,
+                              value: c.city,
+                              onChange: y,
+                            }),
+                            o.city &&
+                              (0, r.jsx)("p", {
+                                className: "text-red-500 text-xs mt-1",
+                                children: o.city,
+                              }),
+                          ],
+                        }),
+                        (0, r.jsxs)("div", {
+                          className: "space-y-4",
+                          children: [
+                            (0, r.jsx)("input", {
+                              type: "text",
+                              name: "stateProvinceZip",
+                              placeholder: "State/Province/Zip",
+                              className: `w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                                o.stateProvinceZip ? "border-red-500" : ""
+                              }`,
+                              value: c.stateProvinceZip,
+                              onChange: y,
+                            }),
+                            o.stateProvinceZip &&
+                              (0, r.jsx)("p", {
+                                className: "text-red-500 text-xs mt-1",
+                                children: o.stateProvinceZip,
+                              }),
+                            (0, r.jsxs)("div", {
+                              className: "relative",
+                              children: [
+                                (0, r.jsx)("input", {
+                                  type: "email",
+                                  name: "email",
+                                  placeholder: "Email",
+                                  className: `w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                                    o.email ? "border-red-500" : ""
+                                  }`,
+                                  value: c.email,
+                                  onChange: y,
+                                }),
+                                (0, r.jsx)(n.A, {
+                                  className:
+                                    "absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",
+                                  size: 20,
+                                }),
+                                o.email &&
+                                  (0, r.jsx)("p", {
+                                    className: "text-red-500 text-xs mt-1",
+                                    children: o.email,
+                                  }),
+                              ],
+                            }),
+                            (0, r.jsxs)("div", {
+                              className: "relative",
+                              children: [
+                                (0, r.jsx)("input", {
+                                  type: "tel",
+                                  name: "phone",
+                                  placeholder: "Phone/Mobile No",
+                                  className: `w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                                    o.phone ? "border-red-500" : ""
+                                  }`,
+                                  value: c.phone,
+                                  onChange: y,
+                                }),
+                                (0, r.jsx)(i.A, {
+                                  className:
+                                    "absolute right-3 top-1/2 -translate-y-1/2 text-gray-400",
+                                  size: 20,
+                                }),
+                                o.phone &&
+                                  (0, r.jsx)("p", {
+                                    className: "text-red-500 text-xs mt-1",
+                                    children: o.phone,
+                                  }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, r.jsxs)("div", {
+                      className:
+                        "flex flex-col md:flex-row gap-4 mt-4 items-center",
+                      children: [
+                        (0, r.jsxs)("div", {
+                          className: "flex-1 space-y-4",
+                          children: [
+                            (0, r.jsx)("input", {
+                              type: "text",
+                              name: "panCard",
+                              placeholder: "PAN Card No (Optional)",
+                              className: `w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                                o.panCard ? "border-red-500" : ""
+                              }`,
+                              value: c.panCard,
+                              onChange: y,
+                            }),
+                            o.panCard &&
+                              (0, r.jsx)("p", {
+                                className: "text-red-500 text-xs mt-1",
+                                children: o.panCard,
+                              }),
+                          ],
+                        }),
+                        (0, r.jsx)("button", {
+                          type: "submit",
+                          className:
+                            "w-full md:w-auto bg-[#16A34A] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors disabled:bg-gray-400",
+                          disabled: g,
+                          children: g
+                            ? "Processing..."
+                            : `DONATE ₹${t}/- via PhonePe`,
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        }
+        function f() {
+          return (0, r.jsxs)("main", {
+            className: "min-h-screen flex flex-col",
+            children: [
+              (0, r.jsx)(d.default, {}),
+              (0, r.jsx)(o.default, {
+                mediaUrl: "/images/donationbanner.png",
+                heading:
+                  "Want to be a Volunteer? Select Your Donation Choice & Amount",
+                paragraph:
+                  "Feel free to go ahead and join us in celebrating the achievement of success all-together forming a dynamic team",
+                buttons: [
+                  { text: "Monthly Donation", link: "/monthly-donation" },
+                  { text: "Onetime Donation", link: "/one-time-donation" },
+                ],
+              }),
+              (0, r.jsx)("section", {
+                className: "flex-grow bg-gray-50 py-12",
+                children: (0, r.jsx)("div", {
+                  className: "container mx-auto px-4",
+                  children: (0, r.jsxs)("div", {
+                    className: "grid lg:grid-cols-3 gap-8",
+                    children: [
+                      (0, r.jsx)(l.Suspense, {
+                        fallback: (0, r.jsx)("div", {
+                          children: "Loading donation form...",
+                        }),
+                        children: (0, r.jsx)(g, {}),
+                      }),
+                      (0, r.jsx)("div", {
+                        className:
+                          "lg:col-span-1 w-full bg-white p-6 rounded-lg shadow-sm",
+                        children: (0, r.jsx)(h.A, {}),
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              (0, r.jsx)(c.default, {}),
+            ],
+          });
+        }
+      },
+      6224: (e, t, s) => {
+        "use strict";
+        s.d(t, { A: () => a });
+        var r = s(45512);
+        s(58009);
+        let a = () =>
+          (0, r.jsxs)("div", {
+            className: "space-y-6",
+            children: [
+              (0, r.jsx)("h2", {
+                className: "text-xl font-bold",
+                children: "You May Support to",
+              }),
+              (0, r.jsx)("div", {
+                className: "space-y-4",
+                children: [
+                  {
+                    title: "Youth Sports Development",
+                    description:
+                      "Organize training camps, coaching programs, and competitions for underprivileged children.",
+                  },
+                  {
+                    title: "School Sports Integration",
+                    description:
+                      "Provide sports equipment and coaching to schools that lack resources.",
+                  },
+                  {
+                    title: "Sports for Women Empowerment",
+                    description:
+                      "Promote female participation in sports through mentorship, training, and tournaments.",
+                  },
+                  {
+                    title: "Paralympic& Adaptive Sports",
+                    description:
+                      "Support athletes with disabilities by offering specialized training and facilities.",
+                  },
+                  {
+                    title: "Community Sports Centres",
+                    description:
+                      "Build or refurbish local playgrounds, fields, and courts to encourage sports participation.",
+                  },
+                  {
+                    title: "Health& Fitness through Sports",
+                    description:
+                      "Conduct awareness campaigns on physical fitness and mental health benefits of sports.",
+                  },
+                  {
+                    title: "Anti- Drug& Rehabilitation through Sports",
+                    description:
+                      "Use sports as a tool for rehabilitation and preventing substance abuse.",
+                  },
+                  {
+                    title: "Scholarship Programs",
+                    description:
+                      "Provide scholarships to talented young athletes who lack financial support.",
+                  },
+                  {
+                    title: "Sports for Social Inclusion",
+                    description:
+                      "Promote sports programs for marginalized communities, including refugees and orphans.",
+                  },
+                  {
+                    title: "Senior Citizen Wellness Sports Programs",
+                    description:
+                      "Organize light sports activities for elderly individuals to promote healthy aging.",
+                  },
+                ].map((e, t) =>
+                  (0, r.jsxs)(
+                    "div",
+                    {
+                      className: "bg-white p-4 rounded-lg shadow-sm",
+                      children: [
+                        (0, r.jsx)("h3", {
+                          className: "font-bold mb-2",
+                          children: e.title,
+                        }),
+                        (0, r.jsx)("p", {
+                          className: "text-gray-600 text-sm",
+                          children: e.description,
+                        }),
+                      ],
+                    },
+                    t
+                  )
+                ),
+              }),
+            ],
+          });
+      },
+      54696: (e, t, s) => {
+        "use strict";
+        s.r(t), s.d(t, { default: () => r });
+        let r = (0, s(46760).registerClientReference)(
+          function () {
+            throw Error(
+              "Attempted to call the default export of \"D:\\\\Development\\\\bsf-sureshdesign\\\\app\\\\donate\\\\page.tsx\" from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component."
+            );
+          },
+          "D:\\Development\\bsf-sureshdesign\\app\\donate\\page.tsx",
+          "default"
+        );
+      },
+      9472: (e, t, s) => {
+        "use strict";
+        s.d(t, { A: () => r });
+        let r = (0, s(94825).A)("Mail", [
+          [
+            "rect",
+            {
+              width: "20",
+              height: "16",
+              x: "2",
+              y: "4",
+              rx: "2",
+              key: "18n3k1",
+            },
+          ],
+          [
+            "path",
+            { d: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7", key: "1ocrg3" },
+          ],
+        ]);
+      },
+      25391: (e, t, s) => {
+        "use strict";
+        s.d(t, { A: () => r });
+        let r = (0, s(94825).A)("MapPin", [
+          [
+            "path",
+            {
+              d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+              key: "1r0f0z",
+            },
+          ],
+          ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }],
+        ]);
+      },
+      89995: (e, t, s) => {
+        "use strict";
+        s.d(t, { A: () => r });
+        let r = (0, s(94825).A)("Phone", [
+          [
+            "path",
+            {
+              d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z",
+              key: "foiqr5",
+            },
+          ],
+        ]);
+      },
+    });
+  var t = require("../../webpack-runtime.js");
+  t.C(e);
+  var s = (e) => t((t.s = e)),
+    r = t.X(0, [638, 776, 392, 746], () => s(82814));
+  module.exports = r;
+})();

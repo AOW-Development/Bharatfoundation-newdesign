@@ -1,1 +1,622 @@
-(()=>{var e={};e.id=831,e.ids=[831],e.modules={10846:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/app-page.runtime.prod.js")},19121:e=>{"use strict";e.exports=require("next/dist/server/app-render/action-async-storage.external.js")},3295:e=>{"use strict";e.exports=require("next/dist/server/app-render/after-task-async-storage.external.js")},29294:e=>{"use strict";e.exports=require("next/dist/server/app-render/work-async-storage.external.js")},63033:e=>{"use strict";e.exports=require("next/dist/server/app-render/work-unit-async-storage.external.js")},33873:e=>{"use strict";e.exports=require("path")},79551:e=>{"use strict";e.exports=require("url")},62302:(e,t,s)=>{"use strict";s.r(t),s.d(t,{GlobalError:()=>o.a,__next_app__:()=>h,pages:()=>c,routeModule:()=>m,tree:()=>d});var r=s(70260),n=s(28203),a=s(25155),o=s.n(a),i=s(67292),l={};for(let e in i)0>["default","tree","pages","GlobalError","__next_app__","routeModule"].indexOf(e)&&(l[e]=()=>i[e]);s.d(t,l);let d=["",{children:["blog",{children:["__PAGE__",{},{page:[()=>Promise.resolve().then(s.bind(s,29740)),"D:\\Development\\bsf-sureshdesign\\app\\blog\\page.tsx"]}]},{metadata:{icon:[async e=>(await Promise.resolve().then(s.bind(s,46055))).default(e)],apple:[],openGraph:[],twitter:[],manifest:void 0}}]},{layout:[()=>Promise.resolve().then(s.bind(s,19611)),"D:\\Development\\bsf-sureshdesign\\app\\layout.tsx"],"not-found":[()=>Promise.resolve().then(s.t.bind(s,19937,23)),"next/dist/client/components/not-found-error"],forbidden:[()=>Promise.resolve().then(s.t.bind(s,69116,23)),"next/dist/client/components/forbidden-error"],unauthorized:[()=>Promise.resolve().then(s.t.bind(s,41485,23)),"next/dist/client/components/unauthorized-error"],metadata:{icon:[async e=>(await Promise.resolve().then(s.bind(s,46055))).default(e)],apple:[],openGraph:[],twitter:[],manifest:void 0}}],c=["D:\\Development\\bsf-sureshdesign\\app\\blog\\page.tsx"],h={require:s,loadChunk:()=>Promise.resolve()},m=new r.AppPageRouteModule({definition:{kind:n.RouteKind.APP_PAGE,page:"/blog/page",pathname:"/blog",bundlePath:"",filename:"",appPaths:[]},userland:{loaderTree:d}})},93197:(e,t,s)=>{Promise.resolve().then(s.bind(s,99580)),Promise.resolve().then(s.bind(s,9879)),Promise.resolve().then(s.bind(s,51929)),Promise.resolve().then(s.t.bind(s,59607,23)),Promise.resolve().then(s.t.bind(s,71066,23))},74637:(e,t,s)=>{Promise.resolve().then(s.bind(s,23320)),Promise.resolve().then(s.bind(s,26283)),Promise.resolve().then(s.bind(s,39701)),Promise.resolve().then(s.t.bind(s,28531,23)),Promise.resolve().then(s.t.bind(s,41902,23))},29740:(e,t,s)=>{"use strict";s.r(t),s.d(t,{default:()=>u});var r=s(62740),n=s(51929),a=s(9879),o=s(35635),i=s(59607),l=s.n(i),d=s(56976);let c=(0,d.A)("Facebook",[["path",{d:"M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",key:"1jg4f8"}]]),h=(0,d.A)("Twitter",[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z",key:"pff0z6"}]]),m=(0,d.A)("Instagram",[["rect",{width:"20",height:"20",x:"2",y:"2",rx:"5",ry:"5",key:"2e1cvw"}],["path",{d:"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z",key:"9exkf1"}],["line",{x1:"17.5",x2:"17.51",y1:"6.5",y2:"6.5",key:"r4j83e"}]]),p=(0,d.A)("Youtube",[["path",{d:"M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17",key:"1q2vi4"}],["path",{d:"m10 15 5-3-5-3z",key:"1jp15x"}]]);var x=s(99580);function u(){return(0,r.jsxs)("main",{className:"min-h-screen flex flex-col",children:[(0,r.jsx)(n.default,{}),(0,r.jsx)(x.default,{mediaUrl:"/images/ourblog-vid.mp4",heading:"",paragraph:""}),(0,r.jsx)("div",{className:"flex-grow bg-gray-50 py-12 px-12",children:(0,r.jsx)("div",{className:"container mx-auto px-4",children:(0,r.jsxs)("div",{className:"grid lg:grid-cols-3 gap-8",children:[(0,r.jsxs)("div",{className:"lg:col-span-2",children:[(0,r.jsxs)("section",{className:"mb-12",children:[(0,r.jsx)("h2",{className:"text-2xl font-bold mb-6",children:"Featured Articles"}),(0,r.jsxs)("div",{className:"grid md:grid-cols-2 gap-6",children:[(0,r.jsxs)("div",{className:"bg-[#B7E4A7] rounded-lg overflow-hidden",children:[(0,r.jsx)("div",{className:"relative h-48",children:(0,r.jsx)(o.default,{src:"/images/89e47092ce57d95022164c316fa26775.png",alt:"Runner in red",fill:!0,className:"object-cover"})}),(0,r.jsxs)("div",{className:"p-4",children:[(0,r.jsx)("h3",{className:"text-xl font-bold mb-2",children:"The Road to Olympic Glory"}),(0,r.jsx)("p",{className:"text-gray-700 mb-4",children:"Discover the inspiring journey of athletes preparing for the upcoming Olympics, their challenges, and"}),(0,r.jsx)("button",{className:"text-black font-semibold hover:underline",children:"Read More"})]})]}),(0,r.jsxs)("div",{className:"bg-[#B7E4A7] rounded-lg overflow-hidden",children:[(0,r.jsx)("div",{className:"relative h-48",children:(0,r.jsx)(o.default,{src:"/images/f755171b33bdb21fcec9db159e0aa353.png",alt:"Children playing soccer",fill:!0,className:"object-cover"})}),(0,r.jsxs)("div",{className:"p-4",children:[(0,r.jsx)("h3",{className:"text-xl font-bold mb-2",children:"Community Sports Programs"}),(0,r.jsx)("p",{className:"text-gray-700 mb-4",children:"Explore how our community programs are fostering a love for sports among youth and building future champions."}),(0,r.jsx)("button",{className:"text-black font-semibold hover:underline",children:"Read More"})]})]})]})]}),(0,r.jsxs)("section",{children:[(0,r.jsx)("h2",{className:"text-2xl font-bold mb-6",children:"Latest Posts"}),(0,r.jsx)("div",{className:"grid gap-8",children:[{title:"Basketball Championship Highlights",description:"Catch up on the thrilling moments from this year's championship games.",image:"/images/210876708e0f735a8d9a625bf7cd372d.png"},{title:"Coaching Tips for Young Athletes",description:"Learn essential coaching strategies to nurture young talents.",image:"/images/ee82f3120d79366a4c871191b1b791a5.png"},{title:"Marathon: A Test of Endurance",description:"Experience the excitement and challenges of marathon running.",image:"/images/fc80c050e7a77a19c613163fdc10e533.png"}].map((e,t)=>(0,r.jsxs)("div",{className:"flex gap-6 items-start",children:[(0,r.jsx)("div",{className:"relative w-32 h-32 flex-shrink-0",children:(0,r.jsx)(o.default,{src:e.image||"/placeholder.svg",alt:e.title,fill:!0,className:"object-cover rounded-lg"})}),(0,r.jsxs)("div",{children:[(0,r.jsx)("h3",{className:"text-xl font-bold mb-2",children:e.title}),(0,r.jsx)("p",{className:"text-gray-600",children:e.description})]})]},t))})]})]}),(0,r.jsxs)("div",{className:"space-y-8",children:[(0,r.jsxs)("section",{children:[(0,r.jsx)("h2",{className:"text-2xl font-bold mb-4",children:"Categories"}),(0,r.jsx)("ul",{className:"space-y-2",children:["Athlete Profiles","Event Coverage","Training Tips","Health & Nutrition"].map((e,t)=>(0,r.jsx)("li",{children:(0,r.jsx)(l(),{href:`/blog/category/${e.toLowerCase().replace(/ /g,"-")}`,className:"text-gray-600 hover:text-black",children:e})},t))})]}),(0,r.jsxs)("section",{children:[(0,r.jsx)("h2",{className:"text-2xl font-bold mb-4",children:"Follow Us"}),(0,r.jsxs)("div",{className:"flex gap-4",children:[(0,r.jsx)(l(),{href:"#",className:"text-gray-600 hover:text-black",children:(0,r.jsx)(c,{className:"h-6 w-6"})}),(0,r.jsx)(l(),{href:"#",className:"text-gray-600 hover:text-black",children:(0,r.jsx)(h,{className:"h-6 w-6"})}),(0,r.jsx)(l(),{href:"#",className:"text-gray-600 hover:text-black",children:(0,r.jsx)(m,{className:"h-6 w-6"})}),(0,r.jsx)(l(),{href:"#",className:"text-gray-600 hover:text-black",children:(0,r.jsx)(p,{className:"h-6 w-6"})})]})]}),(0,r.jsxs)("section",{children:[(0,r.jsx)("h2",{className:"text-2xl font-bold mb-4",children:"Newsletter Signup"}),(0,r.jsx)("p",{className:"text-gray-600 mb-4",children:"Stay updated with the latest news and events from Bharat Sports Foundation."}),(0,r.jsxs)("form",{className:"space-y-4",children:[(0,r.jsx)("input",{type:"email",placeholder:"Enter your email",className:"w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500"}),(0,r.jsx)("button",{type:"submit",className:"w-full bg-[#B7E4A7] text-black font-bold py-2 rounded hover:bg-[#a5d695] transition-colors",children:"Subscribe"})]})]})]})]})})}),(0,r.jsx)(a.default,{})]})}},99580:(e,t,s)=>{"use strict";s.d(t,{default:()=>r});let r=(0,s(46760).registerClientReference)(function(){throw Error("Attempted to call the default export of \"D:\\\\Development\\\\bsf-sureshdesign\\\\components\\\\banner.tsx\" from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"D:\\Development\\bsf-sureshdesign\\components\\banner.tsx","default")},9879:(e,t,s)=>{"use strict";s.d(t,{default:()=>r});let r=(0,s(46760).registerClientReference)(function(){throw Error("Attempted to call the default export of \"D:\\\\Development\\\\bsf-sureshdesign\\\\components\\\\footer.tsx\" from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"D:\\Development\\bsf-sureshdesign\\components\\footer.tsx","default")},51929:(e,t,s)=>{"use strict";s.d(t,{default:()=>r});let r=(0,s(46760).registerClientReference)(function(){throw Error("Attempted to call the default export of \"D:\\\\Development\\\\bsf-sureshdesign\\\\components\\\\header.tsx\" from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"D:\\Development\\bsf-sureshdesign\\components\\header.tsx","default")},59607:(e,t,s)=>{let{createProxy:r}=s(73439);e.exports=r("D:\\Development\\bsf-sureshdesign\\node_modules\\next\\dist\\client\\app-dir\\link.js")},56976:(e,t,s)=>{"use strict";s.d(t,{A:()=>l});var r=s(76301);let n=e=>e.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase(),a=(...e)=>e.filter((e,t,s)=>!!e&&""!==e.trim()&&s.indexOf(e)===t).join(" ").trim();var o={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round"};let i=(0,r.forwardRef)(({color:e="currentColor",size:t=24,strokeWidth:s=2,absoluteStrokeWidth:n,className:i="",children:l,iconNode:d,...c},h)=>(0,r.createElement)("svg",{ref:h,...o,width:t,height:t,stroke:e,strokeWidth:n?24*Number(s)/Number(t):s,className:a("lucide",i),...c},[...d.map(([e,t])=>(0,r.createElement)(e,t)),...Array.isArray(l)?l:[l]])),l=(e,t)=>{let s=(0,r.forwardRef)(({className:s,...o},l)=>(0,r.createElement)(i,{ref:l,iconNode:t,className:a(`lucide-${n(e)}`,s),...o}));return s.displayName=`${e}`,s}}};var t=require("../../webpack-runtime.js");t.C(e);var s=e=>t(t.s=e),r=t.X(0,[638,776,392,635,746],()=>s(62302));module.exports=r})();
+(() => {
+  var e = {};
+  (e.id = 831),
+    (e.ids = [831]),
+    (e.modules = {
+      10846: (e) => {
+        "use strict";
+        e.exports = require("next/dist/compiled/next-server/app-page.runtime.prod.js");
+      },
+      19121: (e) => {
+        "use strict";
+        e.exports = require("next/dist/server/app-render/action-async-storage.external.js");
+      },
+      3295: (e) => {
+        "use strict";
+        e.exports = require("next/dist/server/app-render/after-task-async-storage.external.js");
+      },
+      29294: (e) => {
+        "use strict";
+        e.exports = require("next/dist/server/app-render/work-async-storage.external.js");
+      },
+      63033: (e) => {
+        "use strict";
+        e.exports = require("next/dist/server/app-render/work-unit-async-storage.external.js");
+      },
+      33873: (e) => {
+        "use strict";
+        e.exports = require("path");
+      },
+      79551: (e) => {
+        "use strict";
+        e.exports = require("url");
+      },
+      62302: (e, t, s) => {
+        "use strict";
+        s.r(t),
+          s.d(t, {
+            GlobalError: () => o.a,
+            __next_app__: () => h,
+            pages: () => c,
+            routeModule: () => m,
+            tree: () => d,
+          });
+        var r = s(70260),
+          n = s(28203),
+          a = s(25155),
+          o = s.n(a),
+          i = s(67292),
+          l = {};
+        for (let e in i)
+          0 >
+            [
+              "default",
+              "tree",
+              "pages",
+              "GlobalError",
+              "__next_app__",
+              "routeModule",
+            ].indexOf(e) && (l[e] = () => i[e]);
+        s.d(t, l);
+        let d = [
+            "",
+            {
+              children: [
+                "blog",
+                {
+                  children: [
+                    "__PAGE__",
+                    {},
+                    {
+                      page: [
+                        () => Promise.resolve().then(s.bind(s, 29740)),
+                        "D:\\Development\\bsf-sureshdesign\\app\\blog\\page.tsx",
+                      ],
+                    },
+                  ],
+                },
+                {
+                  metadata: {
+                    icon: [
+                      async (e) =>
+                        (
+                          await Promise.resolve().then(s.bind(s, 46055))
+                        ).default(e),
+                    ],
+                    apple: [],
+                    openGraph: [],
+                    twitter: [],
+                    manifest: void 0,
+                  },
+                },
+              ],
+            },
+            {
+              layout: [
+                () => Promise.resolve().then(s.bind(s, 19611)),
+                "D:\\Development\\bsf-sureshdesign\\app\\layout.tsx",
+              ],
+              "not-found": [
+                () => Promise.resolve().then(s.t.bind(s, 19937, 23)),
+                "next/dist/client/components/not-found-error",
+              ],
+              forbidden: [
+                () => Promise.resolve().then(s.t.bind(s, 69116, 23)),
+                "next/dist/client/components/forbidden-error",
+              ],
+              unauthorized: [
+                () => Promise.resolve().then(s.t.bind(s, 41485, 23)),
+                "next/dist/client/components/unauthorized-error",
+              ],
+              metadata: {
+                icon: [
+                  async (e) =>
+                    (await Promise.resolve().then(s.bind(s, 46055))).default(e),
+                ],
+                apple: [],
+                openGraph: [],
+                twitter: [],
+                manifest: void 0,
+              },
+            },
+          ],
+          c = ["D:\\Development\\bsf-sureshdesign\\app\\blog\\page.tsx"],
+          h = { require: s, loadChunk: () => Promise.resolve() },
+          m = new r.AppPageRouteModule({
+            definition: {
+              kind: n.RouteKind.APP_PAGE,
+              page: "/blog/page",
+              pathname: "/blog",
+              bundlePath: "",
+              filename: "",
+              appPaths: [],
+            },
+            userland: { loaderTree: d },
+          });
+      },
+      93197: (e, t, s) => {
+        Promise.resolve().then(s.bind(s, 99580)),
+          Promise.resolve().then(s.bind(s, 9879)),
+          Promise.resolve().then(s.bind(s, 51929)),
+          Promise.resolve().then(s.t.bind(s, 59607, 23)),
+          Promise.resolve().then(s.t.bind(s, 71066, 23));
+      },
+      74637: (e, t, s) => {
+        Promise.resolve().then(s.bind(s, 23320)),
+          Promise.resolve().then(s.bind(s, 26283)),
+          Promise.resolve().then(s.bind(s, 39701)),
+          Promise.resolve().then(s.t.bind(s, 28531, 23)),
+          Promise.resolve().then(s.t.bind(s, 41902, 23));
+      },
+      29740: (e, t, s) => {
+        "use strict";
+        s.r(t), s.d(t, { default: () => u });
+        var r = s(62740),
+          n = s(51929),
+          a = s(9879),
+          o = s(35635),
+          i = s(59607),
+          l = s.n(i),
+          d = s(56976);
+        let c = (0, d.A)("Facebook", [
+            [
+              "path",
+              {
+                d: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",
+                key: "1jg4f8",
+              },
+            ],
+          ]),
+          h = (0, d.A)("Twitter", [
+            [
+              "path",
+              {
+                d: "M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z",
+                key: "pff0z6",
+              },
+            ],
+          ]),
+          m = (0, d.A)("Instagram", [
+            [
+              "rect",
+              {
+                width: "20",
+                height: "20",
+                x: "2",
+                y: "2",
+                rx: "5",
+                ry: "5",
+                key: "2e1cvw",
+              },
+            ],
+            [
+              "path",
+              {
+                d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z",
+                key: "9exkf1",
+              },
+            ],
+            [
+              "line",
+              { x1: "17.5", x2: "17.51", y1: "6.5", y2: "6.5", key: "r4j83e" },
+            ],
+          ]),
+          p = (0, d.A)("Youtube", [
+            [
+              "path",
+              {
+                d: "M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17",
+                key: "1q2vi4",
+              },
+            ],
+            ["path", { d: "m10 15 5-3-5-3z", key: "1jp15x" }],
+          ]);
+        var x = s(99580);
+        function u() {
+          return (0, r.jsxs)("main", {
+            className: "min-h-screen flex flex-col",
+            children: [
+              (0, r.jsx)(n.default, {}),
+              (0, r.jsx)(x.default, {
+                mediaUrl: "/images/ourblog-vid.mp4",
+                heading: "",
+                paragraph: "",
+              }),
+              (0, r.jsx)("div", {
+                className: "flex-grow bg-gray-50 py-12 px-12",
+                children: (0, r.jsx)("div", {
+                  className: "container mx-auto px-4",
+                  children: (0, r.jsxs)("div", {
+                    className: "grid lg:grid-cols-3 gap-8",
+                    children: [
+                      (0, r.jsxs)("div", {
+                        className: "lg:col-span-2",
+                        children: [
+                          (0, r.jsxs)("section", {
+                            className: "mb-12",
+                            children: [
+                              (0, r.jsx)("h2", {
+                                className: "text-2xl font-bold mb-6",
+                                children: "Featured Articles",
+                              }),
+                              (0, r.jsxs)("div", {
+                                className: "grid md:grid-cols-2 gap-6",
+                                children: [
+                                  (0, r.jsxs)("div", {
+                                    className:
+                                      "bg-[#16A34A] rounded-lg overflow-hidden",
+                                    children: [
+                                      (0, r.jsx)("div", {
+                                        className: "relative h-48",
+                                        children: (0, r.jsx)(o.default, {
+                                          src: "/images/89e47092ce57d95022164c316fa26775.png",
+                                          alt: "Runner in red",
+                                          fill: !0,
+                                          className: "object-cover",
+                                        }),
+                                      }),
+                                      (0, r.jsxs)("div", {
+                                        className: "p-4",
+                                        children: [
+                                          (0, r.jsx)("h3", {
+                                            className: "text-xl font-bold mb-2",
+                                            children:
+                                              "The Road to Olympic Glory",
+                                          }),
+                                          (0, r.jsx)("p", {
+                                            className: "text-gray-700 mb-4",
+                                            children:
+                                              "Discover the inspiring journey of athletes preparing for the upcoming Olympics, their challenges, and",
+                                          }),
+                                          (0, r.jsx)("button", {
+                                            className:
+                                              "text-black font-semibold hover:underline",
+                                            children: "Read More",
+                                          }),
+                                        ],
+                                      }),
+                                    ],
+                                  }),
+                                  (0, r.jsxs)("div", {
+                                    className:
+                                      "bg-[#16A34A] rounded-lg overflow-hidden",
+                                    children: [
+                                      (0, r.jsx)("div", {
+                                        className: "relative h-48",
+                                        children: (0, r.jsx)(o.default, {
+                                          src: "/images/f755171b33bdb21fcec9db159e0aa353.png",
+                                          alt: "Children playing soccer",
+                                          fill: !0,
+                                          className: "object-cover",
+                                        }),
+                                      }),
+                                      (0, r.jsxs)("div", {
+                                        className: "p-4",
+                                        children: [
+                                          (0, r.jsx)("h3", {
+                                            className: "text-xl font-bold mb-2",
+                                            children:
+                                              "Community Sports Programs",
+                                          }),
+                                          (0, r.jsx)("p", {
+                                            className: "text-gray-700 mb-4",
+                                            children:
+                                              "Explore how our community programs are fostering a love for sports among youth and building future champions.",
+                                          }),
+                                          (0, r.jsx)("button", {
+                                            className:
+                                              "text-black font-semibold hover:underline",
+                                            children: "Read More",
+                                          }),
+                                        ],
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)("section", {
+                            children: [
+                              (0, r.jsx)("h2", {
+                                className: "text-2xl font-bold mb-6",
+                                children: "Latest Posts",
+                              }),
+                              (0, r.jsx)("div", {
+                                className: "grid gap-8",
+                                children: [
+                                  {
+                                    title: "Basketball Championship Highlights",
+                                    description:
+                                      "Catch up on the thrilling moments from this year's championship games.",
+                                    image:
+                                      "/images/210876708e0f735a8d9a625bf7cd372d.png",
+                                  },
+                                  {
+                                    title: "Coaching Tips for Young Athletes",
+                                    description:
+                                      "Learn essential coaching strategies to nurture young talents.",
+                                    image:
+                                      "/images/ee82f3120d79366a4c871191b1b791a5.png",
+                                  },
+                                  {
+                                    title: "Marathon: A Test of Endurance",
+                                    description:
+                                      "Experience the excitement and challenges of marathon running.",
+                                    image:
+                                      "/images/fc80c050e7a77a19c613163fdc10e533.png",
+                                  },
+                                ].map((e, t) =>
+                                  (0, r.jsxs)(
+                                    "div",
+                                    {
+                                      className: "flex gap-6 items-start",
+                                      children: [
+                                        (0, r.jsx)("div", {
+                                          className:
+                                            "relative w-32 h-32 flex-shrink-0",
+                                          children: (0, r.jsx)(o.default, {
+                                            src: e.image || "/placeholder.svg",
+                                            alt: e.title,
+                                            fill: !0,
+                                            className:
+                                              "object-cover rounded-lg",
+                                          }),
+                                        }),
+                                        (0, r.jsxs)("div", {
+                                          children: [
+                                            (0, r.jsx)("h3", {
+                                              className:
+                                                "text-xl font-bold mb-2",
+                                              children: e.title,
+                                            }),
+                                            (0, r.jsx)("p", {
+                                              className: "text-gray-600",
+                                              children: e.description,
+                                            }),
+                                          ],
+                                        }),
+                                      ],
+                                    },
+                                    t
+                                  )
+                                ),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      (0, r.jsxs)("div", {
+                        className: "space-y-8",
+                        children: [
+                          (0, r.jsxs)("section", {
+                            children: [
+                              (0, r.jsx)("h2", {
+                                className: "text-2xl font-bold mb-4",
+                                children: "Categories",
+                              }),
+                              (0, r.jsx)("ul", {
+                                className: "space-y-2",
+                                children: [
+                                  "Athlete Profiles",
+                                  "Event Coverage",
+                                  "Training Tips",
+                                  "Health & Nutrition",
+                                ].map((e, t) =>
+                                  (0, r.jsx)(
+                                    "li",
+                                    {
+                                      children: (0, r.jsx)(l(), {
+                                        href: `/blog/category/${e
+                                          .toLowerCase()
+                                          .replace(/ /g, "-")}`,
+                                        className:
+                                          "text-gray-600 hover:text-black",
+                                        children: e,
+                                      }),
+                                    },
+                                    t
+                                  )
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)("section", {
+                            children: [
+                              (0, r.jsx)("h2", {
+                                className: "text-2xl font-bold mb-4",
+                                children: "Follow Us",
+                              }),
+                              (0, r.jsxs)("div", {
+                                className: "flex gap-4",
+                                children: [
+                                  (0, r.jsx)(l(), {
+                                    href: "#",
+                                    className: "text-gray-600 hover:text-black",
+                                    children: (0, r.jsx)(c, {
+                                      className: "h-6 w-6",
+                                    }),
+                                  }),
+                                  (0, r.jsx)(l(), {
+                                    href: "#",
+                                    className: "text-gray-600 hover:text-black",
+                                    children: (0, r.jsx)(h, {
+                                      className: "h-6 w-6",
+                                    }),
+                                  }),
+                                  (0, r.jsx)(l(), {
+                                    href: "#",
+                                    className: "text-gray-600 hover:text-black",
+                                    children: (0, r.jsx)(m, {
+                                      className: "h-6 w-6",
+                                    }),
+                                  }),
+                                  (0, r.jsx)(l(), {
+                                    href: "#",
+                                    className: "text-gray-600 hover:text-black",
+                                    children: (0, r.jsx)(p, {
+                                      className: "h-6 w-6",
+                                    }),
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)("section", {
+                            children: [
+                              (0, r.jsx)("h2", {
+                                className: "text-2xl font-bold mb-4",
+                                children: "Newsletter Signup",
+                              }),
+                              (0, r.jsx)("p", {
+                                className: "text-gray-600 mb-4",
+                                children:
+                                  "Stay updated with the latest news and events from Bharat Sports Foundation.",
+                              }),
+                              (0, r.jsxs)("form", {
+                                className: "space-y-4",
+                                children: [
+                                  (0, r.jsx)("input", {
+                                    type: "email",
+                                    placeholder: "Enter your email",
+                                    className:
+                                      "w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500",
+                                  }),
+                                  (0, r.jsx)("button", {
+                                    type: "submit",
+                                    className:
+                                      "w-full bg-[#16A34A] text-black font-bold py-2 rounded hover:bg-[#a5d695] transition-colors",
+                                    children: "Subscribe",
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              (0, r.jsx)(a.default, {}),
+            ],
+          });
+        }
+      },
+      99580: (e, t, s) => {
+        "use strict";
+        s.d(t, { default: () => r });
+        let r = (0, s(46760).registerClientReference)(
+          function () {
+            throw Error(
+              "Attempted to call the default export of \"D:\\\\Development\\\\bsf-sureshdesign\\\\components\\\\banner.tsx\" from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component."
+            );
+          },
+          "D:\\Development\\bsf-sureshdesign\\components\\banner.tsx",
+          "default"
+        );
+      },
+      9879: (e, t, s) => {
+        "use strict";
+        s.d(t, { default: () => r });
+        let r = (0, s(46760).registerClientReference)(
+          function () {
+            throw Error(
+              "Attempted to call the default export of \"D:\\\\Development\\\\bsf-sureshdesign\\\\components\\\\footer.tsx\" from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component."
+            );
+          },
+          "D:\\Development\\bsf-sureshdesign\\components\\footer.tsx",
+          "default"
+        );
+      },
+      51929: (e, t, s) => {
+        "use strict";
+        s.d(t, { default: () => r });
+        let r = (0, s(46760).registerClientReference)(
+          function () {
+            throw Error(
+              "Attempted to call the default export of \"D:\\\\Development\\\\bsf-sureshdesign\\\\components\\\\header.tsx\" from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component."
+            );
+          },
+          "D:\\Development\\bsf-sureshdesign\\components\\header.tsx",
+          "default"
+        );
+      },
+      59607: (e, t, s) => {
+        let { createProxy: r } = s(73439);
+        e.exports = r(
+          "D:\\Development\\bsf-sureshdesign\\node_modules\\next\\dist\\client\\app-dir\\link.js"
+        );
+      },
+      56976: (e, t, s) => {
+        "use strict";
+        s.d(t, { A: () => l });
+        var r = s(76301);
+        let n = (e) => e.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(),
+          a = (...e) =>
+            e
+              .filter((e, t, s) => !!e && "" !== e.trim() && s.indexOf(e) === t)
+              .join(" ")
+              .trim();
+        var o = {
+          xmlns: "http://www.w3.org/2000/svg",
+          width: 24,
+          height: 24,
+          viewBox: "0 0 24 24",
+          fill: "none",
+          stroke: "currentColor",
+          strokeWidth: 2,
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+        };
+        let i = (0, r.forwardRef)(
+            (
+              {
+                color: e = "currentColor",
+                size: t = 24,
+                strokeWidth: s = 2,
+                absoluteStrokeWidth: n,
+                className: i = "",
+                children: l,
+                iconNode: d,
+                ...c
+              },
+              h
+            ) =>
+              (0, r.createElement)(
+                "svg",
+                {
+                  ref: h,
+                  ...o,
+                  width: t,
+                  height: t,
+                  stroke: e,
+                  strokeWidth: n ? (24 * Number(s)) / Number(t) : s,
+                  className: a("lucide", i),
+                  ...c,
+                },
+                [
+                  ...d.map(([e, t]) => (0, r.createElement)(e, t)),
+                  ...(Array.isArray(l) ? l : [l]),
+                ]
+              )
+          ),
+          l = (e, t) => {
+            let s = (0, r.forwardRef)(({ className: s, ...o }, l) =>
+              (0, r.createElement)(i, {
+                ref: l,
+                iconNode: t,
+                className: a(`lucide-${n(e)}`, s),
+                ...o,
+              })
+            );
+            return (s.displayName = `${e}`), s;
+          };
+      },
+    });
+  var t = require("../../webpack-runtime.js");
+  t.C(e);
+  var s = (e) => t((t.s = e)),
+    r = t.X(0, [638, 776, 392, 635, 746], () => s(62302));
+  module.exports = r;
+})();

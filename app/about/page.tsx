@@ -67,7 +67,7 @@ export default function AboutPage() {
             ].map((tutorial, index) => (
               <div
                 key={index}
-                className="bg-[#B7E4A7] rounded-lg overflow-hidden"
+                className="bg-[#16A34A] rounded-lg overflow-hidden"
               >
                 <div className="relative h-48">
                   <Image
@@ -161,7 +161,7 @@ export default function AboutPage() {
                   Stay updated with live coverage of our exciting sports events
                   and competitions.
                 </p>
-                <button className="bg-[#B7E4A7] text-black px-6 py-2 rounded-lg font-semibold hover:bg-[#98c889] transition-colors">
+                <button className="bg-[#16A34A] text-black px-6 py-2 rounded-lg font-semibold hover:bg-[#98c889] transition-colors">
                   View Events
                 </button>
               </div>
@@ -190,7 +190,7 @@ export default function AboutPage() {
                   Discover the best fitness trails and outdoor activities to
                   stay fit and healthy.
                 </p>
-                <button className="text-[#B7E4A7] font-semibold hover:underline">
+                <button className="text-[#16A34A] font-semibold hover:underline">
                   Find Trails →
                 </button>
               </div>
@@ -210,7 +210,7 @@ export default function AboutPage() {
                   Join our community fitness classes designed for all skill
                   levels.
                 </p>
-                <button className="text-[#B7E4A7] font-semibold hover:underline">
+                <button className="text-[#16A34A] font-semibold hover:underline">
                   Join Classes →
                 </button>
               </div>

@@ -8,7 +8,7 @@ export default function Cancel() {
         </p>
         <a
           href="/"
-          className="mt-6 inline-block bg-[#B7E4A7] text-black font-bold py-2 px-4 rounded-lg"
+          className="mt-6 inline-block bg-[#16A34A] text-black font-bold py-2 px-4 rounded-lg"
         >
           Return Home
         </a>

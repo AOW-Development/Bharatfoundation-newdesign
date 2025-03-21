@@ -271,7 +271,7 @@ export default function MonthlyDonation() {
           <div className="mt-8 flex justify-center">
             <button
               onClick={handleProceedToDonate}
-              className="bg-[#B7E4A7] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors"
+              className="bg-[#16A34A] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors"
             >
               Proceed to Donate
             </button>
