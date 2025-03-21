@@ -41,8 +41,13 @@ export default function VolunteerStats() {
                 that we can transform lives through the power of sports.
               </p>
               <Link
+<<<<<<< HEAD
                 href="/volunteer"
                 className="inline-block px-6 py-3 bg-[#16A34A] text-black rounded-md hover:bg-[#a5d695] transition-colors"
+=======
+                href="/get-involved#volunteer"
+                className="inline-block px-6 py-3 bg-[#B7E4A7] text-black rounded-md hover:bg-[#a5d695] transition-colors"
+>>>>>>> 300a0e3efcacdf75cfa6c7d0da43e94fff22ea15
               >
                 View Details
               </Link>

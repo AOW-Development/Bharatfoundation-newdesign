@@ -77,9 +77,11 @@ export default function ResourcesPage() {
                       Explore a variety of training programs designed to enhance
                       athletic performance and wellness.
                     </p>
+                    <Link href="#">
                     <Button variant="link" className="p-0">
                       Learn More <ChevronRight className="h-4 w-4 ml-1" />
                     </Button>
+                    </Link>
                   </CardContent>
                 </Card>
 
@@ -101,9 +103,11 @@ export default function ResourcesPage() {
                       Get help with acquiring equipment and securing sponsorship
                       for your sports activities.
                     </p>
+                    <Link href="#">
                     <Button variant="link" className="p-0">
                       Learn More <ChevronRight className="h-4 w-4 ml-1" />
                     </Button>
+                    </Link>
                   </CardContent>
                 </Card>
 
@@ -125,9 +129,11 @@ export default function ResourcesPage() {
                       Find resources and support for maintaining optimal health
                       and wellness as an athlete.
                     </p>
+                    <Link href="#">
                     <Button variant="link" className="p-0">
                       Learn More <ChevronRight className="h-4 w-4 ml-1" />
                     </Button>
+                    </Link>
                   </CardContent>
                 </Card>
 
@@ -149,9 +155,11 @@ export default function ResourcesPage() {
                       Access information on available scholarships to support
                       your sports education journey.
                     </p>
+                    <Link href="#">
                     <Button variant="link" className="p-0">
                       Learn More <ChevronRight className="h-4 w-4 ml-1" />
                     </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </div>

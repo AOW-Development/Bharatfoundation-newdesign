@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ActionCards() {
   const cards = [
     {
@@ -5,14 +7,14 @@ export default function ActionCards() {
       description:
         "We welcome you onboard to contribute your time and skills in many ways.",
       buttonText: "Join us Now",
-      buttonLink: "/volunteer",
+      buttonLink: "/get-involved#volunteer",
     },
     {
       title: "ADOPT A CHILD",
       description:
         " Your integrity speaks to the aspiring youths who make loud noises with their success.",
       buttonText: "Contact us",
-      buttonLink: "/adopt",
+      buttonLink: "/contact",
     },
     {
       title: "GET INVOLVED",
@@ -37,9 +39,11 @@ export default function ActionCards() {
                 <p className="text-gray-700">{card.description}</p>
               </div>
               <div>
+              <Link href={card.buttonLink}>
                 <button className="bg-[#8DC674] text-black px-6 py-2  hover:bg-[#7ab563] transition-colors border-[#B3D9FF] border-2">
                   {card.buttonText}
                 </button>
+                </Link>
               </div>
             </div>
           ))}

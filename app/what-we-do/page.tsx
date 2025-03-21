@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Image from "next/image";
@@ -18,7 +19,7 @@ export default function WhatWeDoPage() {
     <main className="min-h-screen flex flex-col">
       <Header />
 
-      <Banner mediaUrl="/images/whatwedo.mp4" heading="" paragraph="" />
+      <Banner mediaUrl="/images/whatwedo1.mp4" heading="" paragraph="" />
 
       {/* Mission & Vision Section */}
       <section className="md:py-16 px-8 md:px-16 py-8 bg-gray-50 dark:bg-gray-800">
@@ -105,9 +106,11 @@ export default function WhatWeDoPage() {
                     {program.category}
                   </div>
                 </div>
+                <Link href="#">
                 <button className="px-6 py-2 border rounded hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-white dark:border-gray-600">
                   Explore
                 </button>
+                </Link>
               </div>
             ))}
           </div>
@@ -145,9 +148,15 @@ export default function WhatWeDoPage() {
 
           <div className="bg-gray-700 text-white text-center py-16 rounded-lg">
             <h3 className="text-3xl font-bold mb-6">Get involved</h3>
+<<<<<<< HEAD
             <button className="bg-[#16A34A] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#98c889] transition-colors">
+=======
+            <Link href="/contact">
+            <button className="bg-[#B7E4A7] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#98c889] transition-colors">
+>>>>>>> 300a0e3efcacdf75cfa6c7d0da43e94fff22ea15
               Join Now
             </button>
+            </Link>
           </div>
         </div>
       </section>
