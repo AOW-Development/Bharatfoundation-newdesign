@@ -7,7 +7,7 @@ const GooglePay = ({ inputAmount }: { inputAmount: string }) => {
         environment="TEST"
         buttonType="donate" // Ensures "G Pay" label
         buttonColor="white" // Keeps default Google styling
-        // style={{ width: "150px", height: "40px", backgroundColor: "#16A34A" }} // Adjust padding/size
+        // style={{ width: "150px", height: "40px", backgroundColor: "#B8EA80" }} // Adjust padding/size
         buttonSizeMode="static"
         paymentRequest={{
           apiVersion: 2,

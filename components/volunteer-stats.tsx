@@ -41,13 +41,8 @@ export default function VolunteerStats() {
                 that we can transform lives through the power of sports.
               </p>
               <Link
-<<<<<<< HEAD
-                href="/volunteer"
-                className="inline-block px-6 py-3 bg-[#16A34A] text-black rounded-md hover:bg-[#a5d695] transition-colors"
-=======
                 href="/get-involved#volunteer"
                 className="inline-block px-6 py-3 bg-[#B7E4A7] text-black rounded-md hover:bg-[#a5d695] transition-colors"
->>>>>>> 300a0e3efcacdf75cfa6c7d0da43e94fff22ea15
               >
                 View Details
               </Link>
@@ -114,7 +109,7 @@ function StatCard({
       <div className="mb-2 md:mb-4">
         <Icon className="w-6 h-6 md:w-12 md:h-12 text-black dark:text-white" />
       </div>
-      <div className="bg-[#16A34A] dark:bg-[#98c889] rounded-full px-2 py-2 md:px-12 md:py-4 w-full md:w-64 flex flex-col items-center shadow-sm border-[#B3D9FF] border-2">
+      <div className="bg-[#B8EA80] dark:bg-[#98c889] rounded-full px-2 py-2 md:px-12 md:py-4 w-full md:w-64 flex flex-col items-center shadow-sm border-[#B3D9FF] border-2">
         <div className="text-lg md:text-2xl font-bold text-black dark:text-gray-800">
           {count}+
         </div>

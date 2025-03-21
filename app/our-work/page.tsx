@@ -56,7 +56,7 @@ export default function OurWorkPage() {
               journey. Apply today to get the support you need.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-[#16A34A] text-black hover:bg-[#98c889]">
+              <Button className="bg-[#B8EA80] text-black hover:bg-[#98c889]">
                 Apply Now
               </Button>
               <Button variant="outline">Learn More</Button>
@@ -129,7 +129,7 @@ export default function OurWorkPage() {
       </section>
 
       {/* Impact Section */}
-      <section id="impact" className="py-16 bg-[#16A34A] scroll-mt-20">
+      <section id="impact" className="py-16 bg-[#B8EA80] scroll-mt-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Impact</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -199,7 +199,7 @@ export default function OurWorkPage() {
                   {[60, 40, 80, 70, 50, 90].map((height, index) => (
                     <div key={index} className="flex flex-col items-center">
                       <div
-                        className="w-16 bg-[#16A34A] rounded-t"
+                        className="w-16 bg-[#B8EA80] rounded-t"
                         style={{ height: `${height}%` }}
                       />
                       <div
@@ -218,7 +218,7 @@ export default function OurWorkPage() {
                 highlighting key areas of growth and future goals.
               </p>
               <div className="flex justify-center mt-8">
-                <Button className="bg-[#16A34A] text-black hover:bg-[#98c889]">
+                <Button className="bg-[#B8EA80] text-black hover:bg-[#98c889]">
                   Download Full Report
                 </Button>
               </div>

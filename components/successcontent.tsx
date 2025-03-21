@@ -90,7 +90,7 @@ export default function SuccessContent() {
             </p>
             <Link
               href="/resources"
-              className="inline-block bg-[#16A34A] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors"
+              className="inline-block bg-[#B8EA80] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors"
             >
               View Our Resources
             </Link>

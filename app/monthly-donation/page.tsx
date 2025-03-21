@@ -89,7 +89,7 @@ export default function OneTimeDonation() {
                       onClick={() => handleSelectAmount(option.amount)}
                       className={`p-4 rounded-lg border transition-colors ${
                         selectedAmounts.includes(option.amount)
-                          ? "bg-[#16A34A] border-[#98c889]"
+                          ? "bg-[#B8EA80] border-[#98c889]"
                           : "bg-white hover:bg-gray-50"
                       }`}
                     >
@@ -111,7 +111,7 @@ export default function OneTimeDonation() {
               <div className="flex justify-center">
                 <button
                   onClick={handleProceedToDonate}
-                  className="bg-[#16A34A] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors"
+                  className="bg-[#B8EA80] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors"
                 >
                   Proceed to Donate ₹{totalDonation.toLocaleString() || "0"}/-
                 </button>

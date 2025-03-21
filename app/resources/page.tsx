@@ -25,7 +25,7 @@ export default function ResourcesPage() {
           <div className="flex flex-col md:flex-row gap-8">
             {/* Sidebar */}
             <div className="w-full md:w-64 flex-shrink-0">
-              <div className="bg-[#16A34A] p-6 rounded-lg">
+              <div className="bg-[#B8EA80] p-6 rounded-lg">
                 <h2 className="font-bold text-lg mb-4">Categories</h2>
                 <ul className="space-y-2">
                   {[
@@ -78,9 +78,9 @@ export default function ResourcesPage() {
                       athletic performance and wellness.
                     </p>
                     <Link href="#">
-                    <Button variant="link" className="p-0">
-                      Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                    </Button>
+                      <Button variant="link" className="p-0">
+                        Learn More <ChevronRight className="h-4 w-4 ml-1" />
+                      </Button>
                     </Link>
                   </CardContent>
                 </Card>
@@ -104,9 +104,9 @@ export default function ResourcesPage() {
                       for your sports activities.
                     </p>
                     <Link href="#">
-                    <Button variant="link" className="p-0">
-                      Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                    </Button>
+                      <Button variant="link" className="p-0">
+                        Learn More <ChevronRight className="h-4 w-4 ml-1" />
+                      </Button>
                     </Link>
                   </CardContent>
                 </Card>
@@ -130,9 +130,9 @@ export default function ResourcesPage() {
                       and wellness as an athlete.
                     </p>
                     <Link href="#">
-                    <Button variant="link" className="p-0">
-                      Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                    </Button>
+                      <Button variant="link" className="p-0">
+                        Learn More <ChevronRight className="h-4 w-4 ml-1" />
+                      </Button>
                     </Link>
                   </CardContent>
                 </Card>
@@ -156,9 +156,9 @@ export default function ResourcesPage() {
                       your sports education journey.
                     </p>
                     <Link href="#">
-                    <Button variant="link" className="p-0">
-                      Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                    </Button>
+                      <Button variant="link" className="p-0">
+                        Learn More <ChevronRight className="h-4 w-4 ml-1" />
+                      </Button>
                     </Link>
                   </CardContent>
                 </Card>
@@ -177,7 +177,7 @@ export default function ResourcesPage() {
                     ].map((item, index) => (
                       <div
                         key={index}
-                        className="flex flex-col items-center justify-center bg-[#16A34A] rounded-full w-24 h-24 p-4"
+                        className="flex flex-col items-center justify-center bg-[#B8EA80] rounded-full w-24 h-24 p-4"
                       >
                         <item.icon className="h-8 w-8 mb-2" />
                         <span className="text-sm text-center">

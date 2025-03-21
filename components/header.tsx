@@ -71,7 +71,7 @@ export default function Header() {
                 href={item.href}
                 className={`mx-12 py-1 px-6 text-sm mx-2 font-bold ${
                   pathname === item.href
-                    ? "bg-[#16A34A] text-black dark:text-white"
+                    ? "bg-[#B8EA80] text-black dark:text-white"
                     : "text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300"
                 }`}
               >
@@ -83,7 +83,7 @@ export default function Header() {
           <div className="hidden md:block z-10">
             <Link
               href="/donate"
-              className="px-6 py-6 bg-[#16A34A] text-black dark:text-white font-bold text-sm hover:bg-[#a5d695] transition-colors"
+              className="px-6 py-6 bg-[#B8EA80] text-black dark:text-white font-bold text-sm hover:bg-[#a5d695] transition-colors"
             >
               DONATE NOW
             </Link>
@@ -91,7 +91,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#16A34A] z-10"
+            className="md:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#B8EA80] z-10"
             onClick={toggleMenu}
           >
             <span className="sr-only">Open main menu</span>
@@ -113,7 +113,7 @@ export default function Header() {
                   href={item.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium ${
                     pathname === item.href
-                      ? "bg-[#16A34A] text-black dark:text-white"
+                      ? "bg-[#B8EA80] text-black dark:text-white"
                       : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white"
                   }`}
                   onClick={toggleMenu}
@@ -123,7 +123,7 @@ export default function Header() {
               ))}
               <Link
                 href="/donate"
-                className="block px-3 py-2 rounded-md text-base font-medium bg-[#16A34A] text-black dark:text-white hover:bg-[#a5d695]"
+                className="block px-3 py-2 rounded-md text-base font-medium bg-[#B8EA80] text-black dark:text-white hover:bg-[#a5d695]"
                 onClick={toggleMenu}
               >
                 DONATE NOW
