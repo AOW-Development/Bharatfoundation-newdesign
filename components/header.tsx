@@ -59,7 +59,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Heading */}
-          <h1 className="text-lg font-bold text-[#a5d695] dark:text-[#a5d695] text-center absolute left-1/2 transform -translate-x-1/2 md:hidden">
+          <h1 className="text-lg font-bold text-[#a5d695] dark:text-[#a5d695] text-center bg-white absolute left-1/2 transform -translate-x-1/2 md:hidden">
             Bharat Sports Foundation
           </h1>
 

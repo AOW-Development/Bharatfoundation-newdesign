@@ -39,7 +39,7 @@ const programs = [
 
 export default function OurProgram() {
   return (
-    <section className="pb-16 pt-8 p-8 md:px-24">
+    <section className="pb-16 md:pt-8 sm:px-8 md:p-8 md:p- md:px-24">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Program</h2>

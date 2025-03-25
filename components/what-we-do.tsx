@@ -6,6 +6,7 @@ import Link from "next/link";
 export default function WhatWeDo() {
   const events = [
     {
+      month: "Jan",
       title: "Education for Children",
       time: "5.00 pm- 7.30 pm",
       location: "24 Bangalore City",
@@ -13,6 +14,7 @@ export default function WhatWeDo() {
         "Education is the basic essential to everyone in this technological era.",
     },
     {
+      month: "Feb",
       title: "Sponsor a child today",
       time: "5.00 pm- 7.30 pm",
       location: "24 Bangalore City",
@@ -20,12 +22,14 @@ export default function WhatWeDo() {
         "Your small action towards kindness might rejuvenate the life of a child for their essential resources, education, and many more",
     },
     {
+      month: "Mar",
       title: "Shelter for Poor",
       time: "5.00 pm- 7.30 pm",
       location: "24 Bangalore City",
       description: "A basic requirement is a home for anyone. ",
     },
     {
+      month: "APR",
       title: "Education for Children",
       time: "5.00 pm- 7.30 pm",
       location: "24 Bangalore City",
@@ -35,7 +39,7 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className="pt-16 px-6 md:px-12 lg:px-20 dark:bg-gray-900">
+    <section className="pt:8 md:pt-16 px-6 md:px-12 lg:px-20 dark:bg-gray-900">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Image and Mission */}
@@ -153,7 +157,9 @@ export default function WhatWeDo() {
                   <div className="bg-[#B8EA80] dark:bg-[#B8EA80] p-3 h-min text-center">
                     <div className="text-2xl font-bold dark:text-white">24</div>
                     <hr className="border-2 my-2 border-black dark:border-white" />
-                    <div className="font-bold dark:text-white">JAN</div>
+                    <div className="font-bold dark:text-white">
+                      {event.month}
+                    </div>
                   </div>
                   <div className="space-y-2">
                     <h3 className="font-bold dark:text-white">{event.title}</h3>

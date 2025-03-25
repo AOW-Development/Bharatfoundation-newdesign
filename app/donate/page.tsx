@@ -110,10 +110,10 @@ function DonationForm() {
   };
 
   return (
-    <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-sm">
+    <div className="lg:col-span-2 bg-white p-4 sm:p-6 rounded-lg shadow-sm">
       <form onSubmit={handleSubmit}>
-        <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">
+        <div className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4">
             Quick Pay: Cheque/ Demand Draft/ NEFT/ RTGS Transfer Details/ UPI
             Details
           </h2>
@@ -124,8 +124,8 @@ function DonationForm() {
           </div>
         </div>
 
-        <div className="mb-8">
-          <h3 className="font-bold mb-4">
+        <div className="mb-6 sm:mb-8">
+          <h3 className="font-bold mb-3 sm:mb-4">
             Enter Your Own Donation Amount To Help As Much As Possible.
           </h3>
           <div className="flex gap-2">
@@ -150,9 +150,9 @@ function DonationForm() {
           )}
         </div>
 
-        <div className="mb-8">
-          <h3 className="font-bold mb-4">Your Information</h3>
-          <div className="grid md:grid-cols-2 gap-4">
+        <div className="mb-6 sm:mb-8">
+          <h3 className="font-bold mb-3 sm:mb-4">Your Information</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -286,8 +286,8 @@ function DonationForm() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4 mt-4 items-center">
-            <div className="flex-1 space-y-4">
+          <div className="flex flex-col sm:flex-row gap-4 mt-4 items-center">
+            <div className="w-full space-y-4">
               <input
                 type="text"
                 name="panCard"
@@ -306,7 +306,7 @@ function DonationForm() {
             </div>
             <button
               type="submit"
-              className="w-full md:w-auto bg-[#B8EA80] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors disabled:bg-gray-400"
+              className="w-full sm:w-auto bg-[#B8EA80] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors disabled:bg-gray-400"
               disabled={isLoading}
             >
               {isLoading
@@ -334,13 +334,13 @@ export default function DonatePage() {
           { text: "Onetime Donation", link: "/one-time-donation" },
         ]}
       />
-      <section className="flex-grow bg-gray-50 py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-8">
+      <section className="flex-grow bg-gray-50 py-8 md:py-12">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             <Suspense fallback={<div>Loading donation form...</div>}>
               <DonationForm />
             </Suspense>
-            <div className="lg:col-span-1 w-full bg-white p-6 rounded-lg shadow-sm">
+            <div className="lg:col-span-1 w-full bg-white p-4 sm:p-6 rounded-lg shadow-sm">
               <RightColumn />
             </div>
           </div>
