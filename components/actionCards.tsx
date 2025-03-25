@@ -32,19 +32,19 @@ export default function ActionCards() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="bg-[#B8EA80] dark:bg-[#5A8A3D] h-[220px] p-8 flex flex-col justify-between border-[#B3D9FF] dark:border-[#4A6D8C] border-2"
+              className="bg-[#B8EA80] dark:bg-[#B8EA80] h-[220px] p-8 flex flex-col justify-between border-[#B3D9FF] dark:border-[#B3D9FF] border-2"
             >
               <div>
                 <h3 className="text-xl font-bold mb-3 dark:text-white">
                   {card.title}
                 </h3>
-                <p className="text-gray-700 dark:text-gray-200">
+                <p className="text-gray-700 dark:text-white">
                   {card.description}
                 </p>
               </div>
               <div>
                 <Link href={card.buttonLink}>
-                  <button className="bg-[#8DC674] dark:bg-[#4A7A33] text-black dark:text-white px-6 py-2 hover:bg-[#7ab563] dark:hover:bg-[#3D6429] transition-colors border-[#B3D9FF] dark:border-[#4A6D8C] border-2">
+                  <button className="bg-[#8DC674] dark:bg-[#8DC674] text-black dark:text-white px-6 py-2 hover:bg-[#7ab563] dark:hover:bg-[#7ab563] transition-colors border-[#B3D9FF] dark:border-[#B3D9FF] border-2">
                     {card.buttonText}
                   </button>
                 </Link>

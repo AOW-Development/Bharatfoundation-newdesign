@@ -53,10 +53,10 @@ export default function WhatWeDo() {
             {/* Mission Section */}
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <Target className="w-8 h-8 dark:text-gray-300" />
+                <Target className="w-8 h-8 dark:text-white" />
                 <h3 className="text-xl font-bold dark:text-white">Mission</h3>
               </div>
-              <p className="text-gray-600 text-sm dark:text-gray-300">
+              <p className="text-gray-600 text-sm dark:text-white">
                 We at Bharath Sports Foundation inspire and enrich athletes as
                 well as provide them with required essentials, resources,
                 mentorship, and growth opportunities. As we value sporting
@@ -66,7 +66,7 @@ export default function WhatWeDo() {
                 and competitive sporting community in India.
               </p>
               <Link href="/what-we-do" className="inline-block mt-4">
-                <button className="flex items-center gap-2 text-sm dark:text-gray-200">
+                <button className="flex items-center gap-2 text-sm dark:text-white">
                   Read More
                   <span className="text-xl">→</span>
                 </button>
@@ -76,10 +76,10 @@ export default function WhatWeDo() {
             {/* Vision Section (visible on mobile, hidden on desktop) */}
             <div className="space-y-4 lg:hidden">
               <div className="flex items-center gap-2">
-                <Eye className="w-8 h-8 dark:text-gray-300" />
+                <Eye className="w-8 h-8 dark:text-white" />
                 <h3 className="text-xl font-bold dark:text-white">Vision</h3>
               </div>
-              <p className="text-gray-600 text-sm dark:text-gray-300">
+              <p className="text-gray-600 text-sm dark:text-white">
                 The Bharath Sports Foundation seeks to develop vibrant talent,
                 give athletes access to resources, and offer them ample
                 possibilities to succeed in their intended disciplines. We work
@@ -87,7 +87,7 @@ export default function WhatWeDo() {
                 construct a solid basis for Indian athletics in the future.
               </p>
               <Link href="/what-we-do" className="inline-block mt-4">
-                <button className="flex items-center gap-2 font-medium text-sm dark:text-gray-200">
+                <button className="flex items-center gap-2 font-medium text-sm dark:text-white">
                   Read More
                   <span className="text-xl">→</span>
                 </button>
@@ -99,10 +99,10 @@ export default function WhatWeDo() {
           <div className="space-y-8">
             <div className="space-y-4 text-sm">
               <h2 className="text-2xl font-bold dark:text-white">What We Do</h2>
-              <h3 className="text-xl font-semibold dark:text-gray-200">
+              <h3 className="text-xl font-semibold dark:text-white">
                 Motivating Greatness Through Sports
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-white">
                 At Bharath Sports Foundation, we are dedicated to a culture of
                 accessing sports to everyone despite their backgrounds.
                 Primarily our initiatives are focused on identifying talent,
@@ -113,7 +113,7 @@ export default function WhatWeDo() {
                 the underprivileged.
               </p>
               <Link href="/what-we-do" className="inline-block mt-4">
-                <button className="flex items-center gap-2 font-medium text-sm dark:text-gray-200">
+                <button className="flex items-center gap-2 font-medium text-sm dark:text-white">
                   Read More
                   <span className="text-xl">→</span>
                 </button>
@@ -123,10 +123,10 @@ export default function WhatWeDo() {
             {/* Vision Section (visible only on desktop) */}
             <div className="space-y-4 hidden lg:block">
               <div className="flex items-center gap-2">
-                <Eye className="w-8 h-8 dark:text-gray-300" />
+                <Eye className="w-8 h-8 dark:text-white" />
                 <h3 className="text-xl font-bold dark:text-white">Vision</h3>
               </div>
-              <p className="text-gray-600 text-sm dark:text-gray-300">
+              <p className="text-gray-600 text-sm dark:text-white">
                 The Bharath Sports Foundation seeks to develop vibrant talent,
                 give athletes access to resources, and offer them ample
                 possibilities to succeed in their intended disciplines. We work
@@ -134,7 +134,7 @@ export default function WhatWeDo() {
                 construct a solid basis for Indian athletics in the future.
               </p>
               <Link href="/what-we-do" className="inline-block mt-4">
-                <button className="flex items-center gap-2 font-medium text-sm dark:text-gray-200">
+                <button className="flex items-center gap-2 font-medium text-sm dark:text-white">
                   Read More
                   <span className="text-xl">→</span>
                 </button>
@@ -150,18 +150,18 @@ export default function WhatWeDo() {
             <div className="space-y-6">
               {events.map((event, index) => (
                 <div key={index} className="flex gap-4">
-                  <div className="bg-[#B8EA80] dark:bg-[#8BC34A] p-3 h-min text-center">
-                    <div className="text-2xl font-bold">24</div>
-                    <hr className="border-2 my-2 border-black dark:border-gray-800" />
-                    <div className="font-bold">JAN</div>
+                  <div className="bg-[#B8EA80] dark:bg-[#B8EA80] p-3 h-min text-center">
+                    <div className="text-2xl font-bold dark:text-white">24</div>
+                    <hr className="border-2 my-2 border-black dark:border-white" />
+                    <div className="font-bold dark:text-white">JAN</div>
                   </div>
                   <div className="space-y-2">
                     <h3 className="font-bold dark:text-white">{event.title}</h3>
-                    <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                    <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-white">
                       <div>at {event.time}</div>
                       <div>{event.location}</div>
                     </div>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-white">
                       {event.description}
                     </p>
                   </div>
