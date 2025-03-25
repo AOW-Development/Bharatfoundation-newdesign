@@ -1,19 +1,22 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const raleway = Raleway({
-  subsets: ["latin"],
-  variable: "--font-raleway",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Bharat Sports Foundation",
   description: "Empowering youth through sports and education",
   keywords: ["sports", "education", "youth empowerment", "India"],
   authors: [{ name: "Bharat Sports Foundation" }],
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  colorScheme: "light", // Force light mode only
 };
 
 export default function RootLayout({
@@ -22,8 +25,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={raleway.variable}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
