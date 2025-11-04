@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 .next/
+
 # dependencies
 /node_modules
 node_modules/
@@ -15,6 +16,17 @@ node_modules/
 
 # testing
 /coverage
+/tests
+/__tests__/
+/test-results/
+*.spec.ts
+*.spec.js
+*.test.ts
+*.test.js
+report-to-excel.js
+*.xlsx
+*.xls
+*.csv
 
 # next.js
 # /.next/
@@ -42,3 +54,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+test-results.json
+# playwright
+playwright.config.ts
