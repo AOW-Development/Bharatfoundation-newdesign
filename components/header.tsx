@@ -13,9 +13,7 @@ export default function Header() {
 
   useEffect(() => {
     // Check if dark mode is enabled
-    const darkModeMediaQuery = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    );
+    const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     setIsDarkMode(darkModeMediaQuery.matches);
 
     // Listen for changes in color scheme
@@ -69,7 +67,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`mx-12 py-1 px-6 text-sm mx-2 font-bold ${
+                className={`mx-2 px-6 py-3 text-sm font-bold rounded-md transition-colors ${
                   pathname === item.href
                     ? "bg-[#B8EA80] text-black dark:text-white"
                     : "text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300"
@@ -83,7 +81,7 @@ export default function Header() {
           <div className="hidden md:block z-10">
             <Link
               href="/donate"
-              className="px-6 py-6 bg-[#B8EA80] text-black dark:text-white font-bold text-sm hover:bg-[#a5d695] transition-colors"
+              className="mx-2 px-6 py-3 text-sm font-bold rounded-md bg-[#B8EA80] text-black dark:text-white hover:bg-[#a5d695] transition-colors"
             >
               DONATE NOW
             </Link>
