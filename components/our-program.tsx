@@ -4,42 +4,42 @@ import Link from "next/link";
 
 const programs = [
   {
-    image: "/images/ourprogram-cricket.jpeg",
-    title: "CRICKET DREAM",
+    image: "/images/equipment-gear.webp",
+    title: "EQUIPMENT AND GEAR SPONSORSHIP",
     description:
-      "Prakash is from a low-income family group. It was hard to meet daily needs for him. With our support, he received training, equipment, and mentorship. As of today, he is a state level player, and he alone inspires many athletes.",
+      "Access to quality sports gear is a major hurdle for underprivileged athletes. Through our sponsorship initiative, we ensure every deserving athlete receives proper equipment to train and compete confidently.",
     shortDesc:
-      "Prakash now dreams of representing his country, a beacon of hope for others in his community.",
+      "We've helped hundreds of young players get essential kits — from shoes to protective gear — empowering them to perform without limitations.",
   },
   {
-    image: "/images/ourprogram-5.jpg",
-    title: "ATHLETICS BREAKTHROUGH",
+    image: "/images/coaching-training.webp",
+    title: "COACHING TRAINING PROGRAMS",
     description:
-      "Meena, a committed sprinter from an agrarian background, lacked coaching. Through our grassroot foundation training program,",
+      "Our expert-led coaching programs provide professional training to aspiring athletes at the grassroots level, ensuring they learn from qualified mentors and experienced sports professionals.",
     shortDesc:
-      "she won multiple national-level championships and even secured a scholarship for her higher education.",
+      "By building skill and discipline early, we nurture potential champions and future coaches for the next generation.",
   },
   {
-    image: "/images/ourprogram-football.jpeg",
-    title: "JOURNEY OF FOOTBALL ",
+    image: "/images/travel-accommodation.jpg",
+    title: "TRAVEL AND ACCOMMODATION",
     description:
-      "Our sports education initiatives provided the required essentials to balance his studies as well as football, and for now he represents his school for national level tournaments.",
+      "Many talented athletes miss opportunities due to lack of travel support. We assist with transportation and safe accommodation so they can attend tournaments and camps stress-free.",
     shortDesc:
-      "Arjun dropped out of school due to his financial conditions, but he was very good at sporting activities.",
+      "Our travel and stay assistance removes barriers, ensuring athletes focus solely on their performance.",
   },
   {
-    image: "/images/ourprogram-badminton.jpeg",
-    title: "SUCCESS AT BADMINTON",
+    image: "/images/health-nutrition.jpg",
+    title: "HEALTH AND NUTRITION SUPPORT",
     description:
-      "Pooja was fond of badminton for a long time, despite pursuing herself in the same way. Their community members weren’t allowed to move forward. With our motivation and training under a team of our expertise coaches,",
+      "A balanced diet and health monitoring are vital for athletic success. We provide nutritional guidance, health checkups, and supplements to ensure athletes maintain peak physical condition.",
     shortDesc:
-      " she is now a district-level competitor, breaking down the barriers and inspiring many young girls.",
+      "With holistic support, we help players build endurance, prevent injuries, and sustain long-term sports careers.",
   },
 ];
 
 export default function OurProgram() {
   return (
-    <section className="pb-16 md:pt-8 sm:px-8 md:p-8 md:p- md:px-24">
+    <section className="pb-16 md:pt-8 sm:px-8 md:p-8 md:px-24">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Program</h2>

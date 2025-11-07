@@ -10,7 +10,7 @@ export default function ActionCards() {
       buttonLink: "/get-involved#volunteer",
     },
     {
-      title: "ADOPT A CHILD",
+      title: "ADOPT SPORTS CHAMPION",
       description:
         " Your integrity speaks to the aspiring youths who make loud noises with their success.",
       buttonText: "Contact us",

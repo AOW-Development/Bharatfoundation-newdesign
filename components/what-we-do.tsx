@@ -6,43 +6,85 @@ import Link from "next/link";
 export default function WhatWeDo() {
   const events = [
     {
+      month: "Jul",
+      year: "2025",
+      date: "8 & 9th",
+      title: "Her Time to Shine",
+      time: "5.00 pm - 7.30 pm",
+      location: "Bangalore City",
+      description:
+        "An empowering sports event dedicated to promoting women’s participation in athletics. Encouraging every girl to step up, play, and shine in her sport of choice.",
+    },
+    {
+      month: "Dec",
+      year: "2025",
+      title: "Equip the Future",
+      time: "5.00 pm - 7.30 pm",
+      location: "Bangalore City",
+      description:
+        "A focused initiative to provide young athletes with essential gear, training resources, and mentorship to prepare them for competitive sports.",
+    },
+    {
+      month: "Feb",
+      year: "2026",
+      title: "Powerplay and Wellness Camp",
+      time: "5.00 pm - 7.30 pm",
+      location: "Bangalore City",
+      description:
+        "An energetic camp combining skill training, physical fitness, and mental wellness programs to boost performance and overall well-being of athletes.",
+    },
+    {
+      month: "May",
+      year: "2026",
+      title: "Game Ready Nutrition Drive",
+      time: "5.00 pm - 7.30 pm",
+      location: "Bangalore City",
+      description:
+        "A nutrition-focused drive that spreads awareness on healthy diets, supplements, and meal plans crucial for maintaining peak performance in sports.",
+    },
+    // 🟢 Old Events
+    {
       month: "Jan",
+      year: "2025",
       title: "Education for Children",
-      time: "5.00 pm- 7.30 pm",
+      time: "5.00 pm - 7.30 pm",
       location: "24 Bangalore City",
       description:
         "Education is the basic essential to everyone in this technological era.",
     },
     {
       month: "Feb",
-      title: "Sponsor a child today",
-      time: "5.00 pm- 7.30 pm",
+      year: "2025",
+      title: "Sponsor a Child Today",
+      time: "5.00 pm - 7.30 pm",
       location: "24 Bangalore City",
       description:
-        "Your small action towards kindness might rejuvenate the life of a child for their essential resources, education, and many more",
+        "Your small action towards kindness might rejuvenate the life of a child for their essential resources, education, and many more.",
     },
     {
       month: "Mar",
+      year: "2025",
       title: "Shelter for Poor",
-      time: "5.00 pm- 7.30 pm",
+      time: "5.00 pm - 7.30 pm",
       location: "24 Bangalore City",
-      description: "A basic requirement is a home for anyone. ",
+      description: "A basic requirement is a home for anyone.",
     },
     {
-      month: "APR",
+      month: "Apr",
+      year: "2025",
       title: "Education for Children",
-      time: "5.00 pm- 7.30 pm",
+      time: "5.00 pm - 7.30 pm",
       location: "24 Bangalore City",
       description:
         "Education is the basic essential to everyone in this technological era.",
-    },
+    },    
   ];
 
   return (
-    <section className="pt:8 md:pt-16 px-6 md:px-12 lg:px-20 dark:bg-gray-900">
+    <section className="pt-8 md:pt-16 px-6 md:px-12 lg:px-20 dark:bg-gray-900">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column - Image and Mission */}
+          {/* Left Column */}
           <div className="space-y-8">
             <div className="rounded-lg overflow-hidden">
               <Image
@@ -64,20 +106,19 @@ export default function WhatWeDo() {
                 We at Bharath Sports Foundation inspire and enrich athletes as
                 well as provide them with required essentials, resources,
                 mentorship, and growth opportunities. As we value sporting
-                activities, we support the individuals despite their backgrounds
-                and make sure the talent is utilized for the betterment of their
-                lives. With our steps to progress, we build a strong, healthy,
-                and competitive sporting community in India.
+                activities, we support individuals despite their backgrounds and
+                ensure the talent is utilized for the betterment of their lives.
+                With our steps to progress, we build a strong, healthy, and
+                competitive sporting community in India.
               </p>
               <Link href="/what-we-do" className="inline-block mt-4">
                 <button className="flex items-center gap-2 text-sm dark:text-white">
-                  Read More
-                  <span className="text-xl">→</span>
+                  Read More <span className="text-xl">→</span>
                 </button>
               </Link>
             </div>
 
-            {/* Vision Section (visible on mobile, hidden on desktop) */}
+            {/* Vision Section (Mobile only) */}
             <div className="space-y-4 lg:hidden">
               <div className="flex items-center gap-2">
                 <Eye className="w-8 h-8 dark:text-white" />
@@ -87,19 +128,18 @@ export default function WhatWeDo() {
                 The Bharath Sports Foundation seeks to develop vibrant talent,
                 give athletes access to resources, and offer them ample
                 possibilities to succeed in their intended disciplines. We work
-                to ensure all individuals gets to engage in sports and to
+                to ensure all individuals get to engage in sports and to
                 construct a solid basis for Indian athletics in the future.
               </p>
               <Link href="/what-we-do" className="inline-block mt-4">
                 <button className="flex items-center gap-2 font-medium text-sm dark:text-white">
-                  Read More
-                  <span className="text-xl">→</span>
+                  Read More <span className="text-xl">→</span>
                 </button>
               </Link>
             </div>
           </div>
 
-          {/* Middle Column - What We Do and Vision (on desktop) */}
+          {/* Middle Column */}
           <div className="space-y-8">
             <div className="space-y-4 text-sm">
               <h2 className="text-2xl font-bold dark:text-white">What We Do</h2>
@@ -108,23 +148,18 @@ export default function WhatWeDo() {
               </h3>
               <p className="text-gray-600 dark:text-white">
                 At Bharath Sports Foundation, we are dedicated to a culture of
-                accessing sports to everyone despite their backgrounds.
-                Primarily our initiatives are focused on identifying talent,
-                skill-development, and to provide training programs for young
-                athletes. Our coaching is structured with various disciplines,
-                to ensure the aspiring sporting individuals receive the right
-                guidance and support. We offer sponsorships and scholarships to
-                the underprivileged.
+                accessing sports for everyone despite their backgrounds. Our
+                initiatives focus on identifying talent, skill development, and
+                providing structured training programs for young athletes.
               </p>
               <Link href="/what-we-do" className="inline-block mt-4">
                 <button className="flex items-center gap-2 font-medium text-sm dark:text-white">
-                  Read More
-                  <span className="text-xl">→</span>
+                  Read More <span className="text-xl">→</span>
                 </button>
               </Link>
             </div>
 
-            {/* Vision Section (visible only on desktop) */}
+            {/* Vision (Desktop only) */}
             <div className="space-y-4 hidden lg:block">
               <div className="flex items-center gap-2">
                 <Eye className="w-8 h-8 dark:text-white" />
@@ -134,40 +169,48 @@ export default function WhatWeDo() {
                 The Bharath Sports Foundation seeks to develop vibrant talent,
                 give athletes access to resources, and offer them ample
                 possibilities to succeed in their intended disciplines. We work
-                to ensure all individuals gets to engage in sports and to
+                to ensure all individuals get to engage in sports and to
                 construct a solid basis for Indian athletics in the future.
               </p>
               <Link href="/what-we-do" className="inline-block mt-4">
                 <button className="flex items-center gap-2 font-medium text-sm dark:text-white">
-                  Read More
-                  <span className="text-xl">→</span>
+                  Read More <span className="text-xl">→</span>
                 </button>
               </Link>
             </div>
           </div>
 
-          {/* Right Column - Upcoming Events */}
+          {/* Right Column - Scrollable Upcoming Events */}
           <div>
             <h2 className="text-2xl font-bold mb-6 dark:text-white">
               Upcoming Events
             </h2>
-            <div className="space-y-6">
+
+            <div className="space-y-6 max-h-[450px] overflow-y-auto pr-2 custom-scrollbar">
               {events.map((event, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="bg-[#B8EA80] dark:bg-[#B8EA80] p-3 h-min text-center">
-                    <div className="text-2xl font-bold dark:text-white">24</div>
-                    <hr className="border-2 my-2 border-black dark:border-white" />
-                    <div className="font-bold dark:text-white">
-                      {event.month}
+                <div
+                  key={index}
+                  className="flex gap-4 bg-white/10 p-3 rounded-lg hover:bg-white/20 transition-all duration-200 dark:bg-gray-800"
+                >
+                  {/* Date & Month Box */}
+                  <div className="bg-[#B8EA80] dark:bg-[#B8EA80] p-3 h-min text-center rounded-md">
+                    <div className="text-2xl font-bold text-black">
+                      {event.year.slice(-2)}
                     </div>
+                    <hr className="border-2 my-2 border-black" />
+                    <div className="font-bold text-black">{event.month}</div>
                   </div>
+
+                  {/* Event Details */}
                   <div className="space-y-2">
-                    <h3 className="font-bold dark:text-white">{event.title}</h3>
-                    <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-white">
+                    <h3 className="font-bold dark:text-white">
+                      {event.title}
+                    </h3>
+                    <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-300">
                       <div>at {event.time}</div>
                       <div>{event.location}</div>
                     </div>
-                    <p className="text-gray-600 dark:text-white">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
                       {event.description}
                     </p>
                   </div>
