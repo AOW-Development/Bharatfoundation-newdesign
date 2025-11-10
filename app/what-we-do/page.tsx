@@ -24,19 +24,6 @@ export default function WhatWeDoPage() {
       {/* Mission & Vision Section */}
       <section className="md:py-16 px-8 md:px-16 py-8 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <div className=" mb-12">
-            <h2 className="text-3xl font-bold mb-6 dark:text-white">
-              Our Mission & Vision
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300">
-              Our mission is to promote physical education and sports at all
-              levels, empowering athletes and communities through our various
-              initiatives and programs. Our vision is to foster a culture where
-              sports are an integral part of everyday life, enhancing the
-              well-being and success of individuals and communities alike.
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="bg-[#B8EA80] dark:bg-[#98c889] p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4 dark:text-gray-800">
@@ -160,7 +147,7 @@ export default function WhatWeDoPage() {
       {/* Featured Program Section */}
       <section className="py-16 md:px-16 px-8 dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {/* <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div>
               <h2 className="text-3xl font-bold mb-6 dark:text-white">
                 Featured Program
@@ -175,7 +162,7 @@ export default function WhatWeDoPage() {
                 className="object-cover rounded-lg"
               />
             </div>
-          </div>
+          </div> */}
 
           <div className="bg-[#B8EA80] dark:bg-[#98c889] p-8 rounded-lg">
             <h3 className="text-2xl font-bold text-center mb-6 dark:text-gray-800">
