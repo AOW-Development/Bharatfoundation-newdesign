@@ -69,8 +69,8 @@ export default function ContactPage() {
                   <Phone className="w-6 h-6 mt-1" />
                   <div>
                     <h3 className="font-semibold mb-2">Phone</h3>
-                    <p className="text-gray-600">+123 456 789 101</p>
-                    <p className="text-gray-600">+321 101 987 654</p>
+                    <p className="text-gray-600">+91 98945 00669</p>
+                    <p className="text-gray-600">+91 98674 47334</p>
                   </div>
                 </div>
 
@@ -86,8 +86,8 @@ export default function ContactPage() {
                   <MapPin className="w-6 h-6 mt-1" />
                   <div>
                     <h3 className="font-semibold mb-2">Address</h3>
-                    <p className="text-gray-600">123 Sports Avenue</p>
-                    <p className="text-gray-600">City, State, Zip Code</p>
+                    <p className="text-gray-600">58/2, first floor, Sriranga complex,opp to century breeze apartment,behind ICICI ATM, Surabhi layout, Yalahanka</p>
+                    <p className="text-gray-600">Bangalore, Karnataka, 560064</p>
                   </div>
                 </div>
 
@@ -96,7 +96,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold mb-2">Social Media</h3>
                     <div className="flex gap-4">
-                      <a href="#" className="hover:text-gray-600">
+                      <a href="https://www.instagram.com/bharatsportsfoundation_/" className="hover:text-gray-600" target="_blank">
                         <Instagram className="w-6 h-6" />
                       </a>
                       <a href="#" className="hover:text-gray-600">
