@@ -316,6 +316,18 @@ function DonationForm() {
           </div>
         </div>
       </form>
+      {/* ✅ QR Section Added AFTER the form */}
+      <div className="mt-10 text-center">
+  <img
+    src="/images/QR.png"
+    alt="Scan to Pay via PhonePe"
+    className="mx-auto w-64 sm:w-72 md:w-80 lg:w-96 h-auto object-contain rounded-xl shadow-lg border border-gray-200"
+  />
+  <p className="text-base sm:text-lg text-gray-700 mt-4">
+    Scan this QR code to donate instantly via PhonePe or any UPI app.
+  </p>
+</div>
+
     </div>
   );
 }
