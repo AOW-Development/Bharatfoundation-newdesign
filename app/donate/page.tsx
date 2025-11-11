@@ -160,9 +160,8 @@ function DonationForm() {
                     type="text"
                     name="firstName"
                     placeholder="First Name"
-                    className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                      formErrors.firstName ? "border-red-500" : ""
-                    }`}
+                    className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${formErrors.firstName ? "border-red-500" : ""
+                      }`}
                     value={formData.firstName}
                     onChange={handleInputChange}
                   />
@@ -177,9 +176,8 @@ function DonationForm() {
                     type="text"
                     name="lastName"
                     placeholder="Last Name"
-                    className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                      formErrors.lastName ? "border-red-500" : ""
-                    }`}
+                    className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${formErrors.lastName ? "border-red-500" : ""
+                      }`}
                     value={formData.lastName}
                     onChange={handleInputChange}
                   />
@@ -195,9 +193,8 @@ function DonationForm() {
                   type="text"
                   name="address"
                   placeholder="Address Street"
-                  className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                    formErrors.address ? "border-red-500" : ""
-                  }`}
+                  className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${formErrors.address ? "border-red-500" : ""
+                    }`}
                   value={formData.address}
                   onChange={handleInputChange}
                 />
@@ -215,9 +212,8 @@ function DonationForm() {
                 type="text"
                 name="city"
                 placeholder="City"
-                className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                  formErrors.city ? "border-red-500" : ""
-                }`}
+                className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${formErrors.city ? "border-red-500" : ""
+                  }`}
                 value={formData.city}
                 onChange={handleInputChange}
               />
@@ -230,9 +226,8 @@ function DonationForm() {
                 type="text"
                 name="stateProvinceZip"
                 placeholder="State/Province/Zip"
-                className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                  formErrors.stateProvinceZip ? "border-red-500" : ""
-                }`}
+                className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${formErrors.stateProvinceZip ? "border-red-500" : ""
+                  }`}
                 value={formData.stateProvinceZip}
                 onChange={handleInputChange}
               />
@@ -246,9 +241,8 @@ function DonationForm() {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                    formErrors.email ? "border-red-500" : ""
-                  }`}
+                  className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${formErrors.email ? "border-red-500" : ""
+                    }`}
                   value={formData.email}
                   onChange={handleInputChange}
                 />
@@ -267,9 +261,8 @@ function DonationForm() {
                   type="tel"
                   name="phone"
                   placeholder="Phone/Mobile No"
-                  className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                    formErrors.phone ? "border-red-500" : ""
-                  }`}
+                  className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${formErrors.phone ? "border-red-500" : ""
+                    }`}
                   value={formData.phone}
                   onChange={handleInputChange}
                 />
@@ -292,9 +285,8 @@ function DonationForm() {
                 type="text"
                 name="panCard"
                 placeholder="PAN Card No (Optional)"
-                className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                  formErrors.panCard ? "border-red-500" : ""
-                }`}
+                className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500 ${formErrors.panCard ? "border-red-500" : ""
+                  }`}
                 value={formData.panCard}
                 onChange={handleInputChange}
               />
@@ -318,16 +310,15 @@ function DonationForm() {
       </form>
       {/* ✅ QR Section Added AFTER the form */}
       <div className="mt-10 text-center">
-  <img
-    src="/images/QR.png"
-    alt="Scan to Pay via PhonePe"
-    className="mx-auto w-64 sm:w-72 md:w-80 lg:w-96 h-auto object-contain rounded-xl shadow-lg border border-gray-200"
-  />
-  <p className="text-base sm:text-lg text-gray-700 mt-4">
-    Scan this QR code to donate instantly via PhonePe or any UPI app.
-  </p>
-</div>
-
+        <img
+          src="/images/QR.png"
+          alt="Scan to Pay via PhonePe"
+          className="mx-auto w-64 sm:w-72 md:w-80 lg:w-96 h-auto object-contain rounded-xl shadow-lg border border-gray-200"
+        />
+        <p className="text-base sm:text-lg text-gray-700 mt-4">
+          Scan this QR code to donate instantly via PhonePe or any UPI app.
+        </p>
+      </div>
     </div>
   );
 }
