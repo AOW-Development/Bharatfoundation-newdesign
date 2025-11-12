@@ -19,10 +19,10 @@ export default function Footer() {
   const router = useRouter();
 
   return (
-    <footer className="bg-gray-700 px-6 md:px-28 text-sm text-white">
-      <div className="container mx-auto px-4 pt-12 pb-6">
+    <footer className="bg-gray-700 px-4 sm:px-6 md:px-12 lg:px-28 text-sm text-white">
+      <div className="container mx-auto px-2 sm:px-4 pt-12 pb-6">
         {/* Main footer content */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Our Work Section */}
           <div>
             <h2 className="text-lg font-bold mb-4 border-b border-gray-500 pb-2">
@@ -133,7 +133,7 @@ export default function Footer() {
             <h2 className="text-lg font-bold mb-4 border-b border-gray-500 pb-2">
               MAIN OFFICE
             </h2>
-            <address className="not-italic">
+            <address className="not-italic text-sm leading-relaxed">
               Bharat Sports Foundation
               <br />
               18th Cross, 5th Main,
@@ -145,21 +145,21 @@ export default function Footer() {
 
         {/* Address and Contact Info */}
         <div className="border-t border-gray-600 pt-6 pb-4">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-6">
-            <div className="space-y-2 mb-4 lg:mb-0">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
+            <div className="space-y-2 text-sm">
               <p>
                 Bharat Foundation161 B/ 4, 3rd Floor, Gulmohar House, Yusuf
                 Sarai Community Centre
               </p>
               <p>New Delhi- 110049 Delhi, India</p>
               <p>
-                Contact Us: Tel:+ 91-11-43123700| E- mail:
+                Contact Us: Tel:+91-11-43123700 | E-mail:
                 info@bharatfoundation.org
               </p>
             </div>
 
             {/* Social Media Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 sm:space-x-4">
               <Link href="#" className="hover:text-gray-300">
                 <Facebook className="h-6 w-6" />
               </Link>
@@ -180,24 +180,24 @@ export default function Footer() {
         </div>
 
         {/* Help and Scroll to Top Buttons */}
-        <div className="fixed bottom-8 right-8 flex flex gap-4">
+        <div className="fixed bottom-8 right-4 sm:right-8 flex flex-col sm:flex-row gap-3 sm:gap-4 z-50">
           <button
             onClick={() => router.push("/contact")}
-            className="bg-white text-green-500 px-6 py-2 rounded-md font-semibold flex items-center gap-2"
+            className="bg-white text-green-600 px-4 sm:px-6 py-2 rounded-md font-semibold flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             <HelpCircle className="h-5 w-5" />
             Help?
           </button>
           <button
             onClick={scrollToTop}
-            className="bg-yellow-500 p-2 rounded-full hover:bg-yellow-400 transition-colors"
+            className="bg-yellow-500 p-2 sm:p-3 rounded-full hover:bg-yellow-400 transition-colors"
           >
-            <ArrowUp className="h-6 w-6 text-white" />
+            <ArrowUp className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
           </button>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-600 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center text-sm">
+        <div className="border-t border-gray-600 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center text-xs sm:text-sm text-center gap-2">
           <p>Powered By:- aow.co.in</p>
           <p>© Copyright 2025 Bharat Sports Foundation. All rights Reserved</p>
         </div>

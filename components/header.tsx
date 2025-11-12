@@ -12,11 +12,9 @@ export default function Header() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check if dark mode is enabled
     const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     setIsDarkMode(darkModeMediaQuery.matches);
 
-    // Listen for changes in color scheme
     const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
     darkModeMediaQuery.addEventListener("change", handleChange);
 
@@ -44,6 +42,7 @@ export default function Header() {
           {/* Background strip (visible only on desktop) */}
           <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 h-12 top-1/2 mx-6 -translate-y-1/2 hidden md:block" />
 
+          {/* Logo */}
           <div className="flex items-center z-10">
             <Link href="/">
               <Image
@@ -56,8 +55,13 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile Heading */}
-          <h1 className="text-lg font-bold text-[#a5d695] dark:text-[#a5d695] text-center bg-white absolute left-1/2 transform -translate-x-1/2 md:hidden">
+          {/* Mobile + Tablet Heading (Improved style) */}
+          <h1
+            className="text-base sm:text-lg font-bold text-[#a5d695] dark:text-[#a5d695] 
+            text-center px-3 py-1 rounded-md 
+            bg-white/20 dark:bg-gray-800/30 backdrop-blur-md 
+            absolute left-1/2 transform -translate-x-1/2 md:hidden"
+          >
             Bharat Sports Foundation
           </h1>
 
@@ -78,6 +82,7 @@ export default function Header() {
             ))}
           </div>
 
+          {/* Donate (Desktop Only) */}
           <div className="hidden md:block z-10">
             <Link
               href="/donate"
@@ -87,7 +92,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#B8EA80] z-10"
             onClick={toggleMenu}
@@ -103,7 +108,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute left-0 right-0 bg-white dark:bg-gray-900 z-50">
+          <div className="md:hidden absolute left-0 right-0 bg-white dark:bg-gray-900 z-50 shadow-md">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navItems.map((item) => (
                 <Link

@@ -39,20 +39,28 @@ const programs = [
 
 export default function OurProgram() {
   return (
-    <section className="pb-16 md:pt-8 sm:px-8 md:p-8 md:px-24">
+    <section className="pb-16 pt-8 px-4 sm:px-8 md:px-16 lg:px-24">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Program</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-10 sm:mb-12 px-2">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+            Our Program
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             Our mission is to inspire, educate, and entertain sports enthusiasts
-            of all ages and skill levels
+            of all ages and skill levels.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Programs Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {programs.map((program, index) => (
-            <div key={index} className="flex flex-col">
-              <div className="relative h-64 mb-4">
+            <div
+              key={index}
+              className="flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-4 sm:p-5"
+            >
+              {/* Image */}
+              <div className="relative h-52 sm:h-56 md:h-64 mb-4">
                 <Image
                   src={program.image || "/placeholder.svg"}
                   alt={program.title}
@@ -60,12 +68,24 @@ export default function OurProgram() {
                   className="object-cover rounded-lg"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-3">{program.title}</h3>
-              <p className="text-gray-600 mb-3">{program.description}</p>
-              <p className="text-gray-600 mb-4">{program.shortDesc}</p>
+
+              {/* Title */}
+              <h3 className="text-lg sm:text-xl font-bold mb-2">
+                {program.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-600 text-sm sm:text-base mb-2">
+                {program.description}
+              </p>
+              <p className="text-gray-600 text-sm sm:text-base mb-4">
+                {program.shortDesc}
+              </p>
+
+              {/* Read More */}
               <Link
                 href="/blog"
-                className="inline-flex items-center text-primary hover:underline mt-auto"
+                className="inline-flex items-center text-primary hover:underline mt-auto text-sm sm:text-base"
               >
                 Read More <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

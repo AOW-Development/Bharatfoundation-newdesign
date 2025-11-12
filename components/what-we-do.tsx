@@ -42,7 +42,7 @@ export default function WhatWeDo() {
       description:
         "A nutrition-focused drive that spreads awareness on healthy diets, supplements, and meal plans crucial for maintaining peak performance in sports.",
     },
-    // 🟢 Old Events
+    // Old Events
     {
       month: "Jan",
       year: "2025",
@@ -77,32 +77,36 @@ export default function WhatWeDo() {
       location: "24 Bangalore City",
       description:
         "Education is the basic essential to everyone in this technological era.",
-    },    
+    },
   ];
 
   return (
-    <section className="pt-8 md:pt-16 px-6 md:px-12 lg:px-20 dark:bg-gray-900">
+    <section className="pt-8 md:pt-12 lg:pt-16 px-4 sm:px-6 md:px-10 lg:px-20 dark:bg-gray-900">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
           {/* Left Column */}
           <div className="space-y-8">
+            {/* Image */}
             <div className="rounded-lg overflow-hidden">
               <Image
                 src="/images/whatwedo-new.webp"
                 alt="playing sports"
                 width={400}
                 height={300}
-                className="w-full object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
 
             {/* Mission Section */}
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <Target className="w-8 h-8 dark:text-white" />
-                <h3 className="text-xl font-bold dark:text-white">Mission</h3>
+                <Target className="w-7 h-7 sm:w-8 sm:h-8 dark:text-white" />
+                <h3 className="text-lg sm:text-xl font-bold dark:text-white">
+                  Mission
+                </h3>
               </div>
-              <p className="text-gray-600 text-sm dark:text-white">
+              <p className="text-gray-600 text-sm sm:text-base dark:text-white leading-relaxed">
                 We at Bharath Sports Foundation inspire and enrich athletes as
                 well as provide them with required essentials, resources,
                 mentorship, and growth opportunities. As we value sporting
@@ -111,9 +115,9 @@ export default function WhatWeDo() {
                 With our steps to progress, we build a strong, healthy, and
                 competitive sporting community in India.
               </p>
-              <Link href="/what-we-do" className="inline-block mt-4">
+              <Link href="/what-we-do" className="inline-block mt-2 sm:mt-4">
                 <button className="flex items-center gap-2 text-sm dark:text-white">
-                  Read More <span className="text-xl">→</span>
+                  Read More <span className="text-lg">→</span>
                 </button>
               </Link>
             </div>
@@ -121,19 +125,21 @@ export default function WhatWeDo() {
             {/* Vision Section (Mobile only) */}
             <div className="space-y-4 lg:hidden">
               <div className="flex items-center gap-2">
-                <Eye className="w-8 h-8 dark:text-white" />
-                <h3 className="text-xl font-bold dark:text-white">Vision</h3>
+                <Eye className="w-7 h-7 sm:w-8 sm:h-8 dark:text-white" />
+                <h3 className="text-lg sm:text-xl font-bold dark:text-white">
+                  Vision
+                </h3>
               </div>
-              <p className="text-gray-600 text-sm dark:text-white">
+              <p className="text-gray-600 text-sm sm:text-base dark:text-white leading-relaxed">
                 The Bharath Sports Foundation seeks to develop vibrant talent,
                 give athletes access to resources, and offer them ample
                 possibilities to succeed in their intended disciplines. We work
                 to ensure all individuals get to engage in sports and to
                 construct a solid basis for Indian athletics in the future.
               </p>
-              <Link href="/what-we-do" className="inline-block mt-4">
-                <button className="flex items-center gap-2 font-medium text-sm dark:text-white">
-                  Read More <span className="text-xl">→</span>
+              <Link href="/what-we-do" className="inline-block mt-2 sm:mt-4">
+                <button className="flex items-center gap-2 text-sm font-medium dark:text-white">
+                  Read More <span className="text-lg">→</span>
                 </button>
               </Link>
             </div>
@@ -141,20 +147,22 @@ export default function WhatWeDo() {
 
           {/* Middle Column */}
           <div className="space-y-8">
-            <div className="space-y-4 text-sm">
-              <h2 className="text-2xl font-bold dark:text-white">What We Do</h2>
-              <h3 className="text-xl font-semibold dark:text-white">
+            <div className="space-y-4 text-sm sm:text-base">
+              <h2 className="text-xl sm:text-2xl font-bold dark:text-white">
+                What We Do
+              </h2>
+              <h3 className="text-lg sm:text-xl font-semibold dark:text-white">
                 Motivating Greatness Through Sports
               </h3>
-              <p className="text-gray-600 dark:text-white">
+              <p className="text-gray-600 dark:text-white leading-relaxed">
                 At Bharath Sports Foundation, we are dedicated to a culture of
                 accessing sports for everyone despite their backgrounds. Our
                 initiatives focus on identifying talent, skill development, and
                 providing structured training programs for young athletes.
               </p>
-              <Link href="/what-we-do" className="inline-block mt-4">
-                <button className="flex items-center gap-2 font-medium text-sm dark:text-white">
-                  Read More <span className="text-xl">→</span>
+              <Link href="/what-we-do" className="inline-block mt-2 sm:mt-4">
+                <button className="flex items-center gap-2 text-sm font-medium dark:text-white">
+                  Read More <span className="text-lg">→</span>
                 </button>
               </Link>
             </div>
@@ -165,52 +173,54 @@ export default function WhatWeDo() {
                 <Eye className="w-8 h-8 dark:text-white" />
                 <h3 className="text-xl font-bold dark:text-white">Vision</h3>
               </div>
-              <p className="text-gray-600 text-sm dark:text-white">
+              <p className="text-gray-600 text-sm sm:text-base dark:text-white leading-relaxed">
                 The Bharath Sports Foundation seeks to develop vibrant talent,
                 give athletes access to resources, and offer them ample
                 possibilities to succeed in their intended disciplines. We work
                 to ensure all individuals get to engage in sports and to
                 construct a solid basis for Indian athletics in the future.
               </p>
-              <Link href="/what-we-do" className="inline-block mt-4">
-                <button className="flex items-center gap-2 font-medium text-sm dark:text-white">
-                  Read More <span className="text-xl">→</span>
+              <Link href="/what-we-do" className="inline-block mt-2 sm:mt-4">
+                <button className="flex items-center gap-2 text-sm font-medium dark:text-white">
+                  Read More <span className="text-lg">→</span>
                 </button>
               </Link>
             </div>
           </div>
 
           {/* Right Column - Scrollable Upcoming Events */}
-          <div>
-            <h2 className="text-2xl font-bold mb-6 dark:text-white">
+          <div className="md:col-span-2 lg:col-span-1">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 dark:text-white text-center sm:text-left">
               Upcoming Events
             </h2>
 
-            <div className="space-y-6 max-h-[450px] overflow-y-auto pr-2 custom-scrollbar">
+            <div className="space-y-4 sm:space-y-6 max-h-[400px] sm:max-h-[450px] overflow-y-auto pr-1 sm:pr-2 custom-scrollbar">
               {events.map((event, index) => (
                 <div
                   key={index}
-                  className="flex gap-4 bg-white/10 p-3 rounded-lg hover:bg-white/20 transition-all duration-200 dark:bg-gray-800"
+                  className="flex flex-col sm:flex-row gap-3 sm:gap-4 bg-white/10 dark:bg-gray-800 p-3 sm:p-4 rounded-lg hover:bg-white/20 transition-all duration-200"
                 >
-                  {/* Date & Month Box */}
-                  <div className="bg-[#B8EA80] dark:bg-[#B8EA80] p-3 h-min text-center rounded-md">
-                    <div className="text-2xl font-bold text-black">
+                  {/* Date Box */}
+                  <div className="bg-[#B8EA80] dark:bg-[#B8EA80] p-2 sm:p-3 h-min text-center rounded-md">
+                    <div className="text-lg sm:text-2xl font-bold text-black">
                       {event.year.slice(-2)}
                     </div>
-                    <hr className="border-2 my-2 border-black" />
-                    <div className="font-bold text-black">{event.month}</div>
+                    <hr className="border border-black my-1 sm:my-2" />
+                    <div className="font-bold text-black text-sm sm:text-base">
+                      {event.month}
+                    </div>
                   </div>
 
                   {/* Event Details */}
-                  <div className="space-y-2">
-                    <h3 className="font-bold dark:text-white">
+                  <div className="space-y-1 sm:space-y-2">
+                    <h3 className="font-bold text-sm sm:text-base dark:text-white">
                       {event.title}
                     </h3>
-                    <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-300">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
                       <div>at {event.time}</div>
                       <div>{event.location}</div>
                     </div>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">
+                    <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed">
                       {event.description}
                     </p>
                   </div>
@@ -220,6 +230,7 @@ export default function WhatWeDo() {
           </div>
         </div>
       </div>
+
       <ActionCards />
     </section>
   );
