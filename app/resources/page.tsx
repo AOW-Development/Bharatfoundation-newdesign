@@ -193,10 +193,10 @@ export default function ResourcesPage() {
                   <h2 className="text-2xl font-bold mb-6">Training Programs</h2>
                   <div className="flex gap-4">
                     {[
-                      "/images/training-1.png",
-                      "/images/training-2.png",
-                      "/images/training-3.png",
-                      "/images/training-4.png",
+                      "/images/training_1_bsf_f2.jpg",
+                      "/images/training_2_bsf_f2.jpg",
+                      "/images/training_3_bsf_f2.jpg",
+                      "/images/training_4_bsf_f2.jpg",
                     ].map((src, index) => (
                       <div
                         key={index}
