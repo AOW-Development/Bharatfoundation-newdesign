@@ -19,7 +19,7 @@ export default function WhatWeDoPage() {
     <main className="min-h-screen flex flex-col">
       <Header />
 
-      <Banner mediaUrl="/images/whatwedo1.mp4" heading="" paragraph="" />
+      <Banner mediaUrl="/images/whatwedo_bsf_f2.mp4" heading="" paragraph="" />
 
       {/* Mission & Vision Section */}
       <section className="md:py-16 px-8 md:px-16 py-8 bg-gray-50 dark:bg-gray-800">

@@ -14,7 +14,7 @@ export default function ResourcesPage() {
       <Header />
       <Banner
         imageUrl="/images/resourcesbanner.webp"
-        videoUrl="/images/resources-banner.mp4"
+        videoUrl="/images/resources_bsf_f2.mp4"
         heading=""
         paragraph=""
       />
