@@ -22,59 +22,65 @@ export default function WhatWeDoPage() {
       <Banner mediaUrl="/images/whatwedo_bsf_f2.mp4" heading="" paragraph="" />
 
       {/* Mission & Vision Section */}
-      <section className="md:py-16 px-8 md:px-16 py-8 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-[#B8EA80] dark:bg-[#98c889] p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4 dark:text-gray-800">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-8 md:px-16 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+            <div className="bg-[#B8EA80] dark:bg-[#98c889] p-6 sm:p-8 rounded-lg">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 dark:text-gray-800">
                 Key Areas of Impact
               </h3>
-              <ul className="space-y-2 dark:text-gray-800">
+              <ul className="space-y-2 text-sm sm:text-base dark:text-gray-800">
                 <li>Community Engagement</li>
                 <li>Athlete Support</li>
                 <li>Health & Wellness Programs</li>
                 <li>Education & Training</li>
               </ul>
             </div>
-            <div className="bg-[#98c889] dark:bg-[#B8EA80] p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4 dark:text-gray-800">
+            <div className="bg-[#98c889] dark:bg-[#B8EA80] p-6 sm:p-8 rounded-lg">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 dark:text-gray-800">
                 Success Stories & Testimonials
               </h3>
-              <blockquote className="italic dark:text-gray-800">
+              <blockquote className="italic text-sm sm:text-base dark:text-gray-800 leading-relaxed">
                 "Thanks to the Foundation, I've achieved my dream of becoming a
                 national athlete!" - Anjali Sharma
               </blockquote>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gray-700 text-white p-6 rounded-lg">
-              <div className="text-3xl font-bold mb-2">500+</div>
-              <div>Athletes Supported</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="bg-gray-700 text-white p-6 sm:p-8 rounded-lg text-center">
+              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">
+                500+
+              </div>
+              <div className="text-sm sm:text-base">Athletes Supported</div>
             </div>
-            <div className="bg-[#98c889] dark:bg-[#B8EA80] p-6 rounded-lg">
-              <div className="text-3xl font-bold mb-2 dark:text-gray-800">
+            <div className="bg-[#98c889] dark:bg-[#B8EA80] p-6 sm:p-8 rounded-lg text-center">
+              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2 dark:text-gray-800">
                 120+
               </div>
-              <div className="dark:text-gray-800">Community Programs</div>
+              <div className="text-sm sm:text-base dark:text-gray-800">
+                Community Programs
+              </div>
             </div>
-            <div className="bg-[#B8EA80] dark:bg-[#98c889] p-6 rounded-lg">
-              <div className="text-3xl font-bold mb-2 dark:text-gray-800">
+            <div className="bg-[#B8EA80] dark:bg-[#98c889] p-6 sm:p-8 rounded-lg text-center">
+              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2 dark:text-gray-800">
                 200K+
               </div>
-              <div className="dark:text-gray-800">Lives Impacted</div>
+              <div className="text-sm sm:text-base dark:text-gray-800">
+                Lives Impacted
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Current Programs Section */}
-      <section className="py-16 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">
+      <section className="py-12 sm:py-16 dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 sm:mb-12 dark:text-white">
             Current Programs
           </h2>
-          <div className="max-w-3xl mx-auto space-y-6">
+          <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
             {[
               { title: "Athlete Mentor", category: "Sports" },
               { title: "Sports Coach", category: "Sports" },
@@ -83,18 +89,18 @@ export default function WhatWeDoPage() {
             ].map((program, index) => (
               <div
                 key={index}
-                className="flex items-center justify-between p-6 border-b dark:border-gray-700"
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 sm:p-6 border-b dark:border-gray-700"
               >
-                <div>
-                  <h3 className="text-xl font-bold dark:text-white">
+                <div className="mb-3 sm:mb-0">
+                  <h3 className="text-lg sm:text-xl font-bold dark:text-white">
                     {program.title}
                   </h3>
-                  <div className="text-gray-600 dark:text-gray-400">
+                  <div className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
                     {program.category}
                   </div>
                 </div>
                 <Link href="#">
-                  <button className="px-6 py-2 border rounded hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-white dark:border-gray-600">
+                  <button className="w-full sm:w-auto px-5 sm:px-6 py-2 border rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-white dark:border-gray-600 text-sm sm:text-base transition">
                     Explore
                   </button>
                 </Link>
@@ -105,12 +111,12 @@ export default function WhatWeDoPage() {
       </section>
 
       {/* Get Involved Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">
+      <section className="py-12 sm:py-16 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 sm:mb-12 dark:text-white">
             Get Involved
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-8 mb-10 sm:mb-16">
             {[
               { icon: Timer, title: "Flexible Training Hours" },
               { icon: BarChart2, title: "Competitive Awards" },
@@ -126,17 +132,21 @@ export default function WhatWeDoPage() {
                 className="flex flex-col items-center text-center"
               >
                 <div className="bg-[#B8EA80] dark:bg-[#98c889] p-4 rounded-lg mb-4">
-                  <item.icon className="h-8 w-8 dark:text-gray-800" />
+                  <item.icon className="h-6 w-6 sm:h-8 sm:w-8 dark:text-gray-800" />
                 </div>
-                <h3 className="font-semibold dark:text-white">{item.title}</h3>
+                <h3 className="text-sm sm:text-base font-semibold dark:text-white">
+                  {item.title}
+                </h3>
               </div>
             ))}
           </div>
 
-          <div className="bg-gray-700 text-white text-center py-16 rounded-lg">
-            <h3 className="text-3xl font-bold mb-6">Get involved</h3>
+          <div className="bg-gray-700 text-white text-center py-10 sm:py-16 rounded-lg px-4">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
+              Get involved
+            </h3>
             <Link href="/contact">
-              <button className="bg-[#B7E4A7] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#98c889] transition-colors">
+              <button className="bg-[#B7E4A7] text-black px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-[#98c889] transition-colors text-sm sm:text-base">
                 Join Now
               </button>
             </Link>
@@ -145,41 +155,24 @@ export default function WhatWeDoPage() {
       </section>
 
       {/* Featured Program Section */}
-      <section className="py-16 md:px-16 px-8 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          {/* <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div>
-              <h2 className="text-3xl font-bold mb-6 dark:text-white">
-                Featured Program
-              </h2>
-              <h3 className="text-2xl mb-4 dark:text-gray-300">Sports Coach</h3>
-            </div>
-            <div className="relative h-64 md:h-full">
-              <Image
-                src="/images/36f02fee745bdf45fe3a56e6ad0882e9.png"
-                alt="Sports collage"
-                fill
-                className="object-cover rounded-lg"
-              />
-            </div>
-          </div> */}
-
-          <div className="bg-[#B8EA80] dark:bg-[#98c889] p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-center mb-6 dark:text-gray-800">
+      <section className="py-12 sm:py-16 px-4 sm:px-8 md:px-16 dark:bg-gray-900">
+        <div className="container mx-auto">
+          <div className="bg-[#B8EA80] dark:bg-[#98c889] p-6 sm:p-8 rounded-lg">
+            <h3 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6 dark:text-gray-800">
               Program Overview
             </h3>
-            <p className="text-center mb-8 dark:text-gray-800">
+            <p className="text-center mb-6 sm:mb-8 text-sm sm:text-base dark:text-gray-800 leading-relaxed">
               We are dedicated to empowering youth through sports programs. Join
               us to make a difference in the community and inspire the next
               generation of athletes.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8 bg-[#98c889]/50 dark:bg-[#B8EA80]/50 p-6 rounded-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 bg-[#98c889]/50 dark:bg-[#B8EA80]/50 p-4 sm:p-6 rounded-lg">
               <div>
-                <h4 className="font-bold mb-4 dark:text-gray-800">
+                <h4 className="font-bold mb-3 sm:mb-4 text-sm sm:text-base dark:text-gray-800">
                   Activities:
                 </h4>
-                <ul className="space-y-2 dark:text-gray-800">
+                <ul className="space-y-1 sm:space-y-2 text-sm sm:text-base dark:text-gray-800">
                   <li>- Plan and execute sports activities</li>
                   <li>- Mentor and guide young athletes</li>
                   <li>- Organize sports events and tournaments</li>
@@ -188,10 +181,10 @@ export default function WhatWeDoPage() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold mb-4 dark:text-gray-800">
+                <h4 className="font-bold mb-3 sm:mb-4 text-sm sm:text-base dark:text-gray-800">
                   Requirements:
                 </h4>
-                <ul className="space-y-2 dark:text-gray-800">
+                <ul className="space-y-1 sm:space-y-2 text-sm sm:text-base dark:text-gray-800">
                   <li>- Experience in sports coaching</li>
                   <li>- Passion for youth development</li>
                   <li>- Strong communication skills</li>
