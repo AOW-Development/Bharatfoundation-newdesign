@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -10,15 +11,28 @@ export default function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    // Check if dark mode is enabled
     const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     setIsDarkMode(darkModeMediaQuery.matches);
 
+    // Listen for changes in color scheme
     const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
     darkModeMediaQuery.addEventListener("change", handleChange);
 
-    return () => darkModeMediaQuery.removeEventListener("change", handleChange);
+    // Handle scroll effect
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      darkModeMediaQuery.removeEventListener("change", handleChange);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const navItems = [
@@ -33,48 +47,75 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 w-full z-50 dark:bg-gray-900 shadow-sm md:pt-4 py-4 md:pt-8 ${
+      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
         isDarkMode ? "dark" : ""
       }`}
+      style={{
+        background: isScrolled 
+          ? 'rgba(15, 23, 42, 0.85)' 
+          : 'rgba(15, 23, 42, 0.95)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)'
+      }}
     >
-      <div className="container mx-auto px-4 md:px-12">
-        <nav className="flex items-center justify-between h-16 md:h-20 relative">
-          {/* Background strip (visible only on desktop) */}
-          <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 h-12 top-1/2 mx-6 -translate-y-1/2 hidden md:block" />
-
-          {/* Logo */}
-          <div className="flex items-center z-10">
-            <Link href="/">
-              <Image
-                src="/images/revisedlogo_bsf.svg"
-                alt="Bharat Sports Foundation Logo"
-                width={150}
-                height={150}
-                className="h-16 w-16 md:h-28 md:w-28"
-              />
+      {/* Glassmorphism gradient overlay */}
+      <div 
+        className="absolute inset-0 opacity-20"
+        style={{
+          background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(147, 51, 234, 0.3) 50%, rgba(236, 72, 153, 0.3) 100%)'
+        }}
+      />
+      
+      {/* Subtle dot pattern */}
+      <div 
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+          backgroundSize: '20px 20px'
+        }}
+      />
+      
+      <div className="container mx-auto px-4 md:px-12 relative z-10">
+        <nav className="flex items-center justify-between h-20 md:h-24">
+          {/* Logo Section */}
+          <div className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative overflow-hidden rounded-full bg-white p-1">
+                <Image
+                  src="/images/revisedlogo_bsf.svg"
+                  alt="Bharat Sports Foundation Logo"
+                  width={150}
+                  height={150}
+                  className="h-14 w-14 md:h-16 md:w-16 transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <div className="hidden lg:block">
+                <h1 className="text-xl font-bold text-white leading-tight">
+                  Bharat Sports
+                </h1>
+                <p className="text-xs text-blue-100 font-medium">
+                  Foundation
+                </p>
+              </div>
             </Link>
           </div>
 
-          {/* Mobile + Tablet Heading (Improved style) */}
-          <h1
-            className="text-base sm:text-lg font-bold text-[#a5d695] dark:text-[#a5d695] 
-            text-center px-3 py-1 rounded-md 
-            bg-white/20 dark:bg-gray-800/30 backdrop-blur-md 
-            absolute left-1/2 transform -translate-x-1/2 md:hidden"
-          >
+          {/* Mobile Heading */}
+          <h1 className="text-base font-bold text-white lg:hidden absolute left-1/2 transform -translate-x-1/2">
             Bharat Sports Foundation
           </h1>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center justify-center absolute left-0 right-0 mx-16 h-8 z-0">
+          <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`mx-2 px-6 py-3 text-sm font-bold rounded-md transition-colors ${
+                className={`relative px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
                   pathname === item.href
-                    ? "bg-[#B8EA80] text-black dark:text-white"
-                    : "text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300"
+                    ? "text-gray-900 bg-[#B8EA80]"
+                    : "text-white hover:text-gray-100 hover:bg-white/10"
                 }`}
               >
                 {item.label}
@@ -82,22 +123,22 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Donate (Desktop Only) */}
-          <div className="hidden md:block z-10">
+          {/* Desktop Donate Button */}
+          <div className="hidden md:block">
             <Link
               href="/donate"
-              className="mx-2 px-6 py-3 text-sm font-bold rounded-md bg-[#B8EA80] text-black dark:text-white hover:bg-[#a5d695] transition-colors"
+              className="px-6 py-2.5 text-sm font-bold rounded-lg bg-[#B8EA80] text-gray-900 transition-all duration-300 hover:shadow-lg hover:shadow-[#B8EA80]/40 hover:bg-[#a5d695] hover:scale-105"
             >
               DONATE NOW
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#B8EA80] z-10"
+            className="md:hidden p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#B8EA80] transition-colors duration-300"
             onClick={toggleMenu}
+            aria-label="Toggle menu"
           >
-            <span className="sr-only">Open main menu</span>
             {isMenuOpen ? (
               <X className="block h-6 w-6" aria-hidden="true" />
             ) : (
@@ -107,33 +148,35 @@ export default function Header() {
         </nav>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden absolute left-0 right-0 bg-white dark:bg-gray-900 z-50 shadow-md">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium ${
-                    pathname === item.href
-                      ? "bg-[#B8EA80] text-black dark:text-white"
-                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white"
-                  }`}
-                  onClick={toggleMenu}
-                >
-                  {item.label}
-                </Link>
-              ))}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="px-2 pb-4 space-y-2">
+            {navItems.map((item) => (
               <Link
-                href="/donate"
-                className="block px-3 py-2 rounded-md text-base font-medium bg-[#B8EA80] text-black dark:text-white hover:bg-[#a5d695]"
+                key={item.href}
+                href={item.href}
+                className={`block px-4 py-3 rounded-lg text-sm font-semibold transition-all duration-300 ${
+                  pathname === item.href
+                    ? "bg-[#B8EA80] text-gray-900 shadow-md"
+                    : "text-white hover:bg-white/10"
+                }`}
                 onClick={toggleMenu}
               >
-                DONATE NOW
+                {item.label}
               </Link>
-            </div>
+            ))}
+            <Link
+              href="/donate"
+              className="block px-4 py-3 rounded-lg text-sm font-bold bg-[#B8EA80] text-gray-900 hover:bg-[#a5d695] transition-all duration-300 shadow-md hover:shadow-lg text-center mt-2"
+              onClick={toggleMenu}
+            >
+              DONATE NOW
+            </Link>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
