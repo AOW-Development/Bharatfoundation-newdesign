@@ -92,7 +92,7 @@ export default function ResourcesPage() {
             <div className="flex-grow">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {filteredResources.map((item, index) => (
-                  <Card key={index} className="overflow-hidden">
+                  <Card key={index} className="$1 relative group overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:bg-[#B8EA80] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 group-hover:after:scale-x-100">
                     <div className="relative h-40 sm:h-48">
                       <Image
                         src={item.img}
@@ -104,9 +104,9 @@ export default function ResourcesPage() {
                     <CardContent className="p-5 sm:p-6">
                       <h3 className="text-lg sm:text-xl font-bold mb-2">{item.title}</h3>
                       <p className="text-gray-600 text-sm sm:text-base mb-4">{item.desc}</p>
-                        <Button variant={'ghost'}  className="p-0 text-sm sm:text-base">
-                          Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                        </Button>
+                      <Button variant={'ghost'}  className="p-0 text-sm sm:text-base">
+                        Learn More <ChevronRight className="h-4 w-4 ml-1" />
+                      </Button>
                     </CardContent>
                   </Card>
                 ))}
@@ -125,7 +125,7 @@ export default function ResourcesPage() {
                       { icon: Award, label: "Sports" },
                       { icon: Settings, label: "Skill" },
                     ].map((item, i) => (
-                      <div key={i} className="flex flex-col items-center justify-center bg-[#B8EA80] rounded-xl p-4 h-24 sm:h-28 w-full">
+                      <div key={i} className="flex flex-col items-center justify-center bg-[#B8EA80] rounded-xl p-4 h-24 sm:h-28 w-full transition-all duration-300 hover:shadow-xl hover:scale-[1.05]">
                         <item.icon className="h-6 w-6 sm:h-8 sm:w-8 mb-2" />
                         <span className="text-xs sm:text-sm text-center">{item.label}</span>
                       </div>
@@ -139,7 +139,7 @@ export default function ResourcesPage() {
 
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                     {["/images/training_1_bsf_f2.jpg", "/images/training_2_bsf_f2.jpg", "/images/training_3_bsf_f2.jpg", "/images/training_4_bsf_f2.jpg"].map((src, i) => (
-                      <div key={i} className="relative w-full h-24 sm:h-28 rounded-lg overflow-hidden">
+                      <div key={i} className="relative w-full h-24 sm:h-28 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.05]">
                         <Image
                           src={src}
                           alt={`Training ${i + 1}`}

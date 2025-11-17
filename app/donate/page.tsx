@@ -124,8 +124,19 @@ function DonationForm() {
               type="number"
               className="flex-1 px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500 w-full"
               placeholder="Enter Your Donation Amount"
-              value={donationAmount}
-              onChange={(e) => setDonationAmount(Number(e.target.value))}
+              value={donationAmount === 0 ? "" : donationAmount}
+              onChange={(e) => {
+                const value = e.target.value;
+
+                // Allow only digits
+                if (/^[0-9]*$/.test(value)) {
+                  // Remove leading zeros
+                  const cleaned = value.replace(/^0+(?=\d)/, "");
+
+                  setDonationAmount(cleaned === "" ? 0 : Number(cleaned));
+                }
+              }}
+
             />
             <button type="button" className="bg-[#B8EA80] px-6 py-2 rounded-r-lg text-black font-semibold">
               Enter

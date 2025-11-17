@@ -105,7 +105,7 @@ export default function MonthlyDonation() {
             </div>
 
             {/* RIGHT COLUMN (SCROLLABLE & RESPONSIVE) */}
-            <div className="w-full bg-white p-4 sm:p-6 rounded-lg shadow-sm h-full flex flex-col max-h-[500px] lg:max-h-[calc(100vh-250px)] overflow-y-auto custom-scrollbar">
+            <div className="w-full bg-white p-4 sm:p-6 rounded-lg shadow-sm h-full flex flex-col max-h-[500px] ">
               <RightColumn />
             </div>
           </div>
