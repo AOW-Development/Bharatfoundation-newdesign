@@ -57,9 +57,9 @@ export default function GetInvolvedPage() {
               Volunteer With Us
             </h2>
             <p className="text-base sm:text-lg md:text-lg mb-8 text-gray-800 leading-relaxed">
-             Join our team of volunteers and make a difference in the community. Whether you are interested in coaching, organizing events, or administrative tasks, we have a place for you.
+              Join our team of volunteers and make a difference in the community. Whether you are interested in coaching, organizing events, or administrative tasks, we have a place for you.
             </p>
-            <Button className="bg-gray-900 text-white hover:bg-gray-800 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300">
+            <Button className="bg-gray-900 text-white hover:bg-gray-800 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl">
               Sign Up to Volunteer
             </Button>
           </div>
@@ -77,13 +77,13 @@ export default function GetInvolvedPage() {
               Support Our Mission Through Donations
             </h2>
             <p className="text-base sm:text-lg md:text-lg mb-8 leading-relaxed">
-             Your contributions help us fund programs and support athletes. Every donation, big or small, makes a significant impact.
+              Your contributions help us fund programs and support athletes. Every donation, big or small, makes a significant impact.
             </p>
-           <Link href="/donate" passHref>
-  <Button className="bg-[#B8EA80] text-gray-900 hover:bg-[#98c889] px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300">
-    Donate Now
-  </Button>
-</Link>
+            <Link href="/donate" passHref>
+              <Button className="bg-[#B8EA80] text-gray-900 hover:bg-[#98c889] px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl">
+                Donate Now
+              </Button>
+            </Link>
 
           </div>
         </div>
@@ -97,9 +97,9 @@ export default function GetInvolvedPage() {
               Partner With Bharat Sports Foundation
             </h2>
             <p className="text-base sm:text-lg md:text-lg mb-8 text-gray-700 leading-relaxed">
-             We collaborate with organizations to promote sports and wellness. Partner with us to create more opportunities for youth and community development.
+              We collaborate with organizations to promote sports and wellness. Partner with us to create more opportunities for youth and community development.
             </p>
-            <Button className="bg-[#B8EA80] text-gray-900 hover:bg-[#98c889] px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300">
+            <Button className="bg-[#B8EA80] text-gray-900 hover:bg-[#98c889] px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl">
               Become a Partner
             </Button>
           </div>
@@ -135,7 +135,7 @@ export default function GetInvolvedPage() {
                 ].map((benefit, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center text-center p-4 sm:p-6 bg-gray-50 hover:bg-gray-100 transition-all duration-300"
+                    className="flex flex-col items-center text-center p-4 sm:p-6 bg-gray-50 hover:bg-gray-100 transition-all duration-300 rounded-xl"
                   >
                     <div className="bg-[#B8EA80] p-4 mb-4">
                       <benefit.icon className="h-6 w-6 sm:h-7 sm:w-7 text-gray-900" />
@@ -176,7 +176,7 @@ export default function GetInvolvedPage() {
                 ].map((job, index) => (
                   <div
                     key={index}
-                    className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-5 sm:p-6 md:p-8 bg-gray-50 hover:bg-gray-100 transition-all duration-300 border border-gray-200"
+                    className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-5 sm:p-6 md:p-8 bg-gray-50 hover:bg-gray-100 transition-all duration-300 border border-gray-200 rounded-xl"
                   >
                     <div className="mb-4 sm:mb-0 flex-1">
                       <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
@@ -189,9 +189,9 @@ export default function GetInvolvedPage() {
                         {job.description}
                       </p>
                     </div>
-                    <Button 
-                      variant="ghost" 
-                      className="gap-2 text-[#00000] hover:bg-gray-200 mt-4 sm:mt-0 w-full sm:w-auto justify-center sm:justify-start font-semibold transition-all duration-300"
+                    <Button
+                      variant="ghost"
+                      className="gap-2 text-[#00000] hover:bg-gray-200 mt-4 sm:mt-0 w-full sm:w-auto justify-center sm:justify-start font-semibold transition-all duration-300 rounded-xl"
                     >
                       Apply Now
                       <ArrowRight className="h-4 w-4" />

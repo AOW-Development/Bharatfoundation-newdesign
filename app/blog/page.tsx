@@ -5,13 +5,16 @@ import Link from "next/link";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import Banner from "@/components/banner";
 
+
 export default function BlogPage() {
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
 
+
       {/* Banner */}
       <Banner mediaUrl="/images/ourblog_bsf_f2.mp4" heading="" paragraph="" />
+
 
       {/* Blog Section */}
       <div className="flex-grow bg-gray-50 py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12">
@@ -23,7 +26,7 @@ export default function BlogPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {/* Article 1 */}
-              <div className="bg-[#B8EA80] overflow-hidden h-full flex flex-col">
+              <div className="bg-[#B8EA80] overflow-hidden h-full flex flex-col rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="relative w-full h-56 sm:h-64 md:h-72 lg:h-64">
                   <Image
                     src="/images/89e47092ce57d95022164c316fa26775.png"
@@ -35,21 +38,22 @@ export default function BlogPage() {
                   />
                 </div>
                 <div className="p-5 sm:p-6 flex-1 flex flex-col">
-                  <h3 className="text-lg sm:text-xl font-bold mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">
                     The Road to Olympic Glory
                   </h3>
-                  <p className="text-gray-700 text-sm sm:text-base mb-4 flex-1">
+                  <p className="text-gray-700 text-sm sm:text-base mb-4 flex-1 leading-relaxed">
                     Discover the inspiring journey of athletes preparing for
-                    the upcoming Olympics, their challenges, and triumphs.
+                    the upcoming Olympics, their challenges, and triumphs. Learn about their dedication, sacrifices, and the incredible stories that drive them forward in pursuit of excellence.
                   </p>
-                  <button className="text-black font-semibold hover:underline text-sm sm:text-base">
-                    Read More
+                  <button className="text-gray-900 font-semibold hover:text-gray-800 transition-colors text-sm sm:text-base">
+                    Read More →
                   </button>
                 </div>
               </div>
 
+
               {/* Article 2 */}
-              <div className="bg-[#B8EA80] overflow-hidden h-full flex flex-col">
+              <div className="bg-[#B8EA80] overflow-hidden h-full flex flex-col rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="relative w-full h-56 sm:h-64 md:h-72 lg:h-64">
                   <Image
                     src="/images/f755171b33bdb21fcec9db159e0aa353.png"
@@ -60,24 +64,25 @@ export default function BlogPage() {
                   />
                 </div>
                 <div className="p-5 sm:p-6 flex-1 flex flex-col">
-                  <h3 className="text-lg sm:text-xl font-bold mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">
                     Community Sports Programs
                   </h3>
-                  <p className="text-gray-700 text-sm sm:text-base mb-4 flex-1">
+                  <p className="text-gray-700 text-sm sm:text-base mb-4 flex-1 leading-relaxed">
                     Explore how our community programs are fostering a love
-                    for sports among youth and building future champions.
+                    for sports among youth and building future champions. Through grassroots initiatives and community engagement, we're creating opportunities for every child to discover their athletic potential.
                   </p>
-                  <button className="text-black font-semibold hover:underline text-sm sm:text-base">
-                    Read More
+                  <button className="text-gray-900 font-semibold hover:text-gray-800 transition-colors text-sm sm:text-base">
+                    Read More →
                   </button>
                 </div>
               </div>
 
+
               {/* Article 3 */}
-              <div className="bg-[#B8EA80] overflow-hidden h-full flex flex-col sm:col-span-2 lg:col-span-1">
+              <div className="bg-[#B8EA80] overflow-hidden h-full flex flex-col sm:col-span-2 lg:col-span-1 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="relative w-full h-56 sm:h-64 md:h-72 lg:h-64">
                   <Image
-                    src="/images/sample-article-image.png"
+                    src="/images/blog-article-3.png"
                     alt="Team celebrating victory"
                     fill
                     className="object-center object-cover"
@@ -85,23 +90,24 @@ export default function BlogPage() {
                   />
                 </div>
                 <div className="p-5 sm:p-6 flex-1 flex flex-col">
-                  <h3 className="text-lg sm:text-xl font-bold mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">
                     How Teamwork Wins Championships
                   </h3>
-                  <p className="text-gray-700 text-sm sm:text-base mb-4 flex-1">
-                    Dive into the strategies and stories behind great teams that rise together, support each other, and achieve incredible results.
+                  <p className="text-gray-700 text-sm sm:text-base mb-4 flex-1 leading-relaxed">
+                    Dive into the strategies and stories behind great teams that rise together, support each other, and achieve incredible results. Discover the power of collaboration, trust, and unity in achieving extraordinary success.
                   </p>
-                  <button className="text-black font-semibold hover:underline text-sm sm:text-base">
-                    Read More
+                  <button className="text-gray-900 font-semibold hover:text-gray-800 transition-colors text-sm sm:text-base">
+                    Read More →
                   </button>
                 </div>
               </div>
             </div>
           </section>
 
+
           {/* Latest Posts Section - Centered */}
           <section className="mb-12 sm:mb-16 md:mb-20">
-            <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-8 sm:mb-10 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-8 sm:mb-10 text-center text-gray-900">
               Latest Posts
             </h2>
             <div className="grid gap-6 md:gap-8 max-w-4xl mx-auto">
@@ -109,47 +115,69 @@ export default function BlogPage() {
                 {
                   title: "Basketball Championship Highlights",
                   description:
-                    "Catch up on the thrilling moments from this year's championship games.",
+                    "Catch up on the thrilling moments from this year's championship games and witness the incredible performances that defined the season. From buzzer-beating shots to historic comebacks, relive the excitement and drama of competitive basketball at its finest. Our coverage brings you the best plays, standout athletes, and unforgettable moments from the court.",
                   image: "/images/210876708e0f735a8d9a625bf7cd372d.png",
+                  category: "Event Coverage",
+                  date: "November 15, 2025",
                 },
                 {
                   title: "Coaching Tips for Young Athletes",
                   description:
-                    "Learn essential coaching strategies to nurture young talents.",
+                    "Learn essential coaching strategies to nurture young talents and help them reach their full potential. Discover proven techniques for building confidence, developing fundamental skills, and fostering a love for sports. Expert insights from experienced coaches will guide you in creating a positive environment where young athletes can thrive, learn, and grow both athletically and personally.",
                   image: "/images/ee82f3120d79366a4c871191b1b791a5.png",
+                  category: "Training Tips",
+                  date: "November 12, 2025",
                 },
                 {
                   title: "Marathon: A Test of Endurance",
                   description:
-                    "Experience the excitement and challenges of marathon running.",
+                    "Experience the excitement and challenges of marathon running through inspiring stories of determination and perseverance. Marathon runners push their physical and mental limits, transforming themselves through months of dedicated training. This comprehensive guide explores training regimens, nutrition strategies, mental preparation techniques, and the profound sense of accomplishment that comes with crossing the finish line.",
                   image: "/images/fc80c050e7a77a19c613163fdc10e533.png",
+                  category: "Athlete Profiles",
+                  date: "November 10, 2025",
                 },
               ].map((post, index) => (
                 <div
                   key={index}
-                  className="flex flex-col sm:flex-row gap-5 sm:gap-6 md:gap-8 items-start bg-white p-5 sm:p-6 md:p-8"
+                  className="flex flex-col sm:flex-row gap-5 sm:gap-6 md:gap-8 items-stretch bg-white p-5 sm:p-6 md:p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200"
                 >
-                  <div className="relative w-full sm:w-48 md:w-56 h-48 sm:h-40 md:h-48 flex-shrink-0">
+                  <div className="relative w-full sm:w-56 md:w-64 h-56 md:h-64 flex-shrink-0 rounded-lg overflow-hidden">
                     <Image
                       src={post.image || "/placeholder.svg"}
                       alt={post.title}
                       fill
-                      className="object-center object-cover"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 192px, 224px"
+                      className="object-center object-cover w-full h-full"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 224px, 256px"
                     />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm sm:text-base md:text-base leading-relaxed">
-                      {post.description}
-                    </p>
+                  <div className="flex-1 flex flex-col justify-between">
+                    <div>
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
+                        <span className="inline-block bg-[#B8EA80] text-gray-900 text-xs sm:text-sm font-semibold px-3 py-1 rounded-full w-fit">
+                          {post.category}
+                        </span>
+                        <span className="text-gray-500 text-xs sm:text-sm">
+                          {post.date}
+                        </span>
+                      </div>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 text-gray-900 hover:text-gray-700 transition-colors cursor-pointer">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm sm:text-base md:text-base leading-relaxed mb-4">
+                        {post.description}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <button className="text-gray-900 font-semibold hover:text-black transition-colors text-sm sm:text-base flex items-center gap-1">
+                        Read Full Article →
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           </section>
+
 
           {/* Main Layout with Sidebar */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8">
@@ -157,6 +185,7 @@ export default function BlogPage() {
             <div className="lg:col-span-2">
               {/* Placeholder for additional content if needed */}
             </div>
+
 
             {/* Sidebar */}
             <aside className="space-y-8 sm:space-y-10">
@@ -186,6 +215,7 @@ export default function BlogPage() {
                 </ul>
               </section> */}
 
+
               {/* Follow Us */}
               {/* <section>
                 <h2 className="text-xl sm:text-2xl font-bold mb-4">
@@ -206,6 +236,7 @@ export default function BlogPage() {
                   </Link>
                 </div>
               </section> */}
+
 
               {/* Newsletter Signup */}
               {/* <section>
@@ -234,6 +265,7 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
+
 
       <Footer />
     </main>
