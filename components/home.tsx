@@ -76,7 +76,7 @@ export default function Home() {
             </h1>
             <p className="text-xl opacity-90">
               Your ultimate destination for everything related to physical
-              education and sports
+              education and sports.
             </p>
             <Link
               href="/donate"
