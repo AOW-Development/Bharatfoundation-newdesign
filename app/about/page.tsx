@@ -76,7 +76,7 @@ export default function AboutPage() {
                 description:"Optimize your performance with nutrition tips from top experts.",
               },
               {
-                image: "/images/e353b2fb29a64134a25fec74dc42d9ea.png",
+                image: "/images/injury.jpg",
                 title: "Injury Prevention",
                 description:"Learn essential techniques to avoid sports injuries and stay healthy.",
               },
