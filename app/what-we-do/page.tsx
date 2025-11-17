@@ -298,10 +298,10 @@ export default function WhatWeDoPage() {
                 className="group flex flex-col lg:flex-row lg:items-center lg:justify-between p-5 lg:p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-[#98c889] dark:hover:border-[#B8EA80] transition-all duration-300 bg-white dark:bg-gray-700 rounded-xl"
               >
                 <div className="mb-3 lg:mb-0 flex-1">
-                  <h3 className="text-lg lg:text-xl font-bold dark:text-white text-gray-900 mb-1 group-hover:text-[#98c889] dark:group-hover:text-[#B8EA80] transition-colors">
+                  <h3 className="text-lg lg:text-xl font-bold dark:text-white text-gray-900 mb-1 group-hover:text-[#00000] dark:group-hover:text-[#B8EA80] transition-colors">
                     {program.title}
                   </h3>
-                  <div className="text-[#98c889] dark:text-[#B8EA80] font-semibold text-xs lg:text-sm mb-1">
+                  <div className="text-[#79bf63] dark:text-[#B8EA80] font-semibold text-xs lg:text-sm mb-1">
                     {program.category}
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 text-xs lg:text-sm">
