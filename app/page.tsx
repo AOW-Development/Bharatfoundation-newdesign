@@ -10,14 +10,7 @@ export default function Page() {
   return (
     <main>
       <Header />
-      <Banner
-        mediaUrl="/images/home_banner.png"
-        // videoUrl="/images/homebanner-vid.mp4"
-        heading=" Welcome to Bharat Sports Foundation"
-        paragraph=" Your ultimate destination for everything related to physical
-              education and sports"
-        buttons={[{ text: "Donate Here", link: "/donate" }]}
-      />{" "}
+      <HomePage />
       <WhatWeDo />
       <OurProgram />
       <VolunteerStats />
