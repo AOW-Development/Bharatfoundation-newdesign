@@ -1,3 +1,4 @@
+// Updated component with 9 donation options in a 3x3 grid
 "use client";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -20,6 +21,7 @@ export default function OneTimeDonation() {
     { amount: 3000, description: "Contribute towards clean drinking water projects." },
     { amount: 5000, description: "Support skill training for unemployed youth." },
     { amount: 10000, description: "Fund a small business startup for a family." },
+    { amount: 15000, description: "Provide full-year education support for a child." },
   ];
 
   const handleSelectAmount = (amount: number) => {
@@ -64,22 +66,20 @@ export default function OneTimeDonation() {
                   <h2 className="text-2xl font-bold mb-4">Donation Categories</h2>
                   <h3 className="text-lg font-semibold mb-4">Select Your Donation Amount</h3>
 
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {donationOptions.map((option, index) => (
                       <button
                         key={index}
                         onClick={() => handleSelectAmount(option.amount)}
-                        className={`p-4 rounded-lg border transition-colors h-full $${`{
-                          selectedAmounts.includes(option.amount)
-                            ? "bg-[#B8EA80] border-[#98c889]"
-                            : "bg-white hover:bg-gray-50"
-                        }`}`}
+                        className={`p-4 rounded-lg border transition-all h-full text-left shadow-sm hover:shadow-md ${selectedAmounts.includes(option.amount)
+                          ? "bg-[#B8EA80] border-[#98c889]"
+                          : "bg-white hover:bg-gray-100"}`}
                       >
-                        <div className="flex items-center justify-center mb-2">
-                          <IndianRupee className="h-6 w-6" />
+                        <div className="flex items-center mb-2 gap-1">
+                          <IndianRupee className="h-5 w-5" />
                           <span className="text-xl font-bold">{option.amount}/-</span>
                         </div>
-                        <p className="text-xs text-center">{option.description}</p>
+                        <p className="text-xs sm:text-sm text-gray-700">{option.description}</p>
                       </button>
                     ))}
                   </div>
