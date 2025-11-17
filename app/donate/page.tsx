@@ -102,7 +102,7 @@ function DonationForm() {
   };
 
   return (
-    <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm box-border w-full h-full overflow-x-hidden">
+    <div className="bg-white sm:p-6 rounded-lg shadow-sm box-border w-full h-full overflow-x-hidden lg:ml-6">
       <form onSubmit={handleSubmit}>
         {/* BANK DETAILS */}
         <div className="mb-6 sm:mb-8">
@@ -110,9 +110,9 @@ function DonationForm() {
             Quick Pay: Cheque/ Demand Draft/ NEFT/ RTGS Transfer Details/ UPI Details
           </h2>
           <div className="space-y-2 text-sm">
-            <p>Bank Name: Name Of The Bank</p>
-            <p>Account Number: 200000001001 IFSC: OPP10004</p>
-            <p>970030368# Namethebank</p>
+            <p>Bank Name: State Bank of India</p>
+            <p>Account Number: 00000043767515362 IFSC: SBIN0008658</p>
+            <p>BHARAT SPORTS FOUNDATION</p>
           </div>
         </div>
 
