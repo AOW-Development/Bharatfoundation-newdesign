@@ -20,7 +20,7 @@ export default function OurWorkPage() {
       {/* Grants Section - Modern Design */}
       <section
         id="grants"
-        className="py-20 bg-gradient-to-br from-gray-50 to-white scroll-mt-20"
+        className="py-10 bg-gradient-to-br from-gray-50 to-white scroll-mt-20"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
