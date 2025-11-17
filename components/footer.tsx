@@ -1,4 +1,3 @@
-
 "use client";
 import Link from "next/link";
 import {
@@ -41,18 +40,28 @@ export default function Footer() {
             </h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/our-work#impact" className="hover:text-gray-300">Impact</Link>
+                <Link href="/our-work#impact" className="hover:text-gray-300">
+                  Impact
+                </Link>
               </li>
               <li>
-                <Link href="/our-work#womens-report" className="hover:text-gray-300">
+                <Link
+                  href="/our-work#womens-report"
+                  className="hover:text-gray-300"
+                >
                   Women's Report
                 </Link>
               </li>
               <li>
-                <Link href="/our-work#grants" className="hover:text-gray-300">Grant</Link>
+                <Link href="/our-work#grants" className="hover:text-gray-300">
+                  Grant
+                </Link>
               </li>
               <li>
-                <Link href="/our-work#initiatives" className="hover:text-gray-300">
+                <Link
+                  href="/our-work#initiatives"
+                  className="hover:text-gray-300"
+                >
                   Simply Periods, Roots, Smiles
                 </Link>
               </li>
@@ -66,22 +75,34 @@ export default function Footer() {
             </h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/get-involved#volunteer" className="hover:text-gray-300">
+                <Link
+                  href="/get-involved#volunteer"
+                  className="hover:text-gray-300"
+                >
                   Volunteer
                 </Link>
               </li>
               <li>
-                <Link href="/get-involved#donate" className="hover:text-gray-300">
+                <Link
+                  href="/get-involved#donate"
+                  className="hover:text-gray-300"
+                >
                   Donate
                 </Link>
               </li>
               <li>
-                <Link href="/get-involved#partner" className="hover:text-gray-300">
+                <Link
+                  href="/get-involved#partner"
+                  className="hover:text-gray-300"
+                >
                   Partner with us
                 </Link>
               </li>
               <li>
-                <Link href="/get-involved#careers" className="hover:text-gray-300">
+                <Link
+                  href="/get-involved#careers"
+                  className="hover:text-gray-300"
+                >
                   Careers
                 </Link>
               </li>
@@ -125,9 +146,9 @@ export default function Footer() {
             <address className="not-italic">
               Bharat Sports Foundation
               <br />
-              18th Cross, 5th Main,
+              58/2, first floor, opp to century breeze apartment,
               <br />
-              Bengaluru, Karnataka 560055
+              Yalahanka Bangalore, Karnataka, 560064
             </address>
           </div>
         </div>
@@ -139,17 +160,28 @@ export default function Footer() {
               <p>Bharat Foundation161 B/ 4, 3rd Floor, Gulmohar House</p>
               <p>New Delhi-110049 Delhi, India</p>
               <p>
-                Contact Us: Tel:+ 91-11-43123700 | E-mail: info@bharatfoundation.org
+                Contact Us: Tel:+ 91-11-43123700 | E-mail:
+                info@bharatfoundation.org
               </p>
             </div>
 
             {/* Social Media Icons */}
             <div className="flex space-x-4">
-              <Link href="#" className="hover:text-gray-300"><Facebook className="h-6 w-6" /></Link>
-              <Link href="#" className="hover:text-gray-300"><Linkedin className="h-6 w-6" /></Link>
-              <Link href="#" className="hover:text-gray-300"><Twitter className="h-6 w-6" /></Link>
-              <Link href="#" className="hover:text-gray-300"><Youtube className="h-6 w-6" /></Link>
-              <Link href="#" className="hover:text-gray-300"><Instagram className="h-6 w-6" /></Link>
+              <Link href="#" className="hover:text-gray-300">
+                <Facebook className="h-6 w-6" />
+              </Link>
+              <Link href="#" className="hover:text-gray-300">
+                <Linkedin className="h-6 w-6" />
+              </Link>
+              <Link href="#" className="hover:text-gray-300">
+                <Twitter className="h-6 w-6" />
+              </Link>
+              <Link href="#" className="hover:text-gray-300">
+                <Youtube className="h-6 w-6" />
+              </Link>
+              <Link href="#" className="hover:text-gray-300">
+                <Instagram className="h-6 w-6" />
+              </Link>
             </div>
           </div>
         </div>
@@ -173,8 +205,8 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-400 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>Powered By:-
-
+          <p>
+            Powered By:-
             <Link
               href="https://aow.co.in/"
               target="_blank"
@@ -182,8 +214,6 @@ export default function Footer() {
             >
               aow.co.in
             </Link>
-
-
           </p>
           <p>© Copyright 2025 Bharat Sports Foundation. All rights Reserved</p>
         </div>
