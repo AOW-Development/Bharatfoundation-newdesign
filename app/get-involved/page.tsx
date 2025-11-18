@@ -43,9 +43,11 @@ export default function GetInvolvedPage() {
               community. Whether you are interested in coaching, organizing
               events, or administrative tasks, we have a place for you.
             </p>
-            <Button className="bg-gray-900 text-white hover:bg-gray-800 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl">
-              Sign Up to Volunteer
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-gray-900 text-white hover:bg-gray-800 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl">
+                Join as a Volunteer
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -88,9 +90,11 @@ export default function GetInvolvedPage() {
               Partner with us to create more opportunities for youth and
               community development.
             </p>
-            <Button className="bg-[#B8EA80] text-gray-900 hover:bg-[#98c889] px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl">
-              Become a Partner
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-[#B8EA80] text-gray-900 hover:bg-[#98c889] px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl">
+                Become a Partner
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -160,7 +164,6 @@ export default function GetInvolvedPage() {
                     type: "Full Time",
                     description:
                       "Lead and mentor athletes with expert coaching techniques, develop training programs, and drive athletic excellence",
-
                   },
                   {
                     title: "Event Coordinator",
@@ -168,7 +171,6 @@ export default function GetInvolvedPage() {
                     type: "Full Time",
                     description:
                       "Organize and manage large-scale sports events and community programs, from planning to execution",
-
                   },
                   {
                     title: "Program Manager",
@@ -176,7 +178,6 @@ export default function GetInvolvedPage() {
                     type: "Full Time",
                     description:
                       "Oversee program development, implementation, and impact measurement across multiple initiatives",
-
                   },
                 ].map((job, index) => (
                   <div
@@ -198,7 +199,6 @@ export default function GetInvolvedPage() {
                           <MapPin className="h-4 w-4 text-[#B8EA80]" />
                           <span>{job.location}</span>
                         </div>
-
                       </div>
 
                       <p className="text-sm md:text-base text-gray-700 leading-relaxed">
@@ -227,7 +227,6 @@ export default function GetInvolvedPage() {
                     Send Us Your Resume
                   </Button>
                 </Link>
-
               </div>
             </div>
           </div>
