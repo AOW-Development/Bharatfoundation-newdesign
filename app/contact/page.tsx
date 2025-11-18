@@ -43,13 +43,13 @@ export default function ContactPage() {
                       </h3>
                       <a
                         href="tel:+919894500669"
-                        className="text-gray-600 hover:text-[#B8EA80] transition-colors text-xs sm:text-sm md:text-base block"
+                        className="text-gray-600 hover:text-[#00000] transition-colors text-xs sm:text-sm md:text-base block"
                       >
                         +91 98945 00669
                       </a>
                       <a
                         href="tel:+919867447334"
-                        className="text-gray-600 hover:text-[#B8EA80] transition-colors text-xs sm:text-sm md:text-base block mt-1"
+                        className="text-gray-600 hover:text-[#00000] transition-colors text-xs sm:text-sm md:text-base block mt-1"
                       >
                         +91 98674 47334
                       </a>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                       </h3>
                       <a
                         href="mailto:bharatsportsfoundation@gmail.com"
-                        className="text-gray-600 hover:text-[#B8EA80] transition-colors text-xs sm:text-sm md:text-base break-all"
+                        className="text-gray-600 hover:text-[#00000] transition-colors text-xs sm:text-sm md:text-base break-all"
                       >
                         bharatsportsfoundation@gmail.com
                       </a>
