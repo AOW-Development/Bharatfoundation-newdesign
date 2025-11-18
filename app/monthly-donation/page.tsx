@@ -58,7 +58,7 @@ export default function OneTimeDonation() {
 
       <section className="flex-grow bg-gray-50 py-12">
         <div className="container mx-auto px-4 h-full">
-          <div className="grid lg:grid-cols-3 gap-8 h-full">
+          <div className="grid lg:grid-cols-3 gap-8 h-full lg:ml-8">
             {/* LEFT SIDE */}
             <div className="lg:col-span-2 flex flex-col h-full">
               <div className="flex-grow space-y-8">

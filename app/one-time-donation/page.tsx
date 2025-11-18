@@ -44,18 +44,24 @@ export default function MonthlyDonation() {
       <Banner
         mediaUrl="/images/donationbanner.png"
         heading="Want to be a Volunteer ? Select Your Donation Choice & Amount"
-        paragraph="Feel free to go ahead and join us in celebrating the achievement of success all‑together forming a dynamic team"
+        paragraph="Feel free to go ahead and join us in celebrating the achievement of success all-together forming a dynamic team"
         buttons={[{ text: "Monthly Donation", link: "/monthly-donation" }, { text: "Onetime Donation", link: "/one-time-donation" }]}
       />
 
       <section className="flex-grow bg-gray-50 py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch h-full">
+
+          {/* GRID: both columns equal height */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch lg:ml-8">
 
             {/* LEFT COLUMN */}
-            <div className="space-y-6 h-full flex flex-col">
+            <div className="h-full flex flex-col">
+
               <h2 className="text-2xl font-bold mb-4">Donation Categories</h2>
-              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+
+              {/* SCROLLABLE LEFT BOX, fixed height */}
+              <div className="bg-white rounded-lg shadow-sm  p-4 ">
+
                 {donationCategories.map(category => (
                   <div key={category.id} className="border-b p-4">
                     <div className="flex gap-4 flex-wrap sm:flex-nowrap">
@@ -79,7 +85,9 @@ export default function MonthlyDonation() {
                               type="number"
                               min="0"
                               value={units[category.id] || 0}
-                              onChange={(e) => setUnits(prev => ({ ...prev, [category.id]: Math.max(0, parseInt(e.target.value) || 0) }))}
+                              onChange={(e) =>
+                                setUnits(prev => ({ ...prev, [category.id]: Math.max(0, parseInt(e.target.value) || 0) }))
+                              }
                               className="w-14 text-center border rounded p-1"
                             />
 
@@ -104,20 +112,23 @@ export default function MonthlyDonation() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN (SCROLLABLE & RESPONSIVE) */}
-            <div className="w-full bg-white p-4 sm:p-6 rounded-lg shadow-sm h-full flex flex-col max-h-[500px] ">
+            {/* RIGHT COLUMN - scrollable & same height */}
+            <div className="bg-white rounded-lg shadow-sm p-6 sm:p-6">
               <RightColumn />
+              <div className="mt-8 flex justify-center">
+                <button
+                  onClick={handleProceedToDonate}
+                  className="bg-[#B8EA80] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors w-full sm:w-auto"
+                >
+                  Proceed to Donate
+                </button>
+              </div>
             </div>
+
           </div>
 
-          <div className="mt-8 flex justify-center">
-            <button
-              onClick={handleProceedToDonate}
-              className="bg-[#B8EA80] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#a5d695] transition-colors w-full sm:w-auto"
-            >
-              Proceed to Donate
-            </button>
-          </div>
+          {/* BUTTON */}
+
         </div>
       </section>
 
