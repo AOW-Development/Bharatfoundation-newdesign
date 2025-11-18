@@ -205,8 +205,8 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
-      <h2 className="text-2xl font-bold mb-8 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+    <div className="">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-7 md:mb-8 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
         Send Us a Message
       </h2>
 
