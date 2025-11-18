@@ -109,16 +109,14 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 min-h-screen flex items-center">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 w-full py-12 md:py-20">
           <div className="text-white space-y-6 md:space-y-8 max-w-2xl">
             {/* Heading */}
             <div className="space-y-3 md:space-y-4">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Welcome to
-                <span className="block mt-2 bg-gradient-to-r from-[#B8EA80] to-[#98c889] bg-clip-text text-transparent">
-                  Bharat Sports Foundation
-                </span>
+                Welcome to Bharat Sports Foundation
+                <span className="block mt-2 bg-gradient-to-r from-[#B8EA80] to-[#98c889] bg-clip-text text-transparent"></span>
               </h1>
             </div>
 
