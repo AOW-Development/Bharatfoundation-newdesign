@@ -2,7 +2,18 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ContactForm from "@/components/contact-form1";
-import { Phone, Mail, MapPin, Share2, Instagram, Twitter } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Share2,
+  Instagram,
+  Twitter,
+  CalendarCheck,
+  Facebook,
+  Youtube,
+  Linkedin,
+} from "lucide-react";
 import Banner from "@/components/banner";
 
 export default function ContactPage() {
@@ -93,6 +104,23 @@ export default function ContactPage() {
                       </p>
                     </div>
                   </div>
+                  {/* timings */}
+                  <div className="flex items-start gap-4 group transition-all duration-300">
+                    <div className="p-3 bg-[#B8EA80] rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 flex-shrink-0">
+                      <CalendarCheck className="w-5 h-5 sm:w-6 sm:h-6 text-gray-900" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">
+                        Office Hours
+                      </h3>
+                      <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
+                        Monday – Saturday: 10:00 AM – 6:00 PM
+                      </p>
+                      <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed mt-2">
+                        Sunday: Closed (or by appointment)
+                      </p>
+                    </div>
+                  </div>
 
                   {/* Social Media */}
                   <div className="flex items-start gap-4 group transition-all duration-300">
@@ -105,13 +133,18 @@ export default function ContactPage() {
                       </h3>
                       <div className="flex gap-3 sm:gap-4">
                         <a
-                          href="https://www.instagram.com/bharatsportsfoundation_/"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href="#"
                           className="p-2.5 bg-gradient-to-br from-[#B8EA80] to-[#98c889] text-gray-900 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-110"
-                          title="Instagram"
+                          title="Twitter"
                         >
-                          <Instagram className="w-5 h-5" />
+                          <Facebook className="w-5 h-5" />
+                        </a>
+                        <a
+                          href="#"
+                          className="p-2.5 bg-gradient-to-br from-[#B8EA80] to-[#98c889] text-gray-900 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-110"
+                          title="Twitter"
+                        >
+                          <Linkedin className="w-5 h-5" />
                         </a>
                         <a
                           href="#"
@@ -119,6 +152,22 @@ export default function ContactPage() {
                           title="Twitter"
                         >
                           <Twitter className="w-5 h-5" />
+                        </a>
+                        <a
+                          href="#"
+                          className="p-2.5 bg-gradient-to-br from-[#B8EA80] to-[#98c889] text-gray-900 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-110"
+                          title="Twitter"
+                        >
+                          <Youtube className="w-5 h-5" />
+                        </a>
+                        <a
+                          href="https://www.instagram.com/bharatsportsfoundation_/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2.5 bg-gradient-to-br from-[#B8EA80] to-[#98c889] text-gray-900 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-110"
+                          title="Instagram"
+                        >
+                          <Instagram className="w-5 h-5" />
                         </a>
                       </div>
                     </div>

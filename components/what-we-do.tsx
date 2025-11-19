@@ -362,20 +362,21 @@ export default function WhatWeDo() {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm sm:text-base dark:text-gray-300 leading-relaxed">
-                We at Bharath Sports Foundation inspire and enrich athletes as
-                well as provide them with required essentials, resources,
-                mentorship, and growth opportunities. As we value sporting
-                activities, we support individuals despite their backgrounds and
-                ensure the talent is utilized for the betterment of their lives.
-                With our steps to progress, we build a strong, healthy, and
-                competitive sporting community in India.
+                To empower, uplift, and equip young athletes with everything
+                they need to progress in their journey, regardless of their
+                background. As a community sport development NGO, we’re
+                dedicated to youth sports development in India. Supporting
+                athletes from all communities and providing structured training
+                and mentorship, ensuring quality gear and facilities, fostering
+                confidence and discipline while building an inclusive and
+                competitive sports culture in India.
               </p>
-              <Link href="/what-we-do" className="inline-block mt-2 sm:mt-4">
+              {/* <Link href="/what-we-do" className="inline-block mt-2 sm:mt-4">
                 <button className="flex items-center gap-2 text-sm dark:text-white hover:gap-3 transition-all duration-300 font-medium group">
                   Read More{" "}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </Link>
+              </Link> */}
             </div>
 
             {/* Vision Section (Mobile only) */}
@@ -389,18 +390,19 @@ export default function WhatWeDo() {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm sm:text-base dark:text-gray-300 leading-relaxed">
-                The Bharath Sports Foundation seeks to develop vibrant talent,
-                give athletes access to resources, and offer them ample
-                possibilities to succeed in their intended disciplines. We work
-                to ensure all individuals get to engage in sports and to
-                construct a solid basis for Indian athletics in the future.
+                To create an India where every young athlete has equal access to
+                professional training, facilities, and opportunities, regardless
+                of their circumstances. We aim to build clear pathways for
+                athletes development while identifying and nurturing talent
+                early, strengthening the grassroots sport ecosystem, and
+                elevating India’s presence in sports.
               </p>
-              <Link href="/what-we-do" className="inline-block mt-2 sm:mt-4">
+              {/* <Link href="/what-we-do" className="inline-block mt-2 sm:mt-4">
                 <button className="flex items-center gap-2 text-sm font-medium dark:text-white hover:gap-3 transition-all duration-300 group">
                   Read More{" "}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -410,15 +412,18 @@ export default function WhatWeDo() {
               <h2 className="text-xl sm:text-2xl font-bold dark:text-white bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 What We Do
               </h2>
-              <h3 className="text-lg sm:text-xl font-semibold dark:text-white">
-                Motivating Greatness Through Sports
+              <h3 className="text-lg sm:text-lg font-semibold dark:text-white">
+                Breaking Barriers.Building Champions.
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                At Bharath Sports Foundation, we are dedicated to a culture of
-                accessing sports for everyone despite their backgrounds. Our
-                initiatives focus on identifying talent, skill development, and
-                providing structured training programs for young athletes.
+                At Bharat Sports Foundation, a leading sports NGO in Bangalore,
+                we strive to make sports accessible to every athlete, those who
+                lack financial support or exposure through grassroots sports
+                programs in Bangalore. Our initiatives focus on talent
+                identification, equipment sponsorship, travel, health, and
+                professional coaching.
               </p>
+
               <Link href="/what-we-do" className="inline-block mt-2 sm:mt-4">
                 <button className="flex items-center gap-2 text-sm font-medium dark:text-white hover:gap-3 transition-all duration-300 group">
                   Read More{" "}
@@ -442,12 +447,12 @@ export default function WhatWeDo() {
                 to ensure all individuals get to engage in sports and to
                 construct a solid basis for Indian athletics in the future.
               </p>
-              <Link href="/what-we-do" className="inline-block mt-2 sm:mt-4">
+              {/* <Link href="/what-we-do" className="inline-block mt-2 sm:mt-4">
                 <button className="flex items-center gap-2 text-sm font-medium dark:text-white hover:gap-3 transition-all duration-300 group">
                   Read More{" "}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </div>
 

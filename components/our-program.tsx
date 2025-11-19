@@ -1,141 +1,70 @@
-// import Image from "next/image";
-// import { ArrowRight } from "lucide-react";
-// import Link from "next/link";
+"use client";
 
-// const programs = [
-//   {
-//     image: "/images/equipment-gear.webp",
-//     title: "EQUIPMENT AND GEAR SPONSORSHIP",
-//     description:
-//       "Access to quality sports gear is a major hurdle for underprivileged athletes. Through our sponsorship initiative, we ensure every deserving athlete receives proper equipment to train and compete confidently.",
-//     shortDesc:
-//       "We've helped hundreds of young players get essential kits — from shoes to protective gear — empowering them to perform without limitations.",
-//   },
-//   {
-//     image: "/images/coaching-training.webp",
-//     title: "COACHING TRAINING PROGRAMS",
-//     description:
-//       "Our expert-led coaching programs provide professional training to aspiring athletes at the grassroots level, ensuring they learn from qualified mentors and experienced sports professionals.",
-//     shortDesc:
-//       "By building skill and discipline early, we nurture potential champions and future coaches for the next generation.",
-//   },
-//   {
-//     image: "/images/travel-accommodation.jpg",
-//     title: "TRAVEL AND ACCOMMODATION",
-//     description:
-//       "Many talented athletes miss opportunities due to lack of travel support. We assist with transportation and safe accommodation so they can attend tournaments and camps stress-free.",
-//     shortDesc:
-//       "Our travel and stay assistance removes barriers, ensuring athletes focus solely on their performance.",
-//   },
-//   {
-//     image: "/images/health-nutrition.jpg",
-//     title: "HEALTH AND NUTRITION SUPPORT",
-//     description:
-//       "A balanced diet and health monitoring are vital for athletic success. We provide nutritional guidance, health checkups, and supplements to ensure athletes maintain peak physical condition.",
-//     shortDesc:
-//       "With holistic support, we help players build endurance, prevent injuries, and sustain long-term sports careers.",
-//   },
-// ];
-
-// export default function OurProgram() {
-//   return (
-//     <section className="pb-16 pt-8 px-4 sm:px-8 md:px-16 lg:px-24">
-//       <div className="container mx-auto">
-//         {/* Section Header */}
-//         <div className="text-center mb-10 sm:mb-12 px-2">
-//           <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
-//             Our Program
-//           </h2>
-//           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-//             Our mission is to inspire, educate, and entertain sports enthusiasts
-//             of all ages and skill levels.
-//           </p>
-//         </div>
-
-//         {/* Programs Grid */}
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-//           {programs.map((program, index) => (
-//             <div
-//               key={index}
-//               className="flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-4 sm:p-5"
-//             >
-//               {/* Image */}
-//               <div className="relative h-52 sm:h-56 md:h-64 mb-4">
-//                 <Image
-//                   src={program.image || "/placeholder.svg"}
-//                   alt={program.title}
-//                   fill
-//                   className="object-cover rounded-lg"
-//                 />
-//               </div>
-
-//               {/* Title */}
-//               <h3 className="text-lg sm:text-xl font-bold mb-2">
-//                 {program.title}
-//               </h3>
-
-//               {/* Description */}
-//               <p className="text-gray-600 text-sm sm:text-base mb-2">
-//                 {program.description}
-//               </p>
-//               <p className="text-gray-600 text-sm sm:text-base mb-4">
-//                 {program.shortDesc}
-//               </p>
-
-//               {/* Read More */}
-//               <Link
-//                 href="/blog"
-//                 className="inline-flex items-center text-primary hover:underline mt-auto text-sm sm:text-base"
-//               >
-//                 Read More <ArrowRight className="ml-2 h-4 w-4" />
-//               </Link>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const programs = [
   {
     image: "/images/equipment-gear.webp",
     title: "EQUIPMENT AND GEAR SPONSORSHIP",
     description:
-      "Access to quality sports gear is a major hurdle for underprivileged athletes. Through our sponsorship initiative, we ensure every deserving athlete receives proper equipment to train and compete confidently.",
-    shortDesc:
-      "We've helped hundreds of young players get essential kits — from shoes to protective gear — empowering them to perform without limitations.",
+      "For many talented athletes, a lack of proper gear is the biggest barrier to progress Through our grassroots sports programs in Bangalore, we ensure every deserving athlete receives quality equipment, including shoes, jerseys, practice kits, protective gear, and sport-specific accessories.",
     gradient: "from-blue-500 to-cyan-500",
+    achievements: [
+      "Eliminates financial barriers to training and competition",
+      "Boosts athlete confidence and performance",
+      "Enhances training quality and consistency",
+      "Encourages participation in district and state-level events",
+    ],
+
+    cta: "Sponsor a Kit",
   },
   {
     image: "/images/coaching-training.webp",
-    title: "COACHING TRAINING PROGRAMS",
+    title: "COACHING AND TRAINING PROGRAMS",
     description:
-      "Our expert-led coaching programs provide professional training to aspiring athletes at the grassroots level, ensuring they learn from qualified mentors and experienced sports professionals.",
-    shortDesc:
-      "By building skill and discipline early, we nurture potential champions and future coaches for the next generation.",
+      "Our structured coaching programs are led by certified coaches, former athletes, and experienced sports professionals who bring real on-ground expertise. They guide young talent through well-designed training modules that promote genuine skill development, consistent improvement, and long-term athletic performance.",
     gradient: "from-purple-500 to-pink-500",
+    achievements: [
+      "Skill development and technique refinement",
+      "Discipline and fitness conditioning",
+      "Sports ethics and leadership development",
+      "Personalized mentorship and goal-setting",
+    ],
+
+    cta: "Support Training Programs",
   },
   {
     image: "/images/travel-accommodation.jpg",
-    title: "TRAVEL AND ACCOMMODATION",
+    title: "TRAVEL AND ACCOMMODATION SUPPORT",
     description:
-      "Many talented athletes miss opportunities due to lack of travel support. We assist with transportation and safe accommodation so they can attend tournaments and camps stress-free.",
-    shortDesc:
-      "Our travel and stay assistance removes barriers, ensuring athletes focus solely on their performance.",
+      "Many promising athletes miss life-changing tournaments simply because they cannot afford the cost of travel or accommodation .Through this program, we make sure financial barriers never stop a deserving athlete from competing and showcasing their talent.",
     gradient: "from-orange-500 to-red-500",
+    achievements: [
+      "Safe and comfortable lodging",
+      "Reliable transportation to and from events",
+      "Seamless participation in state, national, and inter-district competitions",
+      "Reduced stress for athletes and their families",
+    ],
+
+    cta: "Help an Athlete Compete",
   },
   {
     image: "/images/health-nutrition.jpg",
     title: "HEALTH AND NUTRITION SUPPORT",
     description:
-      "A balanced diet and health monitoring are vital for athletic success. We provide nutritional guidance, health checkups, and supplements to ensure athletes maintain peak physical condition.",
-    shortDesc:
-      "With holistic support, we help players build endurance, prevent injuries, and sustain long-term sports careers.",
+      "A strong athlete requires an even stronger physical and mental foundation.Through this comprehensive program, we ensure every athlete receives the essential health, nutrition, and wellness support needed to perform at their highest potential.",
     gradient: "from-green-500 to-emerald-500",
+    achievements: [
+      "Professional nutritional guidance tailored to athletes",
+      "Regular health checkups and body assessments",
+      "Customized diet plans for performance and endurance",
+      "Supplements where they are required",
+      "Injury prevention education and support",
+    ],
+
+    cta: "Support Athlete Wellness",
   },
 ];
 
@@ -159,8 +88,8 @@ export default function OurProgram() {
             Our Programs
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our mission is to inspire, educate, and empower sports enthusiasts
-            of all ages and skill levels through comprehensive support programs.
+            Our programs are designed to inspire, equip, and support athletes at
+            every level, from beginners to rising champions.
           </p>
         </div>
 
@@ -172,7 +101,7 @@ export default function OurProgram() {
               className="group relative flex flex-col bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl shadow-lg border border-gray-100"
             >
               {/* Image Container with Gradient Overlay */}
-              <div className="relative h-56 sm:h-60 md:h-64 overflow-hidden">
+              <div className="relative h-48 sm:h-52 overflow-hidden flex-shrink-0">
                 <Image
                   src={program.image || "/placeholder.svg"}
                   alt={program.title}
@@ -187,7 +116,7 @@ export default function OurProgram() {
                 <div
                   className={`absolute top-4 right-4 px-3 py-1.5 rounded-full bg-gradient-to-r ${program.gradient} text-white text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                 >
-                  Learn More
+                  Support Now
                 </div>
               </div>
 
@@ -195,7 +124,7 @@ export default function OurProgram() {
               <div className="flex flex-col flex-grow p-5 sm:p-6">
                 {/* Title with Gradient Underline */}
                 <div className="mb-4">
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 text-gray-900 leading-tight">
+                  <h3 className="text-base sm:text-lg font-bold mb-2 text-gray-900 leading-tight">
                     {program.title}
                   </h3>
                   <div
@@ -204,20 +133,37 @@ export default function OurProgram() {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm sm:text-base mb-3 leading-relaxed">
+                <p className="text-gray-600 text-sm mb-2 leading-relaxed">
                   {program.description}
                 </p>
-                <p className="text-gray-500 text-sm mb-6 leading-relaxed">
-                  {program.shortDesc}
-                </p>
 
-                {/* Read More Link */}
+                {/* Achievements List */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                    What this program achieves:
+                  </h4>
+                  <ul className="space-y-1.5">
+                    {program.achievements.map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start text-xs text-gray-600"
+                      >
+                        <span
+                          className={`inline-block w-1.5 h-1.5 rounded-full bg-gradient-to-r ${program.gradient} mt-1.5 mr-2 flex-shrink-0`}
+                        />
+                        <span className="leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Simple Text Link */}
                 <Link
-                  href="/blog"
-                  className={`inline-flex items-center gap-2 mt-auto text-sm sm:text-base font-semibold bg-gradient-to-r ${program.gradient} bg-clip-text text-transparent group-hover:gap-3 transition-all duration-300`}
+                  href="/donate"
+                  className="inline-flex items-center gap-2 mt-auto text-sm font-semibold text-gray-900 hover:gap-3 transition-all duration-300 group/link"
                 >
-                  Read More
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 text-gray-900" />
+                  {program.cta}
+                  <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
 
