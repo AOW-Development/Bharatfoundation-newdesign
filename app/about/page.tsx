@@ -21,7 +21,7 @@ export default function AboutPage() {
       />
 
       {/* In-Depth Tutorials Section */}
-      <section id="tutorials" className="py-6 sm:py-8 lg:py-8">
+      <section id="tutorials" className="py-6 sm:py-8 lg:py-8 lg:ml-8">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-4">In-Depth Tutorials</h2>
 
@@ -95,7 +95,7 @@ export default function AboutPage() {
       </section>
 
       {/* Live Events Section */}
-      <section id="events" className="py-6 sm:py-8 lg:py-8">
+      <section id="events" className="py-6 sm:py-8 lg:py-8 lg:ml-8">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-6">Live Events and Coverage</h2>
 
@@ -114,7 +114,7 @@ export default function AboutPage() {
       </section>
 
       {/* Fitness and Wellness Section */}
-      <section id="fitness" className="py-6 sm:py-8 lg:py-8 bg-gray-50">
+      <section id="fitness" className="py-6 sm:py-8 lg:py-8 bg-gray-50 lg:ml-8">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-6">Fitness and Wellness</h2>
 
