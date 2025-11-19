@@ -57,7 +57,7 @@ const RightColumn = () => {
               "Organize light sports activities for elderly individuals to promote healthy aging.",
           },
         ].map((item, index) => (
-          <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
+          <div key={index} className="bg-white p-4 rounded-lg shadow-sm mt-6 mb-6">
             <h3 className="font-bold mb-2">{item.title}</h3>
             <p className="text-gray-600 text-sm">{item.description}</p>
           </div>

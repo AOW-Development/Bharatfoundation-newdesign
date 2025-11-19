@@ -1,7 +1,11 @@
+'use client';
+
+
 import Link from "next/link";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Image from "next/image";
+import { useEffect, useState, useRef, ReactNode } from 'react';
 import {
   Timer,
   BarChart2,
@@ -14,59 +18,158 @@ import {
 } from "lucide-react";
 import Banner from "@/components/banner";
 
+
+
+// Animated Counter Component
+interface StatCounterProps {
+  target: number;
+  duration?: number;
+  suffix?: string;
+}
+
+
+function StatCounter({ target, duration = 2500, suffix = '' }: StatCounterProps) {
+  const [count, setCount] = useState<number>(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+
+    let startTime: number | undefined;
+    const animate = (currentTime: number) => {
+      if (startTime === undefined) startTime = currentTime;
+      const progress = (currentTime - startTime) / duration;
+
+
+      if (progress < 1) {
+        setCount(Math.floor(target * progress));
+        requestAnimationFrame(animate);
+      } else {
+        setCount(target);
+      }
+    };
+
+
+    requestAnimationFrame(animate);
+  }, [isVisible, target, duration]);
+
+
+  return <span ref={ref}>{count}{suffix}</span>;
+}
+
+
 export default function WhatWeDoPage() {
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
 
-      <Banner mediaUrl="/images/whatwedo_bsf_f2.mp4" heading="" paragraph="" />
+
+      <Banner
+        mediaUrl="/images/whatwedo_bsf_f2.mp4"
+        heading="Empowering Communities Through Sports"
+        paragraph="Building a better future through athletic excellence and community engagement"
+      />
+
 
       {/* Mission & Vision Section */}
-      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-8 md:px-16 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
-            <div className="bg-[#B8EA80] dark:bg-[#98c889] p-6 sm:p-8 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 dark:text-gray-800">
+      <section className="py-10 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="container mx-auto max-w-7xl">
+          {/* Hero Stats Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-6 mb-10 lg:mb-12">
+            <div className="bg-gradient-to-br from-[#B8EA80] to-[#98c889] dark:from-[#98c889] dark:to-[#7ab86a] p-6 lg:p-8 shadow-lg transition-shadow duration-300 rounded-xl">
+              <h3 className="text-lg lg:text-xl font-bold mb-4 dark:text-gray-900 text-gray-800 flex items-center gap-2">
+                <span className="w-1.5 h-6 bg-gray-800 dark:bg-gray-900"></span>
                 Key Areas of Impact
               </h3>
-              <ul className="space-y-2 text-sm sm:text-base dark:text-gray-800">
-                <li>Community Engagement</li>
-                <li>Athlete Support</li>
-                <li>Health & Wellness Programs</li>
-                <li>Education & Training</li>
+              <ul className="space-y-2 text-sm lg:text-base dark:text-gray-900 text-gray-800">
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-gray-800 dark:bg-gray-900"></span>
+                  Community Engagement & Development
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-gray-800 dark:bg-gray-900"></span>
+                  Comprehensive Athlete Support
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-gray-800 dark:bg-gray-900"></span>
+                  Health & Wellness Programs
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-gray-800 dark:bg-gray-900"></span>
+                  Education & Professional Training
+                </li>
               </ul>
             </div>
-            <div className="bg-[#98c889] dark:bg-[#B8EA80] p-6 sm:p-8 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 dark:text-gray-800">
+
+
+            <div className="bg-gradient-to-br from-[#98c889] to-[#7ab86a] dark:from-[#B8EA80] dark:to-[#98c889] p-6 lg:p-8 shadow-lg transition-shadow duration-300 rounded-xl">
+              <h3 className="text-lg lg:text-xl font-bold mb-4 dark:text-gray-900 text-gray-800 flex items-center gap-2">
+                <span className="w-1.5 h-6 bg-gray-800 dark:bg-gray-900"></span>
                 Success Stories & Testimonials
               </h3>
-              <blockquote className="italic text-sm sm:text-base dark:text-gray-800 leading-relaxed">
-                "Thanks to the Foundation, I've achieved my dream of becoming a
-                national athlete!" - Anjali Sharma
+              <blockquote className="relative">
+                <span className="text-4xl text-gray-800/20 dark:text-gray-900/20 absolute -top-2 -left-1">"</span>
+                <p className="italic text-sm lg:text-base dark:text-gray-900 text-gray-800 leading-relaxed pl-4 relative">
+                  Thanks to the Foundation, I've achieved my dream of becoming a national athlete!
+                  <span className="text-4xl text-gray-800/20 dark:text-gray-900/20 absolute -bottom-3 -right-(-4)">"</span>
+                </p>
+                <cite className="block mt-3 not-italic font-semibold text-gray-800 dark:text-gray-900 pl-4 text-sm lg:text-base">
+                  — Anjali Sharma
+                </cite>
               </blockquote>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div className="bg-gray-700 text-white p-6 sm:p-8 rounded-lg text-center">
-              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">
-                500+
+
+          {/* Statistics Grid - with animated counters */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+            <div className="bg-gradient-to-br from-gray-700 to-gray-800 text-white p-6 lg:p-8 text-center shadow-lg transition-all duration-300 rounded-xl">
+              <div className="text-3xl lg:text-4xl font-bold mb-1 bg-gradient-to-r from-[#B8EA80] to-[#98c889] bg-clip-text text-transparent">
+                <StatCounter target={500} duration={2500} suffix="+" />
               </div>
-              <div className="text-sm sm:text-base">Athletes Supported</div>
+              <div className="text-sm lg:text-base font-medium text-gray-200">Athletes Supported</div>
             </div>
-            <div className="bg-[#98c889] dark:bg-[#B8EA80] p-6 sm:p-8 rounded-lg text-center">
-              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2 dark:text-gray-800">
-                120+
+
+
+            <div className="bg-gradient-to-br from-[#98c889] to-[#7ab86a] dark:from-[#B8EA80] dark:to-[#98c889] p-6 lg:p-8 text-center shadow-lg transition-all duration-300 rounded-xl">
+              <div className="text-3xl lg:text-4xl font-bold mb-1 dark:text-gray-900 text-gray-800">
+                <StatCounter target={120} duration={2500} suffix="+" />
               </div>
-              <div className="text-sm sm:text-base dark:text-gray-800">
+              <div className="text-sm lg:text-base font-medium dark:text-gray-900 text-gray-800">
                 Community Programs
               </div>
             </div>
-            <div className="bg-[#B8EA80] dark:bg-[#98c889] p-6 sm:p-8 rounded-lg text-center">
-              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2 dark:text-gray-800">
-                200K+
+
+
+            <div className="bg-gradient-to-br from-[#B8EA80] to-[#98c889] dark:from-[#98c889] dark:to-[#7ab86a] p-6 lg:p-8 text-center shadow-lg transition-all duration-300 sm:col-span-2 lg:col-span-1 rounded-xl">
+              <div className="text-3xl lg:text-4xl font-bold mb-1 dark:text-gray-900 text-gray-800">
+                <StatCounter target={200} duration={2500} suffix="K+" />
               </div>
-              <div className="text-sm sm:text-base dark:text-gray-800">
+              <div className="text-sm lg:text-base font-medium dark:text-gray-900 text-gray-800">
                 Lives Impacted
               </div>
             </div>
@@ -74,53 +177,167 @@ export default function WhatWeDoPage() {
         </div>
       </section>
 
-      {/* Current Programs Section */}
-      <section className="py-12 sm:py-16 dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 sm:mb-12 dark:text-white">
-            Current Programs
-          </h2>
-          <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
+
+      {/* Featured Program Section */}
+      <section className="py-10 md:py-14 lg:py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <div className="bg-gradient-to-br from-[#B8EA80] to-[#98c889] dark:from-[#98c889] dark:to-[#7ab86a] p-6 lg:p-10 shadow-2xl rounded-xl">
+            <h3 className="text-xl lg:text-2xl font-bold text-center mb-4 lg:mb-5 dark:text-gray-900 text-gray-800">
+              Comprehensive Program Overview
+            </h3>
+            <p className="text-center mb-8 lg:mb-10 text-sm lg:text-base dark:text-gray-900 text-gray-800 leading-relaxed max-w-3xl mx-auto">
+              We are dedicated to empowering youth through comprehensive sports programs.
+              Join us to make a meaningful difference in the community and inspire the next
+              generation of world-class athletes and leaders.
+            </p>
+
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 bg-white/30 dark:bg-gray-900/30 backdrop-blur-sm p-5 lg:p-7 rounded-lg">
+              <div className="space-y-3">
+                <h4 className="font-bold text-lg lg:text-xl dark:text-gray-900 text-gray-800 flex items-center gap-2">
+                  <span className="w-1.5 h-5 bg-gray-800 dark:bg-gray-900"></span>
+                  Core Activities
+                </h4>
+                <ul className="space-y-2 text-sm lg:text-base dark:text-gray-900 text-gray-800">
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-800 dark:text-gray-900 font-bold mt-0.5">•</span>
+                    <span>Plan and execute comprehensive sports activities and training sessions</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-800 dark:text-gray-900 font-bold mt-0.5">•</span>
+                    <span>Mentor and guide young athletes toward excellence</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-800 dark:text-gray-900 font-bold mt-0.5">•</span>
+                    <span>Organize regional and national sports events and tournaments</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-800 dark:text-gray-900 font-bold mt-0.5">•</span>
+                    <span>Collaborate with coaches, trainers, and sports professionals</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-800 dark:text-gray-900 font-bold mt-0.5">•</span>
+                    <span>Stay updated on latest sports trends, techniques, and methodologies</span>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div className="space-y-3">
+                <h4 className="font-bold text-lg lg:text-xl dark:text-gray-900 text-gray-800 flex items-center gap-2">
+                  <span className="w-1.5 h-5 bg-gray-800 dark:bg-gray-900"></span>
+                  Key Requirements
+                </h4>
+                <ul className="space-y-2 text-sm lg:text-base dark:text-gray-900 text-gray-800">
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-800 dark:text-gray-900 font-bold mt-0.5">•</span>
+                    <span>Proven experience in sports coaching or athletic development</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-800 dark:text-gray-900 font-bold mt-0.5">•</span>
+                    <span>Genuine passion for youth development and empowerment</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-800 dark:text-gray-900 font-bold mt-0.5">•</span>
+                    <span>Excellent communication and interpersonal skills</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-800 dark:text-gray-900 font-bold mt-0.5">•</span>
+                    <span>Strong team collaboration and leadership abilities</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-800 dark:text-gray-900 font-bold mt-0.5">•</span>
+                    <span>Commitment to continuous personal and professional growth</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Current Programs Section - MOVED HERE */}
+      <section className="py-10 md:py-14 lg:py-16 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <div className="text-center mb-10 lg:mb-12">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-3 dark:text-white text-gray-900">
+              Current Programs & Opportunities
+            </h2>
+            <p className="text-sm lg:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Explore our diverse range of programs designed to support athletes and build stronger communities
+            </p>
+          </div>
+
+
+          <div className="max-w-4xl mx-auto space-y-3">
             {[
-              { title: "Athlete Mentor", category: "Sports" },
-              { title: "Sports Coach", category: "Sports" },
-              { title: "Sports Assistant", category: "Sports" },
-              { title: "Event Coordinator", category: "Training" },
+              {
+                title: "Athlete Mentorship Program",
+                category: "Sports Development",
+                description: "One-on-one guidance from experienced professionals"
+              },
+              {
+                title: "Sports Coaching Excellence",
+                category: "Professional Training",
+                description: "Advanced coaching techniques and methodologies"
+              },
+              {
+                title: "Sports Performance Assistant",
+                category: "Support & Analytics",
+                description: "Data-driven performance enhancement"
+              },
+              {
+                title: "Event Coordination & Management",
+                category: "Sports Events",
+                description: "Large-scale tournament planning and execution"
+              },
             ].map((program, index) => (
               <div
                 key={index}
-                className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 sm:p-6 border-b dark:border-gray-700"
+                className="group flex flex-col lg:flex-row lg:items-center lg:justify-between p-5 lg:p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-[#98c889] dark:hover:border-[#B8EA80] transition-all duration-300 bg-white dark:bg-gray-700 rounded-xl"
               >
-                <div className="mb-3 sm:mb-0">
-                  <h3 className="text-lg sm:text-xl font-bold dark:text-white">
+                <div className="mb-3 lg:mb-0 flex-1">
+                  <h3 className="text-lg lg:text-xl font-bold dark:text-white text-gray-900 mb-1 group-hover:text-[#00000] dark:group-hover:text-[#B8EA80] transition-colors">
                     {program.title}
                   </h3>
-                  <div className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
+                  <div className="text-[#79bf63] dark:text-[#B8EA80] font-semibold text-xs lg:text-sm mb-1">
                     {program.category}
                   </div>
+                  <p className="text-gray-600 dark:text-gray-300 text-xs lg:text-sm">
+                    {program.description}
+                  </p>
                 </div>
-                <Link href="#">
-                  <button className="w-full sm:w-auto px-5 sm:px-6 py-2 border rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-white dark:border-gray-600 text-sm sm:text-base transition">
+                <a href="#" className="w-full lg:w-auto mt-3 lg:mt-0 lg:ml-4">
+                  <button className="w-full lg:w-auto px-6 lg:px-8 py-2 lg:py-2.5 border-2 border-gray-300 dark:border-gray-600 font-semibold text-sm lg:text-base text-gray-900 dark:text-white hover:text-gray-900 dark:hover:text-gray-800 hover:bg-[#98c889] hover:border-[#98c889] dark:hover:bg-[#B8EA80] dark:hover:border-[#B8EA80] transition-all duration-300 rounded-xl">
                     Explore
                   </button>
-                </Link>
+                </a>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+
       {/* Get Involved Section */}
-      <section className="py-12 sm:py-16 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 sm:mb-12 dark:text-white">
-            Get Involved
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-8 mb-10 sm:mb-16">
+      <section className="py-10 md:py-14 lg:py-16 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="text-center mb-10 lg:mb-12">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-3 dark:text-white text-gray-900">
+              Why Get Involved With Us?
+            </h2>
+            <p className="text-sm lg:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Join a community dedicated to excellence and make a lasting impact
+            </p>
+          </div>
+
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 mb-10 lg:mb-12">
             {[
               { icon: Timer, title: "Flexible Training Hours" },
               { icon: BarChart2, title: "Competitive Awards" },
-              { icon: Coffee, title: "Free drinks & snacks" },
+              { icon: Coffee, title: "Free Drinks & Snacks" },
               { icon: Microscope, title: "Referral Program" },
               { icon: Leaf, title: "Wellness Activities" },
               { icon: Shield, title: "Healthcare Support" },
@@ -129,73 +346,37 @@ export default function WhatWeDoPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center text-center"
+                className="flex flex-col items-center text-center p-4 sm:p-6 bg-gray-100 hover:bg-gray-200 transition-all duration-300 rounded-xl"
               >
-                <div className="bg-[#B8EA80] dark:bg-[#98c889] p-4 rounded-lg mb-4">
-                  <item.icon className="h-6 w-6 sm:h-8 sm:w-8 dark:text-gray-800" />
+                <div className="bg-gradient-to-br from-[#B8EA80] to-[#98c889] dark:from-[#98c889] dark:to-[#7ab86a] p-4 lg:p-5 mb-3 shadow-lg rounded-xl">
+                  <item.icon className="h-6 w-6 lg:h-7 lg:w-7 dark:text-gray-900 text-gray-800" />
                 </div>
-                <h3 className="text-sm sm:text-base font-semibold dark:text-white">
+
+                <h3 className="text-xs lg:text-sm font-semibold dark:text-white text-gray-900 leading-tight">
                   {item.title}
                 </h3>
               </div>
             ))}
           </div>
 
-          <div className="bg-gray-700 text-white text-center py-10 sm:py-16 rounded-lg px-4">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
-              Get involved
+
+          {/* CTA Section */}
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white text-center py-10 lg:py-12 px-6 shadow-2xl rounded-xl">
+            <h3 className="text-2xl lg:text-3xl font-bold mb-3">
+              Ready to Make a Difference?
             </h3>
+            <p className="text-sm lg:text-base text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join our community of passionate individuals committed to empowering athletes and transforming lives through sports
+            </p>
             <Link href="/contact">
-              <button className="bg-[#B7E4A7] text-black px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-[#98c889] transition-colors text-sm sm:text-base">
-                Join Now
+              <button className="bg-gradient-to-r from-[#B8EA80] to-[#98c889] text-gray-900 px-8 lg:px-10 py-3 lg:py-3.5 font-bold text-sm lg:text-base hover:from-[#98c889] hover:to-[#7ab86a] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl rounded-xl">
+                Join Our Team Today
               </button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Featured Program Section */}
-      <section className="py-12 sm:py-16 px-4 sm:px-8 md:px-16 dark:bg-gray-900">
-        <div className="container mx-auto">
-          <div className="bg-[#B8EA80] dark:bg-[#98c889] p-6 sm:p-8 rounded-lg">
-            <h3 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6 dark:text-gray-800">
-              Program Overview
-            </h3>
-            <p className="text-center mb-6 sm:mb-8 text-sm sm:text-base dark:text-gray-800 leading-relaxed">
-              We are dedicated to empowering youth through sports programs. Join
-              us to make a difference in the community and inspire the next
-              generation of athletes.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 bg-[#98c889]/50 dark:bg-[#B8EA80]/50 p-4 sm:p-6 rounded-lg">
-              <div>
-                <h4 className="font-bold mb-3 sm:mb-4 text-sm sm:text-base dark:text-gray-800">
-                  Activities:
-                </h4>
-                <ul className="space-y-1 sm:space-y-2 text-sm sm:text-base dark:text-gray-800">
-                  <li>- Plan and execute sports activities</li>
-                  <li>- Mentor and guide young athletes</li>
-                  <li>- Organize sports events and tournaments</li>
-                  <li>- Collaborate with other coaches and professionals</li>
-                  <li>- Stay updated on sports trends and techniques</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold mb-3 sm:mb-4 text-sm sm:text-base dark:text-gray-800">
-                  Requirements:
-                </h4>
-                <ul className="space-y-1 sm:space-y-2 text-sm sm:text-base dark:text-gray-800">
-                  <li>- Experience in sports coaching</li>
-                  <li>- Passion for youth development</li>
-                  <li>- Strong communication skills</li>
-                  <li>- Ability to work in a team</li>
-                  <li>- Commitment to personal growth</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>
