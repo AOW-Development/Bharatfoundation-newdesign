@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Image from "next/image";
 import Banner from "@/components/banner";
+import { useState } from "react";
 
 export default function AboutPage() {
   return (
@@ -11,8 +12,8 @@ export default function AboutPage() {
 
       <Banner
         mediaUrl="/images/aboutusbanner.jpg"
-        heading=" Welcome to Bharat Sports Foundation"
-        paragraph=" Your ultimate destination for everything related to physical education and sports"
+        heading="Training Resources for Athletes"
+        paragraph="These resources from our sports NGO in India support athletes at every stage of their journey."
         buttons={[
           { text: "Monthly Donation", link: "/monthly-donation" },
           { text: "Onetime Donation", link: "/one-time-donation" },
@@ -29,17 +30,17 @@ export default function AboutPage() {
               {
                 image: "/images/8deb2f7f40c999bf95e59c8d627037d7.png",
                 title: "Basketball Techniques",
-                description:"Learn advanced basketball dribbling techniques with our expert coaches",
+                description:"Master advanced dribbling, shooting form, and defensive footwork with step-by-step video breakdowns from experienced coaches. Part of our in-depth sports tutorials for young athletes library.",
               },
               {
                 image: "/images/d2338b5fe7ec6b767a6f106bbcee1227.png",
                 title: "Yoga & Stretching",
-                description:"Explore the benefits of yoga with our guided sessions for all levels",
+                description:"Improve flexibility, prevent injuries, and speed up recovery with yoga routines designed specifically for athletes as part of our sports fitness and wellness guidance for youth.",
               },
               {
                 image: "/images/e353b2fb29a64134a25fec74dc42d9ea.png",
-                title: "Weightlifting Mastery",
-                description:"Master weightlifting techniques with our step-by-step tutorials",
+                title: "Strength Training Fundamentals",
+                description:"Build functional strength for sports performance with proper lifting technique, progression strategies, and safety fundamentals.",
               },
             ].map((tutorial, index) => (
               <div key={index} className="bg-[#B8EA80] rounded-lg overflow-hidden relative group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
@@ -48,8 +49,7 @@ export default function AboutPage() {
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold mb-2">{tutorial.title}</h3>
-                  <p className="text-sm text-gray-700">{tutorial.description}</p>
-                  <button className="mt-4 text-sm font-semibold hover:underline">Learn More →</button>
+                  <DescriptionToggle text={tutorial.description} />
                 </div>
                 <div className="absolute bottom-0 left-0 h-1 bg-black w-0 group-hover:w-full transition-all duration-300"></div>
               </div>
@@ -68,17 +68,17 @@ export default function AboutPage() {
               {
                 image: "/images/7f81588e93aba3fd3d23776442e41776.png",
                 title: "Mental Toughness Training",
-                description:"Gain mental toughness with insights from leading sports psychologists.",
+                description:"The mental game separates good athletes from great ones. Learn proven psychological techniques to handle pressure, stay focused, and bounce back from setbacks through our expert sports development advice and insights.",
               },
               {
                 image: "/images/2c007fc3bca4b03ab8ef4cda5c0afe43.png",
                 title: "Sports Nutrition",
-                description:"Optimize your performance with nutrition tips from top experts.",
+                description:"Fuel your performance with practical nutrition advice tailored to Indian diets and athletes training on a budget. Essential sports fitness and wellness guidance for youth from our sports training NGO in India.",
               },
               {
                 image: "/images/injury.jpg",
                 title: "Injury Prevention",
-                description:"Learn essential techniques to avoid sports injuries and stay healthy.",
+                description:"Injury prevention focuses on building strength, flexibility, and proper technique to reduce risk while training. It helps athletes stay consistent by avoiding common strains and overuse issues. With the right habits, you can train safely and maintain long-term performance.",
               },
             ].map((insight, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative group">
@@ -86,8 +86,7 @@ export default function AboutPage() {
                   <Image src={insight.image} alt={insight.title} fill className="object-cover rounded-lg object-top" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{insight.title}</h3>
-                <p className="text-gray-600">{insight.description}</p>
-                <button className="mt-4 text-primary font-semibold hover:underline">Read More →</button>
+                <DescriptionToggle text={insight.description} />
                 <div className="absolute bottom-0 left-0 h-1 bg-[#B8EA80] w-0 group-hover:w-full transition-all duration-300"></div>
               </div>
             ))}
@@ -150,5 +149,28 @@ export default function AboutPage() {
 
       <Footer />
     </main>
+  );
+}
+
+function DescriptionToggle({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false);
+
+  const shortText = text.length > 120 ? text.slice(0, 120) + "..." : text;
+
+  return (
+    <>
+      <p className="text-sm text-gray-700">
+        {expanded ? text : shortText}
+      </p>
+
+      {text.length > 120 && (
+        <button
+          className="mt-2 text-sm font-semibold hover:underline"
+          onClick={() => setExpanded(!expanded)}
+        >
+          {expanded ? "Show Less ↑" : "Learn More →"}
+        </button>
+      )}
+    </>
   );
 }
