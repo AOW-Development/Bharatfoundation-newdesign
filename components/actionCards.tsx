@@ -33,7 +33,7 @@ export default function ActionCards() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 px-4 sm:px-8 md:px-16 lg:px-24 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <section className="py-10 sm:py-12 px-4 sm:px-8 md:px-16 lg:px-24 text-sm dark:bg-gray-900">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {cards.map((card, index) => {

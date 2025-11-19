@@ -33,8 +33,10 @@ export default function OurWorkPage() {
               Grants
             </h2>
             <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-              We offer several grants to support talented athletes in their
-              journey. Apply today to get the support you need.
+              We offer multiple grant opportunities designed to nurture athletic
+              potential and support long-term sporting development. Join our
+              mission to strengthen grassroots sports development initiatives in
+              India and empower rising talent.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="bg-[#B8EA80] text-black hover:bg-[#98c889] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl px-8 py-6 text-lg font-semibold rounded-full">
@@ -82,7 +84,10 @@ export default function OurWorkPage() {
                   Simply Periods
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Educating young girls about menstrual health and hygiene.
+                  Empowering young girls with knowledge, confidence, and dignity
+                  through menstrual health awareness. Every girl deserves access
+                  to facts, support, participating confidently, supporting
+                  women's empowerment through sports in India.{" "}
                 </p>
               </CardContent>
             </Card>
@@ -103,8 +108,10 @@ export default function OurWorkPage() {
                   Roots
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Cultivating environmental awareness through tree planting
-                  drives.
+                  Through tree-planting missions and eco-awareness activities,
+                  we help shape future champions who value growth beyond the
+                  field, strengthening grassroots sports development initiatives
+                  in India.
                 </p>
               </CardContent>
             </Card>
@@ -125,8 +132,11 @@ export default function OurWorkPage() {
                   Smiles
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Bringing joy to underprivileged children through sports and
-                  fun activities.
+                  Beyond competition, play shapes confidence, friendships,
+                  resilience, and happiness. Our programs help build child
+                  development through sports, improving social skills, emotional
+                  well-being, and physical literacy for children from diverse
+                  backgrounds.
                 </p>
               </CardContent>
             </Card>
@@ -169,8 +179,10 @@ export default function OurWorkPage() {
               </div>
               <CardContent className="p-6">
                 <p className="text-gray-700 font-medium leading-relaxed">
-                  Our athletes have won over 100 medals in national
-                  competitions.
+                  Our supported athletes have achieved more than 100 medals
+                  across district, state, and national levels, a testament to
+                  the sports development impact in India when the right
+                  guidance, ecosystem, and encouragement align.
                 </p>
               </CardContent>
             </Card>
@@ -187,8 +199,9 @@ export default function OurWorkPage() {
               </div>
               <CardContent className="p-6">
                 <p className="text-gray-700 font-medium leading-relaxed">
-                  We have impacted over 10,000 youth through our community
-                  programs.
+                  We have empowered more than 10,000 young individuals through
+                  inclusive and community-driven programs, building pathways
+                  from playground to podium across Karnataka and beyond.
                 </p>
               </CardContent>
             </Card>
@@ -205,7 +218,9 @@ export default function OurWorkPage() {
               </div>
               <CardContent className="p-6">
                 <p className="text-gray-700 font-medium leading-relaxed">
-                  Empowering women athletes with specialized training sessions.
+                  We are committed to women's empowerment through sports in
+                  India, offering specialized training, leadership support,
+                  mentorship, and a safe environment for progress.{" "}
                 </p>
               </CardContent>
             </Card>
