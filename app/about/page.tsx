@@ -59,9 +59,9 @@ export default function AboutPage() {
       </section>
 
       {/* Expert Insights Section */}
-      <section id="insights" className="py-6 sm:py-8 lg:py-8 bg-gray-50">
+      <section id="insights" className="py-6 sm:py-8 lg:py-8 bg-gray-50 lg:ml-1">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-2">Expert Insights</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-2 lg:ml-6">Expert Insights</h2>
 
           <div className="grid gap-8 lg:grid-cols-3">
             {[
