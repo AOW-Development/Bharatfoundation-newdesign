@@ -17,7 +17,8 @@ import {
 } from "lucide-react";
 import Banner from "@/components/banner";
 import Link from "next/link";
- 
+import { Mail, Phone } from "lucide-react";
+
  
 export default function GetInvolvedPage() {
   return (
@@ -110,9 +111,11 @@ export default function GetInvolvedPage() {
               </p>
             </div>
  
-            <Button className="bg-gray-900 text-white hover:bg-gray-800 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl w-full sm:w-auto">
-              Sign Up to Volunteer
-            </Button>
+             <Link href="/contact">
+  <Button className="bg-gray-900 text-white hover:bg-gray-800 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl w-full sm:w-auto">
+    Sign Up to Volunteer
+  </Button>
+</Link>
           </div>
         </div>
       </section>
@@ -202,16 +205,28 @@ export default function GetInvolvedPage() {
  
             <div className="bg-white p-4 sm:p-6 rounded-xl border-2 border-gray-200 mb-8 overflow-hidden">
               <h4 className="text-lg sm:text-xl font-bold mb-4 text-gray-900">Contact Us:</h4>
-              <div className="space-y-2">
-                <p className="text-sm sm:text-base text-gray-700 flex items-start gap-2">
-                  <span className="flex-shrink-0">📧</span>
-                  <a href="mailto:partnerships@bharatsportsfoundation.org" className="text-[#7ab86a] hover:underline break-all">partnerships@bharatsportsfoundation.org</a>
-                </p>
-                <p className="text-sm sm:text-base text-gray-700 flex items-start gap-2">
-                  <span className="flex-shrink-0">📞</span>
-                  <a href="tel:+919867447334" className="text-[#7ab86a] hover:underline break-all">+91 98674 47334</a>
-                </p>
-              </div>
+             <div className="space-y-2">
+  <p className="text-sm sm:text-base text-gray-700 flex items-start gap-2">
+    <Mail className="w-5 h-5 text-[#000000] flex-shrink-0" />
+    <a
+      href="mailto:partnerships@bharatsportsfoundation.org"
+      className="text-[#7ab86a] hover:underline break-all"
+    >
+      partnerships@bharatsportsfoundation.org
+    </a>
+  </p>
+
+  <p className="text-sm sm:text-base text-gray-700 flex items-start gap-2">
+    <Phone className="w-5 h-5 text-[#00000] flex-shrink-0" />
+    <a
+      href="tel:+919867447334"
+      className="text-[#7ab86a] hover:underline break-all"
+    >
+      +91 98674 47334
+    </a>
+  </p>
+</div>
+
             </div>
  
             <Button className="bg-[#B8EA80] text-gray-900 hover:bg-[#98c889] px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl w-full sm:w-auto">
