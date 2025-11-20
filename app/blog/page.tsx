@@ -28,10 +28,12 @@ export default function BlogPage() {
  
  
       {/* Banner */}
-      <Banner mediaUrl="/images/ourblog_bsf_f2.mp4" heading="" paragraph="" />
- 
- 
- 
+   <Banner
+  videoUrl="https://www.pexels.com/download/video/18139945/"
+  // heading="Our Blog"
+  // paragraph="Latest stories and updates"
+/>
+
       {/* Blog Section */}
       <div className="flex-grow bg-gray-50 py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="container mx-auto max-w-7xl">
@@ -61,9 +63,9 @@ export default function BlogPage() {
                   <p className="text-gray-700 text-sm sm:text-base mb-4 flex-1 leading-relaxed">
                     Follow the journeys of India's rising athletes as they train, sacrifice, and push toward Olympic dreams. See how grassroots support and child sports training initiatives in Bangalore make it possible for young talent to reach the world stage.
                   </p>
-                  <button className="text-gray-900 font-semibold hover:text-gray-800 transition-colors text-sm sm:text-base">
+                  {/* <button className="text-gray-900 font-semibold hover:text-gray-800 transition-colors text-sm sm:text-base">
                     Read More →
-                  </button>
+                  </button> */}
                 </div>
               </div>
  
@@ -88,9 +90,9 @@ export default function BlogPage() {
                   <p className="text-gray-700 text-sm sm:text-base mb-4 flex-1 leading-relaxed">
                     See how our community programs are creating opportunities for youth across Karnataka. These youth empowerment through sports articles showcase how we're building confidence, discipline, and future champions, one village at a time, through structured training and mentorship.
                   </p>
-                  <button className="text-gray-900 font-semibold hover:text-gray-800 transition-colors text-sm sm:text-base">
+                  {/* <button className="text-gray-900 font-semibold hover:text-gray-800 transition-colors text-sm sm:text-base">
                     Read More →
-                  </button>
+                  </button> */}
                 </div>
               </div>
  
@@ -115,9 +117,9 @@ export default function BlogPage() {
                   <p className="text-gray-700 text-sm sm:text-base mb-4 flex-1 leading-relaxed">
                     Dive into the strategies and stories behind great teams that rise together, support each other, and achieve incredible results. Discover the power of collaboration, trust, and unity in achieving extraordinary success.
                   </p>
-                  <button className="text-gray-900 font-semibold hover:text-gray-800 transition-colors text-sm sm:text-base">
+                  {/* <button className="text-gray-900 font-semibold hover:text-gray-800 transition-colors text-sm sm:text-base">
                     Read More →
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
@@ -207,9 +209,9 @@ export default function BlogPage() {
                       )}
                     </div>
                     <div className="flex items-center gap-2">
-                      <button className="text-gray-900 font-semibold hover:text-black transition-colors text-sm sm:text-base flex items-center gap-1">
+                      {/* <button className="text-gray-900 font-semibold hover:text-black transition-colors text-sm sm:text-base flex items-center gap-1">
                         Read Full Article →
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
