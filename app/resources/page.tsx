@@ -23,7 +23,7 @@ const resources = [
     title: "Training and Fitness Resources",
     img: "/images/4243ea019ae45c91edd4fc7bc74bae3c.png",
     desc: "Step-by-step training programs, warmup routines, and conditioning drills designed to improve performance, no gym membership required. Our coaching guides for grassroots sports include practical, equipment-free exercises perfect for community settings.",
-    category: "Athlete Development",
+    category: "Coaching and Training",
     cta: "Read More →",
     recent: true,
     popular: false,
@@ -80,9 +80,10 @@ export default function ResourcesPage() {
 
       <Banner
         imageUrl="/images/resourcesbanner.webp"
-        videoUrl="/images/resources_bsf_f2.mp4"
+        // videoUrl="/images/resources_bsf_f2.mp4"
+        videoUrl="https://www.pexels.com/download/video/8813226/"
         heading="Sports Development Resources in India"
-        paragraph="Welcome to our comprehensive sports education resource library, your complete collection of sports development resources in India."
+        paragraph="Welcome to our sports education library — your one-stop source for sports development resources in India."
       />
 
       <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-8 md:px-16">

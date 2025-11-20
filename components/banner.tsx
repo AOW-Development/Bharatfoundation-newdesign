@@ -67,7 +67,7 @@ export default function Banner({
     : renderImage(imageUrl || mediaUrl || "");
 
   return (
-    <section className="relative w-full overflow-hidden">
+    <section className="relative w-full overflow-hidden mt-12">
       {/* Background Media */}
       <div className="relative w-full h-[40vh] md:h-[calc(100vh-80px)]">
         {backgroundMedia}
@@ -75,8 +75,8 @@ export default function Banner({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-8 md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-center">
-        <div className="text-center md:text-white space-y-6">
+      <div className="absolute inset-0 z-10 text-white container mx-auto px-4 py-8 flex flex-col items-center justify-center">
+        <div className="text-center md:text-white space-y-4">
           <h1 className="text-2xl md:text-3xl font-bold">
             {(heading || "").split("\n").map((line, i) => (
               <span key={i} className={i > 0 ? "block mt-2" : ""}>
