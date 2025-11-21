@@ -262,12 +262,9 @@ export default function Footer() {
                   >
                     <Youtube className="h-4 w-4 sm:h-5 sm:w-5" />
                   </Link>
-                  <Link
-                    href="#"
-                    className="p-2 bg-white/10 rounded-lg hover:bg-[#B8EA80] hover:text-gray-900"
-                  >
-                    <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
-                  </Link>
+                 <Link href="https://www.instagram.com/bharatsportsfoundation_/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-lg hover:bg-[#B8EA80] hover:text-gray-900">
+                 <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
+                 </Link>
                 </div>
               </div>
             </div>

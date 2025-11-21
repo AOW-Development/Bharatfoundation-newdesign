@@ -81,7 +81,7 @@ export default function ResourcesPage() {
       <Banner
         imageUrl="/images/resourcesbanner.webp"
         // videoUrl="/images/resources_bsf_f2.mp4"
-        videoUrl="https://www.pexels.com/download/video/8813226/"
+        videoUrl="./images/resource.webm"
         heading="Sports Development Resources in India"
         paragraph="Welcome to our sports education library — your one-stop source for sports development resources in India."
       />
