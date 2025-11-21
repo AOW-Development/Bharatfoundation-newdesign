@@ -114,9 +114,9 @@ export default function Home() {
                 <div className="absolute inset-0 border-4 border-transparent border-t-[#B8EA80] rounded-full animate-spin"></div>
               </div>
               {/* Loading Text */}
-              {/* <p className="text-white/70 text-sm font-medium animate-pulse">
+              <p className="text-white/70 text-sm font-medium animate-pulse">
                 Loading...
-              </p> */}
+              </p>
             </div>
           </div>
         )}
@@ -127,10 +127,14 @@ export default function Home() {
           loop
           muted
           playsInline
-          preload="none"
-          className="w-full h-full object-cover"
+          preload="auto"
+          onLoadedData={handleVideoLoad}
+          onCanPlayThrough={handleVideoLoad}
+          className={`w-full h-full object-cover transition-opacity duration-700 ${
+            videoLoaded ? "opacity-100" : "opacity-0"
+          }`}
         >
-          <source src="./images/hero.webm" type="video/mp4" />
+          <source src="./images/her01.webm" type="video/webm" />
         </video>
 
         {/* Gradient Overlay */}
