@@ -351,7 +351,7 @@ export default function WhatWeDo() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
 
-            {/* Mission Section */}
+            {/* Mission Sections  */}
             <div className="space-y-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-[#B8EA80] rounded-lg">
