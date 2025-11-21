@@ -127,14 +127,10 @@ export default function Home() {
           loop
           muted
           playsInline
-          preload="auto"
-          onLoadedData={handleVideoLoad}
-          onCanPlayThrough={handleVideoLoad}
-          className={`w-full h-full object-cover transition-opacity duration-700 ${
-            videoLoaded ? "opacity-100" : "opacity-0"
-          }`}
+          preload="none"
+          className="w-full h-full object-cover"
         >
-          <source src="./images/homepage.mp4" type="video/mp4" />
+          <source src="./images/hero.webm" type="video/mp4" />
         </video>
 
         {/* Gradient Overlay */}
