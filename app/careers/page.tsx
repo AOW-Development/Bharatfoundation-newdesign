@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -138,14 +139,12 @@ export default function CareersPage() {
     setFileError("");
 
     if (file) {
-      // Check if file is PDF
       if (file.type !== "application/pdf") {
         setFileError("Please upload only PDF files");
         e.target.value = "";
         return;
       }
 
-      // Check file size (2MB = 2 * 1024 * 1024 bytes)
       if (file.size > 2 * 1024 * 1024) {
         setFileError("File size must be less than 2MB");
         e.target.value = "";
@@ -161,14 +160,12 @@ export default function CareersPage() {
     setFileError("");
 
     if (file) {
-      // Check if file is PDF
       if (file.type !== "application/pdf") {
         setFileError("Please upload only PDF files");
         e.target.value = "";
         return;
       }
 
-      // Check file size (2MB = 2 * 1024 * 1024 bytes)
       if (file.size > 2 * 1024 * 1024) {
         setFileError("File size must be less than 2MB");
         e.target.value = "";
@@ -185,7 +182,6 @@ export default function CareersPage() {
     setSubmitStatus(null);
 
     try {
-      // Create FormData for file upload
       const submitData = new FormData();
       submitData.append("firstName", formData.firstName);
       submitData.append("lastName", formData.lastName);
@@ -238,7 +234,6 @@ export default function CareersPage() {
     setSubmitStatus(null);
 
     try {
-      // Create FormData for file upload
       const submitData = new FormData();
       submitData.append("firstName", generalFormData.firstName);
       submitData.append("lastName", generalFormData.lastName);
@@ -321,10 +316,14 @@ export default function CareersPage() {
     <main className="min-h-screen flex flex-col">
       <Header />
 
-      <Banner mediaUrl="/images/career.jpg" />
+      <Banner
+        mediaUrl="/images/Pathway-to-Career.jpg"
+        heading="Careers at Bharat Sports Foundation"
+        paragraph="Your ultimate destination for everything related to physical education and sports"
+      />
 
       {/* Careers Introduction */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-8 sm:py-10 md:py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 text-gray-900 text-center lg:text-left">
@@ -338,7 +337,7 @@ export default function CareersPage() {
               right place.
             </p>
 
-            <div className="bg-gradient-to-br from-[#B8EA80] to-[#98c889] p-6 sm:p-8 lg:p-10 rounded-2xl mb-8 sm:mb-12 shadow-lg">
+            <div className="bg-gradient-to-br from-[#B8EA80] to-[#98c889] p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg">
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 text-gray-900 text-center lg:text-left">
                 Why Work Here?
               </h3>
@@ -390,13 +389,13 @@ export default function CareersPage() {
       </section>
 
       {/* What We Offer */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+      <section className="py-8 sm:py-10 md:py-12 lg:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-6xl mx-auto">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 text-gray-900 text-center">
               What We Offer
             </h3>
-            <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 mb-10 sm:mb-12 max-w-3xl mx-auto">
+            <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 mb-8 sm:mb-10 max-w-3xl mx-auto">
               <li className="flex items-start gap-2 sm:gap-3">
                 <span className="text-[#B8EA80] font-bold text-lg sm:text-xl flex-shrink-0 mt-1">
                   ✓
@@ -444,7 +443,7 @@ export default function CareersPage() {
               </li>
             </ul>
 
-            <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 lg:mb-10 text-center text-gray-900">
+            <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 text-center text-gray-900">
               Why Join Our Team
             </h4>
 
@@ -477,10 +476,10 @@ export default function CareersPage() {
       </section>
 
       {/* Current Openings */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-8 sm:py-10 md:py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-5xl mx-auto">
-            <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 mb-8 sm:mb-10 lg:mb-12">
+            <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 mb-8 sm:mb-10">
               <Briefcase className="h-7 w-7 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-[#B8EA80] flex-shrink-0" />
               <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 text-center sm:text-left">
                 Current Openings
@@ -913,7 +912,7 @@ export default function CareersPage() {
       )}
 
       {/* Bottom CTA Section */}
-      <section className="py-10 sm:py-12 lg:py-16 bg-white">
+      <section className="py-8 sm:py-10 lg:py-12 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 sm:mb-6">
             Don&apos;t see the right role? We&apos;re always looking for
