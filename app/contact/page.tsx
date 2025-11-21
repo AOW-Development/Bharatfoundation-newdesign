@@ -22,8 +22,7 @@ export default function ContactPage() {
       <Header />
 
       <Banner
-        imageUrl="/images/contactusbanner.jpg"
-        videoUrl="/images/contactus-banner.mp4"
+        videoUrl="/images/contactus-banner.webm"
       />
 
       {/* Contact Section */}

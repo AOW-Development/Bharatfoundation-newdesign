@@ -104,8 +104,7 @@ export default function Home() {
           preload="none"
           className="w-full h-full object-cover"
         >
-          <source src="https://www.pexels.com/download/video/32311041/" type="video/mp4" />
-          <source src="https://www.pexels.com/download/video/32311041/" type="video/mp4" />
+          <source src="./images/hero.webm" type="video/mp4" />
         </video>
 
         {/* Gradient Overlay */}

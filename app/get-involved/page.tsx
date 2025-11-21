@@ -112,14 +112,13 @@ export default function GetInvolvedPage() {
             </div>
  
              <Link href="/contact">
-  <Button className="bg-gray-900 text-white hover:bg-gray-800 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl w-full sm:w-auto">
-   Volunteer With Us
-  </Button>
-</Link>
-          </div>
-        </div>
-      </section>
- 
+             <Button className="bg-gray-900 text-white hover:bg-gray-800 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-xl w-full sm:w-auto">
+              Volunteer With Us
+             </Button>
+             </Link>
+             </div>
+             </div>
+            </section>
  
       {/* Donate Section */}
       <section
