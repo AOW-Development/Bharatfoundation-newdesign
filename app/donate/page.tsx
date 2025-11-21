@@ -283,8 +283,8 @@ export default function DonatePage() {
       <Header />
       <Banner
         mediaUrl="/images/donationbanner.png"
-        heading="Want to be a Volunteer? Select Your Donation Choice & Amount"
-        paragraph="Feel free to go ahead and join us in celebrating the achievement of success all-together forming a dynamic team"
+        heading="Become a Volunteer — Choose Your Donation"
+        paragraph="Come join us in celebrating success as one dynamic, united team."
         buttons={[
           { text: "Monthly Donation", link: "/monthly-donation" },
           { text: "Onetime Donation", link: "/one-time-donation" },
