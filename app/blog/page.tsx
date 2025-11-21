@@ -28,11 +28,12 @@ export default function BlogPage() {
  
  
       {/* Banner */}
-   <Banner
-  videoUrl="https://www.pexels.com/download/video/18139945/"
-  // heading="Our Blog"
-  // paragraph="Latest stories and updates"
+  <Banner
+  videoUrl="./images/blog-hero.webm"
+// heading="Our Blog"
+// paragraph="Latest stories and updates"
 />
+
 
       {/* Blog Section */}
       <div className="flex-grow bg-gray-50 py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12">
