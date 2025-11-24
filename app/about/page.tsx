@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import Banner from "@/components/banner";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -30,17 +31,17 @@ export default function AboutPage() {
               {
                 image: "/images/8deb2f7f40c999bf95e59c8d627037d7.png",
                 title: "Basketball Techniques",
-                description:"Master advanced dribbling, shooting form, and defensive footwork with step-by-step video breakdowns from experienced coaches. Part of our in-depth sports tutorials for young athletes library.",
+                description: "Master advanced dribbling, shooting form, and defensive footwork with step-by-step video breakdowns from experienced coaches. Part of our in-depth sports tutorials for young athletes library.",
               },
               {
                 image: "/images/d2338b5fe7ec6b767a6f106bbcee1227.png",
                 title: "Yoga & Stretching",
-                description:"Improve flexibility, prevent injuries, and speed up recovery with yoga routines designed specifically for athletes as part of our sports fitness and wellness guidance for youth.",
+                description: "Improve flexibility, prevent injuries, and speed up recovery with yoga routines designed specifically for athletes as part of our sports fitness and wellness guidance for youth.",
               },
               {
                 image: "/images/e353b2fb29a64134a25fec74dc42d9ea.png",
                 title: "Strength Training Fundamentals",
-                description:"Build functional strength for sports performance with proper lifting technique, progression strategies, and safety fundamentals.",
+                description: "Build functional strength for sports performance with proper lifting technique, progression strategies, and safety fundamentals.",
               },
             ].map((tutorial, index) => (
               <div key={index} className="bg-[#B8EA80] rounded-lg overflow-hidden relative group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
@@ -68,17 +69,17 @@ export default function AboutPage() {
               {
                 image: "/images/7f81588e93aba3fd3d23776442e41776.png",
                 title: "Mental Toughness Training",
-                description:"The mental game separates good athletes from great ones. Learn proven psychological techniques to handle pressure, stay focused, and bounce back from setbacks through our expert sports development advice and insights.",
+                description: "The mental game separates good athletes from great ones. Learn proven psychological techniques to handle pressure, stay focused, and bounce back from setbacks through our expert sports development advice and insights.",
               },
               {
                 image: "/images/2c007fc3bca4b03ab8ef4cda5c0afe43.png",
                 title: "Sports Nutrition",
-                description:"Fuel your performance with practical nutrition advice tailored to Indian diets and athletes training on a budget. Essential sports fitness and wellness guidance for youth from our sports training NGO in India.",
+                description: "Fuel your performance with practical nutrition advice tailored to Indian diets and athletes training on a budget. Essential sports fitness and wellness guidance for youth from our sports training NGO in India.",
               },
               {
                 image: "/images/injury.jpg",
                 title: "Injury Prevention",
-                description:"Injury prevention focuses on building strength, flexibility, and proper technique to reduce risk while training. It helps athletes stay consistent by avoiding common strains and overuse issues. With the right habits, you can train safely and maintain long-term performance.",
+                description: "Injury prevention focuses on building strength, flexibility, and proper technique to reduce risk while training. It helps athletes stay consistent by avoiding common strains and overuse issues. With the right habits, you can train safely and maintain long-term performance.",
               },
             ].map((insight, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative group">
@@ -123,12 +124,12 @@ export default function AboutPage() {
               {
                 image: "/images/cc18f816d084b229fcdaba137ffc133d.png",
                 title: "Outdoor Activities",
-                description:"Discover the best fitness trails and outdoor activities to stay fit and healthy.",
+                description: "Discover the best fitness trails and outdoor activities to stay fit and healthy.",
               },
               {
                 image: "/images/9d57ec65f82d82559b352a3f1444c250.png",
                 title: "Community Classes",
-                description:"Join our community fitness classes designed for all skill levels.",
+                description: "Join our community fitness classes designed for all skill levels.",
               },
             ].map((item, index) => (
               <div key={index} className="bg-gray-700 text-white rounded-lg overflow-hidden relative group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
@@ -138,7 +139,11 @@ export default function AboutPage() {
                 <div className="p-6">
                   <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">{item.title}</h3>
                   <p className="mb-4">{item.description}</p>
-                  <button className="text-[#B8EA80] font-semibold hover:underline">{index === 0 ? "Find Trails →": "Join Classes →"}</button>
+                  <button className="text-[#B8EA80] font-semibold hover:underline">
+                    <Link href="/contact">
+                      {index === 0 ? "Find Trails →" : "Join Classes →"}
+                    </Link>
+                  </button>
                 </div>
                 <div className="absolute bottom-0 left-0 h-1 bg-[#B8EA80] w-0 group-hover:w-full transition-all duration-300"></div>
               </div>
