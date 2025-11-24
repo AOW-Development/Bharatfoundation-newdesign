@@ -457,7 +457,7 @@ export default function WhatWeDo() {
           </div>
 
           {/* Right Column - Scrollable Upcoming Events */}
-          <div className="md:col-span-2 lg:col-span-1">
+          <div className="md:col-span-2 lg:col-span-1" id="events">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 dark:text-white text-center sm:text-left bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
               Upcoming Events
             </h2>
