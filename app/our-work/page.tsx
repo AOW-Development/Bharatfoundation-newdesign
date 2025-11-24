@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Banner from "@/components/banner";
+import Link from "next/link";
 
 export default function OurWorkPage() {
   return (
@@ -20,7 +21,7 @@ export default function OurWorkPage() {
       {/* Grants Section - Modern Design */}
       <section
         id="grants"
-        className="py-10 bg-gradient-to-br from-gray-50 to-white scroll-mt-20"
+        className="py-3 bg-gradient-to-br from-gray-50 to-white scroll-mt-20"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -39,22 +40,18 @@ export default function OurWorkPage() {
               India and empower rising talent.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-[#B8EA80] text-black hover:bg-[#98c889] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl px-8 py-6 text-lg font-semibold rounded-full">
-                Apply Now
-              </Button>
-              <Button
-                variant="outline"
-                className="border-2 hover:bg-gray-50 px-8 py-6 text-lg rounded-full transition-all duration-300"
-              >
-                Learn More
-              </Button>
+              <Link href="/contact">
+                <Button className="bg-[#B8EA80] text-black hover:bg-[#98c889] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl px-8 py-6 text-lg font-semibold rounded-full">
+                  Apply Now
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Simply Periods, Roots, Smiles Section - Enhanced Cards */}
-      <section id="initiatives" className="py-20 bg-white scroll-mt-20">
+      <section id="initiatives" className="py-6 bg-white scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -246,10 +243,10 @@ export default function OurWorkPage() {
               </h2>
             </div>
 
-            <div className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100">
-              <div className="relative h-[400px] mb-8">
+            <div className="bg-white p-4 sm:p-6 md:p-10 rounded-3xl shadow-2xl border border-gray-100">
+              <div className="relative h-[300px] sm:h-[350px] md:h-[400px] mb-8 overflow-x-auto">
                 <svg
-                  className="w-full h-full"
+                  className="w-full h-full min-w-[600px] md:min-w-0"
                   viewBox="0 0 800 400"
                   preserveAspectRatio="xMidYMid meet"
                 >
@@ -405,7 +402,7 @@ export default function OurWorkPage() {
               </div>
 
               <div className="border-t border-gray-200 pt-8">
-                <p className="text-center text-gray-600 text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
+                <p className="text-center text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto px-4">
                   The report showcases the strides made in women's sports,
                   highlighting key areas of growth and future goals.
                 </p>
