@@ -218,7 +218,7 @@ export default function Footer() {
                 <p className="mb-2">
                   <span className="font-semibold text-white">Contact Us: </span>
                   <a href="tel:+911143123700" className="hover:text-[#B8EA80]">
-                    Tel: +91-11-43123700
+                    Tel: +91 98674 47334
                   </a>
                 </p>
                 <p>
