@@ -265,10 +265,10 @@ export default function GetInvolvedPage() {
                 <p className="text-sm sm:text-base text-gray-700 flex items-start gap-2">
                   <Mail className="w-5 h-5 text-[#000000] flex-shrink-0" />
                   <a
-                    href="mailto:partnerships@bharatsportsfoundation.org"
+                    href="mailto:bharatsportsfoundation@gmail.com"
                     className="text-[#7ab86a] hover:underline break-all"
                   >
-                    partnerships@bharatsportsfoundation.org
+                   bharatsportsfoundation@gmail.com
                   </a>
                 </p>
 

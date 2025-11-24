@@ -224,10 +224,10 @@ export default function Footer() {
                 <p>
                   <span className="font-semibold text-white">E-mail: </span>
                   <a
-                    href="mailto:info@bharatfoundation.org"
+                    href="mailto:bharatsportsfoundation@gmail.com"
                     className="hover:text-[#B8EA80] break-all"
                   >
-                    info@bharatfoundation.org
+                   bharatsportsfoundation@gmail.com
                   </a>
                 </p>
               </div>
