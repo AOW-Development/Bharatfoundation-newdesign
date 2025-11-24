@@ -107,7 +107,9 @@ export default function AboutPage() {
               <div className="p-6 sm:p-8 text-white">
                 <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Stay Connected with Live Sports</h3>
                 <p className="text-sm sm:text-lg mb-4 sm:mb-6">Stay updated with live coverage of our exciting sports events and competitions.</p>
-                <button className="bg-[#B8EA80] text-black px-5 py-2 rounded-lg font-semibold hover:bg-[#98c889] transition-colors">View Events</button>
+                <button className="bg-[#B8EA80] text-black px-5 py-2 rounded-lg font-semibold hover:bg-[#98c889] transition-colors">
+                  <Link href={'/#events'}>view events</Link>
+                </button>
               </div>
             </div>
           </div>
