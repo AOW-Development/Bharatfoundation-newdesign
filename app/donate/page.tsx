@@ -102,7 +102,7 @@ function DonationForm() {
   };
 
   return (
-    <div className="bg-white sm:p-6 rounded-lg shadow-sm box-border w-full h-full overflow-x-hidden lg:ml-6">
+    <div className=" sm:p-6 rounded-lg lg:shadow-sm md:shadow-sm box-border w-full h-full overflow-x-hidden lg:ml-6">
       <form onSubmit={handleSubmit}>
         {/* BANK DETAILS */}
         <div className="mb-6 sm:mb-8">
