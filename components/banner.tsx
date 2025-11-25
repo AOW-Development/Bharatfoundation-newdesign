@@ -128,6 +128,7 @@ interface BannerProps {
   buttons?: ButtonProps[];
   activeButton?: string;
   lazy?: boolean;
+  blurDataURL?: string;
 }
 
 export default function Banner({
@@ -139,6 +140,7 @@ export default function Banner({
   buttons,
   activeButton,
   lazy = true,
+  blurDataURL,
 }: BannerProps) {
   const [isVideo, setIsVideo] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -182,9 +184,8 @@ export default function Banner({
         preload="auto"
         onLoadedData={handleVideoLoad}
         onCanPlayThrough={handleVideoLoad}
-        className={`w-full h-full object-cover transition-opacity duration-700 ${
-          videoLoaded ? "opacity-100" : "opacity-0"
-        }`}
+        className={`w-full h-full object-cover transition-opacity duration-700 ${videoLoaded ? "opacity-100" : "opacity-0"
+          }`}
       />
     </>
   );
@@ -198,7 +199,11 @@ export default function Banner({
       loading={lazy ? "lazy" : "eager"}
       priority={!lazy}
       placeholder="blur"
-      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+      blurDataURL={
+        blurDataURL
+          ? blurDataURL
+          : 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAE0lEQVR42mNkYGBg+M+ABBgAEHgBBq0F8DAAAAAASUVORK5CYII='
+      }
       quality={90}
     />
   );
@@ -236,11 +241,10 @@ export default function Banner({
                 <Link
                   key={i}
                   href={button.link}
-                  className={`inline-block px-6 py-2 md:px-8 md:py-3 font-bold rounded-md transition-colors ${
-                    activeButton === button.text
-                      ? "bg-[#a5d695] text-black"
-                      : "bg-[#B8EA80] text-black hover:bg-[#a5d695]"
-                  }`}
+                  className={`inline-block px-6 py-2 md:px-8 md:py-3 font-bold rounded-md transition-colors ${activeButton === button.text
+                    ? "bg-[#a5d695] text-black"
+                    : "bg-[#B8EA80] text-black hover:bg-[#a5d695]"
+                    }`}
                 >
                   {button.text}
                 </Link>

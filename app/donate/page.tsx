@@ -289,6 +289,7 @@ export default function DonatePage() {
           { text: "Monthly Donation", link: "/monthly-donation" },
           { text: "Onetime Donation", link: "/one-time-donation" },
         ]}
+        blurDataURL="/images/donation_blur.png"
       />
 
       <section className="flex-grow bg-gray-50 py-8 md:py-12">
