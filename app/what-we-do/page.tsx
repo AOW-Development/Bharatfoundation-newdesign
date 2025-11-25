@@ -113,7 +113,7 @@ export default function WhatWeDoPage() {
  
  
       <Banner
-        videoUrl="/images/basketball.webm"
+        videoUrl="/images/basketball8mb.webm"
         heading="Empowering Communities Through Sports"
         paragraph="Building a better future through athletic excellence and community engagement"
       />
